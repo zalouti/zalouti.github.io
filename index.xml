@@ -6,7 +6,19 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 11 Jan 2022 01:00:00 +0200</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Jan 2022 23:06:52 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>数学与Hugo</title>
+        <link>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</link>
+        <pubDate>Tue, 11 Jan 2022 23:06:52 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</guid>
+        <description>&lt;h2 id=&#34;关于markdown语法&#34;&gt;关于Markdown语法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在markdown中，矩阵的换行只需要输入&lt;code&gt;\\&lt;/code&gt;即可，但是在为了显示在博客文章上，需要输入&lt;code&gt;\\\&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>第二基地</title>
         <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
         <pubDate>Tue, 11 Jan 2022 01:00:00 +0200</pubDate>

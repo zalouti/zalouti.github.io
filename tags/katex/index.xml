@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KaTex on 第二基地</title>
+    <link>https://zalouti.github.io/tags/katex/</link>
+    <description>Recent content in KaTex on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Jan 2022 23:06:52 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/katex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数学与Hugo</title>
+      <link>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</link>
+      <pubDate>Tue, 11 Jan 2022 23:06:52 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</guid>
+      <description>关于Markdown语法 在markdown中，矩阵的换行只需要输入\\即可，但是在为了显示在博客文章上，需要输入\\\</description>
+    </item>
+    
+  </channel>
+</rss>

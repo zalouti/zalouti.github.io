@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Jan 2022 01:00:00 +0200</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 23:06:52 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数学与Hugo</title>
+      <link>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</link>
+      <pubDate>Tue, 11 Jan 2022 23:06:52 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</guid>
+      <description>关于Markdown语法 在markdown中，矩阵的换行只需要输入\\即可，但是在为了显示在博客文章上，需要输入\\\</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>https://zalouti.github.io/p/%E5%85%B3%E4%BA%8E%E6%88%91/</link>
+      <pubDate>Tue, 11 Jan 2022 22:51:50 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E5%85%B3%E4%BA%8E%E6%88%91/</guid>
+      <description>才怪。 第一基 为什么会这样啊？ 11111 $$ \begin{matrix} a &amp;amp; b \\ c &amp;amp; d \\ 12&amp;amp; 3 \end{matrix} $$</description>
+    </item>
+    
     <item>
       <title>第二基地</title>
       <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
