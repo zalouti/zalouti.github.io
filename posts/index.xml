@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 砸楼梯的第二基地</title>
+    <title>Posts on 第二基地</title>
     <link>https://zalouti.github.io/posts/</link>
-    <description>Recent content in Posts on 砸楼梯的第二基地</description>
+    <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Jan 2022 20:36:40 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 18:28:09 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>五道口菜鸡养殖场分部</title>
-      <link>https://zalouti.github.io/posts/%E4%BA%94%E9%81%93%E5%8F%A3%E8%8F%9C%E9%B8%A1%E5%85%BB%E6%AE%96%E5%9C%BA%E5%88%86%E9%83%A8/</link>
-      <pubDate>Mon, 10 Jan 2022 20:36:40 +0800</pubDate>
+      <title>第二基地</title>
+      <link>https://zalouti.github.io/posts/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
+      <pubDate>Tue, 11 Jan 2022 18:28:09 +0800</pubDate>
       
-      <guid>https://zalouti.github.io/posts/%E4%BA%94%E9%81%93%E5%8F%A3%E8%8F%9C%E9%B8%A1%E5%85%BB%E6%AE%96%E5%9C%BA%E5%88%86%E9%83%A8/</guid>
+      <guid>https://zalouti.github.io/posts/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</guid>
       <description>第二基地 经过一学期与命令行操作、git、github的搏斗，我终于明白git的push和pull是在干什么😥回想起每次凌晨3点的寒冷，我看着</description>
     </item>
     
