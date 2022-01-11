@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>创世纪 on 第二基地</title>
+    <link>https://zalouti.github.io/tags/%E5%88%9B%E4%B8%96%E7%BA%AA/</link>
+    <description>Recent content in 创世纪 on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Jan 2022 01:00:00 +0200</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E5%88%9B%E4%B8%96%E7%BA%AA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第二基地</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
+      <pubDate>Tue, 11 Jan 2022 01:00:00 +0200</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</guid>
+      <description>第二基地 经过一学期与命令行操作、git、github的搏斗，我终于明白git的push和pull是在干什么😥回想起每次凌晨3点的寒冷，我看着</description>
+    </item>
+    
+  </channel>
+</rss>

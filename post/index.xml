@@ -6,14 +6,23 @@
     <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Jan 2022 18:28:09 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 01:00:00 +0200</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第二基地</title>
       <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
-      <pubDate>Tue, 11 Jan 2022 18:28:09 +0800</pubDate>
+      <pubDate>Tue, 11 Jan 2022 01:00:00 +0200</pubDate>
       
       <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</guid>
       <description>第二基地 经过一学期与命令行操作、git、github的搏斗，我终于明白git的push和pull是在干什么😥回想起每次凌晨3点的寒冷，我看着</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zalouti.github.io/p/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zalouti.github.io/p/</guid>
+      <description>Links 这里记录了一些其他的站点，或许是第二基地所记录的的一些优质资源，也或许是某个不知名的人留下的痕迹。 没有人是一座孤岛，我们彼此相互连接。 如果</description>
     </item>
     
   </channel>
