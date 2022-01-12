@@ -43,18 +43,6 @@
 </description>
         </item>
         <item>
-        <title>数学与Hugo</title>
-        <link>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</link>
-        <pubDate>Tue, 11 Jan 2022 23:06:52 +0800</pubDate>
-        
-        <guid>https://zalouti.github.io/p/%E6%95%B0%E5%AD%A6%E4%B8%8Ehugo/</guid>
-        <description>&lt;h2 id=&#34;关于markdown语法&#34;&gt;关于Markdown语法&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;在markdown中，矩阵的换行只需要输入&lt;code&gt;\\&lt;/code&gt;即可，但是在为了显示在博客文章上，需要输入&lt;code&gt;\\\&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
         <title>第二基地</title>
         <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0/</link>
         <pubDate>Tue, 11 Jan 2022 01:00:00 +0200</pubDate>
@@ -123,6 +111,93 @@
 	
 &lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;END&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>那位西工大的同学带来的感想</title>
+        <link>https://zalouti.github.io/p/%E9%82%A3%E4%BD%8D%E8%A5%BF%E5%B7%A5%E5%A4%A7%E7%9A%84%E5%90%8C%E5%AD%A6%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%84%9F%E6%83%B3/</link>
+        <pubDate>Sat, 20 Mar 2021 01:00:00 +0200</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E9%82%A3%E4%BD%8D%E8%A5%BF%E5%B7%A5%E5%A4%A7%E7%9A%84%E5%90%8C%E5%AD%A6%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%84%9F%E6%83%B3/</guid>
+        <description>&lt;img src="https://zalouti.github.io/p/%E9%82%A3%E4%BD%8D%E8%A5%BF%E5%B7%A5%E5%A4%A7%E7%9A%84%E5%90%8C%E5%AD%A6%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%84%9F%E6%83%B3/cover.jpeg" alt="Featured image of post 那位西工大的同学带来的感想" /&gt;&lt;blockquote&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;style type=&#34;text/css&#34;&gt;.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#212121&#39;, endColorstr=&#39;#00212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00212121&#39;, endColorstr=&#39;#cc212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}&lt;/style&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;4278389&#34; theme=&#34;#2980b9&#34;&gt;&lt;/meting-js&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一点点妄论，如果这也使你有些许共鸣，那就最好不过了。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今几日心里颇不宁静，在日常生活的压力中浸淫已久，甚至忘却了时间，直到看到高老师的公众号里校外的春光——原来今天是春分啊。&lt;/p&gt;
+&lt;p&gt;这个学期并不清闲，甚至是没有清闲。数分高代压力不减反增，史纲任务量繁多，工图大化也没有时间复习，德语在假期草草玩了一点点，但在开学之初就已经忘光了；社工任务丝毫不水，科协的技术宣传部秉着fly bitch的原则确实可以学会很多东西，然而也确实占时间；科研的进展预计也依旧是flybitch，所幸学生节落选了……&lt;/p&gt;
+&lt;p&gt;前几天高中派活，要写一个两三百字的东西，告诫学弟学妹不要拖延，虽然并不是很想写，但还是胡乱编了一些充数。令人惊讶的是，高中生活已经在我的脑海中形销影蚀——我只能从我的大学生活中寻找灵感，于是我写出了这样的垃圾文字：&lt;/p&gt;
+&lt;p&gt;直到今日，在我的大学生活80%以上的日子，我依然遵循着高中的作息时间：5点50起床晨跑5公里，之后奔赴于各个教室，抑或在图书馆自习，伴着教学楼的闭馆铃声，22：30下自习，23：00宿舍熄灯睡觉。或许你会觉得我是在危言耸听，但现实是，这是我和我大多数同学的生活，平凡，真实。清华的校歌这样唱“行健不息须自强”，作为一名行健书院的学生，我们也常常调侃自己“行健”、“不（休）息”。&lt;/p&gt;
+&lt;p&gt;讽刺的是，在我写完这些垃圾的第二天，我的一位同学在朋友圈里狠批西北工业大学的那位同学。历史不过是在上演昨天的故事，相似的作息时间表被媒体吹捧的故事至今仍被拿去给高三生打鸡血。这件事情让我疑惑：有必要这样累吗？&lt;/p&gt;
+&lt;p&gt;随着这位西工大同学的报道在我的朋友圈刷屏，画风也逐渐趋向于两极——基于对于努力者的称赞与羡慕，以及，更多的，对于这种行为的不屑一顾。我成为了一场隐秘战争的观战者，策源于几千公里之外，投射于虚拟的朋友圈，上演于自己的内心。“有必要这样累吗？”这个问题同样是对我的问题，同样，又有一个老问题，“这是卷吗？”&lt;/p&gt;
+&lt;p&gt;为了再次讨论这个问题，我回顾了当我在看完《马兰花开》后的随笔（见第二篇推送消息），总体上来看，那次的随笔更像是一次集体情绪输出下的不甚成熟的思考产物，并未提出什么有创见的观点，只不过是单纯强调“do our best”的权宜之计。And then？的确没有解决方案……&lt;/p&gt;
+&lt;p&gt;但是第一次的随笔也并非一无是处，具体来讲，是这句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你要区分热爱与意志力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们不妨换一种语言来重新叙述那段垃圾文字，或许，它可以这样写：&lt;/p&gt;
+&lt;p&gt;那正是你所羡慕的大学生活：呼吸着校园第一缕晨光，与晨跑队的小伙伴们享受校园四时风光，晨跑结束后还能蹭吃蹭喝，开启充满活力的一天。在清华，你可以见到“教科书里的人”，也可以享受国内一流的教室与图书馆，聆教大师，享受求知之乐，在社工锻炼自己的自学能力，逐渐成为技术达人，还能在课余时间探访实验室，开启本科生科研的探索旅程。在夜幕中与同学分享自己有趣的X-idea，听着校河的水声潺潺戴月而归。&lt;/p&gt;
+&lt;p&gt;这是同一段生活？这是同一段生活。我总想给自己加上那些让其他人羡慕的选项，想把自己拼凑成自己理想中的模样，只不过，正如“一张每一道题目都是好题的试卷就是一张垃圾试卷”的道理一样，每一个领域都想有所涉猎的兴趣终究会因为与这些兴趣相伴的代价而转化为压力。与此同时，自己就会变得患得患失，一边担心自己会丧失追求兴趣的机会，一边又害怕在日常的竞争中位居人后，这或许便是这几天焦虑的来源……&lt;/p&gt;
+&lt;p&gt;那么回到那个老生常谈的问题——什么是卷？二元对立的“热爱与意志力”说在现实生活中并不完全成立，很多事并不是只有热爱就可以做好的，这种理论的缺陷在于，一旦感觉到开始调用自己的意志力，就会在潜意识中认为，这是一种burden。&lt;/p&gt;
+&lt;p&gt;修正的定义是：动卷心即卷，心无卷则非卷。&lt;/p&gt;
+&lt;p&gt;又问：如何令心不动？&lt;/p&gt;
+&lt;p&gt;答：用心若镜，物来则应，物去不留。&lt;/p&gt;
+&lt;p&gt;以往给自己设计的目标都是类似于KPI的考核指标，当自己取得了一点点成绩是就止不住兴奋，这何尝不是一种期待外物来满足自己的心态，只不过它带着一顶努力的帽子，更具有伪装性罢了。只有今晚停下来的时候才发现，自己又只是凭借着本能前行，却不知道路在哪里？若有人问起你是怎样做到这样所谓努力与自律的，自己也其实一团雾水。说白了，不就是给自己的未来画一个个饼吗……唯有放下希望的心，失望才会彻底消失。&lt;/p&gt;
+&lt;p&gt;突然想起古仁人之心，不以物喜，可真是大境界啊……&lt;/p&gt;
+&lt;p&gt;昨天在科研导引课上接触了OKR的概念，与KPI的区别，今晚细细思索，不正是心中有卷与心中无卷的区别所在吗？上学期的写沟课的长文，不正是自己选题，期待用人类学的视角发现一些有趣的事情，我不能说这其中没有意志力的因素，至少在冬天夜晚零下十几度的寒风中骑车并不是一件和热爱挂钩的事情，但是正是这种OKR的制定，最后在写长文的时候写出了自己写沟课上写得最畅快淋漓的一篇文章。前面关于同一段生活的两种叙述，不正是KPI与OKR的视角吗？&lt;/p&gt;
+&lt;p&gt;古仁人之心，不以己悲，又是另一层更高的境界了……&lt;/p&gt;
+&lt;p&gt;领悟并不是一种成就，而是一种体会。当我明早醒来时，一切都改变了，但是一切又都没有改变。&lt;/p&gt;
+&lt;p&gt;不过，明天就当给自己放个假，记得去看看春天呐。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>马兰花开——写于内卷的间隙</title>
+        <link>https://zalouti.github.io/p/%E9%A9%AC%E5%85%B0%E8%8A%B1%E5%BC%80%E5%86%99%E4%BA%8E%E5%86%85%E5%8D%B7%E7%9A%84%E9%97%B4%E9%9A%99/</link>
+        <pubDate>Wed, 30 Sep 2020 01:00:00 +0200</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E9%A9%AC%E5%85%B0%E8%8A%B1%E5%BC%80%E5%86%99%E4%BA%8E%E5%86%85%E5%8D%B7%E7%9A%84%E9%97%B4%E9%9A%99/</guid>
+        <description>&lt;img src="https://zalouti.github.io/p/%E9%A9%AC%E5%85%B0%E8%8A%B1%E5%BC%80%E5%86%99%E4%BA%8E%E5%86%85%E5%8D%B7%E7%9A%84%E9%97%B4%E9%9A%99/%E9%A9%AC%E5%85%B0%E8%8A%B1%E5%BC%80.png" alt="Featured image of post 马兰花开——写于内卷的间隙" /&gt;&lt;h1 id=&#34;马兰花开写于内卷的间隙&#34;&gt;马兰花开——写于内卷的间隙&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是第一次看完《马兰花开》后的一点点感想，好多观点自己现在都不一定认同，但是考古看看之前写的东西也是一种享受。&lt;/p&gt;
+&lt;p&gt;希望能对你有些帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://imgtu.com/i/7uVReO&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s4.ax1x.com/2022/01/12/7uVReO.png&#34; &gt;
+		&lt;img src=&#34;https://s4.ax1x.com/2022/01/12/7uVReO.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;入场前&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;入场前&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打脸*n&lt;/p&gt;
+&lt;p&gt;之前还觉得这场话剧是无意义的浪费时间，一切的念头在这场话剧开始之时便灰飞烟灭：本以为是套话空话连缀出的样板戏，没想到却成为了在卷卷卷之外的精神皈依，笑点泪点拿捏恰当，演职人员演技过硬，幸亏没有把这张票转手……&lt;/p&gt;
+&lt;p&gt;然而，马兰花开，不只是在今晚。&lt;/p&gt;
+&lt;p&gt;近来，位于T大舆论浪尖的“卷”，以“学堂路车神”为引爆点，引起了大家接连不断的讨论。作为高校所谓“囚徒困境”的一员，对于卷同样是百感交集：“卷”的产生本源自大家想要保持优秀与领先的优越感的人之常情，然而我们却在不断的内耗之中将时间用于低效的“卷”。进一步，随着“卷”的概念的扩大，“卷”的边界渐渐模糊，我们每天正常完成作业被调侃为“卷”，正常学习理解概念被戏谑为“卷”，甚至出现了“一天不说卷”挑战，我们固然可以将其视作T大卷风语境下大家对于压力排遣的一种方式。&lt;/p&gt;
+&lt;p&gt;然而这对于问题的解决毫无帮助。&lt;/p&gt;
+&lt;p&gt;曾经看到过一个关于“卷”的思考的视频，讨论者一针见血地指出，卷是个由于资源有限而产生的制度性问题。这确实是真知灼见，然而需要指出的是，T大历史上也存在制度性的绩点改革，好处是，大家的绩点都看起来更nice，然而“卷”的风气一脉相承，它只不过是在不同时间以不同的面孔现身而已，过去的“踩踏效应”，今天的“卷”，显然，在目前无法做大蛋糕的时候，这种“开根乘十”的做法只不过杯水车薪。&lt;/p&gt;
+&lt;p&gt;还记得在高三的成绩低谷时，我也曾经尝试过比别人早起，比别人更快吃饭，腾出更多时间来学习，用现在的行话来讲，就是“卷王”。然而这种生活是不可能持久的，在我身心俱疲时，感谢有位高人指点我——&lt;/p&gt;
+&lt;p&gt;你要区分热爱与意志力。&lt;/p&gt;
+&lt;p&gt;意志力终究是消耗品，而内外的困境与心智损耗却可以趋于无穷。然而热爱、信仰、所谓的理想，却可以取之不竭，用之不尽。记得有个学姐告诉我：跳出卷风的方法，便是在做某件事情之前，你先不会去想绩点、老师的看法、peer pressure ，而是在想，我如何把这件事做到自己的最好。或许“最好的自己”这种论调已经沦为稀松平常，然而在我看来，却是当下解决“卷”的个人最优解。&lt;/p&gt;
+&lt;p&gt;担心被“卷”，从教育心理学的角度而言，这是对于损失逃避的过分关注，信心的建立来源于与他人的比较。当然我并不是全盘否定这种比较，恰如只要是考试，总会有第一和倒一，我只是在反对这种披着“卷”风外衣的变相恶性比较。我们的文化一直在告诉我们“满招损，谦受益”的哲理，可从来没有人向我们反复强调，极端谦虚本身难道不也是一种比较？这种心态恰好映射到担心被卷的焦虑，于是我们都在这场零和博弈中进行一场有限游戏。&lt;/p&gt;
+&lt;p&gt;可惜，这些时间本可以做一些更有意义的事情的。&lt;/p&gt;
+&lt;p&gt;在一次和某位高人喝下午茶的时候，出于对强基计划的好奇心，她问了我这样一个问题：“你觉得你有很强的家国情怀吗？”我愣住了，当时含糊其辞说了什么现在根本无法回想起来了，可笑的是，外界对强基计划的学生的博大宽广的家国情怀的臆想，在大多数学生身上，被“卷”风文化的peer pressure埋葬在了记忆深处，我们专注于一场激烈的有限游戏，却未曾想过背后存在无限游戏的可能。家国情怀这种东西当然不是天天挂在嘴上，然而直到今晚的《马兰花开》之前，我甚至都没有意识到我还是一个强基的学生，我的第一反应是，数分好难，高代好难……&lt;/p&gt;
+&lt;p&gt;这也是为什么今天的《马兰花开》给我带来的精神震撼如此之大，以致于狂写千字文……之前以为情怀教育是P大的专利，可是今天的《马兰花开》着实唤醒了记忆中沉睡的一部分。人我何如？想清楚这个问题：人非我，我非人，骄傲不是骄傲，谦虚不是谦虚。个人的悲喜是如此的渺小，可我们又常常在孤芳自赏中嗟叹时不利兮，然而回眸凝望，远处的马兰花，才是在日常卷风之外的精神沃土。&lt;/p&gt;
+&lt;p&gt;曾经有个好哥们问我：“为什么我可以从那些使我变得更加优秀的事情里真正获得乐趣？”当时我又被问懵了，然而今天的《马兰花开》可能为这个问题找了一个较为接近的答案吧：可能我们每个人的精神世界中都有那么一株马兰花，纵使外界的卷风日盛，可当你每次凝视那株马兰花时，心底的那份感动依旧不熄，支持我们继续前行。&lt;/p&gt;
+&lt;p&gt;“扎根苍茫大地，深爱热土家园”，当歌词最后再次缓缓响起，泪目那一刻，真是竦体改容，顿觉自己的浅薄与无知。&lt;/p&gt;
+&lt;p&gt;与君共勉。&lt;/p&gt;
 </description>
         </item>
         
