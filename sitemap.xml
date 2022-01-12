@@ -20,6 +20,12 @@
     <loc>https://zalouti.github.io/p/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
     <lastmod>2022-01-11T22:51:50+08:00</lastmod>
   </url><url>
+    <loc>https://zalouti.github.io/page/</loc>
+    <lastmod>2022-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/archives/</loc>
+    <lastmod>2022-01-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://zalouti.github.io/tags/%E5%88%9B%E4%B8%96%E7%BA%AA/</loc>
     <lastmod>2022-01-11T01:00:00+02:00</lastmod>
   </url><url>
@@ -32,5 +38,7 @@
     <loc>https://zalouti.github.io/p/</loc>
   </url><url>
     <loc>https://zalouti.github.io/categories/</loc>
+  </url><url>
+    <loc>https://zalouti.github.io/search/</loc>
   </url>
 </urlset>
