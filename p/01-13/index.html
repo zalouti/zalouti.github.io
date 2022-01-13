@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='heat_solver of rectangle domain'><title>01-13</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/01-13/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='01-13'>
+<meta property='og:description' content='heat_solver of rectangle domain'>
+<meta property='og:url' content='https://zalouti.github.io/p/01-13/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='日寄' /><meta property='article:tag' content='磕盐' /><meta property='article:published_time' content='2022-01-13T11:43:00&#43;08:00'/><meta property='article:modified_time' content='2022-01-13T11:43:00&#43;08:00'/>
+<meta name="twitter:title" content="01-13">
+<meta name="twitter:description" content="heat_solver of rectangle domain">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/01-13/">01-13</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        heat_solver of rectangle domain
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="打工日常">打工日常</h2>
+<blockquote>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<style type="text/css">.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#00212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#cc212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}</style>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js server="netease" type="song" id="1494525139" theme="#2980b9"></meting-js>
+</blockquote>
+<p>今天的任务是理清楚heat_solver的框架，手绘出一个框架的草图。</p>
+<p><em><strong>以下是计算rectangle的模型，disk再说</strong></em></p>
+<h3 id="参数部分">参数部分</h3>
+<p>首先<code>heat_solver</code>在参数读取部分会有两个<code>.txt</code>文件：分别命名为<code>para_model.txt</code>以及<code>para_numerical.txt</code>。分别表示了模型参数与数值模拟的参数。</p>
+<p><code>para_model.txt</code>的文件的内容为</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">#parameter_model</span>
+<span class="c1">#boundary Lx ,Ly</span>
+<span class="mi">10</span>
+<span class="mi">10</span>
+<span class="c1">#initial data \alpha \beta</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+</code></pre></div><p><code>para_numerical.txt</code>的文件的内容为</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">#parameter_numerical simulation</span>
+<span class="c1">#final time T</span>
+<span class="mi">10</span>
+<span class="c1"># Number of meshes Nx, Ny</span>
+<span class="mi">16</span>
+<span class="mi">16</span>
+<span class="c1">#The num of Guass quadrature point</span>
+<span class="mi">8</span>
+</code></pre></div><h3 id="类的使用">类的使用</h3>
+<p>大概类似于C里面的<code>struct</code>，Python使用类，我们定义一个模型类<code>datatype.py</code>，方便调用与存储数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">model</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">Lx</span><span class="p">,</span><span class="n">Ly</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">beta</span><span class="p">):</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">Lx</span><span class="o">=</span><span class="n">Lx</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">Ly</span><span class="o">=</span><span class="n">Ly</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">beta</span><span class="o">=</span><span class="n">beta</span>
+</code></pre></div><h3 id="主函数-mainpy-部分">主函数<code>main.py</code>部分</h3>
+<h4 id="创建文件夹的函数">创建文件夹的函数</h4>
+<p>需要为每次的计算创建三个文件夹来储存数据，分别是<code>/data</code>、<code>/image</code>、<code>/video</code></p>
+<p>这是<code>mkdir.py</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="c1"># 去除首位空格</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="c1"># 去除尾部 \ 符号</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="c1"># 判断路径是否存在</span>
+    <span class="c1"># 存在     True</span>
+    <span class="c1"># 不存在   False</span>
+    <span class="n">isExists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="c1"># 判断结果</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">isExists</span><span class="p">:</span>
+        <span class="c1"># 如果不存在则创建目录</span>
+        <span class="c1"># 创建目录操作函数</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39; 创建成功&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># 如果目录存在则不创建，并提示目录已存在</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39; 目录已存在&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div><p>在主程序中只需要命令特定的<code>path</code>即可</p>
+<h4 id="储存模型与计算数据的函数">储存模型与计算数据的函数</h4>
+<p>将本次模拟计算的数据以二进制的形式储存到<code>/data</code>中，当然，还需要写一个读取二进制文件的函数</p>
+<p>读取数据<code>readpara.py</code>中包含了读取模型数据的<code>modreader</code>和读取数值计算的<code>numreader</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># define the function to read the parameter of the model</span>
+<span class="c1"># meanwhile save the current test parameters as .txt</span>
+<span class="c1"># return a list of[Lx,Ly,alpha,beta]</span>
+<span class="c1">#oops,every element is also a list</span>
+<span class="k">def</span> <span class="nf">modreader</span><span class="p">():</span>
+    <span class="n">para</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/home/u_zalouti/srt/rectangle/para_model.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_object</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="n">c</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]):</span>
+                <span class="n">para</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">line</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">para</span>
+
+
+<span class="c1"># define the function to read the parameter of the numerical computation</span>
+<span class="c1"># return a list of[T,Nx,Ny,num_of_guass]</span>
+<span class="c1"># the linenum of the parameters is</span>
+<span class="c1"># T--2   Nx--4  Ny--5  num_of_guass--7</span>
+<span class="k">def</span> <span class="nf">numreader</span><span class="p">():</span>
+    <span class="n">para</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/home/u_zalouti/srt/rectangle/para_numrical.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_object</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="n">c</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]):</span>
+                <span class="n">para</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">line</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">para</span>
+</code></pre></div><p>储存数据的<code>savepara.py</code>中包含了储存模型数据的<code>modreader</code>和储存数值计算的<code>numreader</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">readpara</span> <span class="kn">import</span> <span class="n">modreader</span><span class="p">,</span> <span class="n">numreader</span>
+
+<span class="k">def</span> <span class="nf">modsaver</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">para</span> <span class="o">=</span> <span class="n">modreader</span><span class="p">()</span>
+    <span class="n">save</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">para</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39;/model.bin&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">save</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="c1"># define the function to save the model parameter as binary form</span>
+<span class="c1"># path is determined by main.py</span>
+
+<span class="k">def</span> <span class="nf">numsaver</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">para</span> <span class="o">=</span> <span class="n">numreader</span><span class="p">()</span>
+    <span class="n">save</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">para</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39;/num.bin&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">save</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="c1"># define the function to save the numerical parameter as binary form</span>
+<span class="c1"># path is determined by main.py</span>
+</code></pre></div><h4 id="计算部分fundamental-solution">计算部分(fundamental solution)</h4>
+<p>开始正式的计算，但是也分几步</p>
+<ol>
+<li>首先划分网格，使用Gaussian积分，为每一个格点匹配对应的权重</li>
+<li>之后再在每一个网格上积分——一个求和——但注意是平面积分——求和两次</li>
+</ol>
+<p>网格划分<code>mesh_div.py</code>包括了根据读取的数据<code>Nx</code>和<code>Ny</code>划分网格<code>mesh</code>，以及每个区间做区间变换<code>interval_tran</code></p>
+<p>区间变换为：
+$$
+\int _{a}^{b}f(x)\ dx=\frac{b-a}{2}\int _{-1}^{1}f\left({\frac {b-a}{2}}\xi +{ \frac {a+b}{2}}\right)\ d\xi 
+$$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">mesh</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Ly</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ly</span><span class="p">,</span> <span class="n">Ny</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># 划分Nx个网格，需要有Nx+1个点</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+<span class="c1"># boundary Lx ,Ly</span>
+<span class="c1"># Number of meshes Nx, Ny</span>
+
+<span class="k">def</span> <span class="nf">interval_tran</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">legendre</span><span class="o">.</span><span class="n">leggauss</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">coff</span> <span class="o">=</span> <span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span><span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">start</span><span class="o">+</span><span class="n">end</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">coff</span>
+<span class="c1"># transform gaussian points from [-1,1] to [start,end]</span>
+<span class="c1"># n stands for the num of Gaussian points</span>
+<span class="c1"># start&amp;end stand for the start and end of the interval</span>
+<span class="c1"># return the guassian points on new interval with their weights</span>
+</code></pre></div><p>积分部分<code>intergrate.py</code>首先写一个非常一般的积分，即高斯求积法在$[-1,1]$上的积分
+$$
+\int_{-1}^1f(x)dx \approx \sum_{i=1}^nw_if_(x_i)
+$$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">int_basic</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">func1</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">+</span><span class="n">func1</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">weight</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div><p>最后得到一维的高斯求积法为</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">int_1D</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">func1</span><span class="p">):</span>
+    <span class="n">point</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">coff</span> <span class="o">=</span> <span class="n">interval_tran</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">coff</span><span class="o">*</span><span class="n">int_basic</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">func1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div><p>考虑到区间变换，则二维的高斯求积法可以被写作
+$$
+\int_{x_1}^{x_2}\int_{y_1}^{y_2}f(x,y)dydx =\\
+\\ 
+\frac{x_2-x_1}{2}\frac{y_2-y_1}{2}\int^1_{-1}\int_{-1}^1f(\frac{x_2-x_1}{2}x+\frac{x_2+x_1}{2},\frac{y_2-y_1}{2}y+\frac{y_2+y_1}{2})\\
+\approx \frac{x_2-x_1}{2}\frac{y_2-y_1}{2}\sum_{j=1}^m\sum_{i=1}^nw_iw_jf(x_i,y_j)
+$$
+我们可以看到，上述二维的表达式中，最后一项两个求和可以采用向量化编程的形式，减少<code>for</code>循环的出现，即为：
+$$
+\sum_{j=1}^m\sum_{i=1}^nw_iw_jf(x_i,y_j)=
+\begin{pmatrix}
+w_1&amp;w_2&amp;\cdots&amp;w_n
+\end{pmatrix}
+\begin{pmatrix}
+f(x_1,y_1)&amp;\cdots&amp;f(x_1,y_m)\\
+\vdots&amp;&amp;\vdots\\
+f(x_n,y_1)&amp;\cdots&amp;f(x_n,y_m)
+\end{pmatrix}
+\begin{pmatrix}
+w_1\\ w_2\\ w_m
+\end{pmatrix}\\
+=det\begin{pmatrix}
+f(x_1,y_1)&amp;\cdots&amp;f(x_1,y_m)\\
+\vdots&amp;&amp;\vdots\\
+f(x_n,y_1)&amp;\cdots&amp;f(x_n,y_m)
+\end{pmatrix}
+\begin{pmatrix}
+w_1\\ w_2\\ w_m
+\end{pmatrix}
+\begin{pmatrix}
+w_1&amp;w_2&amp;\cdots&amp;w_n
+\end{pmatrix}
+$$
+代码实现为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">int_2D</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">func2</span><span class="p">):</span>
+    <span class="n">x_point</span><span class="p">,</span> <span class="n">x_weight</span><span class="p">,</span> <span class="n">x_coff</span> <span class="o">=</span> <span class="n">interval_tran</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">y_point</span><span class="p">,</span> <span class="n">y_weight</span><span class="p">,</span> <span class="n">y_coff</span> <span class="o">=</span> <span class="n">interval_tran</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">w2d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">y_weight</span><span class="p">,</span><span class="n">x_weight</span><span class="p">)</span>
+    <span class="n">p2d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_point</span><span class="p">,</span><span class="n">y_point</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">x_coff</span><span class="o">*</span><span class="n">y_coff</span><span class="o">*</span><span class="n">func2</span><span class="p">(</span><span class="n">p2d</span><span class="p">)</span><span class="o">*</span><span class="n">w2d</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div><h3 id="明天解决的任务">明天解决的任务</h3>
+<ul>
+<li>写出基本解的积分并验证两个算例</li>
+<li>还需要写一个自动生成路径<code>PATH</code>的函数，以便生成文件夹</li>
+<li>学会绘图并保存为<code>.eps</code>格式</li>
+</ul>
+<h2 id="日寄本体">日寄本体……</h2>
+<p>英语已经好久没有开始学习了……得马上速速把计划做起来……</p>
+<p>今晚先听一下听力课，明天起就可以开始练听力了……</p>
+<p>oops，明天是不是还要开始打卡了……</p>
+<p>看看这代码的样子，比那个垃圾微信公众号好多了！</p>
+<hr>
+<p>参考网站与文献：</p>
+<p><a class="link" href="https://www.cnblogs.com/monsteryang/p/6574550.html"  target="_blank" rel="noopener"
+    >https://www.cnblogs.com/monsteryang/p/6574550.html</a></p>
+<p><a class="link" href="https://en.wikipedia.org/wiki/Gaussian_quadrature"  target="_blank" rel="noopener"
+    >https://en.wikipedia.org/wiki/Gaussian_quadrature</a></p>
+<p><a class="link" href="https://kz16.top/na/Guass"  target="_blank" rel="noopener"
+    >https://kz16.top/na/Guass</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%97%A5%E5%AF%84/">日寄</a>
+        
+            <a href="/tags/%E7%A3%95%E7%9B%90/">磕盐</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/01-14/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">01-14</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#打工日常">打工日常</a>
+      <ol>
+        <li><a href="#参数部分">参数部分</a></li>
+        <li><a href="#类的使用">类的使用</a></li>
+        <li><a href="#主函数-mainpy-部分">主函数<code>main.py</code>部分</a>
+          <ol>
+            <li><a href="#创建文件夹的函数">创建文件夹的函数</a></li>
+            <li><a href="#储存模型与计算数据的函数">储存模型与计算数据的函数</a></li>
+            <li><a href="#计算部分fundamental-solution">计算部分(fundamental solution)</a></li>
+          </ol>
+        </li>
+        <li><a href="#明天解决的任务">明天解决的任务</a></li>
+      </ol>
+    </li>
+    <li><a href="#日寄本体">日寄本体……</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>日寄 on 第二基地</title>
-    <link>https://zalouti.github.io/tags/%E6%97%A5%E5%AF%84/</link>
-    <description>Recent content in 日寄 on 第二基地</description>
+    <title>磕盐 on 第二基地</title>
+    <link>https://zalouti.github.io/tags/%E7%A3%95%E7%9B%90/</link>
+    <description>Recent content in 磕盐 on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 13 Jan 2022 19:28:49 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E6%97%A5%E5%AF%84/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>寒假寄划</title>
-      <link>https://zalouti.github.io/p/%E5%AF%92%E5%81%87%E5%AF%84%E5%88%92/</link>
-      <pubDate>Thu, 13 Jan 2022 19:28:49 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/%E5%AF%92%E5%81%87%E5%AF%84%E5%88%92/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 13 Jan 2022 16:25:32 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E7%A3%95%E7%9B%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01-14</title>
       <link>https://zalouti.github.io/p/01-14/</link>
@@ -32,15 +23,6 @@
       
       <guid>https://zalouti.github.io/p/01-13/</guid>
       <description>打工日常 .dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to</description>
-    </item>
-    
-    <item>
-      <title>01-12</title>
-      <link>https://zalouti.github.io/p/01-12/</link>
-      <pubDate>Wed, 12 Jan 2022 09:38:18 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/01-12/</guid>
-      <description>今日任务 .dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to</description>
     </item>
     
   </channel>
