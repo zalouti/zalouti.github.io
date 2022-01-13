@@ -13,7 +13,7 @@
       <pubDate>Thu, 13 Jan 2022 16:25:32 +0800</pubDate>
       
       <guid>https://zalouti.github.io/p/01-14/</guid>
-      <description>接下来我们写出热传导方程的基本解 $$ u(x,t)=\int_{R^n}\Phi(x-y,t)u_0(y)dy+\int^t_0\int_{R^n}\Phi(x-y,t-\tau)f(y,\tau)dyd\tau $$ 其中$u_0(x)$、$f(y,\tau)$由模型决定，$\Phi(x,t)$的表达式为 $$ \Phi(x,t)=\frac{1}{(4\pi\kappa t)^{\frac{n}{2}}}e^{-\frac{|x|^2}{4\kappa t}} $$ 计算</description>
+      <description>打工日常 基本框架搭建 main.py 接下来我们写出热传导方程的基本解 $$ u(x,t)=\int_{R^n}\Phi(x-y,t)u_0(y)dy+\int^t_0\int_{R^n}\Phi(x-y,t-\tau)f(y,\tau)dyd\tau $$ 其中$u_0(x)$、$f(y,\tau)$由模型决定，$\Phi(x,t)$的</description>
     </item>
     
     <item>
