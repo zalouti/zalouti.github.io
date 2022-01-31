@@ -6,7 +6,98 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 31 Jan 2022 17:34:13 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 31 Jan 2022 20:37:51 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>间隔重复系统与渐进阅读</title>
+        <link>https://zalouti.github.io/p/%E9%97%B4%E9%9A%94%E9%87%8D%E5%A4%8D%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB/</link>
+        <pubDate>Mon, 31 Jan 2022 20:37:51 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E9%97%B4%E9%9A%94%E9%87%8D%E5%A4%8D%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB/</guid>
+        <description>&lt;h2 id=&#34;什么是间隔重复系统和渐进阅读&#34;&gt;什么是间隔重复系统和渐进阅读？&lt;/h2&gt;
+&lt;p&gt;Spaced Repetition System，缩写为SRS，也是标题中的间隔重复系统。&lt;/p&gt;
+&lt;p&gt;Incremental Reading，SRS缩写为IR，也就是标题中的渐进阅读。&lt;/p&gt;
+&lt;p&gt;或许这两种工具对于读者还是比较陌生，但是当我讲述结束之后，其实你会发现，这两种工具其实蕴含着一种新的学习理念，或许你也会正如初三时的我一般，内心暗自惊叹：&lt;strong&gt;这TM就是我想要的东西！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果很闲的话，其实可以看一看这个视频，叶哥是国内渐进学习的领头人物了(Repect)&lt;/p&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1jL411V7GD&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div style=&#34;position: relative; padding: 32% 45%;&#34;&gt;
+    &lt;iframe style=&#34;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&#34; 
+    src=&#34;//player.bilibili.com/player.html?bvid=BV1jL411V7GD&amp;page=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=1&#34; 
+    scrolling=&#34;no&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;好吧，我也不知道为什么会有两个窗口，毁灭吧……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;或者可以看这个，以SRS漫画介绍还是非常新颖的做法,&lt;a class=&#34;link&#34; href=&#34;https://ncase.me/remember/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;戳这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;srs&#34;&gt;SRS&lt;/h3&gt;
+&lt;p&gt;对于学生党而言，每年最要紧的时候，无非两场决定生死的考试。而决定两场考试的，便是考试周的疯狂复习，正如季羡林先生所言：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;做什么有意义的事—妈的，这些混蛋教授，不但不知道自己泄气，还整天考，不是你考，就是我考，考他娘的什么东西？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然而，在经历了多次全靠考前一周挣分的经历之后，总想在考试周过得不太狼狈。很正常的想法就是——那我提前开始复习吧！&lt;/p&gt;
+&lt;p&gt;然而问题就来了，提前多少？复习的内容每隔几天看一次最好？一次看多少比较好？&lt;/p&gt;
+&lt;p&gt;这些关于马冬梅和孙红雷的问题几乎每个学生党都遇到过，最重要的是，考前几周总会被莫名其妙的屁事占满，总是没有时间安排一个良好高效的复习计划。&lt;/p&gt;
+&lt;p&gt;所以，SRS就是为了解决这个问题的。&lt;/p&gt;
+&lt;p&gt;相信读者肯定都用过背单词的软件，这也是最基本的SRS软件了。其实，市面上使用量最大的SRS软件是&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;，主要的功能有以下三条：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;制卡：正面问题，背面答案&lt;/li&gt;
+&lt;li&gt;根据回忆评分&lt;/li&gt;
+&lt;li&gt;根据评分自动安排复习时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基本上有这三条就可以判断是一个间隔重复软件了，详细的介绍我放在&lt;a class=&#34;link&#34; href=&#34;https://ncase.me/remember/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;，毕竟用SRS来介绍SRS还是非常好的一件事情hhh&lt;/p&gt;
+&lt;h3 id=&#34;ir&#34;&gt;IR&lt;/h3&gt;
+&lt;p&gt;渐进阅读实际上算是一些高级玩法了，内嵌在软件中的目前只有supermemo一家。其实刚刚谈到SRS用于复习，但是你会发现SRS好像只能用来复习……&lt;/p&gt;
+&lt;p&gt;当我想学一点新的东西的时候会发现传统的线性学习会有以下的问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前面的术语看过之后，到后面用到时，我已经忘记是什么意思了orz&lt;/li&gt;
+&lt;li&gt;刚开始看的时候觉得什么都是重点，什么都想画横线&lt;/li&gt;
+&lt;li&gt;我无法多线程任务，优先级无法很好地安排&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;详细的介绍我放在&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/279553703&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&lt;strong&gt;这里&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;，毕竟前人之述备矣，就不重复造轮子了。&lt;/p&gt;
+&lt;h2 id=&#34;我的实践与经验教训&#34;&gt;我的实践与经验教训&lt;/h2&gt;
+&lt;p&gt;截至大二上学期，我成功学会了使用supermemo以及使用最快速度方法进行Ankify我的知识，下面就我所使用的过程中的一些问题和感想记录下来。&lt;/p&gt;
+&lt;h3 id=&#34;制卡本身就是学习&#34;&gt;制卡本身就是学习&lt;/h3&gt;
+&lt;p&gt;第一次看到anki时，我首先想到的就是，这太适合学语言了！所以我搜集了别人的卡组，开始背诵……&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rule1：永远不要使用别人的卡组！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;制卡以及提问的方式涉及对于知识的理解与掌握，不同的人对于知识的掌握程度不同，制卡并不能达成基本的共识，使用的chunks以及术语不同，拿来主义丧失了最宝贵的学习机会！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rule2：永远不要嫌卡片太多，尤其是初学者。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一次尝试大规模使用anki是在高三背诵生物的时候，但是当时不懂得拆分与原子化问题，导致en背……效果也不是很好&lt;/p&gt;
+&lt;h3 id=&#34;理科的灵魂在于手笔演算&#34;&gt;理科的灵魂在于手笔演算&lt;/h3&gt;
+&lt;p&gt;本学期我尝试了将Anki用于两门科目：理论力学和常微分方程，然而由于这两门课都犯了一个致命的错误——没有计算、或者说，没有规范计算，导致自己吃了两个3.3&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rule3：理科先算后输入是最好的！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;不要害怕重复制卡&#34;&gt;不要害怕重复制卡&lt;/h3&gt;
+&lt;p&gt;重复的过程中，总会发现一些难以记忆的卡片，这时候应该大胆地将其剔除掉，当有了新的理解的时候也应该及时加入，重复的过程就是SRS的意义所在&lt;/p&gt;
+&lt;h3 id=&#34;先框架后原子&#34;&gt;先框架，后原子&lt;/h3&gt;
+&lt;p&gt;在学习知识的时候，一定要先搭建知识框架，之后再进行原子化的制卡，不然会陷入原子化的制卡之中反而为知识所蒙蔽了……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下学期尝试全面SRS化！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>伊卡洛斯的翅膀</title>
         <link>https://zalouti.github.io/p/%E4%BC%8A%E5%8D%A1%E6%B4%9B%E6%96%AF%E7%9A%84%E7%BF%85%E8%86%80/</link>
         <pubDate>Mon, 31 Jan 2022 17:34:13 +0800</pubDate>
@@ -73,7 +164,7 @@
 &lt;p&gt;&lt;strong&gt;Icarus Wings.&lt;/strong&gt; 蛮横的努力可以帮助自己飞出知识的迷楼，然而这种粗暴的努力在飞到过高的天空时，只会灼伤自己。这就是自律所布下的障眼法。&lt;/p&gt;
 &lt;p&gt;我在这学期沟通表达基础与进阶课程中即兴做了一点总结，当时是这样说的：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;之前看到过某位朋友的tape提问箱，问题是：“上大学究竟带给了我什么？”&lt;/p&gt;
+&lt;p&gt;之前看到过他的tape提问箱，问题是：“上大学究竟带给了我什么？”&lt;/p&gt;
 &lt;p&gt;我的回答是：&lt;/p&gt;
 &lt;p&gt;战胜过去的恐惧，以及遇到新的恐惧。&lt;/p&gt;
 &lt;p&gt;这个学期后半段，我学到的最重要的东西，或许就是，在面对恐惧时，不是自律的自我和恐惧一同携手将自己打倒。&lt;em&gt;&lt;strong&gt;相反，自律的我、放纵的我、强大的我、弱小的我，都是我不可或缺的一部分。学会让不同的自我相互融合，或许就是想和大家分享的一些道理。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
