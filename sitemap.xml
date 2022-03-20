@@ -2,16 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://zalouti.github.io/tags/freelearning/</loc>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
+  </url><url>
     <loc>https://zalouti.github.io/post/</loc>
-    <lastmod>2022-02-27T21:58:14+08:00</lastmod>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/tags/</loc>
-    <lastmod>2022-02-27T21:58:14+08:00</lastmod>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
   </url><url>
-    <loc>https://zalouti.github.io/tags/%E5%B7%9D%E9%99%80%E5%9B%BE%E4%B9%A6%E9%A6%86/</loc>
-    <lastmod>2022-02-27T21:58:14+08:00</lastmod>
+    <loc>https://zalouti.github.io/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/</loc>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/</loc>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2022-03-20T20:05:48+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</loc>
+    <lastmod>2022-03-19T19:32:17+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2022-03-18T20:52:03+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2022-03-18T20:49:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</loc>
+    <lastmod>2022-03-15T20:12:27+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</loc>
+    <lastmod>2022-03-13T19:23:10+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/tags/sky-talk/</loc>
+    <lastmod>2022-03-12T06:59:42+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/wissenschaft-als-beruf/</loc>
+    <lastmod>2022-03-12T06:59:42+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/tags/cs106l/</loc>
+    <lastmod>2022-03-09T12:36:41+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/cs106l-sequence-container/</loc>
+    <lastmod>2022-03-09T12:36:41+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</loc>
+    <lastmod>2022-03-08T11:58:38+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/cs106l-types/</loc>
+    <lastmod>2022-03-03T13:09:26+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/cs106l-stream/</loc>
+    <lastmod>2022-03-02T13:07:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/cs106l-stream/</loc>
+    <lastmod>2022-03-02T10:27:46+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/tags/%E5%B7%9D%E9%99%80%E5%9B%BE%E4%B9%A6%E9%A6%86/</loc>
     <lastmod>2022-02-27T21:58:14+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/p/%E9%BB%84%E9%87%91%E4%B8%8E%E9%95%80%E9%87%91/</loc>
@@ -25,9 +73,6 @@
   </url><url>
     <loc>https://zalouti.github.io/p/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-02-06T20:21:32+08:00</lastmod>
-  </url><url>
-    <loc>https://zalouti.github.io/tags/sky-talk/</loc>
-    <lastmod>2022-01-31T20:37:51+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/tags/srs/</loc>
     <lastmod>2022-01-31T20:37:51+08:00</lastmod>

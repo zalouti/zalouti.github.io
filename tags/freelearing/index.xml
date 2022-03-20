@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>freelearing on 第二基地</title>
+    <link>https://zalouti.github.io/tags/freelearing/</link>
+    <description>Recent content in freelearing on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 15 Mar 2022 20:12:27 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/freelearing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第二章·轴向载荷作用的杆件</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</link>
+      <pubDate>Tue, 15 Mar 2022 20:12:27 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</guid>
+      <description>轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相</description>
+    </item>
+    
+    <item>
+      <title>CS106L Sequence container</title>
+      <link>https://zalouti.github.io/p/cs106l-sequence-container/</link>
+      <pubDate>Wed, 09 Mar 2022 12:36:41 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-sequence-container/</guid>
+      <description>overview 反正就是牛逼，不用这个就约等于只用了C+cin/cout 之后关于STL的课程将会涉及以下五个方面 Sequence container Sequence container what is sequence container? It provides the acsess to a sequence of elements 元素是按</description>
+    </item>
+    
+  </channel>
+</rss>

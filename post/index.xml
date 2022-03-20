@@ -6,7 +6,115 @@
     <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 27 Feb 2022 21:58:14 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Mar 2022 20:05:48 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第六章·梁的应力分析与强度计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Sun, 20 Mar 2022 20:05:48 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+      <description>梁的应力分析与强度计算 与应力分析相关的截面图形几何性质 为什么要研究截面图形的几何性质？ 力学性质与几何性质息息相关，受力与变形都受到几何量的影</description>
+    </item>
+    
+    <item>
+      <title>第五章·梁的剪力图和弯矩图</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</link>
+      <pubDate>Sat, 19 Mar 2022 19:32:17 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</guid>
+      <description>梁的剪力图和弯矩图 工程中的梁与梁的力学模型 梁：主要承受弯曲的杆件。 弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线</description>
+    </item>
+    
+    <item>
+      <title>第四章·圆轴扭转时的强度与刚度计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 18 Mar 2022 20:52:03 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+      <description>圆轴扭转时的强度与刚度计算 外加扭力矩、扭矩与扭矩图 作用于构件中的扭矩与机器的转速、功率相关。在传动轴计算中，通常给出传动功率$P$与转速$n</description>
+    </item>
+    
+    <item>
+      <title>第三章·连接件强度的工程假定计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 18 Mar 2022 20:49:13 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</guid>
+      <description>连接件强度的工程假定计算 连接件强度计算的工程意义</description>
+    </item>
+    
+    <item>
+      <title>第二章·轴向载荷作用的杆件</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</link>
+      <pubDate>Tue, 15 Mar 2022 20:12:27 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</guid>
+      <description>轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相</description>
+    </item>
+    
+    <item>
+      <title>第一章材料力学概论</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</link>
+      <pubDate>Sun, 13 Mar 2022 19:23:10 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</guid>
+      <description>第一章·材料力学概论 材料力学研究的内容 什么是材料力学？ 杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积） 材料的行为：在温度/外力作</description>
+    </item>
+    
+    <item>
+      <title>Wissenschaft als Beruf?</title>
+      <link>https://zalouti.github.io/p/wissenschaft-als-beruf/</link>
+      <pubDate>Sat, 12 Mar 2022 06:59:42 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/wissenschaft-als-beruf/</guid>
+      <description>Wissenschaft als Beruf !?&amp;hellip; Things fade , alternatives exclude. 标题是马克斯·韦伯的一次著名的演讲《科学作为天职》。</description>
+    </item>
+    
+    <item>
+      <title>CS106L Sequence container</title>
+      <link>https://zalouti.github.io/p/cs106l-sequence-container/</link>
+      <pubDate>Wed, 09 Mar 2022 12:36:41 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-sequence-container/</guid>
+      <description>overview 反正就是牛逼，不用这个就约等于只用了C+cin/cout 之后关于STL的课程将会涉及以下五个方面 Sequence container Sequence container what is sequence container? It provides the acsess to a sequence of elements 元素是按</description>
+    </item>
+    
+    <item>
+      <title>我所理解的流体力学</title>
+      <link>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</link>
+      <pubDate>Tue, 08 Mar 2022 11:58:38 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</guid>
+      <description>上学期某位北大的dalao整理出的课程自学的电子书实在是令人心动，回想起华大的授课水平同样需要一些优质的在线课程进行补充，遂开此坑。 我所理解</description>
+    </item>
+    
+    <item>
+      <title>Cs106L Types</title>
+      <link>https://zalouti.github.io/p/cs106l-types/</link>
+      <pubDate>Thu, 03 Mar 2022 13:09:26 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-types/</guid>
+      <description>C++ Types auto类型的使用 C++11支持自动类型，可以让编译器帮助你弄清这是什么类型 auto begin =studentMap.cbegin(); auto end =studentMAp.cend(); 几乎所有的地方都可以使用auto，除了函数的形参</description>
+    </item>
+    
+    <item>
+      <title>Cs106L StreamⅡ</title>
+      <link>https://zalouti.github.io/p/cs106l-stream/</link>
+      <pubDate>Wed, 02 Mar 2022 13:07:00 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+      <description>Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲</description>
+    </item>
+    
+    <item>
+      <title>Cs106L StreamⅠ</title>
+      <link>https://zalouti.github.io/p/cs106l-stream/</link>
+      <pubDate>Wed, 02 Mar 2022 10:27:46 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+      <description>Stream Ⅰ string stream 使用#include &amp;lt;sstream&amp;gt; ostringstream代表output string stream 创建一个stream时，默认位置在初始位置 当尝试写入stream</description>
+    </item>
+    
     <item>
       <title>黄金与镀金</title>
       <link>https://zalouti.github.io/p/%E9%BB%84%E9%87%91%E4%B8%8E%E9%95%80%E9%87%91/</link>

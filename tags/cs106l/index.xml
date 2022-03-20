@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS106L on 第二基地</title>
+    <link>https://zalouti.github.io/tags/cs106l/</link>
+    <description>Recent content in CS106L on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 09 Mar 2022 12:36:41 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/cs106l/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS106L Sequence container</title>
+      <link>https://zalouti.github.io/p/cs106l-sequence-container/</link>
+      <pubDate>Wed, 09 Mar 2022 12:36:41 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-sequence-container/</guid>
+      <description>overview 反正就是牛逼，不用这个就约等于只用了C+cin/cout 之后关于STL的课程将会涉及以下五个方面 Sequence container Sequence container what is sequence container? It provides the acsess to a sequence of elements 元素是按</description>
+    </item>
+    
+    <item>
+      <title>Cs106L Types</title>
+      <link>https://zalouti.github.io/p/cs106l-types/</link>
+      <pubDate>Thu, 03 Mar 2022 13:09:26 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-types/</guid>
+      <description>C++ Types auto类型的使用 C++11支持自动类型，可以让编译器帮助你弄清这是什么类型 auto begin =studentMap.cbegin(); auto end =studentMAp.cend(); 几乎所有的地方都可以使用auto，除了函数的形参</description>
+    </item>
+    
+    <item>
+      <title>Cs106L StreamⅡ</title>
+      <link>https://zalouti.github.io/p/cs106l-stream/</link>
+      <pubDate>Wed, 02 Mar 2022 13:07:00 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+      <description>Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲</description>
+    </item>
+    
+    <item>
+      <title>Cs106L StreamⅠ</title>
+      <link>https://zalouti.github.io/p/cs106l-stream/</link>
+      <pubDate>Wed, 02 Mar 2022 10:27:46 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+      <description>Stream Ⅰ string stream 使用#include &amp;lt;sstream&amp;gt; ostringstream代表output string stream 创建一个stream时，默认位置在初始位置 当尝试写入stream</description>
+    </item>
+    
+  </channel>
+</rss>

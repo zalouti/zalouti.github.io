@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='梁的剪力图和弯矩图 工程中的梁与梁的力学模型 梁：主要承受弯曲的杆件。 弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线'><title>第五章·梁的剪力图和弯矩图</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第五章·梁的剪力图和弯矩图'>
+<meta property='og:description' content='梁的剪力图和弯矩图 工程中的梁与梁的力学模型 梁：主要承受弯曲的杆件。 弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='材料力学' /><meta property='article:tag' content='freelearning' /><meta property='article:published_time' content='2022-03-19T19:32:17&#43;08:00'/><meta property='article:modified_time' content='2022-03-19T19:32:17&#43;08:00'/>
+<meta name="twitter:title" content="第五章·梁的剪力图和弯矩图">
+<meta name="twitter:description" content="梁的剪力图和弯矩图 工程中的梁与梁的力学模型 梁：主要承受弯曲的杆件。 弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/">第五章·梁的剪力图和弯矩图</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 19, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="梁的剪力图和弯矩图">梁的剪力图和弯矩图</h1>
+<h2 id="工程中的梁与梁的力学模型">工程中的梁与梁的力学模型</h2>
+<p>梁：主要<strong>承受弯曲</strong>的杆件。</p>
+<p>弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线将弯曲为曲线。</p>
+<p>梁的分类：</p>
+<ul>
+<li>
+<p>悬臂梁：一段固定，一段自由</p>
+<p>例子：直升机的机翼</p>
+</li>
+<li>
+<p>简支梁：一段为固定铰支座，另一端为辊轴支座（水平方向可以移动）</p>
+</li>
+<li>
+<p>外伸梁：简支梁的左右两端/某一段伸在支座的外端</p>
+</li>
+</ul>
+<h2 id="梁横截面上的内力剪力和弯矩">梁横截面上的内力——剪力和弯矩</h2>
+<h3 id="剪力和弯矩的正负号规定">剪力和弯矩的正负号规定</h3>
+<p>剪力：剪力使得构件进行<strong>顺时针旋转即为正</strong>，<strong>逆时针旋转即为负</strong></p>
+<p>弯矩：<strong>“碗口朝上”即为正，“碗口朝下”即为负</strong></p>
+<h3 id="总体平衡与局部平衡的概念">总体平衡与局部平衡的概念</h3>
+<p>总体平衡局部必然平衡，局部平衡是整体平衡的必要条件。</p>
+<h2 id="描述剪力和弯矩沿梁的轴线变化的两种方法">描述剪力和弯矩沿梁的轴线变化的两种方法</h2>
+<ol>
+<li>数学方程：剪力方程、弯矩方程</li>
+<li>图形：剪力图、弯矩图</li>
+</ol>
+<p>在载荷无突变的一段杆件的各截面上内力按照相同的规律变化。即可以用<strong>同一图线或者同一方程</strong>描述。</p>
+<h2 id="应用力系简化方法确定梁的剪力和弯矩">应用力系简化方法确定梁的剪力和弯矩</h2>
+<blockquote>
+<p><strong>远离外力一侧</strong>截面上的内力即为<strong>外力简化至截面</strong>的结果。</p>
+</blockquote>
+<ul>
+<li>不移动外力矩。</li>
+<li>选取合适的外力：约束力/外力</li>
+<li>==简化不通过外力矩==存疑，自行探究</li>
+</ul>
+<h2 id="剪力方程与弯矩方程">剪力方程与弯矩方程</h2>
+<h2 id="载荷集度剪力弯矩之间的微分关系">载荷集度、剪力、弯矩之间的微分关系</h2>
+<blockquote>
+<p>基本思想：通过微分寻找内力与外力的关系</p>
+</blockquote>
+<p><strong>设分布载荷$q(x)$向上为正方向</strong>，则有
+$$
+\frac{dF_Q(x)}{dx}=q\
+\frac{dM(x)}{dx}=F_Q
+\
+\frac{d^2M}{dx^2}=q
+$$</p>
+<ul>
+<li>
+<p>若两个相邻的控制面之间没有外部载荷，则有：
+$$
+\frac{dF_Q}{dx}=q=0 \quad \to F_Q=Const
+$$
+剪力$F_Q$是一条平行于$x$轴的直线
+$$
+\frac{dM}{dx}=F_Q=C \quad \to M=Cx+D
+$$
+弯矩$M$是一条斜直线，但是此处规定向下为弯矩的正方向</p>
+</li>
+<li>
+<p>若两个相邻的控制面之间有均匀分布的载荷，则有：
+$$
+\frac{dF_Q}{dx}=q=const \quad \to F_Q=qx+C
+$$
+剪力$F_Q$是一条斜直线
+$$
+\frac{dM}{dx}=F_Q=qx+C \quad \to M=\frac{1}{2}x^2+Cx+D
+$$
+弯矩$M$是一条抛物线</p>
+</li>
+</ul>
+<p>注意剪力图与弯矩图的对应（端面/极值点）</p>
+<h2 id="剪力图与弯矩图">剪力图与弯矩图</h2>
+<blockquote>
+<p>标注约束力时尽量标注在真实方向，可以避免正负号麻烦。</p>
+</blockquote>
+<ul>
+<li>利用力系简化快速球控制面上的力</li>
+<li>利用微分关系快速连线</li>
+</ul>
+<p>剪力的突变，反应为弯矩的左右导数不一致，丧失了光滑性：尖点向哪边尖——外加力的方向</p>
+<p>回想外力矩的施加弯矩图的分段的方向的巧合</p>
+<p>均布载荷$q$的箭头使得弯矩楼板变形hhh</p>
+<p>弯矩图喜欢画在<em><strong>受拉伸的一侧</strong></em></p>
+<ol>
+<li>
+<p>确定控制面上剪力和弯矩有几种方法？</p>
+<ol>
+<li>微分关系的灵活应用，利用面积关系由剪力图求弯矩
+$$
+\frac{dM}{dx}=F_Q \quad dM=F_Q dx\
+\int_a^edM=\int_a^eF_Qdx
+\
+M(e)-M(a)=A(F_Q)|_a^e
+$$</li>
+</ol>
+</li>
+<li>
+<p>怎样确定弯矩图上极值点处的弯矩数值？</p>
+</li>
+</ol>
+<ul>
+<li>是否能够根据剪力图反向确定约束力以及约束类型？
+<ul>
+<li>有可能确定约束力，但是约束的类型并不唯一</li>
+</ul>
+</li>
+<li>那么给定剪力图和弯矩图呢？
+<ul>
+<li>同样不能确定对应的约束</li>
+<li>单独施加载荷，分别画剪力图和弯矩图，之后叠加</li>
+<li>将约束段简化为中间的墙壁插入</li>
+</ul>
+</li>
+</ul>
+<h2 id="刚架的内力与内力图">刚架的内力与内力图</h2>
+<p>刚架的组成：横梁、立柱与刚节点</p>
+<p>关于三种内力分量，轴力、剪力、弯矩，其内力方向的特点为：</p>
+<ol>
+<li>轴力方向与观察者方向无关</li>
+<li>剪力方向与观察者无关</li>
+<li>弯矩方向与观察者有关
+<ol>
+<li>所以采用<strong>受拉侧为正，受压侧为负</strong>的方法</li>
+</ol>
+</li>
+</ol>
+<p>刚架内力图的绘制并不需要建立坐标系，原因是：</p>
+<blockquote>
+<p>物理规律与坐标系无关</p>
+</blockquote>
+<ul>
+<li>无需建立坐标系</li>
+<li>控制面、平衡微分方程</li>
+<li>弯矩的数值表在受拉边</li>
+<li>轴力、建立画在里侧与外侧均可，但是要标出正负号</li>
+<li>注意节点处的平衡关系</li>
+</ul>
+<h3 id="节点处的平衡关系">节点处的平衡关系</h3>
+<p>节点使得两侧的轴力与剪力分别平衡</p>
+<p>平衡的弯矩</p>
+<p>刚节点的弯矩特点：</p>
+<ul>
+<li>弯矩位于同侧：使得刚架两侧同时同侧受拉/受压</li>
+<li>大小必然相等</li>
+</ul>
+<h2 id="结论与讨论">结论与讨论</h2>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
+        
+            <a href="/tags/freelearning/">freelearning</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第六章·梁的应力分析与强度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第四章·圆轴扭转时的强度与刚度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第三章·连接件强度的工程假定计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第二章·轴向载荷作用的杆件</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第一章材料力学概论</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#工程中的梁与梁的力学模型">工程中的梁与梁的力学模型</a></li>
+    <li><a href="#梁横截面上的内力剪力和弯矩">梁横截面上的内力——剪力和弯矩</a>
+      <ol>
+        <li><a href="#剪力和弯矩的正负号规定">剪力和弯矩的正负号规定</a></li>
+        <li><a href="#总体平衡与局部平衡的概念">总体平衡与局部平衡的概念</a></li>
+      </ol>
+    </li>
+    <li><a href="#描述剪力和弯矩沿梁的轴线变化的两种方法">描述剪力和弯矩沿梁的轴线变化的两种方法</a></li>
+    <li><a href="#应用力系简化方法确定梁的剪力和弯矩">应用力系简化方法确定梁的剪力和弯矩</a></li>
+    <li><a href="#剪力方程与弯矩方程">剪力方程与弯矩方程</a></li>
+    <li><a href="#载荷集度剪力弯矩之间的微分关系">载荷集度、剪力、弯矩之间的微分关系</a></li>
+    <li><a href="#剪力图与弯矩图">剪力图与弯矩图</a></li>
+    <li><a href="#刚架的内力与内力图">刚架的内力与内力图</a>
+      <ol>
+        <li><a href="#节点处的平衡关系">节点处的平衡关系</a></li>
+      </ol>
+    </li>
+    <li><a href="#结论与讨论">结论与讨论</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

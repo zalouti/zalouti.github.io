@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>材料力学 on 第二基地</title>
+    <link>https://zalouti.github.io/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/</link>
+    <description>Recent content in 材料力学 on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 20 Mar 2022 20:05:48 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第六章·梁的应力分析与强度计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Sun, 20 Mar 2022 20:05:48 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+      <description>梁的应力分析与强度计算 与应力分析相关的截面图形几何性质 为什么要研究截面图形的几何性质？ 力学性质与几何性质息息相关，受力与变形都受到几何量的影</description>
+    </item>
+    
+    <item>
+      <title>第五章·梁的剪力图和弯矩图</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</link>
+      <pubDate>Sat, 19 Mar 2022 19:32:17 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</guid>
+      <description>梁的剪力图和弯矩图 工程中的梁与梁的力学模型 梁：主要承受弯曲的杆件。 弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线</description>
+    </item>
+    
+    <item>
+      <title>第四章·圆轴扭转时的强度与刚度计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 18 Mar 2022 20:52:03 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+      <description>圆轴扭转时的强度与刚度计算 外加扭力矩、扭矩与扭矩图 作用于构件中的扭矩与机器的转速、功率相关。在传动轴计算中，通常给出传动功率$P$与转速$n</description>
+    </item>
+    
+    <item>
+      <title>第三章·连接件强度的工程假定计算</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 18 Mar 2022 20:49:13 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</guid>
+      <description>连接件强度的工程假定计算 连接件强度计算的工程意义</description>
+    </item>
+    
+    <item>
+      <title>第二章·轴向载荷作用的杆件</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</link>
+      <pubDate>Tue, 15 Mar 2022 20:12:27 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</guid>
+      <description>轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相</description>
+    </item>
+    
+    <item>
+      <title>第一章材料力学概论</title>
+      <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</link>
+      <pubDate>Sun, 13 Mar 2022 19:23:10 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</guid>
+      <description>第一章·材料力学概论 材料力学研究的内容 什么是材料力学？ 杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积） 材料的行为：在温度/外力作</description>
+    </item>
+    
+  </channel>
+</rss>

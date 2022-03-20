@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相'><title>第二章·轴向载荷作用的杆件</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第二章·轴向载荷作用的杆件'>
+<meta property='og:description' content='轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-15T20:12:27&#43;08:00'/><meta property='article:modified_time' content='2022-03-15T20:12:27&#43;08:00'/>
+<meta name="twitter:title" content="第二章·轴向载荷作用的杆件">
+<meta name="twitter:description" content="轴向载荷作用下的杆件的材料力学问题 轴力与轴力图 为什么要研究内力图？ 通过绘制内力图，寻找哪一处内力最大 正负号的约定：同一处截面上两侧受力正负相">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/">第二章·轴向载荷作用的杆件</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="轴向载荷作用下的杆件的材料力学问题">轴向载荷作用下的杆件的材料力学问题</h1>
+<h2 id="轴力与轴力图">轴力与轴力图</h2>
+<p>为什么要研究内力图？</p>
+<ul>
+<li>通过绘制内力图，寻找哪一处内力最大</li>
+</ul>
+<p>正负号的约定：同一处截面上两侧受力正负相同，规定<em><strong>受拉为正，压缩为负</strong></em></p>
+<p>选取控制面是关键：即内力会发生突变的地方</p>
+<p>选取一个截面后，将此面上的内力标记为正方向的，其他外力与之同向为正，反向为负，进行代数运算。</p>
+<blockquote>
+<p>如何理解控制面两侧内力的突变？</p>
+<p>轴力图的本质是平衡状态的体现，控制面上面由外力突变，为维持平衡，内力图会突变，且<strong>突变量恰为外力的值</strong></p>
+</blockquote>
+<h2 id="拉压杆件横截面上的应力">拉压杆件横截面上的应力</h2>
+<p>当外力沿着杆件的轴线作用时，横截面上只有轴力一个内力分量，截面上只有正应力。</p>
+<p>当杆件在轴力作用下均匀伸长/变短时，由材料均匀性假定，可知此时正应力满足：
+$$
+\int_A\sigma_xdA=F_N\to \sigma=\frac{F_N}{A}
+$$
+<strong>上式表明：横截面上的正应力，与材料无关。（前提条件是？）</strong></p>
+<blockquote>
+<p>殷老师的小技巧：</p>
+<p>在分析杆件的平衡时，可以直接将平衡分析的力换为各个正方向的内力，这样便直接得到了我们需要的内力</p>
+</blockquote>
+<h2 id="拉压杆件的强度设计">拉压杆件的强度设计</h2>
+<p><strong>强度设计</strong>：将杆件中最大的应力限制在允许的范围内，保证杆件既不发生强度失效，还要有安全裕度，满足：
+$$
+\sigma_{max}\leq[\sigma]=\frac{\sigma ^0}{n}
+$$</p>
+<ul>
+<li>$[\sigma]$：许用应力</li>
+<li>$\sigma$：极限应力</li>
+<li>$n$：安全系数</li>
+</ul>
+<p>三种问题：</p>
+<ol>
+<li>强度校核：所有条件已知，检验不等式是否成立</li>
+<li>尺寸设计：根据设计准则，求对应的横截面积$A$</li>
+<li>确定许可载荷：求最大的轴力$F_N$</li>
+</ol>
+<h2 id="拉压杆件的变形分析">拉压杆件的变形分析</h2>
+<h3 id="均匀杆件">均匀杆件</h3>
+<p>对于长为$l$、杨氏模量为$E$、截面积为$A$的杆件的收到$F_P$均匀拉伸,均匀变形保证了:
+$$
+\varepsilon_x=\frac{\Delta l}{l}
+$$
+杆件伸长量$\Delta l$为：
+$$
+\Delta l=\frac{F_Pl}{EA}
+$$</p>
+<p>定义截面抗拉伸的刚度为$EA$，则$\frac{EA}{l}$为单位长度截面抗拉伸的刚度，则有：
+$$
+F_P=\frac{EA}{l}\Delta l\
+类比：F_P=k\Delta x
+$$
+可知，刚度系数$k$与杨氏模量的联系</p>
+<p>当杆件有两个及以上的外力作用时，分段求解为：
+$$
+\Delta l=\sum_i\frac{F_{Ni}l_i}{(EA)_i}
+$$</p>
+<h3 id="非均匀杆件">非均匀杆件</h3>
+<p><strong>在微元段上化非均匀为均匀</strong>，则杆件长度变化为：
+$$
+\Delta l=\int_0^l\Delta dx=\int_l\frac{F_N(x)dx}{E(x)A(x)}
+$$</p>
+<h3 id="横向变形与泊松比">横向变形与泊松比</h3>
+<p>轴向变形时，横向也会发生变形，实验结果表示，轴向应变$\varepsilon_x$与横向变形$\varepsilon_y$之间存在关系为：
+$$
+\varepsilon_x=-\nu \varepsilon_y
+$$
+其中，$\nu$为泊松比，<strong>无量纲</strong></p>
+<h2 id="结论与讨论">结论与讨论</h2>
+<h3 id="应力和变形公式的应用条件">应力和变形公式的应用条件</h3>
+<p>$$
+\sigma_x=\frac{F_N}{A}（正应力均匀分布时才成立）\
+\Delta l=\frac{F_Pl}{EA}（轴向方向均匀变形时伸长量公式才适用）
+$$</p>
+<p>如何满足上述条件？</p>
+<ul>
+<li>轴向载荷在杆件中心轴线</li>
+<li>截面均匀连续</li>
+</ul>
+<h3 id="关于加力点附近的应力分布">关于加力点附近的应力分布</h3>
+<p>圣维南原理：如果杆件两端两种外加力静力学等效，则距离加力点稍远处，静力学等效对应力风不动影响很小，可以忽略不计</p>
+<h3 id="应力集中">应力集中</h3>
+<p>几何形状的不连续出，应力会局部增大，称为应力集中</p>
+<p>应力集中的程度用应力集中因数描述，为横截面上应力最大值与不考虑应力集中时的应力值之比
+$$
+K=\frac{\sigma_{max}}{\sigma_a}
+$$</p>
+<h3 id="拉伸压缩时斜截面上的应力">拉伸压缩时斜截面上的应力</h3>
+<p>当沿着斜截面研究时，会发现角度发生了改变，必有剪应力</p>
+<p>设斜截面法向与杆件轴向的夹角为$\theta$，轴向外力为$F_P$，则有：
+$$
+F_Q=F_P\times sin \theta
+\
+F_N=F_P\times cos \theta
+$$
+设原有的横截面面积为$A$，斜截面面积为$A_{\theta}=A/cos \theta$，设应力在斜截面上均匀分布</p>
+<p>故斜截面上的正应力、剪应力分别为：
+$$
+\sigma_{\theta}=\frac{F_N}{A_{\theta}}=\sigma_x cos^2\theta
+\
+\tau_{\theta}=\frac{F_Q}{A_{\theta}}=\frac{1}{2}\sigma_x sin2\theta
+$$
+或者可以取一个小微元体，再斜切一个$\theta$角：</p>
+<p>此时小微元体横截面只受正应力$\sigma_x$，由于<strong>应力无法参与平衡，只能由力来参与平衡</strong>：
+$$
+\sigma_{\theta}dA=\sigma_x \times cos\theta\times dAcos \theta
+\
+\tau_{\theta}dA=\sigma_x \times sin\theta \times dAcos \theta
+$$
+可得结果为，说明前面对于<strong>斜截面上应力均匀分布的假设是正确</strong>的：
+$$
+\sigma_{\theta}=\frac{F_N}{A_{\theta}}=\sigma_x cos^2\theta
+\
+\tau_{\theta}=\frac{F_Q}{A_{\theta}}=\frac{1}{2}\sigma_x sin2\theta
+$$
+上面的斜截面上的应力公式还反传递出了以下信息：</p>
+<ul>
+<li>不同$\theta$角度应力不同</li>
+<li>正应力横截面最大，剪应力在$\theta=45 \degree$最大</li>
+<li>由于微元体取得比较小，英雌微元体斜面上的应力，即为过一点出不同方向的应力，故指明应力时，应该指明是哪一点处、哪一个方向上的应力</li>
+</ul>
+<h3 id="拉伸和压缩的静不定问题">拉伸和压缩的静不定问题</h3>
+<ul>
+<li>静定问题：外力或者内力可由静力学平衡方程可以直接确定的问题</li>
+<li>静不定问题：未知力的个数多于能够提供平衡方程的个数，仅依靠平衡方程无法确定的问题</li>
+</ul>
+<p>求解静不定问题需要考虑三方面的因素：</p>
+<ol>
+<li>受力平衡</li>
+<li>变形协调方程</li>
+<li>物理性质：胡克定律</li>
+</ol>
+<h2 id="开放式思维案例">开放式思维案例</h2>
+<ul>
+<li>定义一种新的应力，便于分析</li>
+<li>非均匀应力分布的分析方法，常采用<strong>微元体法</strong></li>
+</ul>
+<h2 id="应力-应变曲线">应力-应变曲线</h2>
+<ul>
+<li>
+<p>脆性材料拉伸时的应力应变曲线：</p>
+</li>
+<li>
+<p>韧性金属材料拉伸时的应力应变曲线：</p>
+</li>
+<li>
+<p>屈服应力</p>
+</li>
+<li>
+<p>条件屈服应力</p>
+<ul>
+<li>金属材料先加载，卸载时，会沿着弹性的直线恢复，当最后盈利为0时，无法恢复的塑性形变的量为0.2%时，我们称最大的应力值为条件屈服应力</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/freelearning/">freelearning</a>
+        
+            <a href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第六章·梁的应力分析与强度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第五章·梁的剪力图和弯矩图</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第四章·圆轴扭转时的强度与刚度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第三章·连接件强度的工程假定计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第一章材料力学概论</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#轴力与轴力图">轴力与轴力图</a></li>
+    <li><a href="#拉压杆件横截面上的应力">拉压杆件横截面上的应力</a></li>
+    <li><a href="#拉压杆件的强度设计">拉压杆件的强度设计</a></li>
+    <li><a href="#拉压杆件的变形分析">拉压杆件的变形分析</a>
+      <ol>
+        <li><a href="#均匀杆件">均匀杆件</a></li>
+        <li><a href="#非均匀杆件">非均匀杆件</a></li>
+        <li><a href="#横向变形与泊松比">横向变形与泊松比</a></li>
+      </ol>
+    </li>
+    <li><a href="#结论与讨论">结论与讨论</a>
+      <ol>
+        <li><a href="#应力和变形公式的应用条件">应力和变形公式的应用条件</a></li>
+        <li><a href="#关于加力点附近的应力分布">关于加力点附近的应力分布</a></li>
+        <li><a href="#应力集中">应力集中</a></li>
+        <li><a href="#拉伸压缩时斜截面上的应力">拉伸压缩时斜截面上的应力</a></li>
+        <li><a href="#拉伸和压缩的静不定问题">拉伸和压缩的静不定问题</a></li>
+      </ol>
+    </li>
+    <li><a href="#开放式思维案例">开放式思维案例</a></li>
+    <li><a href="#应力-应变曲线">应力-应变曲线</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

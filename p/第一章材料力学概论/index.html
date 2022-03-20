@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='第一章·材料力学概论 材料力学研究的内容 什么是材料力学？ 杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积） 材料的行为：在温度/外力作'><title>第一章材料力学概论</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第一章材料力学概论'>
+<meta property='og:description' content='第一章·材料力学概论 材料力学研究的内容 什么是材料力学？ 杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积） 材料的行为：在温度/外力作'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-13T19:23:10&#43;08:00'/><meta property='article:modified_time' content='2022-03-13T19:23:10&#43;08:00'/>
+<meta name="twitter:title" content="第一章材料力学概论">
+<meta name="twitter:description" content="第一章·材料力学概论 材料力学研究的内容 什么是材料力学？ 杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积） 材料的行为：在温度/外力作">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/">第一章材料力学概论</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="第一章材料力学概论">第一章·材料力学概论</h1>
+<h2 id="材料力学研究的内容">材料力学研究的内容</h2>
+<h3 id="什么是材料力学">什么是材料力学？</h3>
+<ul>
+<li>杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积）</li>
+<li>材料的行为：在温度/外力作用下表现出的力学性能与失效（宏观）</li>
+</ul>
+<p>设计出杆状构件或者零部件的合理尺寸与形状，保证足够的强度、刚度、稳定性</p>
+<ul>
+<li>强度：受理后不发生破坏或者不可恢复的变形</li>
+<li>刚度：受力变形不大</li>
+<li>稳定性：平衡的状态不发生突变（在压缩载荷之下）</li>
+</ul>
+<h2 id="内力与内分量">内力与内分量</h2>
+<p>为什么要研究<strong>内力</strong>？</p>
+<ul>
+<li>例子：跳板断裂先从根部断裂，外力作用是确定的，但是我们需要内力去解释为什么会从根部断裂。</li>
+</ul>
+<p>如何研究内力？</p>
+<ul>
+<li>采用一个假想的截面，每一点处的合力与对面截面等大反向</li>
+<li>内力可以向截面的坐标系（主矩与坐标系原点相关，主矢无关）简化为内力分量，可以得到一个内力主矢和内力主矩</li>
+</ul>
+<p>内力的分量是？</p>
+<ul>
+<li>轴力：$F_N$轴向，压缩或者拉伸</li>
+<li>剪力：$F_Q$切向，引起剪切</li>
+<li>扭矩：$M_x$轴向，引起扭转变形</li>
+<li>弯矩：$M_y$、$M_z$，引起弯曲变形
+施加方式的形象化理解：</li>
+</ul>
+<h2 id="杆件的受力与变形形式">杆件的受力与变形形式</h2>
+<blockquote>
+<p>拉压弯扭组合受力。</p>
+</blockquote>
+<ul>
+<li>拉伸或压缩：轴向的拉力或者压力，产生轴向伸长或者变形</li>
+<li>剪切：相近的两力错动时产生</li>
+<li>扭转：横截面绕其轴旋转</li>
+<li>弯曲：杆件的轴线变为曲线</li>
+<li>组合受力：以上四种受力的各种组合</li>
+</ul>
+<h2 id="工程构件静力学设计的主要内容">工程构件静力学设计的主要内容</h2>
+<p>工程设计一般需要完成以下几方面的工作：</p>
+<ol>
+<li>分析构件的外力</li>
+<li>研究其内力、变形、失效规律</li>
+<li>提出保证构件具有足够强度、刚度、稳定性的准则与设计方法</li>
+</ol>
+<h2 id="弹性体受力与变形特征">弹性体受力与变形特征</h2>
+<p>力：</p>
+<p>矩：</p>
+<p>两个平衡：</p>
+<ul>
+<li>内力与外力的平衡：截面与其分割的材料的外力</li>
+<li>内力与内力的平衡：截面与截面满足牛顿第三定律</li>
+</ul>
+<p><strong>变形协调</strong>：材料不能重叠，不能出现空缺</p>
+<p>典型的例子是：两根绳子拉着杆件的静力学问题是静定的，三根绳子则为静不定的，需要补充变形协调方程</p>
+<blockquote>
+<p>分析问题时：平衡+变形协调</p>
+</blockquote>
+<h2 id="关于材料的基本假定">关于材料的基本假定</h2>
+<p><em><strong>均匀、连续、各向同性。</strong></em></p>
+<ul>
+<li>
+<p>均匀：构件不同位置处材料性能相同</p>
+</li>
+<li>
+<p>连续：类比函数的连续，各种物理量可以表达为坐标的函数，可以使用微积分方法</p>
+</li>
+<li>
+<p>各向同性：同一位置各个方向看到的一样</p>
+</li>
+</ul>
+<h2 id="应力应变及其相互关系">应力、应变及其相互关系</h2>
+<h3 id="为什么要研究应力">为什么要研究应力？</h3>
+<ul>
+<li>只有一端支撑的梁，在无支撑的一端施力，最上方先断裂，这是我们需要一个点的概念，使得我们能够解释为何同一截面上的行为不同</li>
+</ul>
+<h3 id="应力的定义">应力的定义</h3>
+<p><strong>应力</strong>：分布的内力在一点的集度，就是单位面积上的内力。</p>
+<p>集度的研究无法再一点上面研究，需要在邻域$\Delta A$上研究，此时主矢为$\Delta F$，分量为$\Delta F_Q$、$\Delta F_N$。此时忽略主矩，由于邻域$\Delta A$线度很小，故主矩为高阶小量。</p>
+<p>作用线垂直于截面，为正应力：
+$$
+\sigma =\lim_{\Delta A\to0}\frac{\Delta F_N}{\Delta A}
+$$</p>
+<p>作用线位于截面，为剪应力：
+$$
+\tau =\lim_{\Delta A\to0}\frac{\Delta F_Q}{\Delta A}
+$$</p>
+<h3 id="应力与内力分量的关系">应力与内力分量的关系</h3>
+<blockquote>
+<p>由$\sigma$可以得到轴力与弯矩，但是却不能由轴力与弯矩得到每一点的应力，为什么？</p>
+<p>这是由于，由力确定应力是一个<strong>超静定</strong>问题。</p>
+</blockquote>
+<p>假设以下各式中各量均为正方向：</p>
+<ul>
+<li>
+<p>轴力与正应力：
+$$
+\int_A \sigma_x dA=F_N
+$$</p>
+</li>
+<li>
+<p>弯矩与正应力：
+$$
+\int_A(\sigma_x dA)z=M_y\
+\int_A(\sigma_x dA)y=-M_z
+$$</p>
+</li>
+<li>
+<p>切应力与剪应力：</p>
+<p>$\tau_{xy}$表示截面法向为x，指向y
+$$
+\int_A \tau_{xy}dA=F_{Qy}
+\
+\int_A \tau_{xz}dA=F_{Qz}
+\
+-\int_A(\tau_{xy}dA)z+\int_A(\tau_{xz}dA)y=M_x
+$$
+同正应力一样，<strong>剪应力的分布也是超静定问题</strong>。</p>
+</li>
+</ul>
+<h3 id="应变的定义">应变的定义</h3>
+<p>在构件截面上取一个长方体的<strong>微单元体dxdydz</strong>:</p>
+<ul>
+<li>正应变：正应力引起的线变形的程度，用$\varepsilon$表示</li>
+<li>角应变：剪应力引起的角变形的程度，用$\gamma$表示</li>
+</ul>
+<p>$$
+\varepsilon_x=\frac{\Delta dx}{dx}
+\
+\gamma=\alpha+\beta
+$$</p>
+<p>其中，$dx$为微元体的边长，$\Delta dx$表示边长的改变量，$\alpha、\beta$分别为两边的变化角度</p>
+<p>不难发现，<strong>应变无量纲。</strong></p>
+<h3 id="应变与应力的关系">应变与应力的关系</h3>
+<p>对于大多数金属材料，变形不是很大、受力不是很大的时候，应力与应变满足线性关系：
+$$
+\sigma=E\varepsilon\
+\tau=G\gamma
+$$
+其中，$E$为杨氏模量，单位为$Pa$，又称为线弹性模量；$G$为剪切模量，单位为$Pa$</p>
+<p>常用单位满足：
+$$
+1 Gpa=1\times10^9 Pa
+\
+1 Mpa=1\times10^6 Pa
+\
+1 kpa=1\times10^3 Pa
+$$</p>
+<h2 id="结论与讨论">结论与讨论</h2>
+<h3 id="刚体模型与弹性体模型">刚体模型与弹性体模型</h3>
+<ul>
+<li>平衡问题：采用刚体分析</li>
+<li>变形问题：弹性体模型</li>
+</ul>
+<h3 id="弹性体受力及变形特点">弹性体受力及变形特点</h3>
+<p>材力中的约束：</p>
+<ol>
+<li>外力平衡</li>
+<li>变形协调</li>
+<li>力与变形的物性关系</li>
+</ol>
+<p>这是与理论力学区别所在。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/freelearning/">freelearning</a>
+        
+            <a href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第六章·梁的应力分析与强度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第五章·梁的剪力图和弯矩图</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第四章·圆轴扭转时的强度与刚度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第三章·连接件强度的工程假定计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第二章·轴向载荷作用的杆件</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#材料力学研究的内容">材料力学研究的内容</a>
+      <ol>
+        <li><a href="#什么是材料力学">什么是材料力学？</a></li>
+      </ol>
+    </li>
+    <li><a href="#内力与内分量">内力与内分量</a></li>
+    <li><a href="#杆件的受力与变形形式">杆件的受力与变形形式</a></li>
+    <li><a href="#工程构件静力学设计的主要内容">工程构件静力学设计的主要内容</a></li>
+    <li><a href="#弹性体受力与变形特征">弹性体受力与变形特征</a></li>
+    <li><a href="#关于材料的基本假定">关于材料的基本假定</a></li>
+    <li><a href="#应力应变及其相互关系">应力、应变及其相互关系</a>
+      <ol>
+        <li><a href="#为什么要研究应力">为什么要研究应力？</a></li>
+        <li><a href="#应力的定义">应力的定义</a></li>
+        <li><a href="#应力与内力分量的关系">应力与内力分量的关系</a></li>
+        <li><a href="#应变的定义">应变的定义</a></li>
+        <li><a href="#应变与应力的关系">应变与应力的关系</a></li>
+      </ol>
+    </li>
+    <li><a href="#结论与讨论">结论与讨论</a>
+      <ol>
+        <li><a href="#刚体模型与弹性体模型">刚体模型与弹性体模型</a></li>
+        <li><a href="#弹性体受力及变形特点">弹性体受力及变形特点</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

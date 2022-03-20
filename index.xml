@@ -6,7 +6,1243 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 27 Feb 2022 21:58:14 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Mar 2022 20:05:48 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第六章·梁的应力分析与强度计算</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+        <pubDate>Sun, 20 Mar 2022 20:05:48 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+        <description>&lt;h1 id=&#34;梁的应力分析与强度计算&#34;&gt;梁的应力分析与强度计算&lt;/h1&gt;
+&lt;h2 id=&#34;与应力分析相关的截面图形几何性质&#34;&gt;与应力分析相关的截面图形几何性质&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要研究截面图形的几何性质？&lt;/p&gt;
+&lt;p&gt;力学性质与几何性质息息相关，受力与变形都受到几何量的影响。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lagrange力学是一种$n$维曲面上的$Riemann$几何&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;希望能有机会搞清楚这些事情orz&lt;/p&gt;
+&lt;h3 id=&#34;静矩形心及其相互关系&#34;&gt;静矩、形心及其相互关系&lt;/h3&gt;
+&lt;p&gt;定义截面法向为$x$，其静矩为：
+$$
+S_y=\int_A z dA\
+S_z=\int_A y dA
+$$
+静矩可以近似理解为：单位面积对于某一坐标轴的重力的矩，实际上就是&lt;strong&gt;某种静面积/静力的矩&lt;/strong&gt;（设单位面积上的力为一个单位）。&lt;/p&gt;
+&lt;p&gt;设形心坐标为$(y_c,z_c)$，则有
+$$
+S_y=Az_c=\int_A z dA
+\
+S_z=Ay_c=\int_A y dA
+$$
+概括即为：**分力之矩之和等于合力之矩。**本质上是$Lagrange$中值定理。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静矩与形心可以相互确定。&lt;/li&gt;
+&lt;li&gt;静矩与坐标相关，形心则有图形本身确定，与坐标无关。&lt;/li&gt;
+&lt;li&gt;特殊地，如果图形对于轴的静矩为0，则说明此轴通过形心，反之，若坐标轴通过形心，则说明图形对于这一轴的静矩为0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于组合图形，静矩的确定方式可以类比质心：
+$$
+S_y=\sum_{i=1}^nA_iy_{Ci}=Ay_C
+\
+S_z=\sum_{i=1}^nA_iz_{Ci}=Az_C
+$$&lt;/p&gt;
+&lt;h3 id=&#34;惯性矩极惯性矩惯性积惯性半径&#34;&gt;惯性矩、极惯性矩、惯性积、惯性半径&lt;/h3&gt;
+&lt;p&gt;惯性矩被称为二阶矩，静矩被称为一阶矩。
+$$
+I_y=\int_A z^2 dA
+\
+I_z=\int_A y^2 dA
+$$
+此时产生了惯性半径$i_y$、$i_z$的定义为（在将来稳定性分析时会用得到）：
+$$
+i_y=\sqrt\frac{I_y}{A}
+\
+i_z=\sqrt\frac{I_z}{A}
+$$&lt;/p&gt;
+&lt;p&gt;定义对于$y、z$轴的惯性积$I_{xy}$为：
+$$
+I_{xy}=\int_A xy dA
+$$
+定义图形对于$O$点的极惯性矩$I_P$为：
+$$
+I_P=\int_Ar^2dA
+$$
+且极惯性矩与轴惯性矩有关系：
+$$
+I_P=I_y+I_z
+$$
+&lt;em&gt;Hints：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;极惯性矩与轴惯性矩的关系反映出：绕坐标原点$O$的所有正交系$I_P$相同&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正负号情况：
+$$
+I_y \geq0 \quad I_z\geq 0 \quad I_{yz}未知 \quad I_P\geq0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用的惯性矩：&lt;/p&gt;
+&lt;p&gt;设圆截面的直径为$d$，则有
+$$
+I_y=I_z=\frac{\pi d^4}{64} \quad I_P=\frac{\pi d^4}{32}
+$$
+设矩形截面为$h\times b$（分别对应$y、z$轴），则有
+$$
+I_y=\frac{b^3h}{12} \quad I_z=\frac{bh^3}{12}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;惯性矩与惯性积的移轴定理&#34;&gt;惯性矩与惯性积的移轴定理&lt;/h3&gt;
+&lt;p&gt;其本质是坐标的&lt;strong&gt;平移变换&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fermat的深刻思想：&lt;/p&gt;
+&lt;p&gt;圆锥曲线在不同坐标系下表示的方程不同，如何用一个不变量来检验二者表示的是同一条曲线？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是非常遗憾的一件事。（笑&lt;/p&gt;
+&lt;p&gt;因此，简化方程为标准形式，保留下来的仅为最基本的不变量。&lt;/p&gt;
+&lt;p&gt;设老坐标系$y-z$（注意z为横轴）的原点$O$在新坐标系$y_1-z_1$下坐标为$(a,b)$，已知$I_y、I_z、I_{yz}$，求$I_{y1}、I_{z1}、I_{y_1z_1}$&lt;/p&gt;
+&lt;p&gt;已知坐标变换关系为：
+$$
+y_1=y+a \quad z_1=z+b
+$$
+因此根据惯性矩、惯性积的定义可得：
+$$
+I_{y_1}=\int_A (z+b)^2 dA
+\
+I_{z_1}=\int_A (y+a)^2 dA
+\
+I_{y_1z_1}=\int_A(z+b)(y+a)dA
+$$
+即有：
+$$
+\begin{aligned}
+&amp;amp;I_{y 1}=I_{y}+2 b S_{y}+b^{2} A \
+&amp;amp;I_{z 1}=I_{z}+2 a S_{z}+a^{2} A \
+&amp;amp;I_{y 1 z 1}=I_{y z}+a S_{y}+b S_{z}+a b A
+\end{aligned}
+$$
+当老坐标正好通过图形的形心时，静矩$S$为0，则有：
+$$
+\begin{aligned}
+&amp;amp;I_{y 1}=I_{y}+b^{2} A \
+&amp;amp;I_{z 1}=I_{z}+a^{2} A \
+&amp;amp;I_{y 1 z 1}=I_{y z}+a b A
+\end{aligned}
+$$
+&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于积分的形式可知，从形心开始平移，轴惯性矩总是增加——&lt;strong&gt;形心轴惯性矩最小&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;平移前后惯性积可能增加可能减少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;惯性矩与惯性积的转轴的概念&#34;&gt;惯性矩与惯性积的转轴的概念&lt;/h3&gt;
+&lt;p&gt;本质上是坐标的&lt;strong&gt;旋转变换。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设老坐标$y-z$逆时针旋转$\alpha$角得到新坐标系$y_1-z_1$：&lt;/p&gt;
+&lt;h1 id=&#34;endpmatrix&#34;&gt;可知坐标变换关系为：
+$$
+\begin{pmatrix}
+z_1
+\
+y_1
+\end{pmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{pmatrix}
+cos \alpha &amp;amp;&amp;amp; sin\alpha
+\
+-sin \alpha &amp;amp;&amp;amp;cos \alpha
+\end{pmatrix}
+\begin{pmatrix}
+z
+\
+y
+\end{pmatrix}
+$$
+由定义可知，新坐标系下惯性矩、惯性积则为：
+$$
+\begin{aligned}
+&amp;amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \
+&amp;amp;I_{z 1}=\frac{I_{y}+I_{z}}{2}-\frac{I_{y}-I_{z}}{2} \cos 2 \alpha-I_{y z} \sin 2 \alpha \
+&amp;amp;I_{y 1 z 1}=-\frac{I_{y}-I_{z}}{2} \sin 2 \alpha+I_{y z} \cos 2 \alpha
+\end{aligned}
+$$
+&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据上述公式显然有$I_{y_1}+I_{z_1}=I_y+I_z=I_P$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;主轴与形心主轴主惯性矩与形心主惯性矩&#34;&gt;主轴与形心主轴、主惯性矩与形心主惯性矩&lt;/h3&gt;
+&lt;p&gt;显然存在某个$\alpha_0$，使得：
+$$
+I_{y 0 z 0}=-\frac{I_{y}-I_{z}}{2} \sin 2 \alpha_{0}+I_{y z} \cos 2 \alpha_{0}=0
+$$
+则称此时这&lt;strong&gt;一对坐标轴&lt;/strong&gt;为主轴。&lt;/p&gt;
+&lt;p&gt;且显然有：
+$$
+\tan 2 \alpha_{0}=\frac{2 I_{y z}}{I_{y}-I_{z}}
+$$
+此时的轴惯性矩为：
+$$
+\begin{aligned}
+&amp;amp;I_{y 0}=I_{\max }=\frac{I_{y}+I_{z}}{2} \pm \frac{1}{2} \sqrt{\left(I_{y}-I_{z}\right)^{2}+4 I_{y z}^{2}} \
+&amp;amp;I_{z 0}=I_{\min }=\frac{I_{y}+I_{z}}{2} \mp \frac{1}{2} \sqrt{\left(I_{y}-I_{z}\right)^{2}+4 I_{y z}^{2}}
+\end{aligned}
+$$
+&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$I_{y0}、I_{z0}$也是不变量，意味着上述公式中的每一项都与$\alpha$无关&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图形的轴惯性矩与坐标相关，但是主轴的惯性矩一定对应这些坐标的极大与极小值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;任意一点均有主轴，但是我们最感兴趣的是&lt;strong&gt;形心主轴&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有对称轴截面的惯性主轴：&lt;/p&gt;
+&lt;p&gt;当取图形的对称轴为坐标轴，&lt;strong&gt;对称轴以及与之垂直的任意轴&lt;/strong&gt;即为过两者交点的主轴&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>第五章·梁的剪力图和弯矩图</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</link>
+        <pubDate>Sat, 19 Mar 2022 19:32:17 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/</guid>
+        <description>&lt;h1 id=&#34;梁的剪力图和弯矩图&#34;&gt;梁的剪力图和弯矩图&lt;/h1&gt;
+&lt;h2 id=&#34;工程中的梁与梁的力学模型&#34;&gt;工程中的梁与梁的力学模型&lt;/h2&gt;
+&lt;p&gt;梁：主要&lt;strong&gt;承受弯曲&lt;/strong&gt;的杆件。&lt;/p&gt;
+&lt;p&gt;弯曲：杆件承受垂直于轴线的外力或者位于其轴线所在的平面内的力偶作用时，轴线将弯曲为曲线。&lt;/p&gt;
+&lt;p&gt;梁的分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;悬臂梁：一段固定，一段自由&lt;/p&gt;
+&lt;p&gt;例子：直升机的机翼&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;简支梁：一段为固定铰支座，另一端为辊轴支座（水平方向可以移动）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外伸梁：简支梁的左右两端/某一段伸在支座的外端&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;梁横截面上的内力剪力和弯矩&#34;&gt;梁横截面上的内力——剪力和弯矩&lt;/h2&gt;
+&lt;h3 id=&#34;剪力和弯矩的正负号规定&#34;&gt;剪力和弯矩的正负号规定&lt;/h3&gt;
+&lt;p&gt;剪力：剪力使得构件进行&lt;strong&gt;顺时针旋转即为正&lt;/strong&gt;，&lt;strong&gt;逆时针旋转即为负&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;弯矩：&lt;strong&gt;“碗口朝上”即为正，“碗口朝下”即为负&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;总体平衡与局部平衡的概念&#34;&gt;总体平衡与局部平衡的概念&lt;/h3&gt;
+&lt;p&gt;总体平衡局部必然平衡，局部平衡是整体平衡的必要条件。&lt;/p&gt;
+&lt;h2 id=&#34;描述剪力和弯矩沿梁的轴线变化的两种方法&#34;&gt;描述剪力和弯矩沿梁的轴线变化的两种方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数学方程：剪力方程、弯矩方程&lt;/li&gt;
+&lt;li&gt;图形：剪力图、弯矩图&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在载荷无突变的一段杆件的各截面上内力按照相同的规律变化。即可以用&lt;strong&gt;同一图线或者同一方程&lt;/strong&gt;描述。&lt;/p&gt;
+&lt;h2 id=&#34;应用力系简化方法确定梁的剪力和弯矩&#34;&gt;应用力系简化方法确定梁的剪力和弯矩&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;远离外力一侧&lt;/strong&gt;截面上的内力即为&lt;strong&gt;外力简化至截面&lt;/strong&gt;的结果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;不移动外力矩。&lt;/li&gt;
+&lt;li&gt;选取合适的外力：约束力/外力&lt;/li&gt;
+&lt;li&gt;==简化不通过外力矩==存疑，自行探究&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;剪力方程与弯矩方程&#34;&gt;剪力方程与弯矩方程&lt;/h2&gt;
+&lt;h2 id=&#34;载荷集度剪力弯矩之间的微分关系&#34;&gt;载荷集度、剪力、弯矩之间的微分关系&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基本思想：通过微分寻找内力与外力的关系&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;设分布载荷$q(x)$向上为正方向&lt;/strong&gt;，则有
+$$
+\frac{dF_Q(x)}{dx}=q\
+\frac{dM(x)}{dx}=F_Q
+\
+\frac{d^2M}{dx^2}=q
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;若两个相邻的控制面之间没有外部载荷，则有：
+$$
+\frac{dF_Q}{dx}=q=0 \quad \to F_Q=Const
+$$
+剪力$F_Q$是一条平行于$x$轴的直线
+$$
+\frac{dM}{dx}=F_Q=C \quad \to M=Cx+D
+$$
+弯矩$M$是一条斜直线，但是此处规定向下为弯矩的正方向&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若两个相邻的控制面之间有均匀分布的载荷，则有：
+$$
+\frac{dF_Q}{dx}=q=const \quad \to F_Q=qx+C
+$$
+剪力$F_Q$是一条斜直线
+$$
+\frac{dM}{dx}=F_Q=qx+C \quad \to M=\frac{1}{2}x^2+Cx+D
+$$
+弯矩$M$是一条抛物线&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意剪力图与弯矩图的对应（端面/极值点）&lt;/p&gt;
+&lt;h2 id=&#34;剪力图与弯矩图&#34;&gt;剪力图与弯矩图&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;标注约束力时尽量标注在真实方向，可以避免正负号麻烦。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;利用力系简化快速球控制面上的力&lt;/li&gt;
+&lt;li&gt;利用微分关系快速连线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;剪力的突变，反应为弯矩的左右导数不一致，丧失了光滑性：尖点向哪边尖——外加力的方向&lt;/p&gt;
+&lt;p&gt;回想外力矩的施加弯矩图的分段的方向的巧合&lt;/p&gt;
+&lt;p&gt;均布载荷$q$的箭头使得弯矩楼板变形hhh&lt;/p&gt;
+&lt;p&gt;弯矩图喜欢画在&lt;em&gt;&lt;strong&gt;受拉伸的一侧&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;确定控制面上剪力和弯矩有几种方法？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;微分关系的灵活应用，利用面积关系由剪力图求弯矩
+$$
+\frac{dM}{dx}=F_Q \quad dM=F_Q dx\
+\int_a^edM=\int_a^eF_Qdx
+\
+M(e)-M(a)=A(F_Q)|_a^e
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;怎样确定弯矩图上极值点处的弯矩数值？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;是否能够根据剪力图反向确定约束力以及约束类型？
+&lt;ul&gt;
+&lt;li&gt;有可能确定约束力，但是约束的类型并不唯一&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;那么给定剪力图和弯矩图呢？
+&lt;ul&gt;
+&lt;li&gt;同样不能确定对应的约束&lt;/li&gt;
+&lt;li&gt;单独施加载荷，分别画剪力图和弯矩图，之后叠加&lt;/li&gt;
+&lt;li&gt;将约束段简化为中间的墙壁插入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;刚架的内力与内力图&#34;&gt;刚架的内力与内力图&lt;/h2&gt;
+&lt;p&gt;刚架的组成：横梁、立柱与刚节点&lt;/p&gt;
+&lt;p&gt;关于三种内力分量，轴力、剪力、弯矩，其内力方向的特点为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;轴力方向与观察者方向无关&lt;/li&gt;
+&lt;li&gt;剪力方向与观察者无关&lt;/li&gt;
+&lt;li&gt;弯矩方向与观察者有关
+&lt;ol&gt;
+&lt;li&gt;所以采用&lt;strong&gt;受拉侧为正，受压侧为负&lt;/strong&gt;的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;刚架内力图的绘制并不需要建立坐标系，原因是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;物理规律与坐标系无关&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;无需建立坐标系&lt;/li&gt;
+&lt;li&gt;控制面、平衡微分方程&lt;/li&gt;
+&lt;li&gt;弯矩的数值表在受拉边&lt;/li&gt;
+&lt;li&gt;轴力、建立画在里侧与外侧均可，但是要标出正负号&lt;/li&gt;
+&lt;li&gt;注意节点处的平衡关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;节点处的平衡关系&#34;&gt;节点处的平衡关系&lt;/h3&gt;
+&lt;p&gt;节点使得两侧的轴力与剪力分别平衡&lt;/p&gt;
+&lt;p&gt;平衡的弯矩&lt;/p&gt;
+&lt;p&gt;刚节点的弯矩特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;弯矩位于同侧：使得刚架两侧同时同侧受拉/受压&lt;/li&gt;
+&lt;li&gt;大小必然相等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title>第四章·圆轴扭转时的强度与刚度计算</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</link>
+        <pubDate>Fri, 18 Mar 2022 20:52:03 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/</guid>
+        <description>&lt;h1 id=&#34;圆轴扭转时的强度与刚度计算&#34;&gt;圆轴扭转时的强度与刚度计算&lt;/h1&gt;
+&lt;h2 id=&#34;外加扭力矩扭矩与扭矩图&#34;&gt;外加扭力矩、扭矩与扭矩图&lt;/h2&gt;
+&lt;p&gt;作用于构件中的扭矩与机器的转速、功率相关。在传动轴计算中，通常给出传动功率$P$与转速$n$，可得外加力矩$M_e$为：
+$$
+M_e \omega=P(SI)
+\
+M_e=9549\frac{P}{n}(P单位为kW,n单位为r/min)
+$$
+扭矩与扭矩图的研究同之前轴力与轴力图的方法。&lt;/p&gt;
+&lt;h2 id=&#34;剪应力互等成对定理&#34;&gt;剪应力互等/成对定理&lt;/h2&gt;
+&lt;p&gt;由于一个面上的力偶无法独自平衡，所以需要另有一对力偶与之平衡，则有：
+$$
+(\tau dy dz)dx=(\tau&amp;rsquo;dxdz)dy \to \tau=\tau&#39;
+$$
+严谨表述为：在两个相互垂直的平面上，净盈利必然成对存在且数值相等，两者都垂直于两个平面的交线，方向则共同指向或者背离这一交线&lt;/p&gt;
+&lt;h2 id=&#34;圆轴扭转时横截面上的剪应力分析与强度设计&#34;&gt;圆轴扭转时横截面上的剪应力分析与强度设计&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;变形协调+物性关系+平衡方程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;平面假定&lt;/strong&gt;：圆柱体做扭转时，假定横截面只做刚性的旋转，并不改变轴向位置&lt;/p&gt;
+&lt;p&gt;设圆轴半径为$\rho$处的剪应变为$\gamma(\rho)$，则&lt;strong&gt;变形协调&lt;/strong&gt;方程为：
+$$
+\gamma(\rho)=\rho\frac{d\varphi}{dx}
+$$
+由&lt;strong&gt;物性关系&lt;/strong&gt;可知截面上剪应力分布为：
+$$
+\tau=G\gamma=G\rho\frac{d\varphi}{dx}
+$$
+但是我们仍然不清楚单位长度的相对扭转角$\frac{d\varphi}{dx}$的值，需要用&lt;strong&gt;平衡方程&lt;/strong&gt;获取：
+$$
+\int_A(\tau dA)\rho=M_x
+\
+\frac{d\varphi}{dx}=\frac{M_x}{GI_P}
+$$
+其中，我们定义$GI_P$为&lt;strong&gt;扭转刚度&lt;/strong&gt;，$I_P$的定义为：
+$$
+I_P=\int_A \rho^2 dA
+$$
+故在扭转中的剪应力为：
+$$
+\tau(\rho)=\frac{M_x\rho}{I_P}（注意沿着圆心径向分布）
+$$
+剪应力取最大值为$\rho$取最大值时，设扭转截面模量$W_P$为：
+$$
+W_P=\frac{I_P}{\rho_{max}} \quad
+\to
+\quad
+\tau_{max}=\frac{M_x}{W_P}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;截面的极惯性矩与扭转截面模量&#34;&gt;截面的极惯性矩与扭转截面模量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对于直径为$d$的实心圆截面
+$$
+I_P = \frac{\pi d^4}{32}  \quad W_P=\frac{\pi d^3}{16}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于内外直径分别为$d$和$D$的圆环截面
+$$
+I_P=\frac{\pi D^4(1-\alpha^4)}{32} \quad W_P=\frac{\pi D^3(1-\alpha^4)}{16}
+\quad
+\alpha=\frac{d}{D}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;受扭转的圆轴的强度设计准则&#34;&gt;受扭转的圆轴的强度设计准则&lt;/h3&gt;
+&lt;p&gt;类比拉压杆件，则有：
+$$
+\tau_{max}=\frac{M_{x,max}}{W_P}\leq[\tau]
+$$
+共有三类问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;强度校核&lt;/li&gt;
+&lt;li&gt;尺寸设计&lt;/li&gt;
+&lt;li&gt;最大许可扭矩&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;圆杆扭转时的变形及刚度条件&#34;&gt;圆杆扭转时的变形及刚度条件&lt;/h2&gt;
+&lt;p&gt;受纽圆轴的相对扭转角$\varphi$为：
+$$
+\varphi=\int_ld\varphi=\int_l \frac{M_x}{GI_P}dx
+$$&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;两端承受集中扭矩的等截面圆轴
+$$
+\varphi_{AB}=\frac{M_xl}{GI_P}=\frac{M_el}{GI_P}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各段不等
+分段研究之后累加:
+$$
+\varphi_{AB}=\sum_{i=1}^{n}\frac{M_{xi}l_i}{GI_{Pi}}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;均匀分布的力偶
+需要积分运算$M(x)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;受扭圆轴的刚度设计准则&#34;&gt;受扭圆轴的刚度设计准则&lt;/h3&gt;
+&lt;p&gt;一般地，设计准则为：
+$$
+\theta=\frac{d\varphi}{dx}\leq[\theta]
+$$
+对于之前的两端集中承受扭矩的等截面圆轴则有
+$$
+\theta=\frac{M_x}{GI_P}\leq[\theta]
+$$
+类比也可以进行三类问题的运算：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;刚度校核&lt;/li&gt;
+&lt;li&gt;尺寸设计&lt;/li&gt;
+&lt;li&gt;最大载荷&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;note:计算时需要同一单位，注意弧度与角度！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
+&lt;h3 id=&#34;关于公式的应用条件&#34;&gt;关于公式的应用条件&lt;/h3&gt;
+&lt;p&gt;扭转剪应力公式是圆轴在弹性范围内导出的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;必须是圆轴&lt;/li&gt;
+&lt;li&gt;必须满足胡克定律&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;矩形截面杆扭转时横截面上的剪应力&#34;&gt;矩形截面杆扭转时横截面上的剪应力&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;变形特征——翘曲
+扭转后，横截面将不再保持平面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由平衡直接得到的结论（弹性力学中的基本结论）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;角点的剪应力为0&lt;/li&gt;
+&lt;li&gt;边缘各点剪应力沿着切线方向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;剪应力分布与剪应力公式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最大的切应力发生在长边中点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\tau_{max}=\frac{M_x}{C_1hb^2} \quad 长边h中点处
+\
+\tau_{max}&#39;=C_1&#39;\tau_{max} \quad 短边中点处
+$$&lt;/p&gt;
+&lt;p&gt;其中，$C_1$、$C_1’$查表可得对应系数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;狭长矩形截面
+当长边$h$远大于短边$\delta$时，$C_1=0.3333 \approx\frac{1}{3}$，可得：
+$$
+\tau_{max}=\frac{3M_x}{h\delta^2}
+$$
+此时长边的切应力接近于线性变化，短边切应力几乎为0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个小问题：一张A4纸，直接扭转与卷成纸筒，谁更抗扭转？&lt;/p&gt;
+&lt;p&gt;显然是纸筒，但是为什么呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;纸筒上的切应力为线性分布，在纸厚非常小的情况下，可视作线性分布，已知纸筒的半径为$r$，对于中心点取矩可得:
+$$
+M_x=\oint\tau ,r,dA
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;而一张A4纸的截面，恰为一个狭长矩形截面，对于相同的扭矩$M_x$，此时力臂最大为$\delta$，故此时剪应力$\tau$分布在狭小的一块区域中且数值极大，因此抗扭转的能力更弱&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>第三章·连接件强度的工程假定计算</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</link>
+        <pubDate>Fri, 18 Mar 2022 20:49:13 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</guid>
+        <description>&lt;h1 id=&#34;连接件强度的工程假定计算&#34;&gt;连接件强度的工程假定计算&lt;/h1&gt;
+&lt;h2 id=&#34;连接件强度计算的工程意义&#34;&gt;连接件强度计算的工程意义&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title>第二章·轴向载荷作用的杆件</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</link>
+        <pubDate>Tue, 15 Mar 2022 20:12:27 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%BD%B4%E5%90%91%E8%BD%BD%E8%8D%B7%E4%BD%9C%E7%94%A8%E7%9A%84%E6%9D%86%E4%BB%B6/</guid>
+        <description>&lt;h1 id=&#34;轴向载荷作用下的杆件的材料力学问题&#34;&gt;轴向载荷作用下的杆件的材料力学问题&lt;/h1&gt;
+&lt;h2 id=&#34;轴力与轴力图&#34;&gt;轴力与轴力图&lt;/h2&gt;
+&lt;p&gt;为什么要研究内力图？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过绘制内力图，寻找哪一处内力最大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正负号的约定：同一处截面上两侧受力正负相同，规定&lt;em&gt;&lt;strong&gt;受拉为正，压缩为负&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;选取控制面是关键：即内力会发生突变的地方&lt;/p&gt;
+&lt;p&gt;选取一个截面后，将此面上的内力标记为正方向的，其他外力与之同向为正，反向为负，进行代数运算。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何理解控制面两侧内力的突变？&lt;/p&gt;
+&lt;p&gt;轴力图的本质是平衡状态的体现，控制面上面由外力突变，为维持平衡，内力图会突变，且&lt;strong&gt;突变量恰为外力的值&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;拉压杆件横截面上的应力&#34;&gt;拉压杆件横截面上的应力&lt;/h2&gt;
+&lt;p&gt;当外力沿着杆件的轴线作用时，横截面上只有轴力一个内力分量，截面上只有正应力。&lt;/p&gt;
+&lt;p&gt;当杆件在轴力作用下均匀伸长/变短时，由材料均匀性假定，可知此时正应力满足：
+$$
+\int_A\sigma_xdA=F_N\to \sigma=\frac{F_N}{A}
+$$
+&lt;strong&gt;上式表明：横截面上的正应力，与材料无关。（前提条件是？）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;殷老师的小技巧：&lt;/p&gt;
+&lt;p&gt;在分析杆件的平衡时，可以直接将平衡分析的力换为各个正方向的内力，这样便直接得到了我们需要的内力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;拉压杆件的强度设计&#34;&gt;拉压杆件的强度设计&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;强度设计&lt;/strong&gt;：将杆件中最大的应力限制在允许的范围内，保证杆件既不发生强度失效，还要有安全裕度，满足：
+$$
+\sigma_{max}\leq[\sigma]=\frac{\sigma ^0}{n}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$[\sigma]$：许用应力&lt;/li&gt;
+&lt;li&gt;$\sigma$：极限应力&lt;/li&gt;
+&lt;li&gt;$n$：安全系数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三种问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;强度校核：所有条件已知，检验不等式是否成立&lt;/li&gt;
+&lt;li&gt;尺寸设计：根据设计准则，求对应的横截面积$A$&lt;/li&gt;
+&lt;li&gt;确定许可载荷：求最大的轴力$F_N$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;拉压杆件的变形分析&#34;&gt;拉压杆件的变形分析&lt;/h2&gt;
+&lt;h3 id=&#34;均匀杆件&#34;&gt;均匀杆件&lt;/h3&gt;
+&lt;p&gt;对于长为$l$、杨氏模量为$E$、截面积为$A$的杆件的收到$F_P$均匀拉伸,均匀变形保证了:
+$$
+\varepsilon_x=\frac{\Delta l}{l}
+$$
+杆件伸长量$\Delta l$为：
+$$
+\Delta l=\frac{F_Pl}{EA}
+$$&lt;/p&gt;
+&lt;p&gt;定义截面抗拉伸的刚度为$EA$，则$\frac{EA}{l}$为单位长度截面抗拉伸的刚度，则有：
+$$
+F_P=\frac{EA}{l}\Delta l\
+类比：F_P=k\Delta x
+$$
+可知，刚度系数$k$与杨氏模量的联系&lt;/p&gt;
+&lt;p&gt;当杆件有两个及以上的外力作用时，分段求解为：
+$$
+\Delta l=\sum_i\frac{F_{Ni}l_i}{(EA)_i}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;非均匀杆件&#34;&gt;非均匀杆件&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;在微元段上化非均匀为均匀&lt;/strong&gt;，则杆件长度变化为：
+$$
+\Delta l=\int_0^l\Delta dx=\int_l\frac{F_N(x)dx}{E(x)A(x)}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;横向变形与泊松比&#34;&gt;横向变形与泊松比&lt;/h3&gt;
+&lt;p&gt;轴向变形时，横向也会发生变形，实验结果表示，轴向应变$\varepsilon_x$与横向变形$\varepsilon_y$之间存在关系为：
+$$
+\varepsilon_x=-\nu \varepsilon_y
+$$
+其中，$\nu$为泊松比，&lt;strong&gt;无量纲&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
+&lt;h3 id=&#34;应力和变形公式的应用条件&#34;&gt;应力和变形公式的应用条件&lt;/h3&gt;
+&lt;p&gt;$$
+\sigma_x=\frac{F_N}{A}（正应力均匀分布时才成立）\
+\Delta l=\frac{F_Pl}{EA}（轴向方向均匀变形时伸长量公式才适用）
+$$&lt;/p&gt;
+&lt;p&gt;如何满足上述条件？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;轴向载荷在杆件中心轴线&lt;/li&gt;
+&lt;li&gt;截面均匀连续&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关于加力点附近的应力分布&#34;&gt;关于加力点附近的应力分布&lt;/h3&gt;
+&lt;p&gt;圣维南原理：如果杆件两端两种外加力静力学等效，则距离加力点稍远处，静力学等效对应力风不动影响很小，可以忽略不计&lt;/p&gt;
+&lt;h3 id=&#34;应力集中&#34;&gt;应力集中&lt;/h3&gt;
+&lt;p&gt;几何形状的不连续出，应力会局部增大，称为应力集中&lt;/p&gt;
+&lt;p&gt;应力集中的程度用应力集中因数描述，为横截面上应力最大值与不考虑应力集中时的应力值之比
+$$
+K=\frac{\sigma_{max}}{\sigma_a}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;拉伸压缩时斜截面上的应力&#34;&gt;拉伸压缩时斜截面上的应力&lt;/h3&gt;
+&lt;p&gt;当沿着斜截面研究时，会发现角度发生了改变，必有剪应力&lt;/p&gt;
+&lt;p&gt;设斜截面法向与杆件轴向的夹角为$\theta$，轴向外力为$F_P$，则有：
+$$
+F_Q=F_P\times sin \theta
+\
+F_N=F_P\times cos \theta
+$$
+设原有的横截面面积为$A$，斜截面面积为$A_{\theta}=A/cos \theta$，设应力在斜截面上均匀分布&lt;/p&gt;
+&lt;p&gt;故斜截面上的正应力、剪应力分别为：
+$$
+\sigma_{\theta}=\frac{F_N}{A_{\theta}}=\sigma_x cos^2\theta
+\
+\tau_{\theta}=\frac{F_Q}{A_{\theta}}=\frac{1}{2}\sigma_x sin2\theta
+$$
+或者可以取一个小微元体，再斜切一个$\theta$角：&lt;/p&gt;
+&lt;p&gt;此时小微元体横截面只受正应力$\sigma_x$，由于&lt;strong&gt;应力无法参与平衡，只能由力来参与平衡&lt;/strong&gt;：
+$$
+\sigma_{\theta}dA=\sigma_x \times cos\theta\times dAcos \theta
+\
+\tau_{\theta}dA=\sigma_x \times sin\theta \times dAcos \theta
+$$
+可得结果为，说明前面对于&lt;strong&gt;斜截面上应力均匀分布的假设是正确&lt;/strong&gt;的：
+$$
+\sigma_{\theta}=\frac{F_N}{A_{\theta}}=\sigma_x cos^2\theta
+\
+\tau_{\theta}=\frac{F_Q}{A_{\theta}}=\frac{1}{2}\sigma_x sin2\theta
+$$
+上面的斜截面上的应力公式还反传递出了以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不同$\theta$角度应力不同&lt;/li&gt;
+&lt;li&gt;正应力横截面最大，剪应力在$\theta=45 \degree$最大&lt;/li&gt;
+&lt;li&gt;由于微元体取得比较小，英雌微元体斜面上的应力，即为过一点出不同方向的应力，故指明应力时，应该指明是哪一点处、哪一个方向上的应力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;拉伸和压缩的静不定问题&#34;&gt;拉伸和压缩的静不定问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;静定问题：外力或者内力可由静力学平衡方程可以直接确定的问题&lt;/li&gt;
+&lt;li&gt;静不定问题：未知力的个数多于能够提供平衡方程的个数，仅依靠平衡方程无法确定的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;求解静不定问题需要考虑三方面的因素：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;受力平衡&lt;/li&gt;
+&lt;li&gt;变形协调方程&lt;/li&gt;
+&lt;li&gt;物理性质：胡克定律&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;开放式思维案例&#34;&gt;开放式思维案例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;定义一种新的应力，便于分析&lt;/li&gt;
+&lt;li&gt;非均匀应力分布的分析方法，常采用&lt;strong&gt;微元体法&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;应力-应变曲线&#34;&gt;应力-应变曲线&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;脆性材料拉伸时的应力应变曲线：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;韧性金属材料拉伸时的应力应变曲线：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;屈服应力&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;条件屈服应力&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;金属材料先加载，卸载时，会沿着弹性的直线恢复，当最后盈利为0时，无法恢复的塑性形变的量为0.2%时，我们称最大的应力值为条件屈服应力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>第一章材料力学概论</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</link>
+        <pubDate>Sun, 13 Mar 2022 19:23:10 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E6%A6%82%E8%AE%BA/</guid>
+        <description>&lt;h1 id=&#34;第一章材料力学概论&#34;&gt;第一章·材料力学概论&lt;/h1&gt;
+&lt;h2 id=&#34;材料力学研究的内容&#34;&gt;材料力学研究的内容&lt;/h2&gt;
+&lt;h3 id=&#34;什么是材料力学&#34;&gt;什么是材料力学？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;杆、轴、梁在外力作用下的应力、变形、能量（长度远大于截面积）&lt;/li&gt;
+&lt;li&gt;材料的行为：在温度/外力作用下表现出的力学性能与失效（宏观）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设计出杆状构件或者零部件的合理尺寸与形状，保证足够的强度、刚度、稳定性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;强度：受理后不发生破坏或者不可恢复的变形&lt;/li&gt;
+&lt;li&gt;刚度：受力变形不大&lt;/li&gt;
+&lt;li&gt;稳定性：平衡的状态不发生突变（在压缩载荷之下）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内力与内分量&#34;&gt;内力与内分量&lt;/h2&gt;
+&lt;p&gt;为什么要研究&lt;strong&gt;内力&lt;/strong&gt;？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例子：跳板断裂先从根部断裂，外力作用是确定的，但是我们需要内力去解释为什么会从根部断裂。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何研究内力？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用一个假想的截面，每一点处的合力与对面截面等大反向&lt;/li&gt;
+&lt;li&gt;内力可以向截面的坐标系（主矩与坐标系原点相关，主矢无关）简化为内力分量，可以得到一个内力主矢和内力主矩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;内力的分量是？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;轴力：$F_N$轴向，压缩或者拉伸&lt;/li&gt;
+&lt;li&gt;剪力：$F_Q$切向，引起剪切&lt;/li&gt;
+&lt;li&gt;扭矩：$M_x$轴向，引起扭转变形&lt;/li&gt;
+&lt;li&gt;弯矩：$M_y$、$M_z$，引起弯曲变形
+施加方式的形象化理解：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;杆件的受力与变形形式&#34;&gt;杆件的受力与变形形式&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;拉压弯扭组合受力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;拉伸或压缩：轴向的拉力或者压力，产生轴向伸长或者变形&lt;/li&gt;
+&lt;li&gt;剪切：相近的两力错动时产生&lt;/li&gt;
+&lt;li&gt;扭转：横截面绕其轴旋转&lt;/li&gt;
+&lt;li&gt;弯曲：杆件的轴线变为曲线&lt;/li&gt;
+&lt;li&gt;组合受力：以上四种受力的各种组合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工程构件静力学设计的主要内容&#34;&gt;工程构件静力学设计的主要内容&lt;/h2&gt;
+&lt;p&gt;工程设计一般需要完成以下几方面的工作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分析构件的外力&lt;/li&gt;
+&lt;li&gt;研究其内力、变形、失效规律&lt;/li&gt;
+&lt;li&gt;提出保证构件具有足够强度、刚度、稳定性的准则与设计方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;弹性体受力与变形特征&#34;&gt;弹性体受力与变形特征&lt;/h2&gt;
+&lt;p&gt;力：&lt;/p&gt;
+&lt;p&gt;矩：&lt;/p&gt;
+&lt;p&gt;两个平衡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内力与外力的平衡：截面与其分割的材料的外力&lt;/li&gt;
+&lt;li&gt;内力与内力的平衡：截面与截面满足牛顿第三定律&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变形协调&lt;/strong&gt;：材料不能重叠，不能出现空缺&lt;/p&gt;
+&lt;p&gt;典型的例子是：两根绳子拉着杆件的静力学问题是静定的，三根绳子则为静不定的，需要补充变形协调方程&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分析问题时：平衡+变形协调&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于材料的基本假定&#34;&gt;关于材料的基本假定&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;均匀、连续、各向同性。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;均匀：构件不同位置处材料性能相同&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连续：类比函数的连续，各种物理量可以表达为坐标的函数，可以使用微积分方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各向同性：同一位置各个方向看到的一样&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;应力应变及其相互关系&#34;&gt;应力、应变及其相互关系&lt;/h2&gt;
+&lt;h3 id=&#34;为什么要研究应力&#34;&gt;为什么要研究应力？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;只有一端支撑的梁，在无支撑的一端施力，最上方先断裂，这是我们需要一个点的概念，使得我们能够解释为何同一截面上的行为不同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应力的定义&#34;&gt;应力的定义&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;应力&lt;/strong&gt;：分布的内力在一点的集度，就是单位面积上的内力。&lt;/p&gt;
+&lt;p&gt;集度的研究无法再一点上面研究，需要在邻域$\Delta A$上研究，此时主矢为$\Delta F$，分量为$\Delta F_Q$、$\Delta F_N$。此时忽略主矩，由于邻域$\Delta A$线度很小，故主矩为高阶小量。&lt;/p&gt;
+&lt;p&gt;作用线垂直于截面，为正应力：
+$$
+\sigma =\lim_{\Delta A\to0}\frac{\Delta F_N}{\Delta A}
+$$&lt;/p&gt;
+&lt;p&gt;作用线位于截面，为剪应力：
+$$
+\tau =\lim_{\Delta A\to0}\frac{\Delta F_Q}{\Delta A}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;应力与内力分量的关系&#34;&gt;应力与内力分量的关系&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由$\sigma$可以得到轴力与弯矩，但是却不能由轴力与弯矩得到每一点的应力，为什么？&lt;/p&gt;
+&lt;p&gt;这是由于，由力确定应力是一个&lt;strong&gt;超静定&lt;/strong&gt;问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;假设以下各式中各量均为正方向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;轴力与正应力：
+$$
+\int_A \sigma_x dA=F_N
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;弯矩与正应力：
+$$
+\int_A(\sigma_x dA)z=M_y\
+\int_A(\sigma_x dA)y=-M_z
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;切应力与剪应力：&lt;/p&gt;
+&lt;p&gt;$\tau_{xy}$表示截面法向为x，指向y
+$$
+\int_A \tau_{xy}dA=F_{Qy}
+\
+\int_A \tau_{xz}dA=F_{Qz}
+\
+-\int_A(\tau_{xy}dA)z+\int_A(\tau_{xz}dA)y=M_x
+$$
+同正应力一样，&lt;strong&gt;剪应力的分布也是超静定问题&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应变的定义&#34;&gt;应变的定义&lt;/h3&gt;
+&lt;p&gt;在构件截面上取一个长方体的&lt;strong&gt;微单元体dxdydz&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正应变：正应力引起的线变形的程度，用$\varepsilon$表示&lt;/li&gt;
+&lt;li&gt;角应变：剪应力引起的角变形的程度，用$\gamma$表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\varepsilon_x=\frac{\Delta dx}{dx}
+\
+\gamma=\alpha+\beta
+$$&lt;/p&gt;
+&lt;p&gt;其中，$dx$为微元体的边长，$\Delta dx$表示边长的改变量，$\alpha、\beta$分别为两边的变化角度&lt;/p&gt;
+&lt;p&gt;不难发现，&lt;strong&gt;应变无量纲。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;应变与应力的关系&#34;&gt;应变与应力的关系&lt;/h3&gt;
+&lt;p&gt;对于大多数金属材料，变形不是很大、受力不是很大的时候，应力与应变满足线性关系：
+$$
+\sigma=E\varepsilon\
+\tau=G\gamma
+$$
+其中，$E$为杨氏模量，单位为$Pa$，又称为线弹性模量；$G$为剪切模量，单位为$Pa$&lt;/p&gt;
+&lt;p&gt;常用单位满足：
+$$
+1 Gpa=1\times10^9 Pa
+\
+1 Mpa=1\times10^6 Pa
+\
+1 kpa=1\times10^3 Pa
+$$&lt;/p&gt;
+&lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
+&lt;h3 id=&#34;刚体模型与弹性体模型&#34;&gt;刚体模型与弹性体模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;平衡问题：采用刚体分析&lt;/li&gt;
+&lt;li&gt;变形问题：弹性体模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;弹性体受力及变形特点&#34;&gt;弹性体受力及变形特点&lt;/h3&gt;
+&lt;p&gt;材力中的约束：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;外力平衡&lt;/li&gt;
+&lt;li&gt;变形协调&lt;/li&gt;
+&lt;li&gt;力与变形的物性关系&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这是与理论力学区别所在。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Wissenschaft als Beruf?</title>
+        <link>https://zalouti.github.io/p/wissenschaft-als-beruf/</link>
+        <pubDate>Sat, 12 Mar 2022 06:59:42 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/wissenschaft-als-beruf/</guid>
+        <description>&lt;h1 id=&#34;wissenschaft-als-beruf-&#34;&gt;Wissenschaft als Beruf !?&amp;hellip;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Things fade , alternatives exclude.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;标题是马克斯·韦伯的一次著名的演讲《科学作为天职》。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>CS106L Sequence container</title>
+        <link>https://zalouti.github.io/p/cs106l-sequence-container/</link>
+        <pubDate>Wed, 09 Mar 2022 12:36:41 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/cs106l-sequence-container/</guid>
+        <description>&lt;h1 id=&#34;overview&#34;&gt;overview&lt;/h1&gt;
+&lt;p&gt;反正就是牛逼，不用这个就约等于只用了C+cin/cout&lt;/p&gt;
+&lt;p&gt;之后关于STL的课程将会涉及以下五个方面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequence container&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;sequence-container&#34;&gt;Sequence container&lt;/h1&gt;
+&lt;p&gt;what is sequence container?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It provides the acsess to a sequence of elements&lt;/li&gt;
+&lt;li&gt;元素是按照序列顺序储存的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std::vector&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;std::deque&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;std::list&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;std::array&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;std::forward_list&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stdvectort&#34;&gt;&lt;code&gt;std::vector&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;vector是一列任意元素类型的序列&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;T代表type，在使用时定义，这可以是任何的类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vecInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vecOfvec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;h3 id=&#34;stddequet&#34;&gt;&lt;code&gt;std::deque&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fullname:double ended queue&lt;/li&gt;
+&lt;li&gt;可以完成所有&lt;code&gt;vector&lt;/code&gt;可以完成的事情，同时可以很快速的完成&lt;code&gt;push_front&lt;/code&gt;和&lt;code&gt;pop_front&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;但是在&lt;code&gt;vector&lt;/code&gt;同样可以完成的任务之下，&lt;code&gt;vector&lt;/code&gt;表现更加出色&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;container-adaptors&#34;&gt;Container Adaptors&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title>我所理解的流体力学</title>
+        <link>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</link>
+        <pubDate>Tue, 08 Mar 2022 11:58:38 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;上学期某位北大的dalao整理出的课程自学的电子书实在是令人心动，回想起华大的授课水平同样需要一些优质的在线课程进行补充，遂开此坑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;我所理解的流体力学第一章&#34;&gt;我所理解的流体力学——第一章&lt;/h1&gt;
+&lt;p&gt;我所理解的流体力学是北航的王洪伟老师的一门&lt;strong&gt;针对网课的课程&lt;/strong&gt;，并非线下课程的录制，所以在线观感很强，这门课程十分简短，总时长为395min，结合老师语速较慢的特点，倍速可以在4小时左右解决战斗。&lt;/p&gt;
+&lt;p&gt;这门课程特点鲜明：即是不懂任何关于流体力学的知识，数学基础也几乎没有的话，你也可以随便选感兴趣的一节开始听讲，但是这并没有影响这门课程关于流体力学的高观点，这门课程更注重从物理的角度诠释流体的本质，这门课程可以迅速地建立起流体力学的概览。&lt;/p&gt;
+&lt;p&gt;然而这也是缺点之一，这门课程在数学方面的欠缺，使得其不能作为正式的流体力学教程，更适合用于预习&amp;amp;娱乐&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;课程难度：⭐&lt;/li&gt;
+&lt;li&gt;先修要求：微积分、高中物理&lt;/li&gt;
+&lt;li&gt;预计学时：4~5h&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面是我个人的学习记录&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Cs106L Types</title>
+        <link>https://zalouti.github.io/p/cs106l-types/</link>
+        <pubDate>Thu, 03 Mar 2022 13:09:26 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/cs106l-types/</guid>
+        <description>&lt;h1 id=&#34;c-types&#34;&gt;C++ Types&lt;/h1&gt;
+&lt;h2 id=&#34;auto类型的使用&#34;&gt;&lt;code&gt;auto&lt;/code&gt;类型的使用&lt;/h2&gt;
+&lt;p&gt;C++11支持自动类型，可以让编译器帮助你弄清这是什么类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;begin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;studentMap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cbegin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;studentMAp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cend&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;几乎所有的地方都可以使用&lt;code&gt;auto&lt;/code&gt;，除了函数的形参不可以使用，例如下面的例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;calculateeSum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bettername&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Avery&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[](&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+    
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bettername&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;struct的使用&#34;&gt;&lt;code&gt;struct&lt;/code&gt;的使用&lt;/h2&gt;
+&lt;p&gt;如何使函数返回多个参数值？&lt;/p&gt;
+&lt;p&gt;对于CS106B来讲，函数返回值需要借助其他的&lt;strong&gt;reference parameters&lt;/strong&gt;，例如下例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static_cast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.08&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static_cast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.36&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;750&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6452&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;You can find price between:&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;and&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但是上面的做法并不能很明显地看出&lt;code&gt;max&lt;/code&gt;与&lt;code&gt;min&lt;/code&gt;是reference parameter，当我们返回一对值时会更加自然，例如下例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;pair&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static_cast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.08&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static_cast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.36&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;750&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;make_pair&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pair&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;You can find prices between:&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;and&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;结合&lt;code&gt;auto&lt;/code&gt;我们可以将传回来的pair立马unpack，并直接使用&lt;code&gt;min&lt;/code&gt;与&lt;code&gt;max&lt;/code&gt;，只需将上面的&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;pair&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//pair不必类型相同
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;换为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findpricerange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好多了！但是上面的程序还有缺点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;返回值时一对，能不能返回更多的值？&lt;code&gt;tuple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;返回值要求第一个是&lt;code&gt;min&lt;/code&gt;第二个是&lt;code&gt;max&lt;/code&gt;，但是程序使用者怎样知道呢？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以更好的方式是使用&lt;code&gt;struct&lt;/code&gt;，用法大致同C,略去不写&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;course&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;TIme&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strattime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endtime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;instructors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;initialization&#34;&gt;initialization&lt;/h2&gt;
+&lt;p&gt;初始化在C++里面是一个麻烦事……一共有26种初始化变量的方式。所以为了解决这个问题，我们再添加一种初始化方式为&lt;strong&gt;uniform initialization&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+	&lt;span class=&#34;n&#34;&gt;Course&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;now&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CS106L&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Wang&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zeng&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}};&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下对比了不同的初始化方式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//vector={3}
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//vector ={0,0,0}
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Cs106L StreamⅡ</title>
+        <link>https://zalouti.github.io/p/cs106l-stream/</link>
+        <pubDate>Wed, 02 Mar 2022 13:07:00 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+        <description>&lt;h1 id=&#34;stream-&#34;&gt;Stream Ⅱ&lt;/h1&gt;
+&lt;h2 id=&#34;cout--cin&#34;&gt;cout &amp;amp; cin&lt;/h2&gt;
+&lt;p&gt;一共有四种标准的&lt;code&gt;iostreams&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cin&lt;/code&gt;：标准输入&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cout&lt;/code&gt;：标准输出（缓冲区&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cerr&lt;/code&gt;：标准错误流（未缓冲&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clog&lt;/code&gt;：标准错误流（缓冲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;cin&lt;/code&gt;和&lt;code&gt;iss&lt;/code&gt;的区别在于，如果缓冲区不存在东西时，会等用户输入东西&lt;/p&gt;
+&lt;h3 id=&#34;三个为什么带有的cin是一场噩梦的理由&#34;&gt;三个为什么带有&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;的&lt;code&gt;cin&lt;/code&gt;是一场噩梦的理由：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cin&lt;/code&gt;读取一整行到缓冲区中，但是返回的是根据空白符分割的片段&lt;/li&gt;
+&lt;li&gt;缓冲区中的其他信息会使得&lt;code&gt;cin&lt;/code&gt;可能不会等待用户输入&lt;/li&gt;
+&lt;li&gt;当前面的&lt;code&gt;cin&lt;/code&gt;失效后，后面的&lt;code&gt;cin&lt;/code&gt;也会失效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以如果我们想读取一整行时，可以采用&lt;code&gt;getline(cin,var)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但是仍然会出现一些不方便的bug，当我们想将所有的东西复制到一个不依赖于外部的stream中，我们使用&lt;code&gt;stringstream&lt;/code&gt;!&lt;/p&gt;
+&lt;h3 id=&#34;getinteger&#34;&gt;getInteger&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getInteger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;domain_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(...);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ignore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;numeric_limits&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;streamsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下面我们来解析这个读取整数的函数&lt;code&gt;getInteger()&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;domain_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(...);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这一行代码尝试去读取一整行，因为缓冲区此时是空的，所以他会提示用户输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用刚刚读取的一行&lt;code&gt;line&lt;/code&gt;，创建一个&lt;code&gt;istringstream&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这一行先在&lt;code&gt;iss&lt;/code&gt;中尝试读取&lt;code&gt;int&lt;/code&gt;的result，之后再尝试读取任何的&lt;code&gt;trash&lt;/code&gt;（注意上节课讲到的&lt;code&gt;iss&lt;/code&gt;的读取位置的变化，第二次读取trash时会自动寻找）&lt;/p&gt;
+&lt;p&gt;如果if判定失败，则清空流并且再次尝试，因为出现了一些垃圾&lt;/p&gt;
+&lt;p&gt;反之则返回我们想要的&lt;code&gt;result&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;实际上，由于每一次都在创建不同的流，所以最后两行的清空操作可以省略&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;stringstream&lt;/code&gt;并不是用来彻底取代&lt;code&gt;stream&lt;/code&gt;的，其仍然有自身的适用范围&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在处理字符串时
+&lt;ul&gt;
+&lt;li&gt;化简“/./a/b”为“/a”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;规范输入输出时&lt;/li&gt;
+&lt;li&gt;分析不同的类型时
+&lt;ul&gt;
+&lt;li&gt;例如getinteger()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Cs106L StreamⅠ</title>
+        <link>https://zalouti.github.io/p/cs106l-stream/</link>
+        <pubDate>Wed, 02 Mar 2022 10:27:46 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/cs106l-stream/</guid>
+        <description>&lt;h1 id=&#34;stream-&#34;&gt;Stream Ⅰ&lt;/h1&gt;
+&lt;h2 id=&#34;string-stream&#34;&gt;string stream&lt;/h2&gt;
+&lt;p&gt;使用&lt;code&gt;#include &amp;lt;sstream&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ostringstream&lt;/code&gt;代表&lt;em&gt;output string stream&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;创建一个stream时，默认位置在初始位置&lt;/li&gt;
+&lt;li&gt;当尝试写入stream时，会覆盖原有内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sstream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ostringstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I am Icarus.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;16.9&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;AAAAAOnuce&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;当然我们也可以将位置设置在末尾，即&lt;strong&gt;at e&lt;/strong&gt;nd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ostringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I am Icarus.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stringstream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;istirngstream&lt;/code&gt;代表&lt;em&gt;input string stream&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;istringstream&lt;/code&gt;将读取至下一个空格，并将读取的内容转化为对应的类型(&lt;code&gt;double&lt;/code&gt;、&lt;code&gt;int&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sstream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ostringstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I am Icarus.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;16.9&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Onuce&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;amount&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;amount&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Now the water is &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;amount&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们可以制定&lt;code&gt;ostringtream&lt;/code&gt;和&lt;code&gt;istringstream&lt;/code&gt;所在的任意位置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fpos&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tellp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;streamoff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;seekp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;例一string-to-integer&#34;&gt;例一：string to integer&lt;/h3&gt;
+&lt;p&gt;写一个函数，将输入的字符串转化为整数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;StringtoInteger&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但是这种解答不是完美的，我们并不知道&lt;code&gt;iss &amp;gt;&amp;gt; value&lt;/code&gt;这一行是否成功了。&lt;/p&gt;
+&lt;p&gt;那么引出下文&lt;/p&gt;
+&lt;h2 id=&#34;state-bits&#34;&gt;State bits&lt;/h2&gt;
+&lt;p&gt;一共有四种表示stream的状态&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Good bit:准备好进行读写&lt;/li&gt;
+&lt;li&gt;Fail bit:之前的操作失败了，所有未来操作被冻结&lt;/li&gt;
+&lt;li&gt;EOF bit:end of file&lt;/li&gt;
+&lt;li&gt;Bad bit:外部错误&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h3 id=&#34;stringstream&#34;&gt;stringstream&lt;/h3&gt;
+&lt;p&gt;分为输出与输入&lt;code&gt;ostringstream&lt;/code&gt;与&lt;code&gt;istringstream&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用方法为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;initial&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ostringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;initial&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以使用各种选项，例如：二进制、从末尾开始输入/出&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;istringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;iss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;initial&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stringstream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ostringstream&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;oss&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;initial&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stringstream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用&lt;code&gt;oss&lt;/code&gt;与&lt;code&gt;iss&lt;/code&gt;从缓冲区中读取数据，将字符串变量转化为或者读取为对应的类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;n&#34;&gt;oss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;var1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;var2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;iss&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;var1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;var2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们可以手动调整stream在输入和输出时候的位置&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;output&lt;/th&gt;
+&lt;th&gt;input&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;get position&lt;/td&gt;
+&lt;td&gt;oss.tellp()&lt;/td&gt;
+&lt;td&gt;iss.tellg()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set position&lt;/td&gt;
+&lt;td&gt;oss.seekp(pos)&lt;/td&gt;
+&lt;td&gt;iss.seekg(pos)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;creat offset&lt;/td&gt;
+&lt;td&gt;streamoff(n)&lt;/td&gt;
+&lt;td&gt;~&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;state-bits-1&#34;&gt;state bits&lt;/h3&gt;
+&lt;p&gt;一共有四种表示stream的状态&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Good bit:准备好进行读写&lt;/li&gt;
+&lt;li&gt;Fail bit:之前的操作失败了，所有&lt;strong&gt;未来操作被冻结&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;EOF bit:end of file，&lt;strong&gt;未来操作被冻结&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Bad bit:外部错误，&lt;strong&gt;未来操作被冻结&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>黄金与镀金</title>
         <link>https://zalouti.github.io/p/%E9%BB%84%E9%87%91%E4%B8%8E%E9%95%80%E9%87%91/</link>
         <pubDate>Sun, 27 Feb 2022 21:58:14 +0800</pubDate>
