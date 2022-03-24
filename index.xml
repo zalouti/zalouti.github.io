@@ -6,7 +6,15 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 21 Mar 2022 12:33:00 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Mar 2022 13:39:21 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>文献管理与信息分析1</title>
+        <link>https://zalouti.github.io/p/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%901/</link>
+        <pubDate>Thu, 24 Mar 2022 13:39:21 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%901/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Orbit</title>
         <link>https://zalouti.github.io/p/orbit/</link>
         <pubDate>Mon, 21 Mar 2022 12:33:00 +0800</pubDate>
@@ -161,25 +169,20 @@ $$
 &lt;h3 id=&#34;惯性矩与惯性积的转轴的概念&#34;&gt;惯性矩与惯性积的转轴的概念&lt;/h3&gt;
 &lt;p&gt;本质上是坐标的&lt;strong&gt;旋转变换。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;设老坐标$y-z$逆时针旋转$\alpha$角得到新坐标系$y_1-z_1$：&lt;/p&gt;
-&lt;h1 id=&#34;endpmatrix&#34;&gt;可知坐标变换关系为：
+&lt;p&gt;可知坐标变换关系为：
 $$
-\begin{pmatrix}
-z_1
-\
-y_1
-\end{pmatrix}&lt;/h1&gt;
-&lt;p&gt;\begin{pmatrix}
-cos \alpha &amp;amp;&amp;amp; sin\alpha
-\
--sin \alpha &amp;amp;&amp;amp;cos \alpha
-\end{pmatrix}
-\begin{pmatrix}
-z
-\
+\left(\begin{array}{l}
+z_{1} \\
+y_{1}
+\end{array}\right)=\left(\begin{array}{cc}
+\cos \alpha &amp;amp; \sin \alpha \\
+-\sin \alpha &amp;amp; \cos \alpha
+\end{array}\right)\left(\begin{array}{l}
+z \\
 y
-\end{pmatrix}
-$$
-由定义可知，新坐标系下惯性矩、惯性积则为：
+\end{array}\right)
+$$&lt;/p&gt;
+&lt;p&gt;由定义可知，新坐标系下惯性矩、惯性积则为：
 $$
 \begin{aligned}
 &amp;amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \
@@ -299,9 +302,15 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;计算正应力时先明确正负号，利用右手定则取确定拉伸和压缩&lt;/li&gt;
-&lt;li&gt;平面有正交的对称轴，加载方向与其中一轴相同，则中性轴为另一轴，$\sigma^+&lt;em&gt;{max}=\sigma^-&lt;/em&gt;{max}$&lt;/li&gt;
-&lt;li&gt;只有一个对称轴，架子方向与对称轴相同，则中性轴过截面形心并且垂直对称轴，$\sigma^+&lt;em&gt;{max} \neq \sigma^-&lt;/em&gt;{max}$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算正应力时先明确正负号，利用右手定则取确定拉伸和压缩&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;平面有正交的对称轴，加载方向与其中一轴相同，则中性轴为另一轴$\sigma_{\max }^{+} \neq \sigma_{\max }^{-}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只有一个对称轴，架子方向与对称轴相同，则中性轴过截面形心并且垂直对称轴，$\sigma_{\max}^+ \neq \sigma_{\max}^-$&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;梁的强度计算&#34;&gt;梁的强度计算&lt;/h2&gt;
 &lt;p&gt;梁受到弯矩和剪力时，其上有正应力，也有剪应力，但是对于&lt;strong&gt;细长梁&lt;/strong&gt;剪应力远小于正应力，因此剪应力对于强度的影响忽略不计，&lt;strong&gt;强度计算只考虑正应力。&lt;/strong&gt;&lt;/p&gt;
@@ -368,13 +377,13 @@ $$&lt;/p&gt;
 &lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可得弯曲剪应力表达式为：
 $$
-\tau(y^&lt;em&gt;)=\tau^{\prime}=\frac{F_{\mathrm{Q}} S_{z}^{&lt;/em&gt;}(y^*)}{\delta I_{z}}
+\tau\left(y^{*}\right)=\tau^{\prime}=\frac{F_{\mathrm{Q}} S_{z}^{*}\left(y^{*}\right)}{\delta I_{z}}
 $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$F_Q$为截面的剪力&lt;/li&gt;
 &lt;li&gt;$\delta$为微段的厚度&lt;/li&gt;
 &lt;li&gt;$I_z$为整个截面的轴惯性矩&lt;/li&gt;
-&lt;li&gt;$S_z^&lt;em&gt;$为微段$A^&lt;/em&gt;$的静矩&lt;/li&gt;
+&lt;li&gt;$S_z^*$为微段$A^*$的静矩&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
 &lt;ul&gt;
@@ -392,15 +401,15 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;实心截面梁的弯曲剪应力公式&#34;&gt;实心截面梁的弯曲剪应力公式&lt;/h3&gt;
-&lt;p&gt;设&lt;strong&gt;矩形截面&lt;/strong&gt;y-z长度分别为h与b，设所研究的$A^&lt;em&gt;$的形心坐标为$y_C^&lt;/em&gt;$，截取的刀口为$y^&lt;em&gt;$，则有：
+&lt;p&gt;设&lt;strong&gt;矩形截面&lt;/strong&gt;y-z长度分别为h与b，设所研究的$A^*$的形心坐标为$y_C^*$，截取的刀口为$y^*$，则有：
 $$
-y_C^&lt;/em&gt;=\frac{1}{2}(\frac{h}{2}-y^&lt;em&gt;)+y^&lt;/em&gt;=\frac{1}{2}(\frac{h}{2}+y^&lt;em&gt;)
-\
-S^&lt;/em&gt;&lt;em&gt;z(y^&lt;em&gt;)=A^&lt;/em&gt; \times y_C^&lt;em&gt;=(b \times (\frac{h}{2}-y^&lt;/em&gt;))\times y^*&lt;em&gt;C=\frac{b}{2}[(\frac{h}{2})^2-y^{*2}]
+y^{*}_C=\frac{1}{2}(\frac{h}{2}-y^{*})+y^{*}=\frac{1}{2}(\frac{h}{2}+y^{*})
+\\
+S^{*}_z(y^{*})=A^{*} \times y^{*}_C=(b \times (\frac{h}{2}-y^{*}))\times y^{*}_C=\frac{b}{2}[(\frac{h}{2})^2-y^{{*}2}]
+$$&lt;/p&gt;
+&lt;p&gt;已知$I_z=\frac{bh^3}{12}$，故剪应力为：
 $$
-已知$I_z=\frac{bh^3}{12}$，故剪应力为：
-$$
-\tau=\frac{F&lt;/em&gt;{\mathrm{Q}} S&lt;/em&gt;{z}^{*}}{\delta I_{z}}=\frac{F_{\mathrm{Q}} \frac{b}{2}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]}{b \frac{b h^{3}}{12}}=\frac{6 F_{\mathrm{Q}}}{b h^{3}}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]
+\tau=\frac{F_{\mathrm{Q}} S_{z}^{*}}{\delta I_{z}}=\frac{F_{\mathrm{Q}} \frac{b}{2}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]}{b \frac{b h^{3}}{12}}=\frac{6 F_{\mathrm{Q}}}{b h^{3}}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]
 $$
 故剪应力在y方向以抛物线变化，最大值在中性轴上取得，为：
 $$
@@ -1004,10 +1013,10 @@ $$
 			
 			
 			loading=&#34;lazy&#34;
-			alt=&#34;q8pQ9s.png&#34;&gt;
+			alt=&#34;脆性材料应力应变曲线&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;q8pQ9s.png&lt;/figcaption&gt;
+	&lt;figcaption&gt;脆性材料应力应变曲线&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -1022,10 +1031,10 @@ $$
 			
 			
 			loading=&#34;lazy&#34;
-			alt=&#34;q8pKhj.png&#34;&gt;
+			alt=&#34;韧性材料应力应变曲线&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;q8pKhj.png&lt;/figcaption&gt;
+	&lt;figcaption&gt;韧性材料应力应变曲线&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;

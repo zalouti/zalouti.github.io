@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zalouti.github.io/p/orbit/</loc>
-    <lastmod>2022-03-21T12:33:00+08:00</lastmod>
-  </url><url>
     <loc>https://zalouti.github.io/post/</loc>
+    <lastmod>2022-03-24T13:39:21+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%901/</loc>
+    <lastmod>2022-03-24T13:39:21+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/</loc>
+    <lastmod>2022-03-24T13:39:21+08:00</lastmod>
+  </url><url>
+    <loc>https://zalouti.github.io/p/orbit/</loc>
     <lastmod>2022-03-21T12:33:00+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/tags/srs/</loc>
     <lastmod>2022-03-21T12:33:00+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/tags/</loc>
-    <lastmod>2022-03-21T12:33:00+08:00</lastmod>
-  </url><url>
-    <loc>https://zalouti.github.io/</loc>
     <lastmod>2022-03-21T12:33:00+08:00</lastmod>
   </url><url>
     <loc>https://zalouti.github.io/tags/freelearning/</loc>

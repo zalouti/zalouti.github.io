@@ -11,7 +11,23 @@
 <meta property='og:site_name' content='第二基地'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='材料力学' /><meta property='article:tag' content='freelearning' /><meta property='article:published_time' content='2022-03-20T20:05:48&#43;08:00'/><meta property='article:modified_time' content='2022-03-20T20:05:48&#43;08:00'/>
 <meta name="twitter:title" content="第六章·梁的应力分析与强度计算">
-<meta name="twitter:description" content="梁的应力分析与强度计算 与应力分析相关的截面图形几何性质 为什么要研究截面图形的几何性质？ 力学性质与几何性质息息相关，受力与变形都受到几何量的影">
+<meta name="twitter:description" content="梁的应力分析与强度计算 与应力分析相关的截面图形几何性质 为什么要研究截面图形的几何性质？ 力学性质与几何性质息息相关，受力与变形都受到几何量的影"><style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
     </head>
     <body class="
     article-page has-toc
@@ -237,25 +253,20 @@ $$
 <h3 id="惯性矩与惯性积的转轴的概念">惯性矩与惯性积的转轴的概念</h3>
 <p>本质上是坐标的<strong>旋转变换。</strong></p>
 <p>设老坐标$y-z$逆时针旋转$\alpha$角得到新坐标系$y_1-z_1$：</p>
-<h1 id="endpmatrix">可知坐标变换关系为：
+<p>可知坐标变换关系为：
 $$
-\begin{pmatrix}
-z_1
-\
-y_1
-\end{pmatrix}</h1>
-<p>\begin{pmatrix}
-cos \alpha &amp;&amp; sin\alpha
-\
--sin \alpha &amp;&amp;cos \alpha
-\end{pmatrix}
-\begin{pmatrix}
-z
-\
+\left(\begin{array}{l}
+z_{1} \\
+y_{1}
+\end{array}\right)=\left(\begin{array}{cc}
+\cos \alpha &amp; \sin \alpha \\
+-\sin \alpha &amp; \cos \alpha
+\end{array}\right)\left(\begin{array}{l}
+z \\
 y
-\end{pmatrix}
-$$
-由定义可知，新坐标系下惯性矩、惯性积则为：
+\end{array}\right)
+$$</p>
+<p>由定义可知，新坐标系下惯性矩、惯性积则为：
 $$
 \begin{aligned}
 &amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \
@@ -375,9 +386,15 @@ $$</p>
 </ul>
 <p><em>Hints</em>:</p>
 <ul>
-<li>计算正应力时先明确正负号，利用右手定则取确定拉伸和压缩</li>
-<li>平面有正交的对称轴，加载方向与其中一轴相同，则中性轴为另一轴，$\sigma^+<em>{max}=\sigma^-</em>{max}$</li>
-<li>只有一个对称轴，架子方向与对称轴相同，则中性轴过截面形心并且垂直对称轴，$\sigma^+<em>{max} \neq \sigma^-</em>{max}$</li>
+<li>
+<p>计算正应力时先明确正负号，利用右手定则取确定拉伸和压缩</p>
+</li>
+<li>
+<p>平面有正交的对称轴，加载方向与其中一轴相同，则中性轴为另一轴$\sigma_{\max }^{+} \neq \sigma_{\max }^{-}$</p>
+</li>
+<li>
+<p>只有一个对称轴，架子方向与对称轴相同，则中性轴过截面形心并且垂直对称轴，$\sigma_{\max}^+ \neq \sigma_{\max}^-$</p>
+</li>
 </ul>
 <h2 id="梁的强度计算">梁的强度计算</h2>
 <p>梁受到弯矩和剪力时，其上有正应力，也有剪应力，但是对于<strong>细长梁</strong>剪应力远小于正应力，因此剪应力对于强度的影响忽略不计，<strong>强度计算只考虑正应力。</strong></p>
@@ -444,13 +461,13 @@ $$</p>
 </figure></a></p>
 <p>可得弯曲剪应力表达式为：
 $$
-\tau(y^<em>)=\tau^{\prime}=\frac{F_{\mathrm{Q}} S_{z}^{</em>}(y^*)}{\delta I_{z}}
+\tau\left(y^{*}\right)=\tau^{\prime}=\frac{F_{\mathrm{Q}} S_{z}^{*}\left(y^{*}\right)}{\delta I_{z}}
 $$</p>
 <ul>
 <li>$F_Q$为截面的剪力</li>
 <li>$\delta$为微段的厚度</li>
 <li>$I_z$为整个截面的轴惯性矩</li>
-<li>$S_z^<em>$为微段$A^</em>$的静矩</li>
+<li>$S_z^*$为微段$A^*$的静矩</li>
 </ul>
 <p><em>Hints</em>:</p>
 <ul>
@@ -468,15 +485,15 @@ $$</p>
 </li>
 </ul>
 <h3 id="实心截面梁的弯曲剪应力公式">实心截面梁的弯曲剪应力公式</h3>
-<p>设<strong>矩形截面</strong>y-z长度分别为h与b，设所研究的$A^<em>$的形心坐标为$y_C^</em>$，截取的刀口为$y^<em>$，则有：
+<p>设<strong>矩形截面</strong>y-z长度分别为h与b，设所研究的$A^*$的形心坐标为$y_C^*$，截取的刀口为$y^*$，则有：
 $$
-y_C^</em>=\frac{1}{2}(\frac{h}{2}-y^<em>)+y^</em>=\frac{1}{2}(\frac{h}{2}+y^<em>)
-\
-S^</em><em>z(y^<em>)=A^</em> \times y_C^<em>=(b \times (\frac{h}{2}-y^</em>))\times y^*<em>C=\frac{b}{2}[(\frac{h}{2})^2-y^{*2}]
+y^{*}_C=\frac{1}{2}(\frac{h}{2}-y^{*})+y^{*}=\frac{1}{2}(\frac{h}{2}+y^{*})
+\\
+S^{*}_z(y^{*})=A^{*} \times y^{*}_C=(b \times (\frac{h}{2}-y^{*}))\times y^{*}_C=\frac{b}{2}[(\frac{h}{2})^2-y^{{*}2}]
+$$</p>
+<p>已知$I_z=\frac{bh^3}{12}$，故剪应力为：
 $$
-已知$I_z=\frac{bh^3}{12}$，故剪应力为：
-$$
-\tau=\frac{F</em>{\mathrm{Q}} S</em>{z}^{*}}{\delta I_{z}}=\frac{F_{\mathrm{Q}} \frac{b}{2}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]}{b \frac{b h^{3}}{12}}=\frac{6 F_{\mathrm{Q}}}{b h^{3}}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]
+\tau=\frac{F_{\mathrm{Q}} S_{z}^{*}}{\delta I_{z}}=\frac{F_{\mathrm{Q}} \frac{b}{2}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]}{b \frac{b h^{3}}{12}}=\frac{6 F_{\mathrm{Q}}}{b h^{3}}\left[\left(\frac{h}{2}\right)^{2}-y^{2}\right]
 $$
 故剪应力在y方向以抛物线变化，最大值在中性轴上取得，为：
 $$
@@ -867,13 +884,6 @@ async>
         <li><a href="#惯性矩极惯性矩惯性积惯性半径">惯性矩、极惯性矩、惯性积、惯性半径</a></li>
         <li><a href="#惯性矩与惯性积的移轴定理">惯性矩与惯性积的移轴定理</a></li>
         <li><a href="#惯性矩与惯性积的转轴的概念">惯性矩与惯性积的转轴的概念</a></li>
-      </ol>
-    </li>
-  </ol>
-
-  <ol>
-    <li>
-      <ol>
         <li><a href="#主轴与形心主轴主惯性矩与形心主惯性矩">主轴与形心主轴、主惯性矩与形心主惯性矩</a></li>
       </ol>
     </li>
