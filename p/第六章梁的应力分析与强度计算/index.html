@@ -137,14 +137,14 @@
 <h3 id="静矩形心及其相互关系">静矩、形心及其相互关系</h3>
 <p>定义截面法向为$x$，其静矩为：
 $$
-S_y=\int_A z dA\
+S_y=\int_A z dA\\
 S_z=\int_A y dA
 $$
 静矩可以近似理解为：单位面积对于某一坐标轴的重力的矩，实际上就是<strong>某种静面积/静力的矩</strong>（设单位面积上的力为一个单位）。</p>
 <p>设形心坐标为$(y_c,z_c)$，则有
 $$
 S_y=Az_c=\int_A z dA
-\
+\\
 S_z=Ay_c=\int_A y dA
 $$
 概括即为：**分力之矩之和等于合力之矩。**本质上是$Lagrange$中值定理。</p>
@@ -157,20 +157,20 @@ $$
 <p>对于组合图形，静矩的确定方式可以类比质心：
 $$
 S_y=\sum_{i=1}^nA_iy_{Ci}=Ay_C
-\
+\\
 S_z=\sum_{i=1}^nA_iz_{Ci}=Az_C
 $$</p>
 <h3 id="惯性矩极惯性矩惯性积惯性半径">惯性矩、极惯性矩、惯性积、惯性半径</h3>
 <p>惯性矩被称为二阶矩，静矩被称为一阶矩。
 $$
 I_y=\int_A z^2 dA
-\
+\\
 I_z=\int_A y^2 dA
 $$
 此时产生了惯性半径$i_y$、$i_z$的定义为（在将来稳定性分析时会用得到）：
 $$
 i_y=\sqrt\frac{I_y}{A}
-\
+\\
 i_z=\sqrt\frac{I_z}{A}
 $$</p>
 <p>定义对于$y、z$轴的惯性积$I_{xy}$为：
@@ -224,24 +224,24 @@ $$
 因此根据惯性矩、惯性积的定义可得：
 $$
 I_{y_1}=\int_A (z+b)^2 dA
-\
+\\
 I_{z_1}=\int_A (y+a)^2 dA
-\
+\\
 I_{y_1z_1}=\int_A(z+b)(y+a)dA
 $$
 即有：
 $$
 \begin{aligned}
-&amp;I_{y 1}=I_{y}+2 b S_{y}+b^{2} A \
-&amp;I_{z 1}=I_{z}+2 a S_{z}+a^{2} A \
+&amp;I_{y 1}=I_{y}+2 b S_{y}+b^{2} A \\
+&amp;I_{z 1}=I_{z}+2 a S_{z}+a^{2} A \\
 &amp;I_{y 1 z 1}=I_{y z}+a S_{y}+b S_{z}+a b A
 \end{aligned}
 $$
 当老坐标正好通过图形的形心时，静矩$S$为0，则有：
 $$
 \begin{aligned}
-&amp;I_{y 1}=I_{y}+b^{2} A \
-&amp;I_{z 1}=I_{z}+a^{2} A \
+&amp;I_{y 1}=I_{y}+b^{2} A \\
+&amp;I_{z 1}=I_{z}+a^{2} A \\
 &amp;I_{y 1 z 1}=I_{y z}+a b A
 \end{aligned}
 $$
@@ -269,8 +269,8 @@ $$</p>
 <p>由定义可知，新坐标系下惯性矩、惯性积则为：
 $$
 \begin{aligned}
-&amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \
-&amp;I_{z 1}=\frac{I_{y}+I_{z}}{2}-\frac{I_{y}-I_{z}}{2} \cos 2 \alpha-I_{y z} \sin 2 \alpha \
+&amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \\
+&amp;I_{z 1}=\frac{I_{y}+I_{z}}{2}-\frac{I_{y}-I_{z}}{2} \cos 2 \alpha-I_{y z} \sin 2 \alpha \\
 &amp;I_{y 1 z 1}=-\frac{I_{y}-I_{z}}{2} \sin 2 \alpha+I_{y z} \cos 2 \alpha
 \end{aligned}
 $$
@@ -291,7 +291,7 @@ $$
 此时的轴惯性矩为：
 $$
 \begin{aligned}
-&amp;I_{y 0}=I_{\max }=\frac{I_{y}+I_{z}}{2} \pm \frac{1}{2} \sqrt{\left(I_{y}-I_{z}\right)^{2}+4 I_{y z}^{2}} \
+&amp;I_{y 0}=I_{\max }=\frac{I_{y}+I_{z}}{2} \pm \frac{1}{2} \sqrt{\left(I_{y}-I_{z}\right)^{2}+4 I_{y z}^{2}} \\
 &amp;I_{z 0}=I_{\min }=\frac{I_{y}+I_{z}}{2} \mp \frac{1}{2} \sqrt{\left(I_{y}-I_{z}\right)^{2}+4 I_{y z}^{2}}
 \end{aligned}
 $$
@@ -350,7 +350,7 @@ $$
 但此时并不确定曲率半径$\rho$与中性轴的位置，需要使用平衡方程确定</p>
 <p>由于纯弯曲时，轴力为0，弯矩为$M_z$：
 $$
-\int_{A} \sigma \mathrm{d} A=F_{\mathrm{N}}=0 \
+\int_{A} \sigma \mathrm{d} A=F_{\mathrm{N}}=0 \\
 \int_{A}(\sigma \mathrm{d} A) y=-M_{\mathrm{z}}
 $$
 整理可得：
@@ -401,12 +401,12 @@ $$</p>
 <p>弯曲强度条件：
 $$
 \sigma_{max}=\sigma_s\quad(韧性材料)
-\
+\\
 \sigma_{max}=\sigma_b\quad(脆性材料)
 $$
 故许可应力为：
 $$
-\sigma_{\max }  \leq \frac{\sigma_{\mathrm{s}}}{n_{s}}=[\sigma] \
+\sigma_{\max }  \leq \frac{\sigma_{\mathrm{s}}}{n_{s}}=[\sigma] \\
 \sigma_{\max }  \leq \frac{\sigma_{\mathrm{b}}}{n_{b}}=[\sigma]
 $$
 此处注意，有些材料拉伸与压缩的强度不等，故需要分别计算</p>
@@ -544,7 +544,7 @@ $$</p>
 <p>设$F_P$与y轴夹角为$\alpha$，则有
 $$
 F_y=F_p cos \alpha \quad M_z=F_Plcos\alpha
-\
+\\
 F_z=F_p sin \alpha \quad M_y=F_Plsin\alpha
 $$
 任一点的正应力为：
@@ -567,7 +567,7 @@ $$
 $$</p>
 <p>对于<strong>矩形截面</strong>，最大拉、压应力发生在角点处：
 $$
-\sigma_{\max }^{+}=\frac{M_{y}}{W_{y}}+\frac{M_{z}}{W_{z}} \
+\sigma_{\max }^{+}=\frac{M_{y}}{W_{y}}+\frac{M_{z}}{W_{z}} \\
 \sigma_{\max }^{-}=-\left(\frac{M_{y}}{W_{y}}+\frac{M_{z}}{W_{z}}\right)
 $$
 但是上式对于圆截面不成立，这是由于最大的拉/压应力$M_y、M_z$<em>不同时取最值</em>，利用圆截面主矩与中性轴重合则有：
