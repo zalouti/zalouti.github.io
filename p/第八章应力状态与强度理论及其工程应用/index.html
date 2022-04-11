@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='应力状态与强度理论及其工程应用 应力状态的基本概念 应力的点的概念： 同一个截面上，不同点的应力不同 同一点处，过同一点不同方向的面上的应力各不相同'><title>第八章·应力状态与强度理论及其工程应用</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第八章·应力状态与强度理论及其工程应用'>
+<meta property='og:description' content='应力状态与强度理论及其工程应用 应力状态的基本概念 应力的点的概念： 同一个截面上，不同点的应力不同 同一点处，过同一点不同方向的面上的应力各不相同'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='材料力学' /><meta property='article:tag' content='freelearning' /><meta property='article:published_time' content='2022-04-02T10:01:25&#43;08:00'/><meta property='article:modified_time' content='2022-04-02T10:01:25&#43;08:00'/>
+<meta name="twitter:title" content="第八章·应力状态与强度理论及其工程应用">
+<meta name="twitter:description" content="应力状态与强度理论及其工程应用 应力状态的基本概念 应力的点的概念： 同一个截面上，不同点的应力不同 同一点处，过同一点不同方向的面上的应力各不相同"><style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8/">第八章·应力状态与强度理论及其工程应用</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 02, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="应力状态与强度理论及其工程应用">应力状态与强度理论及其工程应用</h1>
+<h2 id="应力状态的基本概念">应力状态的基本概念</h2>
+<p>应力的点的概念：</p>
+<ol>
+<li>同一个截面上，不同点的应力不同</li>
+<li>同一点处，过同一点不同方向的面上的应力各不相同</li>
+<li>不仅横截面上存在应力，斜截面上也存在应力</li>
+</ol>
+<p><strong>应力状态</strong>：<strong>过一点、在不同方向面上应力的集合</strong>，称之为这一点的应力状态</p>
+<p><em>为什么要研究应力状态？</em></p>
+<ul>
+<li>不仅横截面上存在应力，斜截面上也存在应力，所以二者均需研究，故引出了应力状态。</li>
+</ul>
+<p>我们描述应力状态使用有限的几个面确定应力状态去描述</p>
+<ul>
+<li>三维采用正方体的6个面</li>
+<li>二维（平面）采用4个面</li>
+<li>一维（单向）采用两个面，此时仅有正应力$\sigma_{x}$</li>
+<li>纯剪切状态，二维情形，此时只有切应力$\tau$</li>
+</ul>
+<h2 id="平面应力状态任意方向面上的应力">平面应力状态任意方向面上的应力</h2>
+<h3 id="方向角与应力分量的正负号约定">方向角与应力分量的正负号约定</h3>
+<ul>
+<li>
+<p>正应力：拉伸为正，压缩为负</p>
+</li>
+<li>
+<p>剪应力：使得微元局部顺时针转动为正，反之为负（与投影平衡的正负进行区分）</p>
+</li>
+<li>
+<p>方向角：即为x坐标轴与平面法向<em>n</em>的夹角，由逆时针转动为正，顺时针为负</p>
+</li>
+</ul>
+<h3 id="微元的局部平衡">微元的局部平衡</h3>
+<ol>
+<li>
+<p>平衡对象：用$\theta$斜截面截取的微元局部</p>
+</li>
+<li>
+<p>参加平衡的量：应力乘以面积得到<strong>力</strong>，才能参加平衡</p>
+<p><!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>由于未知数为$\sigma_{x’} \quad\tau_{x&rsquo;y'}$，故取平衡方程为y’-x’方向，可得：
+$$
+\begin{gathered}
+\sigma_{x^{\prime}}=\frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2} \cos 2 \theta-\tau_{x y} \sin 2 \theta \\
+\tau_{x^{\prime} y^{\prime}}=\frac{\sigma_{x}-\sigma_{y}}{2} \sin 2 \theta+\tau_{x y} \cos 2 \theta
+\end{gathered}
+$$
+类比转轴定理：
+$$
+\begin{aligned}
+&amp;I_{y 1}=\frac{I_{y}+I_{z}}{2}+\frac{I_{y}-I_{z}}{2} \cos 2 \alpha+I_{y z} \sin 2 \alpha \\
+&amp;I_{z 1}=\frac{I_{y}+I_{z}}{2}-\frac{I_{y}-I_{z}}{2} \cos 2 \alpha-I_{y z} \sin 2 \alpha \\
+&amp;I_{y 1 z 1}=-\frac{I_{y}-I_{z}}{2} \sin 2 \alpha+I_{y z} \cos 2 \alpha
+\end{aligned}
+$$
+同样，公式中的$\theta$可以看作变量，可以进行变量的代换与换元</p>
+</li>
+</ol>
+<h2 id="应力状态中的主应力与最大剪应力">应力状态中的主应力与最大剪应力</h2>
+<h3 id="主平面主应力主方向">主平面、主应力、主方向</h3>
+<p>当剪应力$\tau_{x’y’}=0$时，设对应的夹角为$\theta_p$:
+$$
+tan 2\theta_p =-\frac{2\tau_{xy}}{\sigma_x-\sigma_y}
+$$
+此时对应的平面称为主平面，主平面上的正应力称为主应力，主方向即为主平面的法线方向，使用夹角$\theta_p$表示</p>
+<p>我们对于斜截面的正应力$\sigma_{x’}$求导可得，当$\sigma_{x’}$取得极值时，角度恰为主方向对应的夹角$\theta_p$，说明<strong>主平面上正应力取得极值</strong></p>
+<p><em>Hints:</em></p>
+<ul>
+<li>
+<p>由剪应力互等定理可知，当主平面上剪应力为0时，另一与其垂直的平面上的剪应力同样为0，即说明$\theta_p$与$\theta_p+\frac{\pi}{2}$均为主方向，正应力在其上一个为极大值，另一个为极小值</p>
+</li>
+<li>
+<p>主应力的极值</p>
+<p>将$\theta_p$代入$\sigma_{x’}$中，可得：
+$$
+\begin{aligned}
+\sigma^{\prime}=\frac{\sigma_{x}+\sigma_{y}}{2}+\frac{1}{2} \sqrt{\left(\sigma_{x}-\sigma_{y}\right)^{2}+4 \tau_{x y}^{2}} \\
+\sigma^{\prime \prime}=\frac{\sigma_{x}+\sigma_{y}}{2}-\frac{1}{2} \sqrt{\left(\sigma_{x}-\sigma_{y}\right)^{2}+4 \tau_{x y}^{2}}
+\end{aligned}
+$$</p>
+</li>
+<li>
+<p>平面应力状态的三个主应力</p>
+<p>注意主平面的定义为<strong>剪应力为0的平面</strong>，因此斜微元体本身的三角形平面也是一个主平面，且有$\sigma^{'''}=0$</p>
+<p>按照数值大小排序三个主应力为
+$$
+\sigma_1 &gt;\sigma_2&gt;\sigma_3
+$$</p>
+</li>
+</ul>
+<blockquote>
+<p>研究主平面上的应力较为简单，且可以有效的代表此点的情况。</p>
+</blockquote>
+<h3 id="面内最大剪应力">面内最大剪应力</h3>
+<p>对于剪应力$\tau_{x&rsquo;y'}$求导，可得到另一个特征角$\theta_s$：
+$$
+\tan 2 \theta_{s}=\frac{\sigma_{x}-\sigma_{y}}{2 \tau_{x y}}
+$$
+同样$\theta_s$与$\theta_s+\frac{\pi}{2}$均为对应的解，对应两个垂直的平面</p>
+<p>将$\theta_s$代入，可得到切应力的极值为：
+$$
+\tau^{\prime}=\pm \frac{1}{2} \sqrt{\left(\sigma_{x}-\sigma_{y}\right)^{2}+4 \tau_{x y}^{2}}
+$$</p>
+<blockquote>
+<p>但是此时的斜截面为垂直平面，此时确定的最大剪应力是否为对应的整个微元体中的最大剪应力呢？</p>
+<p>见后文</p>
+</blockquote>
+<h3 id="主平面与最大剪应力作用面之关系">主平面与最大剪应力作用面之关系</h3>
+<p>$$
+tan 2\theta_p =-\frac{2\tau_{xy}}{\sigma_x-\sigma_y} 
+\quad
+\tan 2 \theta_{s}=\frac{\sigma_{x}-\sigma_{y}}{2 \tau_{x y}}
+$$</p>
+<p>可发现
+$$
+tan2\theta_p \dotproduct tan2\theta_s=-1
+\to
+2\theta_p-2\theta_s=\frac{\pi}{2}
+$$</p>
+<h3 id="过一点所有方向面中的最大剪应力">过一点所有方向面中的最大剪应力</h3>
+<p>此时我们取一个微元体，使得其表面恰好为三对主平面，且此时主应力分别为$\sigma_1$、$\sigma_2$、$\sigma_3$（之前规定的）</p>
+<p>切割方法：分别平行于$\sigma_1$、$\sigma_2$、$\sigma_3$去切割，分析可得面内最大切应力为：
+$$
+\tau=\frac{\sigma_1-\sigma_2}{2}
+\quad
+\tau=\frac{\sigma_2-\sigma_3}{2}
+\quad
+\tau=\frac{\sigma_1-\sigma_3}{2}
+$$
+由弹性力学的理论可以证明，对于一个微元体，任意的切割均不会使其剪应力超过上述三者的最大值，故过一点所有方向面中的最大剪应力为：
+$$
+\tau=\frac{\sigma_1-\sigma_3}{2}
+$$</p>
+<h2 id="应力圆及其应用">应力圆及其应用</h2>
+<blockquote>
+<p>应力圆是辅助思考分析的工具，而非计算工具</p>
+</blockquote>
+<p>由莫尔圆可知
+$$
+tan2\theta_p=\frac{\tau_{xy}}{\sigma_x-\frac{\sigma_x-\sigma_y}{2}}
+$$
+莫尔圆的半径$R$为:
+$$
+R=\frac{1}{2}\sqrt{(\sigma_x-\sigma_y)^2+4\tau_{xy}^2}
+$$
+因此主应力的大小为
+$$
+\sigma'=\frac{\sigma_x+\sigma_y}{2} \pm R
+$$
+最大切应力即为$R$:
+$$
+R=\frac{1}{2}\sqrt{(\sigma_x-\sigma_y)^2+4\tau_{xy}^2}
+$$
+且有几何关系：
+$$
+2\theta_s+2\theta_p=\frac{\pi}{2}
+$$</p>
+<h3 id="三向应力状态的应力圆">三向应力状态的应力圆</h3>
+<p>分别沿着$\sigma_1$、$\sigma_2$、$\sigma_3$作出应力圆，并画在<strong>同一坐标系</strong>之中</p>
+<p>微元任一方向面上的应力对应着<strong>三个应力圆之间某一点的坐标</strong>。</p>
+<p>平面应力状态存在<strong>应力为0的面</strong>，其中一个主应力<strong>位于原点</strong>，同样可以做出三个应力圆</p>
+<h2 id="承受内压薄壁容器的应力状态">承受内压薄壁容器的应力状态</h2>
+<p>在中间对称轴上面取一个小微元，设周向应力为$\sigma_t$，轴向应力为$\sigma_m$，由于此时咋子对称轴附近取微元，因此没有剪应力，此时上面两种应力恰为主应力</p>
+<p>将<strong>薄壁容器与容器内的气体</strong>一同作为受力对象分析，此时界面上的压力将为分布于平面上的均布压力，合力为：
+$$
+p(\frac{\pi D^2}{4})
+$$
+由水平方向$\sum F_x=0$可知：
+$$
+\sigma_m(\pi D)\delta=p(\frac{\pi D^2}{4}) \to \sigma_m=\frac{pD}{4\delta}
+$$
+在取一个长为$l$的环状容器，取一半及其中气体分析：</p>
+<p>气体产生的合力为:
+$$
+pDl
+$$
+由竖直方向$\sum F_y=0$可知：
+$$
+\sigma_t2\delta l=pDl \to \sigma_t=\frac{pD}{2\delta}
+$$
+综上，则有：
+$$
+\sigma_t=\frac{pD}{2\delta} \quad \sigma_m=\frac{pD}{4\delta}
+$$
+上述分析中，忽略了气体内压对于应力分析的影响，是由于数量级的原因。</p>
+<h2 id="广义胡克定律">广义胡克定律</h2>
+<p>要求：</p>
+<ol>
+<li>线弹性阶段</li>
+<li>线性微小变形</li>
+</ol>
+<p>对于平面应力状态，广义胡克定律为：
+$$
+\varepsilon_{x}=\frac{1}{E}\left(\sigma_{x}-v \sigma_{y}\right) \\
+\varepsilon_{y}=\frac{1}{E}\left(\sigma_{y}-v \sigma_{x}\right) \\
+\varepsilon_{z}=\frac{\nu}{E}\left(\sigma_{y}+ \sigma_{x}\right) 
+\\
+\gamma_{x y}=\frac{\tau_{x y}}{G}
+$$
+对于三维的应力状态可得：
+$$
+\varepsilon_{x}=\frac{1}{E}\left[\sigma_{x}-v\left(\sigma_{y}+\sigma_{z}\right)\right] \\
+\varepsilon_{y}=\frac{1}{E}\left[\sigma_{y}-v\left(\sigma_{z}+\sigma_{x}\right)\right] \\
+\varepsilon_{z}=\frac{1}{E}\left[\sigma_{z}-v\left(\sigma_{x}+\sigma_{y}\right)\right] \\
+\gamma_{x y}=\frac{\tau_{x y}}{G} \\
+\gamma_{x z}=\frac{\tau_{x z}}{G} \\
+\gamma_{y z}=\frac{\tau_{y z}}{G}
+$$
+其中应变指标满足下指标轮换，这反映了<strong>材料的各向同性</strong></p>
+<p>在主应力下，则有：
+$$
+\begin{aligned}
+&amp;\varepsilon_{1}=\frac{1}{E}\left[\sigma_{1}-v\left(\sigma_{2}+\sigma_{3}\right)\right] \
+&amp;\varepsilon_{2}=\frac{1}{E}\left[\sigma_{2}-v\left(\sigma_{3}+\sigma_{1}\right)\right] \
+&amp;\varepsilon_{3}=\frac{1}{E}\left[\sigma_{3}-v\left(\sigma_{1}+\sigma_{2}\right)\right]
+\end{aligned}
+$$</p>
+<h3 id="各项同性材料各弹性常数之间的关系">各项同性材料各弹性常数之间的关系</h3>
+<p>满足：
+$$
+G=\frac{E}{2(1+v)}
+$$
+对于大多数各项同性材料，泊松比一般在0~0.5之间取值，切变模量的取值范围为：
+$$
+\frac{E}{3}&lt;G&lt;\frac{E}{2}
+$$</p>
+<h2 id="应变能与应变能密度">应变能与应变能密度</h2>
+<h3 id="总应变能密度">总应变能密度</h3>
+<p>取正好处在主应力状态的微单元体，可以得到每个主应力对应的应变为：
+$$
+\sigma_{1} \mathrm{~d} y \mathrm{~d} z \rightarrow \varepsilon_{1} \mathrm{~d} x \\
+\sigma_{2} \mathrm{~d} x \mathrm{~d} z \rightarrow \varepsilon_{2} \mathrm{~d} y \\
+\sigma_{3} \mathrm{~d} y \mathrm{~d} x \rightarrow \varepsilon_{3} \mathrm{~d} z
+$$
+由于为线弹性，故应变能为：
+$$
+\mathrm{d} W \\
+=\frac{1}{2}\left(\sigma_{1} \mathrm{~d} y \mathrm{~d} z\right)\left(\varepsilon_{1} \mathrm{~d} x\right) +\frac{1}{2}\left(\sigma_{2} \mathrm{~d} x \mathrm{~d} z\right)\left(\varepsilon_{2} \mathrm{~d} y\right) +\frac{1}{2}\left(\sigma_{3} \mathrm{~d} x \mathrm{~d} y\right)\left(\varepsilon_{3} \mathrm{~d} z\right) \\
+=\frac{1}{2}\left(\sigma_{1} \varepsilon_{1}+\sigma_{2} \varepsilon_{2}+\sigma_{3} \varepsilon_{3}\right)(\mathrm{d} x \mathrm{~d} y \mathrm{~d} z) \\
+=\mathrm{d} V_{\varepsilon}
+$$
+应变能密度$v$:
+$$
+\begin{aligned}
+v=&amp; \frac{\mathrm{d} V_{\varepsilon}}{\mathrm{d} V}=\frac{\frac{1}{2}\left(\sigma_{1} \varepsilon_{1}+\sigma_{2} \varepsilon_{2}+\sigma_{3} \varepsilon_{3}\right)(\mathrm{d} x \mathrm{~d} y \mathrm{~d} z)}{(\mathrm{d} x \mathrm{~d} y \mathrm{~d} z)} \\
+&amp;=\frac{1}{2}\left(\sigma_{1} \varepsilon_{1}+\sigma_{2} \varepsilon_{2}+\sigma_{3} \varepsilon_{3}\right)\\
+&amp;=\frac{1}{2 E}\left[\sigma_{1}^{2}+\sigma_{2}^{2}+\sigma_{3}^{2}-2 v\left(\sigma_{1} \sigma_{2}+\sigma_{2} \sigma_{3}+\sigma_{3} \sigma_{1}\right)\right]
+\end{aligned}
+$$</p>
+<h3 id="体积改变能密度与畸变能密度">体积改变能密度与畸变能密度</h3>
+<p>将一般的应力状态进行和分解</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/11/FpXySaQoJrIw7fH.png" >
+		<img src="https://s2.loli.net/2022/04/11/FpXySaQoJrIw7fH.png"
+			
+			
+			
+			loading="lazy"
+			alt="应变状态的和分解">
+	</a>
+	
+	<figcaption>应变状态的和分解</figcaption>
+	
+</figure></p>
+<p>这两个应力状态满足</p>
+<ol>
+<li>第一个不改变形状、只改变体积</li>
+<li>第二个不改变体积，只改变形状</li>
+</ol>
+<p>设体积改变能密度为$v_{\mathrm{v}}$，则有：
+$$
+v_{\mathrm{v}}=\frac{1-2 v}{6 E}\left(\sigma_{1}+\sigma_{2}+\sigma_{3}\right)^{2}
+$$
+设畸变能密度为$v_{\mathrm{d}}$，则有：
+$$
+v_{\mathrm{d}}=\frac{1+v}{6 E}\left[\left(\sigma_{1}-\sigma_{2}\right)^{2}+\left(\sigma_{2}-\sigma_{3}\right)^{2}+\left(\sigma_{3}-\sigma_{1}\right)^{2}\right]
+$$
+应变能密度之间满足：
+$$
+v=v_V+v_d
+$$
+这种分解的特殊之处在于，应变能一个非线性的表达式，竟然可以使用<strong>线性的叠加！</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
+        
+            <a href="/tags/freelearning/">freelearning</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第七章·梁的变形分析与刚度问题</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第六章·梁的应力分析与强度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%A2%81%E7%9A%84%E5%89%AA%E5%8A%9B%E5%9B%BE%E5%92%8C%E5%BC%AF%E7%9F%A9%E5%9B%BE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第五章·梁的剪力图和弯矩图</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第四章·圆轴扭转时的强度与刚度计算</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第三章·连接件强度的工程假定计算</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#应力状态的基本概念">应力状态的基本概念</a></li>
+    <li><a href="#平面应力状态任意方向面上的应力">平面应力状态任意方向面上的应力</a>
+      <ol>
+        <li><a href="#方向角与应力分量的正负号约定">方向角与应力分量的正负号约定</a></li>
+        <li><a href="#微元的局部平衡">微元的局部平衡</a></li>
+      </ol>
+    </li>
+    <li><a href="#应力状态中的主应力与最大剪应力">应力状态中的主应力与最大剪应力</a>
+      <ol>
+        <li><a href="#主平面主应力主方向">主平面、主应力、主方向</a></li>
+        <li><a href="#面内最大剪应力">面内最大剪应力</a></li>
+        <li><a href="#主平面与最大剪应力作用面之关系">主平面与最大剪应力作用面之关系</a></li>
+        <li><a href="#过一点所有方向面中的最大剪应力">过一点所有方向面中的最大剪应力</a></li>
+      </ol>
+    </li>
+    <li><a href="#应力圆及其应用">应力圆及其应用</a>
+      <ol>
+        <li><a href="#三向应力状态的应力圆">三向应力状态的应力圆</a></li>
+      </ol>
+    </li>
+    <li><a href="#承受内压薄壁容器的应力状态">承受内压薄壁容器的应力状态</a></li>
+    <li><a href="#广义胡克定律">广义胡克定律</a>
+      <ol>
+        <li><a href="#各项同性材料各弹性常数之间的关系">各项同性材料各弹性常数之间的关系</a></li>
+      </ol>
+    </li>
+    <li><a href="#应变能与应变能密度">应变能与应变能密度</a>
+      <ol>
+        <li><a href="#总应变能密度">总应变能密度</a></li>
+        <li><a href="#体积改变能密度与畸变能密度">体积改变能密度与畸变能密度</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+    </body>
+</html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='yyj老师好帅'><title>第四章·圆轴扭转时的强度与刚度计算</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一'><title>第七章·梁的变形分析与刚度问题</title>
 
-<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/'>
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第四章·圆轴扭转时的强度与刚度计算'>
-<meta property='og:description' content='yyj老师好帅'>
-<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第七章·梁的变形分析与刚度问题'>
+<meta property='og:description' content='梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/'>
 <meta property='og:site_name' content='第二基地'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-18T20:52:03&#43;08:00'/><meta property='article:modified_time' content='2022-03-18T20:52:03&#43;08:00'/>
-<meta name="twitter:title" content="第四章·圆轴扭转时的强度与刚度计算">
-<meta name="twitter:description" content="yyj老师好帅"><style>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-28T09:47:23&#43;08:00'/><meta property='article:modified_time' content='2022-03-28T09:47:23&#43;08:00'/>
+<meta name="twitter:title" content="第七章·梁的变形分析与刚度问题">
+<meta name="twitter:description" content="梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -81,13 +81,9 @@
     
 
     <h2 class="article-title">
-        <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">第四章·圆轴扭转时的强度与刚度计算</a>
+        <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">第七章·梁的变形分析与刚度问题</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        yyj老师好帅
-    </h3>
     
 
     
@@ -103,7 +99,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 18, 2022</time>
+                <time class="article-time--published">Mar 28, 2022</time>
             </div>
         
 
@@ -118,7 +114,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -128,181 +124,64 @@
 </header>
 
     <section class="article-content">
-    <h1 id="圆轴扭转时的强度与刚度计算">圆轴扭转时的强度与刚度计算</h1>
-<h2 id="外加扭力矩扭矩与扭矩图">外加扭力矩、扭矩与扭矩图</h2>
-<p>作用于构件中的扭矩与机器的转速、功率相关。在传动轴计算中，通常给出传动功率$P$与转速$n$，可得外加力矩$M_e$为：
+    <h1 id="梁的变形分析与刚度问题">梁的变形分析与刚度问题</h1>
+<h2 id="梁的变形与梁的位移">梁的变形与梁的位移</h2>
+<h3 id="梁的曲率与位移">梁的曲率与位移</h3>
+<p>挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。</p>
+<p>$w(x)$:某一点受弯曲之后下降的高度</p>
+<p>$\rho(x)$：x处的曲率半径</p>
+<p>$\theta(x)$:曲率半径与垂直法向的夹角</p>
+<p>根据弯曲可知，梁的纯弯曲满足：
 $$
-M_e \omega=P(SI)
-\
-M_e=9549\frac{P}{n}(P单位为kW,n单位为r/min)
+\frac{1}{\rho}=\frac{M}{EI}
+$$</p>
+<h3 id="梁截面的三种位移">梁截面的三种位移</h3>
+<ol>
+<li>挠度：横截面形心处的铅垂位移，用<em>w</em>表示</li>
+<li>转角：变形后的横截面，相对于变形前的中性轴所转过的夹角</li>
+<li>水平位移（小变形下忽略）：横截面形心沿着水平方向的位移</li>
+</ol>
+<h3 id="挠度与转角的相互关系">挠度与转角的相互关系</h3>
+<p>规定挠度<strong>向下为正</strong>，建立w-x坐标系则有：
 $$
-扭矩与扭矩图的研究同之前轴力与轴力图的方法。</p>
-<h2 id="剪应力互等成对定理">剪应力互等/成对定理</h2>
-<p>由于一个面上的力偶无法独自平衡，所以需要另有一对力偶与之平衡，则有：
+\frac{dw}{dx}=tan \theta \approx \theta
 $$
-(\tau dy dz)dx=(\tau&rsquo;dxdz)dy \to \tau=\tau'
+则称$w=w(x)$为挠度方程。</p>
+<h2 id="梁的小挠度微分方程及其积分">梁的小挠度微分方程及其积分</h2>
+<p>已知数学中的曲率公式为：
 $$
-严谨表述为：在两个相互垂直的平面上，净应力必然成对存在且数值相等，两者都垂直于两个平面的交线，方向则共同指向或者背离这一交线</p>
-<h2 id="圆轴扭转时横截面上的剪应力分析与强度设计">圆轴扭转时横截面上的剪应力分析与强度设计</h2>
+\frac{1}{\rho}=\frac{|\frac{d^2 w}{dx^2}|}{[1+(\frac{d w}{dx})^2]^{3/2}}
+$$</p>
+<p>在小挠度情况下$\frac{dw}{dx}$为小量，略去分母上的二阶小量可得：
+$$
+\frac{d^2w}{dx^2}= \pm\frac{M}{EI}
+$$
+正负号与<strong><em>w</em>坐标取向</strong>有关，在力矩$M$碗口朝上的情况下，当坐标w正方向朝下时，上式取负号，正方向朝上时，上式取正号。</p>
+<p>两侧积分可得
+$$
+\frac{d w}{d x}=\theta=-\int \frac{M(x)}{E I} \mathrm{~d} x+C 
+\\
+w=\int_{l}(-\int_{l} \frac{M(x)}{E I} \mathrm{~d} x) \mathrm{d} x+C x+D
+$$</p>
+<h3 id="积分常数的确定">积分常数的确定</h3>
+<ul>
+<li>在固定轴支座处，约束条件为挠度w=0</li>
+<li>在墙面的固定端，约束条件为：挠度w与夹角$\theta$均为0</li>
+<li><strong>连续条件</strong>：在集中力、集中力偶、分布载荷间断处，两侧的挠度与转角对应相等，$w_1=w_2 \quad \theta_1=\theta_2$</li>
+</ul>
+<p><em>Hints</em>:</p>
+<ol>
+<li>在建立梁的弯矩方程时，统一由截面左侧部分建立方程，这样可以方便确定待定常数</li>
+<li>不要展开力系简化中的力臂项</li>
+<li>分为n段，会有2n个待定常数</li>
+</ol>
+<h2 id="叠加法确定梁的挠度和转角">叠加法确定梁的挠度和转角</h2>
 <blockquote>
-<p>变形协调+物性关系+平衡方程</p>
+<p>先决条件：在线弹性、小变形问题下，梁的弯曲问题，是线性问题。</p>
 </blockquote>
-<p><strong>平面假定</strong>：圆柱体做扭转时，假定横截面只做刚性的旋转，并不改变轴向位置</p>
-<p>设圆轴半径为$\rho$处的剪应变为$\gamma(\rho)$，则<strong>变形协调</strong>方程为：
-$$
-\gamma(\rho)=\rho\frac{d\varphi}{dx}
-$$
-由<strong>物性关系</strong>可知截面上剪应力分布为：
-$$
-\tau=G\gamma=G\rho\frac{d\varphi}{dx}
-$$
-但是我们仍然不清楚单位长度的相对扭转角$\frac{d\varphi}{dx}$的值，需要用<strong>平衡方程</strong>获取：
-$$
-\int_A(\tau dA)\rho=M_x
-\
-\frac{d\varphi}{dx}=\frac{M_x}{GI_P}
-$$
-其中，我们定义$GI_P$为<strong>扭转刚度</strong>，$I_P$的定义为：
-$$
-I_P=\int_A \rho^2 dA
-$$
-故在扭转中的剪应力为：
-$$
-\tau(\rho)=\frac{M_x\rho}{I_P}（注意沿着圆心径向分布）
-$$
-剪应力取最大值为$\rho$取最大值时，设扭转截面模量$W_P$为：
-$$
-W_P=\frac{I_P}{\rho_{max}} \quad
-\to
-\quad
-\tau_{max}=\frac{M_x}{W_P}
-$$</p>
-<h3 id="截面的极惯性矩与扭转截面模量">截面的极惯性矩与扭转截面模量</h3>
-<ul>
-<li>
-<p>对于直径为$d$的实心圆截面
-$$
-I_P = \frac{\pi d^4}{32}  \quad W_P=\frac{\pi d^3}{16}
-$$</p>
-</li>
-<li>
-<p>对于内外直径分别为$d$和$D$的圆环截面
-$$
-I_P=\frac{\pi D^4(1-\alpha^4)}{32} \quad W_P=\frac{\pi D^3(1-\alpha^4)}{16}
-\quad
-\alpha=\frac{d}{D}
-$$</p>
-</li>
-</ul>
-<h3 id="受扭转的圆轴的强度设计准则">受扭转的圆轴的强度设计准则</h3>
-<p>类比拉压杆件，则有：
-$$
-\tau_{max}=\frac{M_{x,max}}{W_P}\leq[\tau]
-$$
-共有三类问题：</p>
-<ol>
-<li>强度校核</li>
-<li>尺寸设计</li>
-<li>最大许可扭矩</li>
-</ol>
-<h2 id="圆杆扭转时的变形及刚度条件">圆杆扭转时的变形及刚度条件</h2>
-<p>受纽圆轴的相对扭转角$\varphi$为：
-$$
-\varphi=\int_ld\varphi=\int_l \frac{M_x}{GI_P}dx
-$$</p>
-<ol>
-<li>
-<p>两端承受集中扭矩的等截面圆轴</p>
-<p>$$
-\varphi_{AB}=\frac{M_xl}{GI_P}=\frac{M_el}{GI_P}
-$$</p>
-</li>
-<li>
-<p>各段不等</p>
-<p>分段研究之后累加:
-$$
-\varphi_{AB}=\sum_{i=1}^{n}\frac{M_{xi}l_i}{GI_{Pi}}
-$$</p>
-</li>
-<li>
-<p>均匀分布的力偶</p>
-<p>需要积分运算$M(x)$</p>
-</li>
-</ol>
-<h3 id="受扭圆轴的刚度设计准则">受扭圆轴的刚度设计准则</h3>
-<p>一般地，设计准则为：
-$$
-\theta=\frac{d\varphi}{dx}\leq[\theta]
-$$
-对于之前的两端集中承受扭矩的等截面圆轴则有
-$$
-\theta=\frac{M_x}{GI_P}\leq[\theta]
-$$
-类比也可以进行三类问题的运算：</p>
-<ol>
-<li>刚度校核</li>
-<li>尺寸设计</li>
-<li>最大载荷</li>
-</ol>
-<blockquote>
-<p>note:计算时需要同一单位，注意弧度与角度！</p>
-</blockquote>
-<h2 id="结论与讨论">结论与讨论</h2>
-<h3 id="关于公式的应用条件">关于公式的应用条件</h3>
-<p>扭转剪应力公式是圆轴在弹性范围内导出的：</p>
-<ol>
-<li>必须是圆轴</li>
-<li>必须满足胡克定律</li>
-</ol>
-<h3 id="矩形截面杆扭转时横截面上的剪应力">矩形截面杆扭转时横截面上的剪应力</h3>
-<ol>
-<li>
-<p>变形特征——翘曲</p>
-<p>扭转后，横截面将不再保持平面</p>
-</li>
-<li>
-<p>由平衡直接得到的结论（弹性力学中的基本结论）</p>
-<ul>
-<li>角点的剪应力为0</li>
-<li>边缘各点剪应力沿着切线方向</li>
-</ul>
-</li>
-<li>
-<p>剪应力分布与剪应力公式</p>
-<ul>
-<li>最大的切应力发生在长边中点</li>
-</ul>
-<p>$$
-\tau_{max}=\frac{M_x}{C_1hb^2} \quad 长边h中点处
-\
-\tau_{max}'=C_1'\tau_{max} \quad 短边中点处
-$$</p>
-<p>其中，$C_1$、$C_1’$查表可得对应系数</p>
-</li>
-<li>
-<p>狭长矩形截面</p>
-<p>当长边$h$远大于短边$\delta$时，$C_1=0.3333 \approx\frac{1}{3}$，可得：
-$$
-\tau_{max}=\frac{3M_x}{h\delta^2}
-$$
-此时长边的切应力接近于线性变化，短边切应力几乎为0</p>
-<blockquote>
-<p>一个小问题：一张A4纸，直接扭转与卷成纸筒，谁更抗扭转？</p>
-<p>显然是纸筒，但是为什么呢？</p>
-</blockquote>
-<ul>
-<li>
-<p>纸筒上的切应力为线性分布，在纸厚非常小的情况下，可视作线性分布，已知纸筒的半径为$r$，对于中心点取矩可得:
-$$
-M_x=\oint\tau ,r,dA
-$$</p>
-</li>
-<li>
-<p>而一张A4纸的截面，恰为一个狭长矩形截面，对于相同的扭矩$M_x$，此时力臂最大为$\delta$，故此时剪应力$\tau$分布在狭小的一块区域中且数值极大，因此抗扭转的能力更弱</p>
-</li>
-</ul>
-</li>
-</ol>
+<h3 id="逐段钢化法">逐段钢化法</h3>
+<p>将杆件逐段钢化，将挠度与角度代数叠加，即可得到最终的挠度与转角。</p>
+<p>原理在于：逐段钢化法中，产生$\theta$转角的微段都纳入计算，与之前并无区别。这种算法实际上是对于自身转角与传导转角的一种叠加。</p>
 
 </section>
 
@@ -382,18 +261,6 @@ $$</p>
                 
                     
 <article class="">
-    <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第七章·梁的变形分析与刚度问题</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/p/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A2%81%E7%9A%84%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E4%B8%8E%E5%BC%BA%E5%BA%A6%E8%AE%A1%E7%AE%97/">
         
         
@@ -412,6 +279,18 @@ $$</p>
 
         <div class="article-details">
             <h2 class="article-title">第五章·梁的剪力图和弯矩图</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第四章·圆轴扭转时的强度与刚度计算</h2>
         </div>
     </a>
 </article>
@@ -603,23 +482,21 @@ async>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#外加扭力矩扭矩与扭矩图">外加扭力矩、扭矩与扭矩图</a></li>
-    <li><a href="#剪应力互等成对定理">剪应力互等/成对定理</a></li>
-    <li><a href="#圆轴扭转时横截面上的剪应力分析与强度设计">圆轴扭转时横截面上的剪应力分析与强度设计</a>
+    <li><a href="#梁的变形与梁的位移">梁的变形与梁的位移</a>
       <ol>
-        <li><a href="#截面的极惯性矩与扭转截面模量">截面的极惯性矩与扭转截面模量</a></li>
-        <li><a href="#受扭转的圆轴的强度设计准则">受扭转的圆轴的强度设计准则</a></li>
+        <li><a href="#梁的曲率与位移">梁的曲率与位移</a></li>
+        <li><a href="#梁截面的三种位移">梁截面的三种位移</a></li>
+        <li><a href="#挠度与转角的相互关系">挠度与转角的相互关系</a></li>
       </ol>
     </li>
-    <li><a href="#圆杆扭转时的变形及刚度条件">圆杆扭转时的变形及刚度条件</a>
+    <li><a href="#梁的小挠度微分方程及其积分">梁的小挠度微分方程及其积分</a>
       <ol>
-        <li><a href="#受扭圆轴的刚度设计准则">受扭圆轴的刚度设计准则</a></li>
+        <li><a href="#积分常数的确定">积分常数的确定</a></li>
       </ol>
     </li>
-    <li><a href="#结论与讨论">结论与讨论</a>
+    <li><a href="#叠加法确定梁的挠度和转角">叠加法确定梁的挠度和转角</a>
       <ol>
-        <li><a href="#关于公式的应用条件">关于公式的应用条件</a></li>
-        <li><a href="#矩形截面杆扭转时横截面上的剪应力">矩形截面杆扭转时横截面上的剪应力</a></li>
+        <li><a href="#逐段钢化法">逐段钢化法</a></li>
       </ol>
     </li>
   </ol>
