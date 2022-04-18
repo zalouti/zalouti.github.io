@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一'><title>第七章·梁的变形分析与刚度问题</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='应力状态与强度理论及其工程应用（下） 强度理论概述 建立一般应力状态下强度失效准则的思路 已知简单应力状态下的失效条件 实际工程中承受复杂载荷 但是材'><title>第八章·应力状态与强度理论及其工程应用（下）</title>
 
-<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/'>
+<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第七章·梁的变形分析与刚度问题'>
-<meta property='og:description' content='梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一'>
-<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第八章·应力状态与强度理论及其工程应用（下）'>
+<meta property='og:description' content='应力状态与强度理论及其工程应用（下） 强度理论概述 建立一般应力状态下强度失效准则的思路 已知简单应力状态下的失效条件 实际工程中承受复杂载荷 但是材'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/'>
 <meta property='og:site_name' content='第二基地'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-28T09:47:23&#43;08:00'/><meta property='article:modified_time' content='2022-03-28T09:47:23&#43;08:00'/>
-<meta name="twitter:title" content="第七章·梁的变形分析与刚度问题">
-<meta name="twitter:description" content="梁的变形分析与刚度问题 梁的变形与梁的位移 梁的曲率与位移 挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。 $w(x)$:某一"><style>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-04-18T08:16:35&#43;08:00'/><meta property='article:modified_time' content='2022-04-18T08:16:35&#43;08:00'/>
+<meta name="twitter:title" content="第八章·应力状态与强度理论及其工程应用（下）">
+<meta name="twitter:description" content="应力状态与强度理论及其工程应用（下） 强度理论概述 建立一般应力状态下强度失效准则的思路 已知简单应力状态下的失效条件 实际工程中承受复杂载荷 但是材"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -81,7 +81,7 @@
     
 
     <h2 class="article-title">
-        <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">第七章·梁的变形分析与刚度问题</a>
+        <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/">第八章·应力状态与强度理论及其工程应用（下）</a>
     </h2>
 
     
@@ -99,7 +99,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 28, 2022</time>
+                <time class="article-time--published">Apr 18, 2022</time>
             </div>
         
 
@@ -114,7 +114,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -124,64 +124,239 @@
 </header>
 
     <section class="article-content">
-    <h1 id="梁的变形分析与刚度问题">梁的变形分析与刚度问题</h1>
-<h2 id="梁的变形与梁的位移">梁的变形与梁的位移</h2>
-<h3 id="梁的曲率与位移">梁的曲率与位移</h3>
-<p>挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。</p>
-<p>$w(x)$:某一点受弯曲之后下降的高度</p>
-<p>$\rho(x)$：x处的曲率半径</p>
-<p>$\theta(x)$:曲率半径与垂直法向的夹角</p>
-<p>根据弯曲可知，梁的纯弯曲满足：
-$$
-\frac{1}{\rho}=\frac{M}{EI}
-$$</p>
-<h3 id="梁截面的三种位移">梁截面的三种位移</h3>
-<ol>
-<li>挠度：横截面形心处的铅垂位移，用<em>w</em>表示</li>
-<li>转角：变形后的横截面，相对于变形前的中性轴所转过的夹角</li>
-<li>水平位移（小变形下忽略）：横截面形心沿着水平方向的位移</li>
-</ol>
-<h3 id="挠度与转角的相互关系">挠度与转角的相互关系</h3>
-<p>规定挠度<strong>向下为正</strong>，建立w-x坐标系则有：
-$$
-\frac{dw}{dx}=tan \theta \approx \theta
-$$
-则称$w=w(x)$为挠度方程。</p>
-<h2 id="梁的小挠度微分方程及其积分">梁的小挠度微分方程及其积分</h2>
-<p>已知数学中的曲率公式为：
-$$
-\frac{1}{\rho}=\frac{|\frac{d^2 w}{dx^2}|}{[1+(\frac{d w}{dx})^2]^{3/2}}
-$$</p>
-<p>在小挠度情况下$\frac{dw}{dx}$为小量，略去分母上的二阶小量可得：
-$$
-\frac{d^2w}{dx^2}= \pm\frac{M}{EI}
-$$
-正负号与<strong><em>w</em>坐标取向</strong>有关，在力矩$M$碗口朝上的情况下，当坐标w正方向朝下时，上式取负号，正方向朝上时，上式取正号。</p>
-<p>两侧积分可得
-$$
-\frac{d w}{d x}=\theta=-\int \frac{M(x)}{E I} \mathrm{~d} x+C 
-\\
-w=\int_{l}(-\int_{l} \frac{M(x)}{E I} \mathrm{~d} x) \mathrm{d} x+C x+D
-$$</p>
-<h3 id="积分常数的确定">积分常数的确定</h3>
+    <h1 id="应力状态与强度理论及其工程应用下">应力状态与强度理论及其工程应用（下）</h1>
+<h2 id="强度理论概述">强度理论概述</h2>
 <ul>
-<li>在固定轴支座处，约束条件为挠度w=0</li>
-<li>在墙面的固定端，约束条件为：挠度w与夹角$\theta$均为0</li>
-<li><strong>连续条件</strong>：在集中力、集中力偶、分布载荷间断处，两侧的挠度与转角对应相等，$w_1=w_2 \quad \theta_1=\theta_2$</li>
-</ul>
-<p><em>Hints</em>:</p>
+<li>建立一般应力状态下强度失效准则的思路
 <ol>
-<li>在建立梁的弯矩方程时，统一由截面左侧部分建立方程，这样可以方便确定待定常数</li>
-<li>不要展开力系简化中的力臂项</li>
-<li>分为n段，会有2n个待定常数</li>
+<li>已知简单应力状态下的失效条件</li>
+<li>实际工程中承受复杂载荷</li>
+<li>但是材料失效的原因是不变的，因此存在由简单情况导出复杂情况下失效的条件</li>
 </ol>
-<h2 id="叠加法确定梁的挠度和转角">叠加法确定梁的挠度和转角</h2>
+</li>
+</ul>
+<h2 id="关于脆性断裂的强度理论">关于脆性断裂的强度理论</h2>
+<h3 id="第一强度理论最大拉应力">第一强度理论（最大拉应力）</h3>
 <blockquote>
-<p>先决条件：在线弹性、小变形问题下，梁的弯曲问题，是线性问题。</p>
+<p>材料受到破坏的原因是由于材料微元内最大拉应力达到了某一个共同的极限值。</p>
 </blockquote>
-<h3 id="逐段钢化法">逐段钢化法</h3>
-<p>将杆件逐段钢化，将挠度与角度代数叠加，即可得到最终的挠度与转角。</p>
-<p>原理在于：逐段钢化法中，产生$\theta$转角的微段都纳入计算，与之前并无区别。这种算法实际上是对于自身转角与传导转角的一种叠加。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/UM7nayfPv6cNe1g.png" >
+		<img src="https://s2.loli.net/2022/04/18/UM7nayfPv6cNe1g.png"
+			
+			
+			
+			loading="lazy"
+			alt="第一强度理论">
+	</a>
+	
+	<figcaption>第一强度理论</figcaption>
+	
+</figure></p>
+<p>三向应力状态下最大应力为$\sigma_1$，对应单向荷载，可知失效判据与强度条件分别为：
+$$
+\sigma_{1}=\sigma_{\mathrm{b}} \\
+\sigma_{1}=\frac{\sigma_{\mathrm{b}}}{n_{b}}=[\sigma]
+$$</p>
+<h3 id="第二强度理论最大拉应变">第二强度理论（最大拉应变）</h3>
+<blockquote>
+<p>材料受到破坏的原因是由于材料微元内最大拉应变达到了某一个共同的极限值。</p>
+</blockquote>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/nmUhz8J2ew5BjST.png" >
+		<img src="https://s2.loli.net/2022/04/18/nmUhz8J2ew5BjST.png"
+			
+			
+			
+			loading="lazy"
+			alt="第二强度理论">
+	</a>
+	
+	<figcaption>第二强度理论</figcaption>
+	
+</figure></p>
+<p>三向应力状态下最大应变为$\sigma_1$对应的应变$\varepsilon_1$，对应单向荷载，可知失效判据与强度条件分别为：</p>
+<p>失效判据
+$$
+\sigma_{1}-\nu\left(\sigma_{2}+\sigma_{3}\right)=\sigma_{\mathrm{b}}
+$$
+设计准则
+$$
+\sigma_{1}-\nu\left(\sigma_{2}+\sigma_{3}\right) \leq \frac{\sigma_{\mathrm{b}}}{n_{b}}=[\sigma]
+$$</p>
+<h2 id="关于屈服的强度理论">关于屈服的强度理论</h2>
+<h3 id="第三强度理论最大切应力准则">第三强度理论（最大切应力准则）</h3>
+<p>对于<strong>韧性材料（如：铸铁）</strong>，拉伸时在$45\degree$方向出现滑移线，扭转时沿着横截面断裂，都是由于对应的<strong>截面上切应力最大</strong>。</p>
+<p>推广至一般情况为：</p>
+<blockquote>
+<p>无论材料处于什么应力状态，只要发生屈服，都是由于微元内的最大切应力达到了某一个共同的极限值。</p>
+</blockquote>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/A8Z5rQRwJTPYdql.png" >
+		<img src="https://s2.loli.net/2022/04/18/A8Z5rQRwJTPYdql.png"
+			
+			
+			
+			loading="lazy"
+			alt="第三强度理论">
+	</a>
+	
+	<figcaption>第三强度理论</figcaption>
+	
+</figure></p>
+<p>三向应力状态下，最大切应力为$\tau_{max}=\frac{\sigma_1-\sigma_3}{2}$</p>
+<p>失效判据 
+$$
+\sigma_{1}-\sigma_{3}=\sigma_{s}
+$$
+设计准则
+$$
+\sigma_{1}-\sigma_{3} \leq \frac{\sigma_{\mathrm{s}}}{n_{s}}=[\sigma]
+$$</p>
+<h3 id="第四强度理论最大畸变能准则">第四强度理论（最大畸变能准则）</h3>
+<blockquote>
+<p>无论材料处于什么应力状态，只要发生屈服，都是由于微元的形状改变能密度达到了一个极限值。</p>
+</blockquote>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/qewuZ4zs2DyVvxA.png" >
+		<img src="https://s2.loli.net/2022/04/18/qewuZ4zs2DyVvxA.png"
+			
+			
+			
+			loading="lazy"
+			alt="第四强度理论">
+	</a>
+	
+	<figcaption>第四强度理论</figcaption>
+	
+</figure></p>
+<p>失效判据 
+$$
+\sqrt{\frac{1}{2}\left[\left(\sigma_{1}-\sigma_{2}\right)^{2}+\left(\sigma_{2}-\sigma_{3}\right)^{2}+\left(\sigma_{3}-\sigma_{1}\right)^{2}\right]}=\sigma_{s}
+$$
+设计准则
+$$
+\sqrt{\frac{1}{2}\left[\left(\sigma_{1}-\sigma_{2}\right)^{2}+\left(\sigma_{2}-\sigma_{3}\right)^{2}+\left(\sigma_{3}-\sigma_{1}\right)^{2}\right]} \leq \frac{\sigma_{s}}{n_{s}}=[\sigma]
+$$
+<em>Hints</em>(关于两个屈服准则的评述):</p>
+<ul>
+<li>假说不同的失效原因，导致了不同的屈服准则</li>
+<li>哪一个更保守？<strong>最大切应力更加保守</strong></li>
+<li>哪一个更加精确？<strong>最大畸变能更加精确</strong></li>
+<li>注意$\sigma_s$是材料属性，不随外力变化</li>
+</ul>
+<h2 id="圆轴承受弯曲与扭转共同作用时的强度计算">圆轴承受弯曲与扭转共同作用时的强度计算</h2>
+<p>对于同时承受弯曲与扭转的圆轴，此时危险面上同时受到弯矩与扭矩（忽略剪力产生的横向弯曲）</p>
+<p>在危险截面上取一微元，可得到最大的正应力与剪应力分别为：
+$$
+\sigma=\frac{M}{W} \quad \tau=\frac{M_{x}}{W_{\mathrm{P}}}
+$$</p>
+<p>其中</p>
+<p>$$
+W=\frac{\pi d^{3}}{32}\quad W_{\mathrm{P}}=\frac{\pi d^{3}}{16}
+$$</p>
+<p>此状态下，微元的受力为：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/pPwaSMBTvq6URsi.png" >
+		<img src="https://s2.loli.net/2022/04/18/pPwaSMBTvq6URsi.png"
+			
+			
+			
+			loading="lazy"
+			alt="微元受力">
+	</a>
+	
+	<figcaption>微元受力</figcaption>
+	
+</figure></p>
+<p>传动轴一般选用韧性材料，因此采用第三、第四设计准则：</p>
+<p>对于最大剪应力准则：
+$$
+\sigma_{1}-\sigma_{3}=\sqrt{\sigma^{2}+4 \tau^{2}} \leq[\sigma]
+$$
+对于最大畸变能准则：
+$$
+\sqrt{\frac{1}{2}\left[\left(\sigma_{1}-\sigma_{2}\right)^{2}+\left(\sigma_{2}-\sigma_{3}\right)^{2}+\left(\sigma_{3}-\sigma_{1}\right)^{2}\right]}=\sqrt{\sigma^{2}+3 \tau^{2}} \leq[\sigma]
+$$
+将 $\sigma$ 和 $\tau$ 的表达式代入上式, 并考虑到 $W_{\mathrm{P}}=2 W$, 便得到
+$$
+\frac{\sqrt{M^{2}+M_{x}^{2}}}{W} \leq[\sigma] \quad \frac{\sqrt{M^{2}+0.75 M_{x}^{2}}}{W} \leq[\sigma]
+$$</p>
+<h3 id="计算简图">计算简图</h3>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/5WxGezohwVKi9da.png" >
+		<img src="https://s2.loli.net/2022/04/18/5WxGezohwVKi9da.png"
+			
+			
+			
+			loading="lazy"
+			alt="计算简图">
+	</a>
+	
+	<figcaption>计算简图</figcaption>
+	
+</figure></p>
+<p>对于借助于齿轮的传动轴，常常讲受力简化值轴线形心，只画出对应的轴线受力，便于受力分析。</p>
+<h3 id="扭转与弯曲">扭转与弯曲</h3>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/04/18/P1VfGH8M2WQ6Nrm.png" >
+		<img src="https://s2.loli.net/2022/04/18/P1VfGH8M2WQ6Nrm.png"
+			
+			
+			
+			loading="lazy"
+			alt="危险点及其应力状态">
+	</a>
+	
+	<figcaption>危险点及其应力状态</figcaption>
+	
+</figure>
+$$
+\sigma=\frac{M}{W}, \tau=\frac{M_x}{W_p}, \quad M=\sqrt{M_{y}^{2}+M_{z}^{2}}, \quad W_{p}=2W
+\\
+\sigma_{r 3}=\sqrt{\sigma^{2}+4 \tau^{2}}=\frac{M_{r 3}}{W} \leq[\sigma] , \quad M_{r 3}=\sqrt{M^{2}+M_{x}^{2}}
+\\
+\sigma_{r 4}=\sqrt{\sigma^{2}+3 \tau^{2}}=\frac{M_{r 4}}{W} \leq[\sigma], \quad M _{r 4}=\sqrt{M^{2}+0.75  M _{x}^{2}}
+$$</p>
+<h2 id="同时承受弯矩扭矩剪力和轴力作用的圆轴">同时承受弯矩、扭矩、剪力和轴力作用的圆轴</h2>
+<p>危险点的应力状态仍然为$\sigma$、$\tau$同时作用的清醒，所不同的是：
+$$
+\sigma=-\frac{M}{W}-\frac{F_{Nx}}{A}\quad \tau=\frac{M_x}{W_P}
+$$</p>
+<h2 id="圆柱形薄壁容器的应力分析与强度设计">圆柱形薄壁容器的应力分析与强度设计</h2>
+<p>承受内压的薄壁容器，主应力大小为：
+$$
+\sigma_{1}=\sigma_{t}=\frac{p D}{2 \delta}, \quad \sigma_{2}=\sigma_{m}=\frac{p D}{4 \delta}, \quad \sigma_{3}=0
+$$
+考虑到薄壁容器由韧性材料制成，可以采用最大剪应力或畸变能密度准则进行强度设计，采用第三强度理论则有：
+$$
+\sigma_{1}-\sigma_{3}=\frac{p D}{2 \delta}-0 \leq[\sigma]
+$$</p>
+<h3 id="计算直径的改变量">计算直径的改变量</h3>
+<blockquote>
+<p>从周长考虑，而不是从直径直接考虑</p>
+</blockquote>
+<p>设周长为$l$、直径为$D$，则有
+$$
+l=\pi D\to \Delta l=\pi \Delta D
+\\
+\varepsilon_t=\frac{\Delta l}{l}=\frac{\Delta D}{D}=\frac{1}{E}(\sigma_t-\nu\sigma_m)
+$$</p>
+<h2 id="结论与讨论">结论与讨论</h2>
+<h3 id="适用范围">适用范围</h3>
+<ul>
+<li>大多数韧性材料在一般应力状态下发生塑性屈服</li>
+<li>大多数脆性材料在一本应力状态下发生脆性断裂</li>
+</ul>
+<p>例外：韧性材料只受各向等拉伸时，只受正应力，此时应力圆为一个<strong>点源</strong>，微元体的任何面上受力均为正应力，没有剪应力。</p>
+<p>这种特殊状态类似于流体静力学。</p>
 
 </section>
 
@@ -249,24 +424,24 @@ $$</p>
                 
                     
 <article class="">
-    <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第八章·应力状态与强度理论及其工程应用（下）</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8A/">
         
         
 
         <div class="article-details">
             <h2 class="article-title">第八章·应力状态与强度理论及其工程应用（上）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第七章·梁的变形分析与刚度问题</h2>
         </div>
     </a>
 </article>
@@ -482,21 +657,34 @@ async>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#梁的变形与梁的位移">梁的变形与梁的位移</a>
+    <li><a href="#强度理论概述">强度理论概述</a></li>
+    <li><a href="#关于脆性断裂的强度理论">关于脆性断裂的强度理论</a>
       <ol>
-        <li><a href="#梁的曲率与位移">梁的曲率与位移</a></li>
-        <li><a href="#梁截面的三种位移">梁截面的三种位移</a></li>
-        <li><a href="#挠度与转角的相互关系">挠度与转角的相互关系</a></li>
+        <li><a href="#第一强度理论最大拉应力">第一强度理论（最大拉应力）</a></li>
+        <li><a href="#第二强度理论最大拉应变">第二强度理论（最大拉应变）</a></li>
       </ol>
     </li>
-    <li><a href="#梁的小挠度微分方程及其积分">梁的小挠度微分方程及其积分</a>
+    <li><a href="#关于屈服的强度理论">关于屈服的强度理论</a>
       <ol>
-        <li><a href="#积分常数的确定">积分常数的确定</a></li>
+        <li><a href="#第三强度理论最大切应力准则">第三强度理论（最大切应力准则）</a></li>
+        <li><a href="#第四强度理论最大畸变能准则">第四强度理论（最大畸变能准则）</a></li>
       </ol>
     </li>
-    <li><a href="#叠加法确定梁的挠度和转角">叠加法确定梁的挠度和转角</a>
+    <li><a href="#圆轴承受弯曲与扭转共同作用时的强度计算">圆轴承受弯曲与扭转共同作用时的强度计算</a>
       <ol>
-        <li><a href="#逐段钢化法">逐段钢化法</a></li>
+        <li><a href="#计算简图">计算简图</a></li>
+        <li><a href="#扭转与弯曲">扭转与弯曲</a></li>
+      </ol>
+    </li>
+    <li><a href="#同时承受弯矩扭矩剪力和轴力作用的圆轴">同时承受弯矩、扭矩、剪力和轴力作用的圆轴</a></li>
+    <li><a href="#圆柱形薄壁容器的应力分析与强度设计">圆柱形薄壁容器的应力分析与强度设计</a>
+      <ol>
+        <li><a href="#计算直径的改变量">计算直径的改变量</a></li>
+      </ol>
+    </li>
+    <li><a href="#结论与讨论">结论与讨论</a>
+      <ol>
+        <li><a href="#适用范围">适用范围</a></li>
       </ol>
     </li>
   </ol>

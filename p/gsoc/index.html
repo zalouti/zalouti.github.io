@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Gsoc Gsoc全称为Google summer of code 记录一些自己感兴趣的项目与方向 Julia Dynamical systems, complex systems &amp;amp; nonlinear dynamics – Summer of Code 动态系统.jl **难度：**容易到中等，取决于选择实'><title>Gsoc</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/gsoc/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Gsoc'>
+<meta property='og:description' content='Gsoc Gsoc全称为Google summer of code 记录一些自己感兴趣的项目与方向 Julia Dynamical systems, complex systems &amp;amp; nonlinear dynamics – Summer of Code 动态系统.jl **难度：**容易到中等，取决于选择实'>
+<meta property='og:url' content='https://zalouti.github.io/p/gsoc/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='留学' /><meta property='article:published_time' content='2022-04-12T21:21:13&#43;08:00'/><meta property='article:modified_time' content='2022-04-12T21:21:13&#43;08:00'/>
+<meta name="twitter:title" content="Gsoc">
+<meta name="twitter:description" content="Gsoc Gsoc全称为Google summer of code 记录一些自己感兴趣的项目与方向 Julia Dynamical systems, complex systems &amp;amp; nonlinear dynamics – Summer of Code 动态系统.jl **难度：**容易到中等，取决于选择实"><style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/gsoc/">Gsoc</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 12, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 27 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="gsoc">Gsoc</h1>
+<blockquote>
+<p>Gsoc全称为Google summer of code</p>
+<p>记录一些自己感兴趣的项目与方向</p>
+</blockquote>
+<h2 id="julia">Julia</h2>
+<h3 id="dynamical-systems-complex-systems--nonlinear-dynamics--summer-of-codehttpsjulialangorgjsocgsocjuliadynamicsdynamical_systems_complex_systems_nonlinear_dynamics_summer_of_code"><a class="link" href="https://julialang.org/jsoc/gsoc/juliadynamics/#dynamical_systems_complex_systems_nonlinear_dynamics_summer_of_code"  target="_blank" rel="noopener"
+    >Dynamical systems, complex systems &amp; nonlinear dynamics – Summer of Code</a></h3>
+<h4 id="动态系统jlhttpsjulialangorgjsocgsocjuliadynamicsdynamicalsystemsjl"><a class="link" href="https://julialang.org/jsoc/gsoc/juliadynamics/#dynamicalsystemsjl"  target="_blank" rel="noopener"
+    >动态系统.jl</a></h4>
+<p>**难度：**容易到中等，取决于选择实现的算法。</p>
+<p><strong>时长</strong>：175 小时。</p>
+<p><a class="link" href="https://juliadynamics.github.io/DynamicalSystems.jl/latest/"  target="_blank" rel="noopener"
+    >DynamicalSystems.jl</a>是一个<a class="link" href="https://dsweb.siam.org/The-Magazine/Article/winners-of-the-dsweb-2018-software-contest"  target="_blank" rel="noopener"
+    >屡获殊荣的</a>Julia 软件库，用于动态系统、非线性动力学、确定性混沌和非线性时间序列分析。它有一系列令人印象深刻的功能，但永远都不够。在这个项目中，贡献者将能够用新算法丰富 DynamicalSystems.jl，并丰富他们在非线性动力学和复杂系统计算机辅助探索方面的知识。</p>
+<p>可能的项目总结在<a class="link" href="https://github.com/issues?q=is%3Aopen&#43;is%3Aissue&#43;repo%3AJuliaDynamics%2FChaosTools.jl&#43;repo%3AJuliaDynamics%2FDynamicalSystemsBase.jl&#43;repo%3AJuliaDynamics%2FDelayEmbeddings.jl&#43;repo%3AJuliaDynamics%2FRecurrenceAnalysis.jl&#43;repo%3AJuliaDynamics%2FDynamicalSystems.jl&#43;label%3A%22wanted&#43;feature%22&#43;"  target="_blank" rel="noopener"
+    >图书馆的通缉特征中</a></p>
+<p><strong>推荐技能</strong>：熟悉非线性动力学和/或微分方程以及 Julia 语言。</p>
+<p><strong>预期结果</strong>：DynamicalSystems.jl 的有据可查、经过充分测试的新算法。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/Datseris"  target="_blank" rel="noopener"
+    >乔治·达瑟里斯</a></p>
+<h3 id="machine-learning-projects---summer-of-codehttpsjulialangorgjsocgsocmachine-learningmachine_learning_projects_-_summer_of_code"><a class="link" href="https://julialang.org/jsoc/gsoc/machine-learning/#machine_learning_projects_-_summer_of_code"  target="_blank" rel="noopener"
+    >Machine Learning Projects - Summer of Code</a></h3>
+<h4 id="cuda-hackinghttpsjulialangorgjsocgsocmachine-learningcuda_hacking"><a class="link" href="https://julialang.org/jsoc/gsoc/machine-learning/#cuda_hacking"  target="_blank" rel="noopener"
+    >CUDA Hacking</a></h4>
+<p>Time: 175h</p>
+<p>Are you a performance nut? This project is aimed at expanding our coverage of high performance kernels and libraries widely used across machine learning workflows.</p>
+<h5 id="expected-outcomeshttpsjulialangorgjsocgsocmachine-learningexpected_outcomes"><a class="link" href="https://julialang.org/jsoc/gsoc/machine-learning/#expected_outcomes"  target="_blank" rel="noopener"
+    >Expected Outcomes</a></h5>
+<p>Help us implement cutting-edge CUDA kernels in Julia for operations important across deep learning, scientific computing and more. We also need help developing our wrappers for machine learning, sparse matrices and more, as well as CI and infrastructure. Contact us to develop a project plan.</p>
+<p>Mentors: <a class="link" href="https://github.com/maleadt"  target="_blank" rel="noopener"
+    >Tim Besard</a>, <a class="link" href="https://github.com/DhairyaLGandhi"  target="_blank" rel="noopener"
+    >Dhairya Gandhi</a>.</p>
+<h1 id="sciml-数值微分方程项目---google-summer-of-codehttpsscimlaigsocgsoc_diffeqsciml_numerical_differential_equations_projects_google_summer_of_code"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#sciml_numerical_differential_equations_projects_google_summer_of_code"  target="_blank" rel="noopener"
+    >SciML 数值微分方程项目 - Google Summer of Code</a></h1>
+<h2 id="原生-julia-odesdedaedde-和-spde-求解器httpsscimlaigsocgsoc_diffeqnative_julia_ode_sde_dae_dde_and_spde_solvers"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#native_julia_ode_sde_dae_dde_and_spde_solvers"  target="_blank" rel="noopener"
+    >原生 Julia ODE、SDE、DAE、DDE 和 (S)PDE 求解器</a></h2>
+<p>DifferentialEquations.jl 生态系统拥有一套广泛的最先进的求解微分方程的方法，这些方法由<a class="link" href="https://sciml.ai/"  target="_blank" rel="noopener"
+    >SciML 科学机器学习软件组织</a>托管。通过在同一调度系统下混合本地方法和包装方法，<a class="link" href="https://arxiv.org/abs/1807.06430"  target="_blank" rel="noopener"
+    >DifferentialEquations.jl 既可以作为部署和研究最现代有效方法的系统</a>. 虽然大多数基本方法已经开发和优化，但许多较新的方法需要高性能实现和对其效率要求的实际测试。在这个项目中，学生将与该学科的当前研究人员配对，以掌握一些最新技术并将有效的实现构建到 *DiffEq 库（OrdinaryDiffEq.jl、StochasticDiffEq.jl、DelayDiffEq.jl）中。可能实现的方法系列是：</p>
+<ul>
+<li>全局误差估计 ODE 求解器</li>
+<li>隐式-显式 (IMEX) 方法</li>
+<li>几何（指数）积分器</li>
+<li>低内存 Runge-Kutta 方法</li>
+<li>专门用于二阶 ODE（卫星模拟）的多步方法</li>
+<li>并行（多线程）外推（显式和隐式）</li>
+<li>并行隐式积分因子方法（PDE 和 SPDE）</li>
+<li>实时并行 ODE 方法</li>
+<li>Rosenbrock-W 方法</li>
+<li>近似矩阵分解</li>
+<li>Runge-Kutta-Chebyshev 方法（高稳定性 RK 方法）</li>
+<li>完全隐式龙格-库塔 (FIRK) 方法</li>
+<li>安德森加速</li>
+<li>边界值问题 (BVP) 求解器，例如 MIRK 和搭配方法</li>
+<li>微分代数方程 (DAE) 的 BDF 方法</li>
+<li>刚性随机微分方程的方法</li>
+</ul>
+<p>其中许多方法是高效偏微分方程 (PDE) 求解器的基础，因此对于计算流体动力学、数学生物学和量子力学等许多领域都很重要。</p>
+<p>该项目对对数值分析领域感兴趣的软件工程师和有兴趣在该领域进行研究生研究的学生都有好处。</p>
+<p><strong>推荐技能</strong>：数值分析、数值线性代数的背景知识，以及编写快速代码的能力（或渴望学习）。</p>
+<p><strong>预期结果</strong>：生产质量求解器方法的贡献。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>、 Yingbo <a class="link" href="https://github.com/YingboMa"  target="_blank" rel="noopener"
+    >Ma</a>、<a class="link" href="https://github.com/kanav99"  target="_blank" rel="noopener"
+    >Kanav Gupta</a>和<a class="link" href="https://github.com/utkarsh530"  target="_blank" rel="noopener"
+    >Utkarsh</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：根据所选的子任务，从易到难。</p>
+<h2 id="用于求解微分方程的物理信息神经网络-pinn-的改进httpsscimlaigsocgsoc_diffeqimprovements_to_physics-informed_neural_networks_pinn_for_solving_differential_equations"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#improvements_to_physics-informed_neural_networks_pinn_for_solving_differential_equations"  target="_blank" rel="noopener"
+    >用于求解微分方程的物理信息神经网络 (PINN) 的改进</a></h2>
+<p>神经网络可以作为一种有效求解困难偏微分方程的方法。<a class="link" href="https://github.com/SciML/NeuralPDE.jl"  target="_blank" rel="noopener"
+    >作为NeuralPDE.jl</a>包的一部分，正在探索最近论文中基于物理的机器学习的有效实现。<a class="link" href="https://github.com/SciML/NeuralPDE.jl/issues"  target="_blank" rel="noopener"
+    >问题跟踪器</a>包含指向论文的链接，这些论文将是有趣的基于神经网络的新方法，用于实现经典技术并对其进行基准测试。</p>
+<p><strong>推荐技能</strong>：数值分析和机器学习方面的背景知识。</p>
+<p><strong>预期结果</strong>：新的基于神经网络的求解器方法。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和<a class="link" href="https://github.com/KirillZubov"  target="_blank" rel="noopener"
+    >Kirill Zubov</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：根据所选的子任务，从易到难。</p>
+<h2 id="微分方程求解器的性能增强httpsscimlaigsocgsoc_diffeqperformance_enhancements_for_differential_equation_solvers"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#performance_enhancements_for_differential_equation_solvers"  target="_blank" rel="noopener"
+    >微分方程求解器的性能增强</a></h2>
+<p>参与开发广泛使用的高效微分方程求解器不是很酷吗？DifferentialEquations.jl 具有广泛的现有方法和<a class="link" href="https://github.com/SciML/DiffEqBenchmarks.jl"  target="_blank" rel="noopener"
+    >广泛的基准套件</a>，用于调整性能方法。它的很多方法已经是同类中最快的了，但是还有很多性能提升工作可以做。在这个项目中，您可以了解各种方法的详细信息，并深入研究算法策略和实现的优化，以提高基准。可能会提高整个微分方程生态系统性能的项目包括：</p>
+<ul>
+<li>可选的自适应步长技术和步长优化</li>
+<li>指针交换技巧</li>
+<li>准牛顿全球化与优化</li>
+<li>缓存大小减少</li>
+<li>增强的方法内多线程、分布式并行性和 GPU 使用</li>
+<li>改进的自动化方法选择</li>
+<li>大规模 (PDE) 离散化的自适应预处理</li>
+</ul>
+<p><strong>推荐技能</strong>：数值分析、数值线性代数的背景知识，以及编写快速代码的能力（或渴望学习）。</p>
+<p><strong>预期结果</strong>：改进的基准与社区共享。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和Yingbo <a class="link" href="https://github.com/YingboMa"  target="_blank" rel="noopener"
+    >Ma</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：根据所选的子任务，从易到难。</p>
+<h2 id="偏微分方程的离散化httpsscimlaigsocgsoc_diffeqdiscretizations_of_partial_differential_equations"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#discretizations_of_partial_differential_equations"  target="_blank" rel="noopener"
+    >偏微分方程的离散化</a></h2>
+<p>有两种方法可以使用偏微分方程 (PDE) 库：一种可以构建“工具包”，使用户能够离散化任何 PDE，但需要了解数值 PDE 方法，或者可以为特定 PDE 构建“完全停止”的 PDE 求解器. 解决偏微分方程的方法有很多种，这里有一些关于潜在项目的想法：</p>
+<ol>
+<li>自动 PDE 离散化工具。我们希望用户以数学形式描述 PDE，并自动执行其余的求解过程。有关详细信息，请参阅<a class="link" href="https://github.com/SciML/DifferentialEquations.jl/issues/469"  target="_blank" rel="noopener"
+    >此问题</a>。</li>
+<li>增强用于离散 PDE 的现有工具。可以增强有限差分 (FDM) 库<a class="link" href="https://github.com/SciML/MethodOfLines.jl"  target="_blank" rel="noopener"
+    >MethodOfLines.jl以允许非均匀网格或算子组合。</a>有限元法 (FEM) 库<a class="link" href="https://github.com/SciML/FEniCS.jl"  target="_blank" rel="noopener"
+    >FEniCS.jl</a>可以包装更多的 FEniCS 库。</li>
+<li>普通流体动力学方程（例如扩散-对流-对流方程）或双曲 PDE（例如 Hamilton-Jacobi-Bellman 方程）的句号求解器将对许多用户有用。</li>
+<li>使用随机微分方程 (SDE) 求解器高效（且高度并行）逼近某些 PDE。</li>
+<li>开发 ODE 求解器以更有效地求解特定类型的 PDE 离散化。请参阅“常微分方程的原生 Julia 求解器”项目。</li>
+</ol>
+<p><strong>推荐技能</strong>：求解微分方程的数值方法的背景知识。一些偏微分方程的基本知识，但主要是学习意愿和对微积分和线性代数的深刻理解。</p>
+<p><strong>预期结果</strong>：一些常见 PDE 的生产质量 PDE 求解器包。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h2 id="全局敏感性分析工具httpsscimlaigsocgsoc_diffeqtools_for_global_sensitivity_analysis"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#tools_for_global_sensitivity_analysis"  target="_blank" rel="noopener"
+    >全局敏感性分析工具</a></h2>
+<p>全局敏感性分析是评估参数对微分方程模型的影响的流行工具。<a class="link" href="https://discovery.ucl.ac.uk/id/eprint/19896/"  target="_blank" rel="noopener"
+    >在这篇论文中可以找到</a>一个很好的介绍。全局敏感性分析工具可以比局部敏感性分析工具更有效，并且可以更好地了解参数如何在更一般的意义上影响模型。该项目的目标是在<a class="link" href="https://github.com/SciML/GlobalSensitivity.jl"  target="_blank" rel="noopener"
+    >GlobalSensitivity.jl</a>中实现更多的全局灵敏度分析方法，例如 eFAST 方法，该方法可与通用接口上的任何微分方程求解器一起使用。</p>
+<p><strong>推荐技能</strong>：了解如何使用DifferentialEquations.jl 求解方程。</p>
+<p><strong>预期结果</strong>：执行全局敏感性分析的有效函数。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和<a class="link" href="https://github.com/Vaibhavdixit02"  target="_blank" rel="noopener"
+    >Vaibhav Dixit</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易到中等，具体取决于所选的子任务。</p>
+<h2 id="跳跃过程模拟算法httpsscimlaigsocgsoc_diffeqjump_process_simulation_algorithms"><a class="link" href="https://sciml.ai/gsoc/gsoc_diffeq/#jump_process_simulation_algorithms"  target="_blank" rel="noopener"
+    >跳跃过程模拟算法</a></h2>
+<p>跳跃过程是一种广泛使用的方法，用于对生物、化学和流行病学系统进行建模，可以解释蛋白质/粒子/试剂的随机相互作用和空间传输。<a class="link" href="https://github.com/SciML/DiffEqJump.jl/"  target="_blank" rel="noopener"
+    >DiffEqJump.jl</a>提供了一个优化求解器库，用于精确模拟跳跃过程，包括最近添加的求解器，允许模拟空间分布的跳跃过程（粒子/代理在图形或一般网格上移动）。扩展和增强当前工具的各种可能项目包括</p>
+<ul>
+<li>添加额外的随机模拟算法，例如恒定复杂度下一个反应方法或部分倾向方法（显式或通过包装 C++ <a class="link" href="https://github.com/breezerider/pSSAlib"  target="_blank" rel="noopener"
+    >pSSALib</a>）。</li>
+<li>扩展当前的图形和空间算法以支持不同空间位置的粒子/代理之间的交互，并开发工具以通过 PDE 离散化技术自动计算转换率。</li>
+<li>使用 τ-leap 算法扩展 StochasticDiffEq.jl 以实现跳跃过程的近似但计算效率更高的模拟。</li>
+<li>使用混合仿真功能扩展 DiffEqJump 和 StochasticDiffEq，允许模型混合 ODE、SDE 和跳转过程，并且可以根据需要在每个数学表示之间动态划分模型组件以保持物理精度。</li>
+<li>扩展 DiffEqJump 的模拟算法集合，以更好地支持时间相关的速率函数和延迟。</li>
+</ul>
+<p><strong>推荐技能</strong>：了解 Gillespie 方法或基本跳跃过程模拟算法的工作原理，以及使用 DiffEqJump.jl 模拟跳跃过程的经验。</p>
+<p><strong>预期结果</strong>：完成对跳跃过程模拟工具的一项或多项前述改进。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/isaacsas"  target="_blank" rel="noopener"
+    >Samuel Isaacson</a>和<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>。</p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h1 id="sciml-科学机器学习项目--google-summer-of-codehttpsscimlaigsocgsoc_scimlsciml_scientific_machine_learning_projects_google_summer_of_code"><a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/#sciml_scientific_machine_learning_projects_google_summer_of_code"  target="_blank" rel="noopener"
+    >SciML 科学机器学习项目 – Google Summer of Code</a></h1>
+<h2 id="物理信息神经网络-pinn-和使用深度学习求解微分方程httpsscimlaigsocgsoc_scimlphysics-informed_neural_networks_pinns_and_solving_differential_equations_with_deep_learning"><a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/#physics-informed_neural_networks_pinns_and_solving_differential_equations_with_deep_learning"  target="_blank" rel="noopener"
+    >物理信息神经网络 (PINN) 和使用深度学习求解微分方程</a></h2>
+<p>神经网络可以作为一种有效求解困难偏微分方程的方法。最近，这种策略被称为<a class="link" href="https://www.sciencedirect.com/science/article/pii/S0021999118307125"  target="_blank" rel="noopener"
+    >基于物理的神经网络</a>，并且由于其相对于经典深度学习的效率优势而重新出现。<a class="link" href="https://github.com/SciML/NeuralNetDiffEq.jl"  target="_blank" rel="noopener"
+    >作为NeuralNetDiffEq.jl</a>包的一部分，正在探索最近论文中的有效实现。<a class="link" href="https://github.com/SciML/NeuralNetDiffEq.jl/issues"  target="_blank" rel="noopener"
+    >问题跟踪器</a>包含指向论文的链接，这些论文将是有趣的基于神经网络的新方法，用于实现经典技术并对其进行基准测试。该领域的项目工作包括：</p>
+<ul>
+<li><a class="link" href="https://github.com/SciML/NeuralNetDiffEq.jl/issues/71"  target="_blank" rel="noopener"
+    >改进了 PINN 的训练策略</a>。</li>
+<li>实施新的神经架构，施加物理约束，如<a class="link" href="https://arxiv.org/pdf/2002.00021.pdf"  target="_blank" rel="noopener"
+    >无散度标准</a>。</li>
+<li>演示通过 PINN 训练解决的大规模问题。</li>
+<li>提高 PINN 训练例程的速度和并行化。</li>
+</ul>
+<p>该项目对对科学机器学习领域感兴趣的软件工程师和对阅读该领域研究生研究感兴趣的学生都有好处。</p>
+<p><strong>推荐技能</strong>：数值分析和机器学习方面的背景知识。</p>
+<p><strong>预期结果</strong>：新的基于神经网络的求解器方法。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和<a class="link" href="https://github.com/KirillZubov"  target="_blank" rel="noopener"
+    >Kirill Zubov</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：根据所选的子任务，从易到难。</p>
+<h2 id="对神经和通用微分方程的改进httpsscimlaigsocgsoc_scimlimprovements_to_neural_and_universal_differential_equations"><a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/#improvements_to_neural_and_universal_differential_equations"  target="_blank" rel="noopener"
+    >对神经和通用微分方程的改进</a></h2>
+<p><a class="link" href="https://arxiv.org/abs/1806.07366"  target="_blank" rel="noopener"
+    >神经常微分方程</a>已被证明是一种使用机器学习来学习微分方程模型的方法。该方法的进一步改进，如<a class="link" href="https://arxiv.org/abs/2001.04385"  target="_blank" rel="noopener"
+    >通用微分方程</a>已将物理和生物学知识纳入系统，以使其成为一种数据和计算有效的学习方法。然而，还有许多计算方面有待探索。<a class="link" href="https://github.com/SciML/DiffEqFlux.jl"  target="_blank" rel="noopener"
+    >该项目的目的是增强DiffEqFlux.jl</a>的通用微分方程逼近能力，添加以下功能：</p>
+<ul>
+<li>改进了 DAE 和 SDE 的伴随</li>
+<li><a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/173"  target="_blank" rel="noopener"
+    >非神经网络通用逼近器</a></li>
+<li><a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/118"  target="_blank" rel="noopener"
+    >对小批量</a>的各种<a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/133"  target="_blank" rel="noopener"
+    >改进</a></li>
+<li>支持<a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/48"  target="_blank" rel="noopener"
+    >二阶 ODE（即辛积分器）</a></li>
+<li><a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/46"  target="_blank" rel="noopener"
+    >连续标准化流量</a>和<a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues/47"  target="_blank" rel="noopener"
+    >FFJORD</a></li>
+</ul>
+<p>有关完整详细信息，请参阅<a class="link" href="https://github.com/SciML/DiffEqFlux.jl/issues"  target="_blank" rel="noopener"
+    >DiffEqFlux.jl 问题跟踪器</a>。</p>
+<p>该项目对对科学机器学习领域感兴趣的软件工程师和对阅读该领域研究生研究感兴趣的学生都有好处。</p>
+<p><strong>推荐技能</strong>：数值分析和机器学习方面的背景知识。</p>
+<p><strong>预期结果</strong>：神经和通用微分方程的新方法和改进方法。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h2 id="使用代理模型通过机器学习加速优化surrogatesjlhttpsscimlaigsocgsoc_scimlaccelerating_optimization_via_machine_learning_with_surrogate_models_surrogatesjl"><a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/#accelerating_optimization_via_machine_learning_with_surrogate_models_surrogatesjl"  target="_blank" rel="noopener"
+    >使用代理模型通过机器学习加速优化：Surrogates.jl</a></h2>
+<p>在许多情况下，当试图优化一个函数时，<code>f(p)</code>每次计算<code>f</code>都是非常昂贵的。例如，评估<code>f</code>可能需要求解 PDE 或复杂线性代数的其他应用。<code>f</code>因此，人们可以开发一个替代模型，而不是总是直接评估，该模型<code>g</code>近似地通过对从评估中<code>f</code>收集的先前数据进行训练。<code>f</code>这种使用经过训练的代理代替真实函数的技术称为代理优化，它混合了来自机器学习的技术以加速优化。</p>
+<p>先进的技术<a class="link" href="https://www.cambridge.org/core/journals/acta-numerica/article/kernel-techniques-from-machine-learning-to-meshless-methods/00686923110F799A1537C4F02BBAAE8E"  target="_blank" rel="noopener"
+    >利用径向基函数</a>和高斯过程来插入新参数以估计<code>f</code>尚未采样的区域。<a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/http%3A%2F%2Fwww.ressources-actuarielles.net%2FEXT%2FISFA%2F1226.nsf%2F9c8e3fd4d8874d60c1257052003eced6%2Fe7dc33e4da12c5a9c12576d8002e442b%2F%24FILE%2FJones01.pdf"  target="_blank" rel="noopener"
+    >自适应训练技术</a>探索如何挑选新领域进行评估<code>f</code>，以更好地磨练全局最优值。</p>
+<p>该项目的目的是通过以下方式进一步改进 Surrogates.jl：添加新的代理模型、添加新的优化技术、展示与 SciML 生态系统的兼容性以及修复一些当前代理模型的不良行为。</p>
+<p><strong>推荐技能</strong>：标准机器学习、统计或优化技术的背景知识。强大的数值分析知识是有帮助的，但不是必需的。</p>
+<p><strong>预期结果</strong>：使用新的代理模型和新的优化技术改进 Surrogates.jl。</p>
+<p><strong>导师</strong>：<a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/https://github.com/ludoro"  target="_blank" rel="noopener"
+    >卢多维科·贝西</a>、<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h2 id="fenicsjl-与-dolfin-adjoint--zygotejl-的集成用于有限元科学机器学习httpsscimlaigsocgsoc_scimlintegration_of_fenicsjl_with_dolfin-adjoint_zygotejl_for_finite_element_scientific_machine_learning"><a class="link" href="https://sciml.ai/gsoc/gsoc_sciml/#integration_of_fenicsjl_with_dolfin-adjoint_zygotejl_for_finite_element_scientific_machine_learning"  target="_blank" rel="noopener"
+    >FEniCS.jl 与 dolfin-adjoint + Zygote.jl 的集成，用于有限元科学机器学习</a></h2>
+<p>科学机器学习需要将科学计算库与机器学习相结合。<a class="link" href="https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/"  target="_blank" rel="noopener"
+    >这篇博客文章重点介绍了 Julia 的工具与 Python 等替代工具相比在该领域是如何相当先进的</a>，但尚未完全解决的一个领域是自动微分与偏微分方程的集成。<a class="link" href="https://github.com/SciML/FEniCS.jl"  target="_blank" rel="noopener"
+    >FEniCS.jl</a>是<a class="link" href="https://fenicsproject.org/"  target="_blank" rel="noopener"
+    >FEniCS</a>项目的包装器，用于偏微分方程的有限元解。我们希望通过使用<a class="link" href="http://www.dolfin-adjoint.org/en/release/"  target="_blank" rel="noopener"
+    >dolfin-adjoint</a>来增强 Julia 包装器以允许与 Julia 的自动微分库（如<a class="link" href="https://github.com/FluxML/Zygote.jl"  target="_blank" rel="noopener"
+    >Zygote.jl ）集成</a>. 这将需要为 Julia 用户设置此库以自动安装并编写使用此伴随构建器库的伴随通行证。这将导致 PDE 和神经网络之间的第一次完全集成。</p>
+<p><strong>推荐技能</strong>：微分方程和 Python 的基本背景。具有先前的 Julia 知识是首选，但不是严格要求。</p>
+<p><strong>预期结果</strong>：Zygote.jl 在 FEniCS.jl 函数上的高效和高质量的伴随实现。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：350 小时。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h1 id="sciml-数值方法项目---google-summer-of-codehttpsscimlaigsocgsoc_numericssciml_numerical_methods_projects_google_summer_of_code"><a class="link" href="https://sciml.ai/gsoc/gsoc_numerics/#sciml_numerical_methods_projects_google_summer_of_code"  target="_blank" rel="noopener"
+    >SciML 数值方法项目 - Google Summer of Code</a></h1>
+<h2 id="linearsolvejl-分布式算法httpsscimlaigsocgsoc_numericslinearsolvejl_distributed_algorithms"><a class="link" href="https://sciml.ai/gsoc/gsoc_numerics/#linearsolvejl_distributed_algorithms"  target="_blank" rel="noopener"
+    >LinearSolve.jl 分布式算法</a></h2>
+<p><a class="link" href="https://github.com/SciML/LinearSolve.jl"  target="_blank" rel="noopener"
+    >LinearSolve.jl</a>是求解线性系统的高级接口，<code>Ax=b</code>它允许像 ODE 求解器和非线性求解器这样的算法在使用稀疏直接方法、Krylov 方法等之间轻松切换。但是，<code>A</code>跨 HPC 集群的分布式矩阵自动化线性系统解决方案将使许多大型应用程序变得容易。该项目的全局性将与<a class="link" href="https://github.com/JuliaParallel/Elemental.jl"  target="_blank" rel="noopener"
+    >Elemental.jl</a>、<a class="link" href="https://github.com/fverdugo/PartitionedArrays.jl"  target="_blank" rel="noopener"
+    >PartitionedArrays.jl</a>和<a class="link" href="https://github.com/JuliaParallel/PETSc.jl"  target="_blank" rel="noopener"
+    >PETSc.jl</a>等库集成以简化此操作。</p>
+<p><strong>推荐技能</strong>：数值线性代数和并行计算的背景知识。</p>
+<p><strong>预期结果：包装在</strong><a class="link" href="https://github.com/SciML/LinearSolve.jl"  target="_blank" rel="noopener"
+    >LinearSolve.jl 中</a>的新并行算法</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易到中等，具体取决于所选的子任务。</p>
+<h2 id="nonlinearsolvejl-全球化准牛顿和效率httpsscimlaigsocgsoc_numericsnonlinearsolvejl_globalization_quasi-newton_and_efficiency"><a class="link" href="https://sciml.ai/gsoc/gsoc_numerics/#nonlinearsolvejl_globalization_quasi-newton_and_efficiency"  target="_blank" rel="noopener"
+    >NonlinearSolve.jl 全球化、准牛顿和效率</a></h2>
+<p>求解的方法<code>f(x)=0</code>很多，应用也很多，从偏微分方程求解器到优化器，在内循环中使用非线性求解器。<a class="link" href="https://github.com/SciML/NonlinearSolve.jl"  target="_blank" rel="noopener"
+    >非线性求解.jl</a>是 Julia 编程语言的核心非线性求解器库，它目前主要作为旧代码（一些用 Fortran 编写）的包装器存在，但这有很多缺点。那些封装的库不支持 GPU 加速，它们没有用于小方程的静态数组的快速路径，它们不支持更高精度的算术等。这个项目的目标是将原生 Julia 非线性求解器扩展到牛顿之外- Raphson 并演示了使用此扩展功能集的功能。功能可以包括全球化方法、准牛顿（Broyden 等）、非线性预处理、线搜索等。</p>
+<p><strong>推荐技能</strong>：数值分析的背景知识。</p>
+<p><strong>预期结果</strong>：SciMLTutorials 中的新教程和<a class="link" href="https://github.com/SciML/SciMLTutorials.jl"  target="_blank" rel="noopener"
+    >SciMLBenchmarks</a>中的基准<a class="link" href="https://github.com/SciML/SciMLBenchmarks.jl"  target="_blank" rel="noopener"
+    >测试</a>。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和<a class="link" href="https://github.com/utkarsh530"  target="_blank" rel="noopener"
+    >Utkarsh</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易到中等，具体取决于所选的子任务。</p>
+<h2 id="基准和教程写作httpsscimlaigsocgsoc_numericsbenchmarks_and_tutorial_writing"><a class="link" href="https://sciml.ai/gsoc/gsoc_numerics/#benchmarks_and_tutorial_writing"  target="_blank" rel="noopener"
+    >基准和教程写作</a></h2>
+<p>许多大学课堂使用 SciML 生态系统进行教学，因此世界各地的课堂都将得到改善。涵盖更多领域的教程将允许教授生物建模课程的教授不必手动重写基于物理的教程以匹配他们的课程，并且将 README 转换为文档将有助于这些教授在他们的讲义中链接到这些工具的参考部分。</p>
+<p>此外，这些基准是广泛引用的微分方程跨语言基准，它提供了 Python、R、Julia、MATLAB 以及许多 C++ 和 Fortran 包之间的标准。围绕基准改进技术写作可以使这组文档更广泛地访问，扩大主题范围将帮助所有编程语言的个人更好地评估他们应该为他们的问题选择的方法。</p>
+<p>请注意，这将包括使用基准的 SciML 出版物的作者身份。</p>
+<p><strong>推荐技能</strong>：数值分析和建模方面的背景知识。</p>
+<p><strong>预期结果</strong>：SciMLTutorials 中的新教程和<a class="link" href="https://github.com/SciML/SciMLTutorials.jl"  target="_blank" rel="noopener"
+    >SciMLBenchmarks</a>中的基准<a class="link" href="https://github.com/SciML/SciMLBenchmarks.jl"  target="_blank" rel="noopener"
+    >测试</a>。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易。</p>
+<h1 id="sciml-符号-数值计算项目--google-summer-of-codehttpsscimlaigsocgsoc_symbolicsciml_symbolic-numeric_computing_projects_google_summer_of_code"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#sciml_symbolic-numeric_computing_projects_google_summer_of_code"  target="_blank" rel="noopener"
+    >SciML 符号-数值计算项目 – Google Summer of Code</a></h1>
+<h2 id="参数可识别性分析httpsscimlaigsocgsoc_symbolicparameter_identifiability_analysis"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#parameter_identifiability_analysis"  target="_blank" rel="noopener"
+    >参数可识别性分析</a></h2>
+<p>参数可识别性分析是描述动态系统的参数是否可以从数据中识别或是否冗余的分析。可识别性分析有两种形式：结构性和实用性。结构可识别性分析将 ODE 解的变化直接与其他参数联系起来，表明无法区分参数 A 较高和参数 B 较低，反之亦然，仅给出有关解的数据，因为两个互动。这可以作为<a class="link" href="https://github.com/SciML/ModelingToolkit.jl"  target="_blank" rel="noopener"
+    >ModelingToolkit.jl的一部分直接在方程的符号形式上完成</a>. 同时，实际可识别性分析着眼于参数是否在实际意义上是不可识别的，例如，如果两个参数在数值上无法区分（给定可能有噪声的数据）。在这种情况下，可以使用 DiffEqSensitivity.jl 中构建的数值技术（例如<a class="link" href="https://github.com/SciML/DiffEqSensitivity.jl/issues/109"  target="_blank" rel="noopener"
+    >非线性似然分析器</a>或<a class="link" href="https://github.com/SciML/DiffEqSensitivity.jl/issues/108"  target="_blank" rel="noopener"
+    >信息敏感性测量</a>）来展示参数是否具有足够独特的影响来确定。</p>
+<p><strong>推荐技能</strong>：微分方程的基本背景和使用数值 ODE 求解器库的能力。不需要微分方程求解器的数值分析背景。</p>
+<p><strong>预期结果</strong>：参数可识别性方法的高效和高质量实现。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：350 小时。</p>
+<p><strong>难度</strong>：难。</p>
+<h2 id="模型订单减少httpsscimlaigsocgsoc_symbolicmodel_order_reduction"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#model_order_reduction"  target="_blank" rel="noopener"
+    >模型订单减少</a></h2>
+<p>模型降阶是一种自动找到与大模型近似但计算成本低得多的小模型的技术。我们计划使用 ModelingToolkit.jl 构建的基础设施来<a class="link" href="https://github.com/SciML/ModelingToolkit.jl/issues/58"  target="_blank" rel="noopener"
+    >实现一系列方法</a>，并找出加速微分方程求解的最佳方法。</p>
+<p><strong>推荐技能</strong>：微分方程的基本背景和使用数值 ODE 求解器库的能力。不需要微分方程求解器的数值分析背景。</p>
+<p><strong>预期结果</strong>：模型降阶方法的高效和高质量实施。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >克里斯·拉考卡斯</a></p>
+<p><strong>预计项目规模</strong>：350 小时。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h2 id="微分方程系统的自动符号操作httpsscimlaigsocgsoc_symbolicautomated_symbolic_manipulations_of_differential_equation_systems"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#automated_symbolic_manipulations_of_differential_equation_systems"  target="_blank" rel="noopener"
+    >微分方程系统的自动符号操作</a></h2>
+<p>数值求解微分方程可能很困难，因此在将模型交给求解器之前简化模型会很有帮助。唉，这需要时间&hellip;&hellip;所以让我们自动化吧！<a class="link" href="https://github.com/SciML/ModelingToolkit.jl"  target="_blank" rel="noopener"
+    >ModelingToolkit.jl</a>是一个用于自动化模型转换过程的项目。图书馆的各个部分仍然开放，例如：</p>
+<ul>
+<li>支持 DAE、DDE 和 SDE</li>
+<li>用于 DAE 索引缩减的 Pantelides 算法</li>
+<li>兰佩蒂变换</li>
+<li>自动构建伴随解决方案</li>
+<li>非线性求解器的撕裂</li>
+<li>求解分布式延迟方程</li>
+</ul>
+<p><strong>推荐技能</strong>：微分方程的基本背景和使用数值 ODE 求解器库的能力。不需要微分方程求解器的数值分析背景。</p>
+<p><strong>预期结果</strong>：模型转换方法的高效和高质量实施。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>和Yingbo <a class="link" href="https://github.com/YingboMa"  target="_blank" rel="noopener"
+    >Ma</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：中等到困难，具体取决于所选的子任务。</p>
+<h2 id="符号化学和计算反应速率系数httpsscimlaigsocgsoc_symbolicsymbolic_chemistry_and_calculating_reaction_rate_coefficients"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#symbolic_chemistry_and_calculating_reaction_rate_coefficients"  target="_blank" rel="noopener"
+    >符号化学和计算反应速率系数</a></h2>
+<p>催化剂是模拟化学反应的好工具，但通常反应速率系数通常是可疑的。有一些成熟的方法可以计算这些系数应该被赋予反应的活化能。我们希望自动化部分建模，允许用户提供原子键图并免费确定系数。</p>
+<ul>
+<li>表示化学物质、化合物、离子和同位素的数据结构</li>
+<li>阿累尼乌斯方程计算反应速率系数k(T)</li>
+<li>使用上述数据结构自动平衡反应</li>
+<li>验证反应系统中每个反应的能量守恒</li>
+</ul>
+<p><strong>推荐技能</strong>：深入了解化学和 Julia 开源编程，尤其是<a class="link" href="https://github.com/JuliaSymbolics/Symbolics.jl"  target="_blank" rel="noopener"
+    >Symbolics.jl</a>和<a class="link" href="https://github.com/SciML/ModelingToolkit.jl"  target="_blank" rel="noopener"
+    >ModelingToolkit.jl</a>。</p>
+<p><strong>预期结果</strong>：定义用于提供 Symbolics.jl 对象的接口，该对象包含使用 Arrhenius 方程计算活化能和反应速率系数的相关元数据。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>、<a class="link" href="https://github.com/anandijain"  target="_blank" rel="noopener"
+    >Anand Jain</a>和<a class="link" href="https://github.com/isaacsas"  target="_blank" rel="noopener"
+    >Samuel Isaacson</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易到中等，具体取决于所选的子任务。</p>
+<h2 id="改进了-modelingtoolkitjl-和-galacticoptimjl-之间的接口httpsscimlaigsocgsoc_symbolicimproved_interfacing_between_modelingtoolkitjl_and_galacticoptimjl"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#improved_interfacing_between_modelingtoolkitjl_and_galacticoptimjl"  target="_blank" rel="noopener"
+    >改进了 ModelingToolkit.jl 和 GalacticOptim.jl 之间的接口</a></h2>
+<p>GalacticOptim.jl 包装了多个本地和全局优化包以提供通用接口。GalacticOptim.jl 添加了一些高级功能，例如与自动微分集成，以使其在大多数情况下的使用相当简单，同时允许在单个统一界面中使用所有选项。目前，ModelingToolkit.jl 作为 AD 后端选项之一提供，也可用于直接象征性地定义优化问题。目前，这种支持是有限的，还没有涵盖约束之类的东西，但是通过利用 ModelingToolkit 可能的符号简化可以获得巨大的价值。除了 GalacticOptim 中可用的当前 MOI 包装器外，该项目还将涵盖使用从 MTK 生成的符号表达式集成到 MathOptInterface 中。</p>
+<p><strong>推荐技能</strong>：标准机器学习、统计或优化技术的背景知识。熟悉相关包、ModelingToolkit、GalacticOptim 和 MathOptInterface 将有助于入门。</p>
+<p><strong>预期结果</strong>：具有完整的符号优化问题接口。</p>
+<p><strong>导师</strong>: <a class="link" href="https://github.com/Vaibhavdixit02"  target="_blank" rel="noopener"
+    >Vaibhav Dixit</a> , <a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a></p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：容易到中等，具体取决于所选的子任务。</p>
+<h2 id="化学反应网络的符号分析与转换httpsscimlaigsocgsoc_symbolicsymbolic_analysis_and_transformations_of_chemical_reaction_networks"><a class="link" href="https://sciml.ai/gsoc/gsoc_symbolic/#symbolic_analysis_and_transformations_of_chemical_reaction_networks"  target="_blank" rel="noopener"
+    >化学反应网络的符号分析与转换</a></h2>
+<p>Catalyst.jl 提供了创建化学反应网络的符号模型、从中生成符号微分方程和随机过程模型的能力，并提供了一些有限的分析符号化学反应网络的能力。可以通过多种方式扩展 Catalyst.jl 的核心功能，包括添加</p>
+<ul>
+<li>用于检测和分类质量作用系统（即多项式 ODE 系统）的稳态及其平衡的工具。</li>
+<li>使用化学反应网络理论从反应网络图表示推断可能的动态和平衡行为的工具。</li>
+<li>通过消除保守物种来减小反应网络大小的方法。</li>
+<li>支持消除不同 Catalyst 模型组件之间的别名物种，以实现基于 Catalyst 的模型的更模块化组合。</li>
+<li>新的基于 ModelingToolkit 的系统来表示 τ 跳跃和/或抽象主方程表示，以及从 Catalyst 反应网络模型生成此类系统的转换层。</li>
+<li>新的基于 ModelingToolkit 的表示，用于跨建模尺度（ODE、SDE、跳跃过程）混合反应的混合系统，以及从 Catalyst 反应网络模型生成此类系统的转换层。</li>
+<li>Catalyst 反应允许随机变量或一般参数对反应化学计量进行编码的能力，更新了 ModelingToolkit 和 Symbolics 以支持生成相应的 ODE、SDE 和跳跃过程模型。</li>
+</ul>
+<p><strong>推荐技能</strong>：深入了解化学系统的 ODE 模型和 Julia 开源编程，尤其是<a class="link" href="https://github.com/JuliaSymbolics/Symbolics.jl"  target="_blank" rel="noopener"
+    >Symbolics.jl</a>和<a class="link" href="https://github.com/SciML/ModelingToolkit.jl"  target="_blank" rel="noopener"
+    >ModelingToolkit.jl</a>。</p>
+<p><strong>预期结果</strong>：使用上述一项或多项功能扩展 Catalyst，并使用相应的 ModelingToolkit 更新，使用户能够构建、分析和模拟包含新组件的 Catalyst 衍生模型。</p>
+<p><strong>导师</strong>：<a class="link" href="https://github.com/isaacsas"  target="_blank" rel="noopener"
+    >Samuel Isaacson</a>和<a class="link" href="https://github.com/ChrisRackauckas"  target="_blank" rel="noopener"
+    >Chris Rackauckas</a>。</p>
+<p><strong>预计项目规模</strong>：175 小时或 350 小时，具体取决于所选的子任务。</p>
+<p><strong>难度</strong>：根据所选的子任务，从易到难。</p>
+<h1 id="感兴趣的学生的重要信息-">⚡感兴趣的学生的重要信息 ⚡</h1>
+<ul>
+<li>阅读<a class="link" href="https://summerofcode.withgoogle.com/get-started/"  target="_blank" rel="noopener"
+    >GSoC2022 的入门页面</a></li>
+<li><a class="link" href="https://numfocus.org/"  target="_blank" rel="noopener"
+    >请记住，Gridap 以NumFOCUS</a>作为伞形组织参与 GSoC2022 。</li>
+<li>仔细阅读这个想法页面</li>
+<li>根据这个想法页面、您的专业知识和您的兴趣，思考如何为 Gridap 项目做出贡献</li>
+<li>在通过我们的<a class="link" href="https://gitter.im/Gridap-jl/community"  target="_blank" rel="noopener"
+    >Gitter 聊天</a>申请之前联系我们，为您的提案找到合适的主题</li>
+<li><a class="link" href="https://github.com/gridap/GSoC/issues/6"  target="_blank" rel="noopener"
+    >就此问题</a>的申请流程提出任何问题</li>
+</ul>
+<h1 id="gridapjl">Gridap.jl</h1>
+<p><a class="link" href="https://github.com/gridap/Gridap.jl"  target="_blank" rel="noopener"
+    >Gridap.jl</a>是用 Julia 编程语言实现的新一代开源有限元 (FE) 库。Gridap.jl 旨在采用比现有的用 C/C++ 或 Fortran 编写的 FE 应用程序更现代的编程风格。该库目前能够在单纯形和 n 立方的结构化和非结构化网格上求解标量和矢量场、单场和多场问题、合格和不合格 FE 离散化的线性和非线性偏微分方程 (PDE)。Gridap 是可扩展的和模块化的。可以实现新的有限元空间、新的参考元素、使用外部网格生成器、线性求解器、后处理工具等。例如，参见可用的 Gridap 插件列表。</p>
+<h2 id="导师">导师</h2>
+<p>按字母顺序</p>
+<ul>
+<li><a class="link" href="https://github.com/santiagobadia"  target="_blank" rel="noopener"
+    >圣地亚哥巴迪亚</a></li>
+<li><a class="link" href="https://github.com/oriolcg"  target="_blank" rel="noopener"
+    >Oriol Colomés</a></li>
+<li><a class="link" href="https://github.com/amartinhuertas"  target="_blank" rel="noopener"
+    >阿尔贝托·F·马丁</a></li>
+<li><a class="link" href="https://github.com/ericneiva"  target="_blank" rel="noopener"
+    >埃里克·内瓦</a></li>
+<li><a class="link" href="https://github.com/fverdugo"  target="_blank" rel="noopener"
+    >弗朗西斯科·维杜戈</a></li>
+</ul>
+<h2 id="项目构想">项目构想</h2>
+<h3 id="向-gridapjl-添加对带有悬挂节点的自适应网格细化的支持">向 Gridap.jl 添加对带有悬挂节点的自适应网格细化的支持。</h3>
+<p>自适应网格细化 (AMR) 是一种数值工具，用于在计算域的不同部分需要不同网格分辨率的问题中有效地利用计算资源。基于八叉树（或四叉树）的网格生成器，例如<a class="link" href="https://www.p4est.org/"  target="_blank" rel="noopener"
+    >p4est</a>是生成 3D（或 2D）自适应计算网格的最有效方法之一。生成的网格包含所谓的悬挂或不规则节点，即位于较粗相邻单元的边缘或表面的节点。在这种情况下，生成符合单元格的全局节点编号（或自由度）不足以生成连续有限元 (FE) 插值。由于这些原因，FE 代码需要引入特殊技术来在悬挂节点处施加连续插值。例如，这可以通过对插值空间施加补充线性约束来完成。该项目的目标是在 Gridap.jl 包中实现一种机制来处理具有悬挂节点的网格。为此，我们计划添加新的数据结构来跟踪挂起的节点，并从中建立相关的线性约束。一旦定义了约束，就可以使用库中已经存在的函数轻松地将它们施加到插值空间，例如<code>FESpaceWithLinearConstraints</code>类型。此外，我们已经在扩展包<a class="link" href="https://github.com/gridap/GridapP4est.jl"  target="_blank" rel="noopener"
+    >GridapP4est</a>中为 p4est 提供了包装器。因此，在 Gridap.jl 中实现对悬挂节点的支持在 Google 的夏季代码项目中应该是可行的。学生的主要任务是熟悉 Gridap.jl 的几何相关数据结构，根据项目目标扩展它们，通过 PR 将生成的代码发布到 Gridap.jl 项目的主分支，并通过示例展示新功能的应用（例如，在我们的<a class="link" href="https://gridap.github.io/Tutorials/dev/"  target="_blank" rel="noopener"
+    >教程</a>页面中的新教程中。）</p>
+<table>
+<thead>
+<tr>
+<th><strong>优先事项</strong></th>
+<th><strong>强度</strong></th>
+<th><strong>项目类型</strong></th>
+<th><strong>目标</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高的</td>
+<td>缓和</td>
+<td>长（~350 小时）或中（~175 小时）取决于学生的专业知识</td>
+<td>在 Gridap.jl 中实现悬挂节点支持。针对 Gridap.jl 的主分支开发、记录和打开 PR。</td>
+<td><a class="link" href="https://github.com/fverdugo"  target="_blank" rel="noopener"
+    >Francesc Verdugo</a>、<a class="link" href="https://github.com/amartinhuertas"  target="_blank" rel="noopener"
+    >Alberto F. Martin</a>和<a class="link" href="https://github.com/ericneiva"  target="_blank" rel="noopener"
+    >Eric Neiva</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用-gridapmakiejl-在-julia-中进行有限元模拟的高级可视化">使用 GridapMakie.jl 在 Julia 中进行有限元模拟的高级可视化。</h3>
+<p>数值结果的可视化是有限元 (FE) 计算的重要组成部分。它是检查计算解决方案以进行调试或生成可用于发布的质量图像和动画的重要工具。在 Gridap.jl 中可视化 FE 模拟产生的数据的常规方法是将 vtu 文件写入磁盘并使用<a class="link" href="https://www.paraview.org/"  target="_blank" rel="noopener"
+    >Paraview</a>可视化它们。这允许人们利用 Paraview 出色且功能丰富的可视化功能，但在直接从 Julia 代码中直观地检查数据或使用 Julia 开源包生态系统的包对其进行操作时，它会带来挑战。出于这个原因，在上一版 Google Summer of Code 中，我们开发了<a class="link" href="https://github.com/gridap/GridapMakie.jl"  target="_blank" rel="noopener"
+    >GridapMakie.jl的第一个版本</a><a class="link" href="https://github.com/JuliaPlots/Makie.jl"  target="_blank" rel="noopener"
+    >，一个使用Makie.jl</a>可视化 Gridap.jl 数据结构的包。第一个版本支持在三角形和四面体元素的计算网格上可视化标量场，并提供反应式<em>绘图配方</em>允许人们轻松生成交互式绘图和动画。此功能已经占 FE 计算中可视化需求的重要份额，但仍然缺少几个重要功能。在这个新项目中，我们计划使用新的可视化工具丰富 GridapMakie.jl，例如支持四边形和六面体元素、矢量值字段的可视化、计算网格的裁剪和切片等。我们还希望改善用户体验，在 Jupyter 或<a class="link" href="https://github.com/fonsp/Pluto.jl"  target="_blank" rel="noopener"
+    >Pluto.jl</a>笔记本和 VSCode 侧面板中生成交互式绘图时。这项工作将产生具有新功能的 GridapMakie.jl 的第二个版本。GSoC 学生的主要任务是进一步开发 GridapMakie.jl，记录它，最后在官方发布<a class="link" href="https://github.com/JuliaRegistries/General"  target="_blank" rel="noopener"
+    >Julia 包注册表</a>。</p>
+<table>
+<thead>
+<tr>
+<th><strong>优先事项</strong></th>
+<th><strong>强度</strong></th>
+<th><strong>项目类型</strong></th>
+<th><strong>目标</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中等的</td>
+<td>缓和</td>
+<td>长（~350 小时）或中（~175 小时）</td>
+<td>在 GridapMakie.jl 中实施高级可视化技术。开发、记录和发布新版本的 GridapMakie.jl 包。</td>
+<td><a class="link" href="https://github.com/fverdugo"  target="_blank" rel="noopener"
+    >弗朗西斯科·维杜戈</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="一般多面体的离散化技术">一般多面体的离散化技术</h3>
+<p>使用有限元和有限体积方法的 PDE 数值逼近依赖于感兴趣域的网格的定义。这些网格通常由<em>单元</em>格组成，它们是三角形/四面体或四边形/六面体。网格生成步骤是 PDE 离散化工作流程中的瓶颈之一，因为它很难自动化和并行化。为了缓解这种情况，一些数值离散方案（不连续 Galerkin，可混合方法）在网格生成中提供了灵活性，因为它们可以为任何单元拓扑定义。<code>Gridap</code>在主包中提供不连续 Galerkin 方法，在主包中提供可混合方法<code>GridapHybrid</code>. 然而，这些实现还不能利用一般的多面体。在这个项目中，我们想要提供这个额外的功能。首先，我们将利用多面体的一般表示作为<em>旋转系统</em>，即图的子类型。我们将定义一个具体<code>Polytope</code>的图形表示，其中每个顶点的邻接是<em>循环顺序</em>，并根据这种描述定义它的 API。接下来，我们将实施一个<code>Quadrature</code>适用于一般多面体的新规则（例如，参见<a class="link" href="http://dilbert.engr.ucdavis.edu/~suku/quadrature/hni-curvedsolid.pdf"  target="_blank" rel="noopener"
+    >此处</a>）。最后，将使用一些多面体网格来检查不连续 Galerkin 和混合求解器的实现。如果项目类型很<em>长</em>，我们还将探索在多面体网格上工作的其他方案的实现，例如，虚拟单元方法或混合高阶方法。</p>
+<table>
+<thead>
+<tr>
+<th><strong>优先事项</strong></th>
+<th><strong>强度</strong></th>
+<th><strong>项目类型</strong></th>
+<th><strong>目标</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中等的</td>
+<td>缓和</td>
+<td>长（~350 小时）或中（~175 小时）取决于学生的专业知识</td>
+<td>在 中实现一般多面体和正交<code>Gridap.jl</code>。<code>Gridap.jl</code>在和中将它们与 DG 和杂交方法相结合<code>GridapHybrid.jl</code>。</td>
+<td><a class="link" href="https://github.com/santiagobadia"  target="_blank" rel="noopener"
+    >圣地亚哥·巴迪亚</a>、<a class="link" href="https://github.com/amartinhuertas"  target="_blank" rel="noopener"
+    >阿尔贝托·F·马丁</a>和<a class="link" href="https://github.com/ericneiva"  target="_blank" rel="noopener"
+    >埃里克·内瓦</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="基于伴随的-pde-约束优化">基于伴随的 PDE 约束优化</h3>
+<p>在许多工程和科学应用中，需要找到变量受某些 PDE 约束的优化问题的解决方案。这就是逆问题的情况，其中人们有兴趣找到最佳参数集，以便解决方案与观察结果相匹配，或者设计优化问题，其中人们想要找到最大化或最小化感兴趣数量的最佳参数。大多数有效的优化求解器依赖于优化函数对参数的导数，这可以从前向问题的伴随中获得。处理瞬态 PDE 和时间相关参数时出现的主要挑战之一。在这种情况下，前向问题在时间上向前整合并存储在内存中，以便向后解决的伴随问题使用。在这个项目中，我们建议创建一个通用框架来计算伴随，并在优化问题中使用它们，使用<code>Gridap.jl</code>并<code>GridapODEs.jl</code>作为前向问题的解决者。目标是利用<em>Julia</em>的自动微分功能来自动化优化过程。从事该项目的学生将首先使用稳定前向问题的离散伴随物来定义优化问题的通用 API。接下来，我们将在瞬态问题中为伴随的前向/后向时间推进方案工作。最后，我们将实施检查点方案以限制计算伴随时间相关问题的内存消耗。</p>
+<table>
+<thead>
+<tr>
+<th><strong>优先事项</strong></th>
+<th><strong>强度</strong></th>
+<th><strong>项目类型</strong></th>
+<th><strong>目标</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中等的</td>
+<td>缓和</td>
+<td>长（~350 小时）或中（~175 小时）取决于学生的专业知识</td>
+<td>创建一个通用框架来计算伴随项，并将它们用于优化问题，使用<code>Gridap.jl</code>和<code>GridapODEs.jl</code>作为前向问题的求解器。</td>
+<td><a class="link" href="https://github.com/oriolcg"  target="_blank" rel="noopener"
+    >Oriol Colomés</a>、<a class="link" href="https://github.com/santiagobadia"  target="_blank" rel="noopener"
+    >Santiago Badia</a>和<a class="link" href="https://github.com/fverdugo"  target="_blank" rel="noopener"
+    >Francesc Verdugo</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="fenics-项目">FEniCS 项目</h1>
+<h3 id="关于我们">关于我们</h3>
+<p>FEniCSx 是一个流行的开源 (LGPLv3) 计算平台，用于求解偏微分方程 (PDE)。FEniCSx 使用户能够快速将科学模型转换为高效的有限元代码。借助 FEniCSx 的高级 Python 和 C++ 接口，很容易上手，但 FEniCSx 还为更有经验的程序员提供了强大的功能。FEniCSx 可在从笔记本电脑到高性能集群的多种平台上运行。</p>
+<h3 id="过程">过程</h3>
+<p>在所有情况下，我们都建议未来的学生加入我们的<a class="link" href="https://fenicsproject-slack-invite.herokuapp.com/"  target="_blank" rel="noopener"
+    >Slack 频道</a>#gsoc2022 并与我们一起撰写他们的项目提案。以下只是想法；如果您有自己的想法，我们非常乐意与您讨论！</p>
+<p>我们会要求潜在的申请者安装 <a class="link" href="https://github.com/fenics"  target="_blank" rel="noopener"
+    >FEniCSx</a>并试用演示。DOLFINx<a class="link" href="https://jorgensd.github.io/dolfinx-tutorial/"  target="_blank" rel="noopener"
+    >教程</a>有使用 FEniCSx 求解偏微分方程的最新描述。</p>
+<h3 id="扩大资格">扩大资格</h3>
+<p>GSoC 2022 现在向更广泛的申请者开放，而不仅仅是像往年那样在高等教育机构的课程中注册的申请者。<a class="link" href="https://developers.google.com/open-source/gsoc/faq"  target="_blank" rel="noopener"
+    >请在此处</a>阅读 GSoC 常见问题解答，了解所有新的资格要求。</p>
+<h3 id="fenicsx-与-fenics">FEniCSx 与 FEniCS</h3>
+<p>FEniCS 项目最近经历了几乎完全的重新开发。因此，所有项目都将添加到新的 FEniCSx 组件（DOLFINx、FFCx、Basix）而不是旧组件（DOLFIN、FFC 和 FIAT）。所有开发都在我们的<a class="link" href="https://github.com/fenics"  target="_blank" rel="noopener"
+    >GitHub 页面上</a>进行。在查找相关示例时，您应该看<code>import dolfinx</code>不到<code>import dolfin</code>或<code>from dolfin import *</code>在顶部。</p>
+<h3 id="需要先验知识">需要先验知识</h3>
+<p>所有项目都需要现代 C++ 和 Python 知识。您将主要使用 FEniCS 项目的有限元求解器 DOLFINx。一些有限元方法的知识以及更普遍的数值计算知识将是一个很大的优势。</p>
+<h2 id="扩展-dolfinx-演示-1">扩展 DOLFINx 演示 (1)</h2>
+<h3 id="抽象的">抽象的</h3>
+<p>DOLFINx Python 和 C++ 演示是我们的用户了解和学习 FEniCS 项目的主要方式。经过最近一段时间的密集工作以平滑 DOLFINx API 的设计，我们现在准备完善和扩展我们现有的（有限的！）演示集。该项目非常适合具有有限元和数值方法知识并热衷于为最终用户编写非常清晰和精确的示例的参与者。</p>
+<h3 id="描述">描述</h3>
+<table>
+<thead>
+<tr>
+<th><strong>困难</strong></th>
+<th><strong>优先事项</strong></th>
+<th><strong>涉及</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中等（175 小时）</td>
+<td>高的</td>
+<td>Python 和/或 C++</td>
+<td><a class="link" href="mailto:jack.hale@uni.lu" >迈克尔·哈贝拉、杰克·S·黑尔</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="技术细节">技术细节</h3>
+<p><a class="link" href="https://docs.fenicsproject.org/dolfinx/main/python/demos.html"  target="_blank" rel="noopener"
+    >您可以在此处查看</a>主分支上演示的当前状态 。</p>
+<p>一个可能的计划可能是：</p>
+<ul>
+<li>查看现有的 DOLFIN 和 DOLFINx 演示，并熟悉用于将 Python 文件转换为例如笔记本或 Sphinx 文档的管道。</li>
+<li>确定这些演示所揭示的概念方面的差距。尽量减少演示之间的概念重叠。例如，我们不需要在一个专注于向用户展示如何解决非线性问题的演示中解释网格生成的基础知识。</li>
+<li>定义一组新的演示和/或现有 DOLFINx 演示的端口。</li>
+<li>建议 API 更改或新的高级函数，其中现有的低级函数会产生大量样板代码或潜在错误。参见例如<code>fem.LinearProblem</code>。</li>
+</ul>
+<h3 id="额外知识">额外知识</h3>
+<p>因为这项任务将涉及编写一些英语文本来记录演示候选人应该相当精通书面英语。</p>
+<h2 id="扩展-dolfinx-演示-2">扩展 DOLFINx 演示 (2)</h2>
+<h3 id="抽象的-1">抽象的</h3>
+<p>我们设想两个学生在这个主题上合作工作的可能性，请参阅扩展 DOLFINx 演示 (1)。</p>
+<h3 id="描述-1">描述</h3>
+<table>
+<thead>
+<tr>
+<th><strong>困难</strong></th>
+<th><strong>优先事项</strong></th>
+<th><strong>涉及</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中等（175 小时）</td>
+<td>高的</td>
+<td>蟒蛇，C++</td>
+<td><a class="link" href="mailto:jack.hal@uni.lu" >杰克 S. 黑尔，加思 N. 威尔斯</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="混合单元拓扑支持">混合单元拓扑支持</h2>
+<h3 id="抽象的-2">抽象的</h3>
+<p>有限元方法需要将域离散化为称为网格的小单元（或单元）。目前，FEniCSx 仅支持由单一类型的单元组成的网格（例如三角形、四面体、四边形或六面体）。然而，在许多应用中，使用由多种类型的单元组成的网格很重要。例如，为了在流体力学问题中有效地对复杂几何形状周围的边界层进行网格划分，最好使用主要是六面体单元和一些替代类型（例如金字塔）的单元，以便处理网格问题。在这个项目中，您将扩展 FEniCSx 以完全支持具有多种类型单元的网格。</p>
+<h3 id="描述-2">描述</h3>
+<table>
+<thead>
+<tr>
+<th><strong>困难</strong></th>
+<th><strong>优先事项</strong></th>
+<th><strong>涉及</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>硬（350小时）</td>
+<td>中等的</td>
+<td>蟒蛇，C++</td>
+<td><a class="link" href="mailto:chris@bpi.cam.ac.uk" >克里斯·理查森，伊戈尔·巴拉塔</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="技术细节-1">技术细节</h3>
+<p>该项目可能有一个重要的概念设计组件，需要与核心开发人员密切合作进行。具有计算几何或拓扑知识的候选人也非常适合该项目。</p>
+<p>一个可能的计划可能是：</p>
+<ul>
+<li>精确识别 DOLFINx 的所有部分，其中当前假定统一的单元拓扑，例如<code>fem::ElementDofLayout</code>和<code>fem::DofMap</code>功能 <code>assemble_*</code>。请注意，某些细胞类型具有多个面拓扑，例如金字塔（一个方形面和三个三角形面）。</li>
+<li>在未经测试的细胞类型上验证现有的有限元内核。</li>
+<li>确定合适的非侵入式设计以在混合拓扑网格上进行组装。这也许可以通过将每个单元类型生成的内核分派到组装器中来处理，该组装器作用于一组统一拓扑的单元。</li>
+<li>指定发出多个小的增量拉取请求而不是一个大请求的工作计划。</li>
+<li>实施新设计并指定和编写适当的单元测试。</li>
+<li>生成具有混合单元拓扑的网格。</li>
+<li>对混合拓扑网格上的泊松问题等执行标准收敛测试。</li>
+</ul>
+<h2 id="检查点支持">检查点支持</h2>
+<h3 id="抽象的-3">抽象的</h3>
+<p>求解瞬态偏微分方程 (PDE) 的一种普遍方法是在时间上采用有限差分格式，在空间中采用有限元格式。这种方法会产生一系列问题，必须按顺序解决。对于许多 PDE，自适应时间步长对于获得稳定的解决方案至关重要。然而，对于复杂的问题，稳定性标准可能不是先验的，必须通过反复试验来估计。对于大型问题，这种探索可能会变得非常耗时，因为模拟必须从每次模拟的初始时间步开始。拥有一个检查点算法来在任何时间步将有限元问题的解存储到磁盘上，这样就可以从最后一个稳定的解重新开始模拟。目前，FEniCSx 不支持函数的检查点。在这个项目中，您将扩展 FEniCSx 以支持使用检查点<a class="link" href="https://adios2.readthedocs.io/en/latest/"  target="_blank" rel="noopener"
+    >ADIOS2</a>。</p>
+<h3 id="描述-3">描述</h3>
+<table>
+<thead>
+<tr>
+<th><strong>困难</strong></th>
+<th><strong>优先事项</strong></th>
+<th><strong>涉及</strong></th>
+<th><strong>导师</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>硬（350小时）</td>
+<td>中等的</td>
+<td>蟒蛇，C++</td>
+<td><a class="link" href="mailto:jsd55@eng.cam.ac.uk" >约根·多肯，克里斯·理查森</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="技术细节-2">技术细节</h3>
+<p>FEniCSx 目前支持使用 ADIOS2 写入输出，实现可以在<a class="link" href="https://github.com/FEniCS/dolfinx/blob/main/cpp/dolfinx/io/ADIOS2Writers.cpp"  target="_blank" rel="noopener"
+    >这里</a>找到。候选人应扩展此接口，理想情况下，候选人应熟悉 C++ 和有限元方法的基础知识。</p>
+<p>一个可能的计划可能是：</p>
+<ul>
+<li>扩展 FEniCSx 中的 ADIOS2 功能，以便能够串行读取网格（从使用单个 MPI 进程生成的文件）。</li>
+<li>熟悉 ADIOS2 如何存储使用 MPI 并行写入的数据，以及如何在串行程序中读取此类数据。</li>
+<li>当使用多个进程执行时，使用 ADIOS2 读取使用单个 MPI 进程写入的探索数据。</li>
+<li>通过探索前面的两个概念，将网格的读取扩展到并行。</li>
+<li>将 FEniCSx 中的 ADIOS2-IO 扩展到检查点功能。</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%95%99%E5%AD%A6/">留学</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#julia">Julia</a>
+      <ol>
+        <li><a href="#dynamical-systems-complex-systems--nonlinear-dynamics--summer-of-codehttpsjulialangorgjsocgsocjuliadynamicsdynamical_systems_complex_systems_nonlinear_dynamics_summer_of_code"><a href="https://julialang.org/jsoc/gsoc/juliadynamics/#dynamical_systems_complex_systems_nonlinear_dynamics_summer_of_code">Dynamical systems, complex systems &amp; nonlinear dynamics – Summer of Code</a></a>
+          <ol>
+            <li><a href="#动态系统jlhttpsjulialangorgjsocgsocjuliadynamicsdynamicalsystemsjl"><a href="https://julialang.org/jsoc/gsoc/juliadynamics/#dynamicalsystemsjl">动态系统.jl</a></a></li>
+          </ol>
+        </li>
+        <li><a href="#machine-learning-projects---summer-of-codehttpsjulialangorgjsocgsocmachine-learningmachine_learning_projects_-_summer_of_code"><a href="https://julialang.org/jsoc/gsoc/machine-learning/#machine_learning_projects_-_summer_of_code">Machine Learning Projects - Summer of Code</a></a>
+          <ol>
+            <li><a href="#cuda-hackinghttpsjulialangorgjsocgsocmachine-learningcuda_hacking"><a href="https://julialang.org/jsoc/gsoc/machine-learning/#cuda_hacking">CUDA Hacking</a></a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#原生-julia-odesdedaedde-和-spde-求解器httpsscimlaigsocgsoc_diffeqnative_julia_ode_sde_dae_dde_and_spde_solvers"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#native_julia_ode_sde_dae_dde_and_spde_solvers">原生 Julia ODE、SDE、DAE、DDE 和 (S)PDE 求解器</a></a></li>
+    <li><a href="#用于求解微分方程的物理信息神经网络-pinn-的改进httpsscimlaigsocgsoc_diffeqimprovements_to_physics-informed_neural_networks_pinn_for_solving_differential_equations"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#improvements_to_physics-informed_neural_networks_pinn_for_solving_differential_equations">用于求解微分方程的物理信息神经网络 (PINN) 的改进</a></a></li>
+    <li><a href="#微分方程求解器的性能增强httpsscimlaigsocgsoc_diffeqperformance_enhancements_for_differential_equation_solvers"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#performance_enhancements_for_differential_equation_solvers">微分方程求解器的性能增强</a></a></li>
+    <li><a href="#偏微分方程的离散化httpsscimlaigsocgsoc_diffeqdiscretizations_of_partial_differential_equations"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#discretizations_of_partial_differential_equations">偏微分方程的离散化</a></a></li>
+    <li><a href="#全局敏感性分析工具httpsscimlaigsocgsoc_diffeqtools_for_global_sensitivity_analysis"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#tools_for_global_sensitivity_analysis">全局敏感性分析工具</a></a></li>
+    <li><a href="#跳跃过程模拟算法httpsscimlaigsocgsoc_diffeqjump_process_simulation_algorithms"><a href="https://sciml.ai/gsoc/gsoc_diffeq/#jump_process_simulation_algorithms">跳跃过程模拟算法</a></a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#物理信息神经网络-pinn-和使用深度学习求解微分方程httpsscimlaigsocgsoc_scimlphysics-informed_neural_networks_pinns_and_solving_differential_equations_with_deep_learning"><a href="https://sciml.ai/gsoc/gsoc_sciml/#physics-informed_neural_networks_pinns_and_solving_differential_equations_with_deep_learning">物理信息神经网络 (PINN) 和使用深度学习求解微分方程</a></a></li>
+    <li><a href="#对神经和通用微分方程的改进httpsscimlaigsocgsoc_scimlimprovements_to_neural_and_universal_differential_equations"><a href="https://sciml.ai/gsoc/gsoc_sciml/#improvements_to_neural_and_universal_differential_equations">对神经和通用微分方程的改进</a></a></li>
+    <li><a href="#使用代理模型通过机器学习加速优化surrogatesjlhttpsscimlaigsocgsoc_scimlaccelerating_optimization_via_machine_learning_with_surrogate_models_surrogatesjl"><a href="https://sciml.ai/gsoc/gsoc_sciml/#accelerating_optimization_via_machine_learning_with_surrogate_models_surrogatesjl">使用代理模型通过机器学习加速优化：Surrogates.jl</a></a></li>
+    <li><a href="#fenicsjl-与-dolfin-adjoint--zygotejl-的集成用于有限元科学机器学习httpsscimlaigsocgsoc_scimlintegration_of_fenicsjl_with_dolfin-adjoint_zygotejl_for_finite_element_scientific_machine_learning"><a href="https://sciml.ai/gsoc/gsoc_sciml/#integration_of_fenicsjl_with_dolfin-adjoint_zygotejl_for_finite_element_scientific_machine_learning">FEniCS.jl 与 dolfin-adjoint + Zygote.jl 的集成，用于有限元科学机器学习</a></a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#linearsolvejl-分布式算法httpsscimlaigsocgsoc_numericslinearsolvejl_distributed_algorithms"><a href="https://sciml.ai/gsoc/gsoc_numerics/#linearsolvejl_distributed_algorithms">LinearSolve.jl 分布式算法</a></a></li>
+    <li><a href="#nonlinearsolvejl-全球化准牛顿和效率httpsscimlaigsocgsoc_numericsnonlinearsolvejl_globalization_quasi-newton_and_efficiency"><a href="https://sciml.ai/gsoc/gsoc_numerics/#nonlinearsolvejl_globalization_quasi-newton_and_efficiency">NonlinearSolve.jl 全球化、准牛顿和效率</a></a></li>
+    <li><a href="#基准和教程写作httpsscimlaigsocgsoc_numericsbenchmarks_and_tutorial_writing"><a href="https://sciml.ai/gsoc/gsoc_numerics/#benchmarks_and_tutorial_writing">基准和教程写作</a></a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#参数可识别性分析httpsscimlaigsocgsoc_symbolicparameter_identifiability_analysis"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#parameter_identifiability_analysis">参数可识别性分析</a></a></li>
+    <li><a href="#模型订单减少httpsscimlaigsocgsoc_symbolicmodel_order_reduction"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#model_order_reduction">模型订单减少</a></a></li>
+    <li><a href="#微分方程系统的自动符号操作httpsscimlaigsocgsoc_symbolicautomated_symbolic_manipulations_of_differential_equation_systems"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#automated_symbolic_manipulations_of_differential_equation_systems">微分方程系统的自动符号操作</a></a></li>
+    <li><a href="#符号化学和计算反应速率系数httpsscimlaigsocgsoc_symbolicsymbolic_chemistry_and_calculating_reaction_rate_coefficients"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#symbolic_chemistry_and_calculating_reaction_rate_coefficients">符号化学和计算反应速率系数</a></a></li>
+    <li><a href="#改进了-modelingtoolkitjl-和-galacticoptimjl-之间的接口httpsscimlaigsocgsoc_symbolicimproved_interfacing_between_modelingtoolkitjl_and_galacticoptimjl"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#improved_interfacing_between_modelingtoolkitjl_and_galacticoptimjl">改进了 ModelingToolkit.jl 和 GalacticOptim.jl 之间的接口</a></a></li>
+    <li><a href="#化学反应网络的符号分析与转换httpsscimlaigsocgsoc_symbolicsymbolic_analysis_and_transformations_of_chemical_reaction_networks"><a href="https://sciml.ai/gsoc/gsoc_symbolic/#symbolic_analysis_and_transformations_of_chemical_reaction_networks">化学反应网络的符号分析与转换</a></a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#导师">导师</a></li>
+    <li><a href="#项目构想">项目构想</a>
+      <ol>
+        <li><a href="#向-gridapjl-添加对带有悬挂节点的自适应网格细化的支持">向 Gridap.jl 添加对带有悬挂节点的自适应网格细化的支持。</a></li>
+        <li><a href="#使用-gridapmakiejl-在-julia-中进行有限元模拟的高级可视化">使用 GridapMakie.jl 在 Julia 中进行有限元模拟的高级可视化。</a></li>
+        <li><a href="#一般多面体的离散化技术">一般多面体的离散化技术</a></li>
+        <li><a href="#基于伴随的-pde-约束优化">基于伴随的 PDE 约束优化</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#关于我们">关于我们</a></li>
+        <li><a href="#过程">过程</a></li>
+        <li><a href="#扩大资格">扩大资格</a></li>
+        <li><a href="#fenicsx-与-fenics">FEniCSx 与 FEniCS</a></li>
+        <li><a href="#需要先验知识">需要先验知识</a></li>
+      </ol>
+    </li>
+    <li><a href="#扩展-dolfinx-演示-1">扩展 DOLFINx 演示 (1)</a>
+      <ol>
+        <li><a href="#抽象的">抽象的</a></li>
+        <li><a href="#描述">描述</a></li>
+        <li><a href="#技术细节">技术细节</a></li>
+        <li><a href="#额外知识">额外知识</a></li>
+      </ol>
+    </li>
+    <li><a href="#扩展-dolfinx-演示-2">扩展 DOLFINx 演示 (2)</a>
+      <ol>
+        <li><a href="#抽象的-1">抽象的</a></li>
+        <li><a href="#描述-1">描述</a></li>
+      </ol>
+    </li>
+    <li><a href="#混合单元拓扑支持">混合单元拓扑支持</a>
+      <ol>
+        <li><a href="#抽象的-2">抽象的</a></li>
+        <li><a href="#描述-2">描述</a></li>
+        <li><a href="#技术细节-1">技术细节</a></li>
+      </ol>
+    </li>
+    <li><a href="#检查点支持">检查点支持</a>
+      <ol>
+        <li><a href="#抽象的-3">抽象的</a></li>
+        <li><a href="#描述-3">描述</a></li>
+        <li><a href="#技术细节-2">技术细节</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+    </body>
+</html>

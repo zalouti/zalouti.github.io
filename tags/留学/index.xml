@@ -6,7 +6,16 @@
     <description>Recent content in 留学 on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Mar 2022 22:51:31 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E7%95%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 21:21:13 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/%E7%95%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gsoc</title>
+      <link>https://zalouti.github.io/p/gsoc/</link>
+      <pubDate>Tue, 12 Apr 2022 21:21:13 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/gsoc/</guid>
+      <description>Gsoc Gsoc全称为Google summer of code 记录一些自己感兴趣的项目与方向 Julia Dynamical systems, complex systems &amp;amp; nonlinear dynamics – Summer of Code 动态系统.jl **难度：**容易到中等，取决于选择实</description>
+    </item>
+    
     <item>
       <title>Course</title>
       <link>https://zalouti.github.io/p/course/</link>
