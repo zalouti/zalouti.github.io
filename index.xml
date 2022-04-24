@@ -240,11 +240,26 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
 &lt;h3 id=&#34;适用范围&#34;&gt;适用范围&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;大多数韧性材料在一般应力状态下发生塑性屈服&lt;/li&gt;
-&lt;li&gt;大多数脆性材料在一本应力状态下发生脆性断裂&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;大多数韧性材料在一般应力状态下发生塑性屈服&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;例外：韧性材料只受各向等拉伸时，只受正应力，此时应力圆为一个&lt;strong&gt;点源&lt;/strong&gt;，微元体的任何面上受力均为正应力，没有剪应力。&lt;/p&gt;
 &lt;p&gt;这种特殊状态类似于流体静力学。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大多数脆性材料在一本应力状态下发生脆性断裂&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在只受压应力时，不会被拉断，很有可能被剪切&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;开放性问题：&lt;/p&gt;
+&lt;p&gt;圆柱形韧性薄壁容器水平轴线上面出现了水平裂纹，求水平裂纹的内部情况？&lt;/p&gt;
+&lt;p&gt;（受剪断）&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -2288,6 +2303,50 @@ $$&lt;/p&gt;
         <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%BF%9E%E6%8E%A5%E4%BB%B6%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%81%87%E5%AE%9A%E8%AE%A1%E7%AE%97/</guid>
         <description>&lt;h1 id=&#34;连接件强度的工程假定计算&#34;&gt;连接件强度的工程假定计算&lt;/h1&gt;
 &lt;h2 id=&#34;连接件强度计算的工程意义&#34;&gt;连接件强度计算的工程意义&lt;/h2&gt;
+&lt;p&gt;工程中常常采用连接件，由于应力集中，应力分布规律复杂，需要做一些假定来分析。&lt;/p&gt;
+&lt;h3 id=&#34;假定计算的基础&#34;&gt;假定计算的基础&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;假设应力均匀分布&lt;/li&gt;
+&lt;li&gt;在假定的前提下进行实验，确定许用应力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;剪切假定计算&#34;&gt;剪切假定计算&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/04/20/1nSQf5eVruM96Cv.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/04/20/1nSQf5eVruM96Cv.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;剪切假定&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;剪切假定&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+$$
+\tau=\frac{F_Q}{A}\leq[\tau]
+$$&lt;/p&gt;
+&lt;h2 id=&#34;挤压假定计算&#34;&gt;挤压假定计算&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/04/20/su2fEMrdwmBJAXG.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/04/20/su2fEMrdwmBJAXG.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;挤压假定&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;挤压假定&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;由图可知，假设有效挤压面为$S=\delta d$,则有
+$$
+\sigma_{\mathrm{c}}=\frac{F_{\mathrm{P}}}{\delta d} \leq\left[\sigma_{\mathrm{c}}\right]
+$$&lt;/p&gt;
+&lt;h2 id=&#34;焊缝假定计算&#34;&gt;焊缝假定计算&lt;/h2&gt;
 </description>
         </item>
         <item>
