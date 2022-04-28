@@ -1340,6 +1340,179 @@ $$
 </description>
         </item>
         <item>
+        <title>第七章·梁的变形分析与刚度问题</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Mon, 28 Mar 2022 09:47:23 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;h1 id=&#34;梁的变形分析与刚度问题&#34;&gt;梁的变形分析与刚度问题&lt;/h1&gt;
+&lt;h2 id=&#34;梁的变形与梁的位移&#34;&gt;梁的变形与梁的位移&lt;/h2&gt;
+&lt;h3 id=&#34;梁的曲率与位移&#34;&gt;梁的曲率与位移&lt;/h3&gt;
+&lt;p&gt;挠度曲线：平面弯曲下，梁的轴线弯曲成平面曲线，这条曲线叫做挠度曲线。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/04/25/eHJTujrkEBt8IUA.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/04/25/eHJTujrkEBt8IUA.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;挠度曲线&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;挠度曲线&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;$w(x)$:某一点受弯曲之后下降的高度&lt;/p&gt;
+&lt;p&gt;$\rho(x)$：x处的曲率半径&lt;/p&gt;
+&lt;p&gt;$\theta(x)$:曲率半径与垂直法向的夹角&lt;/p&gt;
+&lt;p&gt;根据弯曲可知，梁的纯弯曲满足：
+$$
+\frac{1}{\rho}=\frac{M}{EI}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;梁截面的三种位移&#34;&gt;梁截面的三种位移&lt;/h3&gt;
+&lt;p&gt;此处位移为广义坐标对应的广义位移。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;挠度：横截面形心处的铅垂位移，用&lt;em&gt;w&lt;/em&gt;表示&lt;/li&gt;
+&lt;li&gt;转角：变形后的横截面，相对于变形前的中性轴所转过的夹角$\theta$&lt;/li&gt;
+&lt;li&gt;水平位移（小变形下忽略）：横截面形心沿着水平方向的位移&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;挠度与转角的相互关系&#34;&gt;挠度与转角的相互关系&lt;/h3&gt;
+&lt;p&gt;规定挠度&lt;strong&gt;向下为正&lt;/strong&gt;，建立w-x坐标系则有：
+$$
+\frac{dw}{dx}=tan \theta \approx \theta
+$$
+则称$w=w(x)$为挠度方程。&lt;/p&gt;
+&lt;h2 id=&#34;梁的小挠度微分方程及其积分&#34;&gt;梁的小挠度微分方程及其积分&lt;/h2&gt;
+&lt;h3 id=&#34;微分方程的建立&#34;&gt;微分方程的建立&lt;/h3&gt;
+&lt;p&gt;已知数学中的曲率公式为：
+$$
+\frac{1}{\rho}=\frac{|\frac{d^2 w}{dx^2}|}{[1+(\frac{d w}{dx})^2]^{3/2}}
+$$&lt;/p&gt;
+&lt;p&gt;在小挠度情况下$\frac{dw}{dx}$为小量，略去分母上的二阶小量可得：
+$$
+\frac{d^2w}{dx^2}= \pm\frac{M}{EI}=\pm \frac{1}{\rho}
+$$
+正负号与&lt;strong&gt;&lt;em&gt;w&lt;/em&gt;坐标取向&lt;/strong&gt;有关，在力矩$M$碗口朝上的情况下，当坐标w正方向朝下时，上式取负号，正方向朝上时，上式取正号。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/04/25/hQw5I6yiWlzFpNa.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/04/25/hQw5I6yiWlzFpNa.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;正负号约定&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;正负号约定&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;两侧积分可得
+$$
+\frac{d w}{d x}=\theta=-\int \frac{M(x)}{E I} \mathrm{~d} x+C 
+\\
+w=\int_{l}(-\int_{l} \frac{M(x)}{E I} \mathrm{~d} x) \mathrm{d} x+C x+D
+$$&lt;/p&gt;
+&lt;h3 id=&#34;积分常数的确定&#34;&gt;积分常数的确定&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在固定轴支座处，约束条件为挠度w=0&lt;/li&gt;
+&lt;li&gt;在墙面的固定端，约束条件为：挠度w与夹角$\theta$均为0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连续条件&lt;/strong&gt;：在集中力、集中力偶、分布载荷间断处，两侧的挠度与转角对应相等，$w_1=w_2 \quad \theta_1=\theta_2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在建立梁的弯矩方程时，统一由&lt;strong&gt;截面左侧部分&lt;/strong&gt;建立方程，这样可以方便确定待定常数&lt;/li&gt;
+&lt;li&gt;不要展开力系简化中的力臂项&lt;/li&gt;
+&lt;li&gt;挠度方程需要分段去写，分为n段，会有2n个待定常数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;叠加法确定梁的挠度和转角&#34;&gt;叠加法确定梁的挠度和转角&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先决条件：在线弹性、小变形问题下，梁的弯曲问题，是线性问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设有$n$载荷, 第$i$个载荷单独作用时, 产生$M_{i}$
+$$
+\left.\begin{array}{c}
+M=\sum_{i=1}^{n} M_{i} \
+\frac{\mathrm{d}^{2} w_{i}}{\mathrm{~d} x^{2}}=-\frac{M_{i}}{E I} \Rightarrow w_{i}
+\end{array}\right} \Rightarrow w=\sum_{i=1}^{n} w_{i}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;逐段钢化法&#34;&gt;逐段钢化法&lt;/h3&gt;
+&lt;p&gt;将杆件逐段钢化，将挠度与角度代数叠加，即可得到最终的挠度与转角。&lt;/p&gt;
+&lt;p&gt;原理在于：逐段钢化法中，产生$\theta$转角的微段都纳入计算，与之前并无区别。这种算法实际上是对于&lt;strong&gt;自身转角&lt;/strong&gt;与&lt;strong&gt;传导转角&lt;/strong&gt;的一种叠加。&lt;/p&gt;
+&lt;h3 id=&#34;斜弯曲时的位移&#34;&gt;斜弯曲时的位移&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/04/25/Jstf45wdDzXKkFR.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/04/25/Jstf45wdDzXKkFR.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;斜弯曲&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;斜弯曲&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;设夹角满足
+$$
+\tan \theta=\frac{F_{\mathrm{P} z}}{F_{\mathrm{P} y}} \quad \tan \alpha=\frac{w_{z}}{w_{y}}
+$$
+由挠度的定义可知：
+$$
+\tan \alpha=\frac{w_{z}}{w_{y}}=\frac{\frac{F_{\mathrm{P} z} l^{3}}{3 E I_{y}}}{\frac{F_{\mathrm{P} y}}{3 E I_{z}^{3}}}=\frac{F_{\mathrm{P} z}}{F_{\mathrm{P} y}} \cdot \frac{I_{z}}{I_{y}}=\tan \theta \frac{I_{z}}{I_{y}}
+$$
+​&lt;/p&gt;
+&lt;p&gt;因此
+$$
+\tan \theta \neq \tan \alpha\left(I_{z} \neq I_{y}\right)
+$$&lt;/p&gt;
+&lt;h2 id=&#34;奇异函数的应用&#34;&gt;奇异函数的应用&lt;/h2&gt;
+&lt;h3 id=&#34;奇异函数的定义&#34;&gt;奇异函数的定义&lt;/h3&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;h2 id=&#34;梁的刚度问题&#34;&gt;梁的刚度问题&lt;/h2&gt;
+&lt;h3 id=&#34;梁的刚度条件&#34;&gt;梁的刚度条件&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{gathered}
+w_{\max } \leq[w] \\
+\theta_{\max } \leq[\theta]
+\end{gathered}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;简单静不定梁&#34;&gt;简单静不定梁&lt;/h2&gt;
+&lt;h3 id=&#34;多余约束与静不定次数&#34;&gt;多余约束与静不定次数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;静定问题与静定结构：未知力的个数等于独立的平衡方程的个数&lt;/li&gt;
+&lt;li&gt;静不定问题与静不定结构：未知力的个数多于独立的平衡方程的个数&lt;/li&gt;
+&lt;li&gt;静不定次数：未知力的个数与独立的平衡方程的差&lt;/li&gt;
+&lt;li&gt;多余约束：保持结构静定多余的约束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;平衡方程+变形协调+本构方程/物性关系&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;应用小变形概念可以推知道某些物理量&#34;&gt;应用小变形概念可以推知道某些物理量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;小变形忽略轴向位移，水平约束力为0&lt;/li&gt;
+&lt;li&gt;静定的基本系统
+&lt;ul&gt;
+&lt;li&gt;用约束力代替约束反力，通过叠加法确定挠度与转角&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用对称性也可以求得某些未知量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;讨论与结论&#34;&gt;讨论与结论&lt;/h2&gt;
+&lt;h3 id=&#34;变形和位移的相互关系&#34;&gt;变形和位移的相互关系&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;位移是变形累加的结果。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有位移不一定有变形，有变形不一定有位移。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;关于梁的连续光滑曲线&#34;&gt;关于梁的连续光滑曲线&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;由弯矩$M$的方向确定轴线的凸凹性&lt;/li&gt;
+&lt;li&gt;由约束性质及连续光滑性确定挠度曲线的大致形状以及位置&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>很无名少年</title>
         <link>https://zalouti.github.io/p/%E5%BE%88%E6%97%A0%E5%90%8D%E5%B0%91%E5%B9%B4/</link>
         <pubDate>Fri, 25 Mar 2022 23:22:46 +0800</pubDate>
