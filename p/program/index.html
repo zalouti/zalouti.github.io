@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='yyj老师好帅'><title>第四章·圆轴扭转时的强度与刚度计算</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.
+ USA Brown University Data-Enabled Computational Engineering and Science
+Language Prerequisite Switzerland UK Rankings 2022 Best Applied Mathematics Master&amp;rsquo;s Degree Schools
+computational engineering science of master degree in USA'><title>Program</title>
 
-<link rel='canonical' href='https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/'>
+<link rel='canonical' href='https://zalouti.github.io/p/program/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='第四章·圆轴扭转时的强度与刚度计算'>
-<meta property='og:description' content='yyj老师好帅'>
-<meta property='og:url' content='https://zalouti.github.io/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Program'>
+<meta property='og:description' content='Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.
+ USA Brown University Data-Enabled Computational Engineering and Science
+Language Prerequisite Switzerland UK Rankings 2022 Best Applied Mathematics Master&amp;rsquo;s Degree Schools
+computational engineering science of master degree in USA'>
+<meta property='og:url' content='https://zalouti.github.io/p/program/'>
 <meta property='og:site_name' content='第二基地'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='freelearning' /><meta property='article:tag' content='材料力学' /><meta property='article:published_time' content='2022-03-18T20:52:03&#43;08:00'/><meta property='article:modified_time' content='2022-03-18T20:52:03&#43;08:00'/>
-<meta name="twitter:title" content="第四章·圆轴扭转时的强度与刚度计算">
-<meta name="twitter:description" content="yyj老师好帅"><style>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-11T23:18:05&#43;08:00'/><meta property='article:modified_time' content='2022-05-11T23:18:05&#43;08:00'/>
+<meta name="twitter:title" content="Program">
+<meta name="twitter:description" content="Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.
+ USA Brown University Data-Enabled Computational Engineering and Science
+Language Prerequisite Switzerland UK Rankings 2022 Best Applied Mathematics Master&amp;rsquo;s Degree Schools
+computational engineering science of master degree in USA"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -81,13 +90,9 @@
     
 
     <h2 class="article-title">
-        <a href="/p/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%9C%86%E8%BD%B4%E6%89%AD%E8%BD%AC%E6%97%B6%E7%9A%84%E5%BC%BA%E5%BA%A6%E4%B8%8E%E5%88%9A%E5%BA%A6%E8%AE%A1%E7%AE%97/">第四章·圆轴扭转时的强度与刚度计算</a>
+        <a href="/p/program/">Program</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        yyj老师好帅
-    </h3>
     
 
     
@@ -103,7 +108,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 18, 2022</time>
+                <time class="article-time--published">May 11, 2022</time>
             </div>
         
 
@@ -118,7 +123,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -128,195 +133,28 @@
 </header>
 
     <section class="article-content">
-    <h1 id="圆轴扭转时的强度与刚度计算">圆轴扭转时的强度与刚度计算</h1>
-<h2 id="外加扭力矩扭矩与扭矩图">外加扭力矩、扭矩与扭矩图</h2>
-<p>作用于构件中的扭矩与机器的转速、功率相关。在传动轴计算中，通常给出传动功率$P$与转速$n$，可得外加力矩$M_e$为：
-$$
-M_e \omega=P(SI)
-\
-M_e=9549\frac{P}{n}(P单位为kW,n单位为r/min)
-$$
-扭矩与扭矩图的研究同之前轴力与轴力图的方法。</p>
-<h2 id="剪应力互等成对定理">剪应力互等/成对定理</h2>
-<p>由于一个面上的力偶无法独自平衡，所以需要另有一对力偶与之平衡，则有：
-$$
-(\tau dy dz)dx=(\tau&rsquo;dxdz)dy \to \tau=\tau'
-$$
-严谨表述为：在两个相互垂直的平面上，净应力必然成对存在且数值相等，两者都垂直于两个平面的交线，方向则共同指向或者背离这一交线</p>
-<h2 id="圆轴扭转时横截面上的剪应力分析与强度设计">圆轴扭转时横截面上的剪应力分析与强度设计</h2>
-<blockquote>
-<p>变形协调+物性关系+平衡方程</p>
+    <blockquote>
+<p>Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.</p>
 </blockquote>
-<p><strong>平面假定</strong>：圆柱体做扭转时，假定横截面只做刚性的旋转，并不改变轴向位置</p>
-<p>设圆轴半径为$\rho$处的剪应变为$\gamma(\rho)$，则<strong>变形协调</strong>方程为：
-$$
-\gamma(\rho)=\rho\frac{d\varphi}{dx}
-$$
-由<strong>物性关系</strong>可知截面上剪应力分布为：
-$$
-\tau=G\gamma=G\rho\frac{d\varphi}{dx}
-$$
-但是我们仍然不清楚单位长度的相对扭转角$\frac{d\varphi}{dx}$的值，需要用<strong>平衡方程</strong>获取：
-$$
-\int_A(\tau dA)\rho=M_x
-\
-\frac{d\varphi}{dx}=\frac{M_x}{GI_P}
-$$
-其中，我们定义$GI_P$为<strong>扭转刚度</strong>，$I_P$的定义为：
-$$
-I_P=\int_A \rho^2 dA
-$$
-故在扭转中的剪应力为：
-$$
-\tau(\rho)=\frac{M_x\rho}{I_P}（注意沿着圆心径向分布）
-$$
-剪应力取最大值为$\rho$取最大值时，设扭转截面模量$W_P$为：
-$$
-W_P=\frac{I_P}{\rho_{max}} \quad
-\to
-\quad
-\tau_{max}=\frac{M_x}{W_P}
-$$</p>
-<h3 id="截面的极惯性矩与扭转截面模量">截面的极惯性矩与扭转截面模量</h3>
-<ul>
-<li>
-<p>对于直径为$d$的实心圆截面
-$$
-I_P = \frac{\pi d^4}{32}  \quad W_P=\frac{\pi d^3}{16}
-$$</p>
-</li>
-<li>
-<p>对于内外直径分别为$d$和$D$的圆环截面
-$$
-I_P=\frac{\pi D^4(1-\alpha^4)}{32} \quad W_P=\frac{\pi D^3(1-\alpha^4)}{16}
-\quad
-\alpha=\frac{d}{D}
-$$</p>
-</li>
-</ul>
-<h3 id="受扭转的圆轴的强度设计准则">受扭转的圆轴的强度设计准则</h3>
-<p>类比拉压杆件，则有：
-$$
-\tau_{max}=\frac{M_{x,max}}{W_P}\leq[\tau]
-$$
-共有三类问题：</p>
-<ol>
-<li>强度校核</li>
-<li>尺寸设计</li>
-<li>最大许可扭矩</li>
-</ol>
-<h2 id="圆杆扭转时的变形及刚度条件">圆杆扭转时的变形及刚度条件</h2>
-<p>受纽圆轴的相对扭转角$\varphi$为：
-$$
-\varphi=\int_ld\varphi=\int_l \frac{M_x}{GI_P}dx
-$$</p>
-<ol>
-<li>
-<p>两端承受集中扭矩的等截面圆轴</p>
-<p>$$
-\varphi_{AB}=\frac{M_xl}{GI_P}=\frac{M_el}{GI_P}
-$$</p>
-</li>
-<li>
-<p>各段不等</p>
-<p>分段研究之后累加:
-$$
-\varphi_{AB}=\sum_{i=1}^{n}\frac{M_{xi}l_i}{GI_{Pi}}
-$$</p>
-</li>
-<li>
-<p>均匀分布的力偶</p>
-<p>需要积分运算$M(x)$</p>
-</li>
-</ol>
-<h3 id="受扭圆轴的刚度设计准则">受扭圆轴的刚度设计准则</h3>
-<p>一般地，设计准则为：
-$$
-\theta=\frac{d\varphi}{dx}\leq[\theta]
-$$
-对于之前的两端集中承受扭矩的等截面圆轴则有
-$$
-\theta=\frac{M_x}{GI_P}\leq[\theta]
-$$
-类比也可以进行三类问题的运算：</p>
-<ol>
-<li>刚度校核</li>
-<li>尺寸设计</li>
-<li>最大载荷</li>
-</ol>
-<blockquote>
-<p>note:计算时需要同一单位，注意弧度与角度！</p>
-</blockquote>
-<h2 id="结论与讨论">结论与讨论</h2>
-<h3 id="关于公式的应用条件">关于公式的应用条件</h3>
-<p>扭转剪应力公式是圆轴在弹性范围内导出的：</p>
-<ol>
-<li>必须是圆轴</li>
-<li>必须满足胡克定律</li>
-</ol>
-<h3 id="矩形截面杆扭转时横截面上的剪应力">矩形截面杆扭转时横截面上的剪应力</h3>
-<ol>
-<li>
-<p>变形特征——翘曲</p>
-<p>扭转后，横截面将不再保持平面</p>
-</li>
-<li>
-<p>由平衡直接得到的结论（弹性力学中的基本结论）</p>
-<ul>
-<li>角点的剪应力为0</li>
-<li>边缘各点剪应力沿着切线方向</li>
-</ul>
-</li>
-<li>
-<p>剪应力分布与剪应力公式</p>
-<ul>
-<li>最大的切应力发生在长边中点</li>
-</ul>
-<p>$$
-\tau_{max}=\frac{M_x}{C_1hb^2} \quad 长边h中点处
-\
-\tau_{max}'=C_1'\tau_{max} \quad 短边中点处
-$$</p>
-<p>其中，$C_1$、$C_1’$查表可得对应系数</p>
-</li>
-<li>
-<p>狭长矩形截面</p>
-<p>当长边$h$远大于短边$\delta$时，$C_1=0.3333 \approx\frac{1}{3}$，可得：
-$$
-\tau_{max}=\frac{3M_x}{h\delta^2}
-$$
-此时长边的切应力接近于线性变化，短边切应力几乎为0</p>
-<blockquote>
-<p>一个小问题：一张A4纸，直接扭转与卷成纸筒，谁更抗扭转？</p>
-<p>显然是纸筒，但是为什么呢？</p>
-</blockquote>
-<ul>
-<li>
-<p>纸筒上的切应力为线性分布，在纸厚非常小的情况下，可视作线性分布，已知纸筒的半径为$r$，对于中心点取矩可得:
-$$
-M_x=\oint\tau ,r,dA
-$$</p>
-</li>
-<li>
-<p>而一张A4纸的截面，恰为一个狭长矩形截面，对于相同的扭矩$M_x$，此时力臂最大为$\delta$，故此时剪应力$\tau$分布在狭小的一块区域中且数值极大，因此抗扭转的能力更弱</p>
-</li>
-</ul>
-</li>
-</ol>
+<h1 id="usa">USA</h1>
+<h2 id="brown-university">Brown University</h2>
+<p><a class="link" href="https://graduateprograms.brown.edu/graduate-program/data-enabled-computational-engineering-and-science-scm"  target="_blank" rel="noopener"
+    >Data-Enabled Computational Engineering and Science</a></p>
+<h3 id="language">Language</h3>
+<h3 id="prerequisite">Prerequisite</h3>
+<h1 id="switzerland">Switzerland</h1>
+<h1 id="uk">UK</h1>
+<h1 id="rankings">Rankings</h1>
+<p><a class="link" href="https://www.collegefactual.com/majors/mathematics-and-statistics/applied-mathematics/rankings/best-graduate-schools/masters-degrees/#discover_best_schools"  target="_blank" rel="noopener"
+    >2022 Best Applied Mathematics Master&rsquo;s Degree Schools</a></p>
+<p><a class="link" href="https://www.gousa.study/ms-in-computational-engineering-in-usa"  target="_blank" rel="noopener"
+    >computational engineering science of master degree in USA</a></p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/freelearning/">freelearning</a>
-        
-            <a href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -363,73 +201,6 @@ $$</p>
 
     <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%83%BD%E9%87%8F%E6%96%B9%E6%B3%95/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第十章·材料力学中的能量方法</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/%E7%AC%AC%E4%B9%9D%E7%AB%A0%E5%8E%8B%E6%9D%86%E7%A8%B3%E5%AE%9A%E6%80%A7/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第九章·压杆稳定性</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第八章·应力状态与强度理论及其工程应用（下）</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8A/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第八章·应力状态与强度理论及其工程应用（上）</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%A2%81%E7%9A%84%E5%8F%98%E5%BD%A2%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%9A%E5%BA%A6%E9%97%AE%E9%A2%98/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第七章·梁的变形分析与刚度问题</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
     
 </aside>
 
@@ -603,23 +374,10 @@ async>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#外加扭力矩扭矩与扭矩图">外加扭力矩、扭矩与扭矩图</a></li>
-    <li><a href="#剪应力互等成对定理">剪应力互等/成对定理</a></li>
-    <li><a href="#圆轴扭转时横截面上的剪应力分析与强度设计">圆轴扭转时横截面上的剪应力分析与强度设计</a>
+    <li><a href="#brown-university">Brown University</a>
       <ol>
-        <li><a href="#截面的极惯性矩与扭转截面模量">截面的极惯性矩与扭转截面模量</a></li>
-        <li><a href="#受扭转的圆轴的强度设计准则">受扭转的圆轴的强度设计准则</a></li>
-      </ol>
-    </li>
-    <li><a href="#圆杆扭转时的变形及刚度条件">圆杆扭转时的变形及刚度条件</a>
-      <ol>
-        <li><a href="#受扭圆轴的刚度设计准则">受扭圆轴的刚度设计准则</a></li>
-      </ol>
-    </li>
-    <li><a href="#结论与讨论">结论与讨论</a>
-      <ol>
-        <li><a href="#关于公式的应用条件">关于公式的应用条件</a></li>
-        <li><a href="#矩形截面杆扭转时横截面上的剪应力">矩形截面杆扭转时横截面上的剪应力</a></li>
+        <li><a href="#language">Language</a></li>
+        <li><a href="#prerequisite">Prerequisite</a></li>
       </ol>
     </li>
   </ol>

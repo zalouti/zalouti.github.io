@@ -6,7 +6,463 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 18 Apr 2022 08:16:35 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 12 May 2022 07:02:12 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第十章·材料力学中的能量方法</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%83%BD%E9%87%8F%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Thu, 12 May 2022 07:02:12 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%83%BD%E9%87%8F%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;h1 id=&#34;材料力学中的能量方法&#34;&gt;材料力学中的能量方法&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;核心思想：从牛顿、莱布尼茨的局部化梳理分析，到欧拉、拉格朗日的整体化数理分析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
+&lt;h3 id=&#34;功和余功&#34;&gt;功和余功&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;功：以位移作为积分变量&lt;/li&gt;
+&lt;li&gt;余功：以力作为积分变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应变能和余应变能&#34;&gt;应变能和余应变能&lt;/h3&gt;
+&lt;p&gt;应变能以应变为积分变量
+$$
+v_{\epsilon}=\int d \epsilon-应变比能
+\\
+V_{\epsilon}=\int v_{\epsilon}dV-应变能
+$$
+余应变能以应力为积分变量
+$$
+\nu_{\sigma}=\int \varepsilon d \sigma-余应变比能
+\\
+V_{\sigma}=\int \nu_{\sigma} dV-应变能
+$$
+计算的前提：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保持平截面假定&lt;/li&gt;
+&lt;li&gt;满足静力学基本方程&lt;/li&gt;
+&lt;li&gt;细长杆忽略了剪力影响&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于线性问题，应变能与余应变能相等：
+$$
+V_{\varepsilon}=V_{\sigma}=\int_l \frac{F^2_{N_x}dx}{2EA}+
+\int_l \frac{M^2_{x}dx}{2GI_P}+
+\int_l \frac{M^2_{y}dx}{2EI_y}+
+\int_l \frac{M^2_{z}dx}{2EI_z}
+$$
+对于内力分量不连续时，可以采用分段计算：
+$$
+V_{\varepsilon}=\sum_{i} \frac{F_{\mathrm{N} i}^{2} l_{i}}{2 E A}+\sum_{i} \frac{M_{i}^{2} l_{i}}{2 E I}+\sum_{i} \frac{M_{x i}^{2} l_{i}}{2 G I_{\mathrm{P}}}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;叠加原理的局限&#34;&gt;叠加原理的局限&lt;/h2&gt;
+&lt;h3 id=&#34;轴向拉伸时&#34;&gt;轴向拉伸时&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/TRJLS2GB4gdFUvf.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/TRJLS2GB4gdFUvf.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;线弹性位移可叠加&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;线弹性位移可叠加&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/uW8Mx9J4okY2Iv6.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/uW8Mx9J4okY2Iv6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;线弹性应变能不可叠加&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;线弹性应变能不可叠加&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这是由于先施加的力在后续力施加产生的位移上也做功的原因。&lt;/p&gt;
+&lt;h3 id=&#34;横向施加力时&#34;&gt;横向施加力时&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/8YRaIWxU7y1CFjg.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/8YRaIWxU7y1CFjg.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;同样不能叠加的例子&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;同样不能叠加的例子&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;特例&#34;&gt;特例&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/vkJzisOyB27ejNt.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/vkJzisOyB27ejNt.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;可以叠加的特例&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;可以叠加的特例&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;功互等定理&#34;&gt;功互等定理&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在线弹性、小变形下，应变能时状态量，具有随加载顺序无关性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/aRY4uJ9NgM3WwFO.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/aRY4uJ9NgM3WwFO.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20220522113327789&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20220522113327789&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;功的互等定理&lt;/strong&gt;：一个力系的力在另一个力系引起的相应的位移上所作之功等于另一个力系的力在这一个力系引起的相应的位移上所作之功。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;虚位移原理&#34;&gt;虚位移原理&lt;/h2&gt;
+&lt;h3 id=&#34;变形体的虚位移原理&#34;&gt;变形体的虚位移原理&lt;/h3&gt;
+&lt;p&gt;对于在平衡力系作用下的变形体，当给其与约束条件一致的虚变形时，如果依然保持平衡，则外力在虚位移上作的虚功与内力在其相应虚变形上所作虚功之和为零。&lt;/p&gt;
+&lt;p&gt;公式为：
+$$
+W_{\mathrm{e}}+W_{\mathrm{i}}=0
+$$&lt;/p&gt;
+&lt;h3 id=&#34;虚位移原理的多样性&#34;&gt;虚位移原理的多样性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以是与真实位移有关的位移，也可以是与真实位移无关的位移。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以是真实位移的增量，这时外力的虚功全部转变为应变能的增量，此时虚位移原理变为：
+$$
+\delta W_{\mathrm{e}}=\delta V_{\varepsilon}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;卡式第一定理&#34;&gt;卡式第一定理&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/ieCWtuwgOczjoFx.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/ieCWtuwgOczjoFx.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;卡式第一定理&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;卡式第一定理&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;应变能表示成位移的函数
+$$
+V_{\varepsilon}=V_{\varepsilon}\left(\Delta_{1}, \Delta_{2}, \cdots, \Delta_{n}\right)
+$$
+应变能对于某一个位移的一阶偏导, 等于作用在这一位 移处, 沿着这一位移方向上的力。此即卡氏第一定理, 数学表达式为
+$$
+F_{\mathrm{P} 1}=\frac{\partial V_{\varepsilon}}{\partial \Delta_{1}}, F_{\mathrm{P} 2}=\frac{\partial V_{\varepsilon}}{\partial \Delta_{2}}, \cdots, F_{\mathrm{P} n}=\frac{\partial V_{\varepsilon}}{\partial \Delta_{n}}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;虚力原理&#34;&gt;虚力原理&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;弹性体&lt;/strong&gt;保持变形协调的充分和必要条件是外力虚余功 $\delta W_{\mathrm{Ce}}$ 等于内力虚余功 $\delta W_{\mathrm{Ci}}$ :
+$$
+\delta W_{C \mathrm{e}}=\delta W_{C \mathrm{i}}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;卡式第二定理&#34;&gt;卡式第二定理&lt;/h2&gt;
+&lt;h3 id=&#34;恩格赛第一定理&#34;&gt;恩格赛第一定理&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不要求为线弹性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;恩格赛第一定理
+$$
+\Delta_{1}=\frac{\partial V_{\mathrm{C}}}{\partial F_{\mathrm{P} 1}}, \Delta_{2}=\frac{\partial V_{\mathrm{C}}}{\partial F_{\mathrm{P} 2}}, \cdots \Delta_{i}=\frac{\partial V_{\mathrm{C}}}{\partial F_{\mathrm{P} i}}, \cdots, \Delta_{n}=\frac{\partial V_{\mathrm{C}}}{\partial F_{\mathrm{P} n}}
+$$
+弹性体或弹性系统的余应变能对于某一个力的偏导数, 等于与这一个力对应的位移。此即恩格赛第一定理。&lt;/p&gt;
+&lt;h3 id=&#34;卡式第二定理-1&#34;&gt;卡式第二定理&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;卡氏第二定理只适用与小变形情形，而且力与位移必须满足线性关系&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于线性问题，应变能与余应变能相等：
+$$
+V_{\varepsilon}=V_c
+$$&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/22/e1MKGXIalmUSgnw.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/22/e1MKGXIalmUSgnw.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;卡式第二定理&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;卡式第二定理&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;构件或结构的应变能对于某一个载荷的一阶偏导教，等于这一载荷的作用点处、沿着这一载荷作用方向上的位移。其数学表达式为
+$$
+\Delta_{1}=\frac{\partial V_{\varepsilon}}{\partial F_{\mathrm{P} 1}}, \Delta_{2}=\frac{\partial V_{\varepsilon}}{\partial F_{\mathrm{P} 2}}, \cdots, \Delta_{n}=\frac{\partial V_{\varepsilon}}{\partial F_{\mathrm{P} n}}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;卡式第二定理在超静定问题上的应用&#34;&gt;卡式第二定理在超静定问题上的应用&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/30/JKVl8yMeTUqtsDL.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/30/JKVl8yMeTUqtsDL.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;求梁的约束力&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;求梁的约束力&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;已知应变能为：
+$$
+V_{\varepsilon}=\int_l\frac{M^2dx}{2EI}=V_{\varepsilon}(q,F_B)
+$$
+由卡式第二定理和变形协调方程可知：
+$$
+0=w_B=\Delta_B=\frac{\partial V_{\varepsilon}}{\partial F_B}
+$$
+即可求出对应的约束力$F_B$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;那么应变能对于$q$求偏导得到的是什么？
+&lt;ul&gt;
+&lt;li&gt;对应的广义位移，即下沉的面积&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一句话总结&#34;&gt;一句话总结&lt;/h2&gt;
+&lt;p&gt;虚位移原理（卡式第一原理）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;满足变形协调条件的平衡方程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;卡式第二定理&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;满足平衡条件的变形协调方程&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Program</title>
+        <link>https://zalouti.github.io/p/program/</link>
+        <pubDate>Wed, 11 May 2022 23:18:05 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/program/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;usa&#34;&gt;USA&lt;/h1&gt;
+&lt;h2 id=&#34;brown-university&#34;&gt;Brown University&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://graduateprograms.brown.edu/graduate-program/data-enabled-computational-engineering-and-science-scm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Data-Enabled Computational Engineering and Science&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;language&#34;&gt;Language&lt;/h3&gt;
+&lt;h3 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h3&gt;
+&lt;h1 id=&#34;switzerland&#34;&gt;Switzerland&lt;/h1&gt;
+&lt;h1 id=&#34;uk&#34;&gt;UK&lt;/h1&gt;
+&lt;h1 id=&#34;rankings&#34;&gt;Rankings&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.collegefactual.com/majors/mathematics-and-statistics/applied-mathematics/rankings/best-graduate-schools/masters-degrees/#discover_best_schools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2022 Best Applied Mathematics Master&amp;rsquo;s Degree Schools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gousa.study/ms-in-computational-engineering-in-usa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;computational engineering science of master degree in USA&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第九章·压杆稳定性</title>
+        <link>https://zalouti.github.io/p/%E7%AC%AC%E4%B9%9D%E7%AB%A0%E5%8E%8B%E6%9D%86%E7%A8%B3%E5%AE%9A%E6%80%A7/</link>
+        <pubDate>Mon, 09 May 2022 08:04:53 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E7%AC%AC%E4%B9%9D%E7%AB%A0%E5%8E%8B%E6%9D%86%E7%A8%B3%E5%AE%9A%E6%80%A7/</guid>
+        <description>&lt;h1 id=&#34;压杆的稳定性问题&#34;&gt;压杆的稳定性问题&lt;/h1&gt;
+&lt;h2 id=&#34;压杆稳定的基本概念&#34;&gt;压杆稳定的基本概念&lt;/h2&gt;
+&lt;h3 id=&#34;弹性平衡稳定性的静力学准则&#34;&gt;弹性平衡稳定性的静力学准则&lt;/h3&gt;
+&lt;p&gt;压杆存在两种平衡构型：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/09/elZc1opBLmxSPJ6.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/09/elZc1opBLmxSPJ6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;压杆平衡构型&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;压杆平衡构型&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在扰动作用下，直线平衡构形转变为弯曲平衡构形，扰动除去后，能够恢复到直线平衡构形，则称原来的直线平衡构形是&lt;strong&gt;稳定的&lt;/strong&gt;。此时载荷较小：
+$$
+F_p&amp;lt;F_{Pcr}
+$$
+在扰动作用下，直线平衡构形转变为弯曲平衡构形，扰动除去后，不能恢复到直线平衡构形，则称原来的直线平衡构形是&lt;strong&gt;不稳定的&lt;/strong&gt;。此时载荷较大：
+$$
+F_p&amp;gt;F_{Pcr}
+$$
+压杆由直线平衡构型到弯曲平衡构型的转变过程，称为**“屈曲”&lt;strong&gt;。由于屈曲，压杆产生了侧向位移，称为&lt;/strong&gt;屈曲位移**。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/09/LIzhwZQPVnuMido.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/09/LIzhwZQPVnuMido.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;平衡路径及其分叉&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;平衡路径及其分叉&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;稳定的平衡构型与不稳定的平衡构型之间的分界点称为&lt;strong&gt;临界点&lt;/strong&gt;，细长压杆从临界点开始，平衡路径出现分叉，临界点对应的载荷称为临界载荷，用$F_{Pcr}$表示&lt;/p&gt;
+&lt;h2 id=&#34;两端铰支压杆的临界载荷欧拉公式&#34;&gt;两端铰支压杆的临界载荷欧拉公式&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;假设压力略高于临界力，在外界扰动下压杆处于微弯状态。考察微弯状态下局部压杆的平衡（小挠度）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/09/6Bj49L1Wdreu7cY.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/09/6Bj49L1Wdreu7cY.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;微微弯曲的杆件&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;微微弯曲的杆件&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;分析力矩平衡可得：
+$$
+M(x)=F_{\mathrm{P}} w(x) \\
+M(x)=-E I \frac{\mathrm{d}^{2} w}{\mathrm{~d} x^{2}} \\
+\frac{\mathrm{d}^{2} w}{\mathrm{~d} x^{2}}+\frac{F_{\mathrm{P}}}{E I} w=0 \\
+k^{2}=\frac{F_{\mathrm{P}}}{E I}
+$$
+解微分方程，加上定解条件：
+$$
+w(0)=0
+\\
+w(l)=0
+$$
+去除平凡解，可得到：
+$$
+F_{\mathrm{Pcr}}=\frac{\pi^{2} n^{2} E I}{l^{2}}\\
+w(x)=A \sin \frac{n \pi x}{l}
+$$
+A为未定常数，称为屈曲模态幅值。这表明屈曲位移是不确定的量。这与开始推导公式时假设压杆处于任意微弯状态是一致的。&lt;/p&gt;
+&lt;p&gt;更高阶的n，构型并不稳定，会在受微扰下回归$n=1$，或者可以增加约束，提高临界载荷&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/09/TL2BSA4eEdZxDQI.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/09/TL2BSA4eEdZxDQI.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;增加约束，提高临界载荷&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;增加约束，提高临界载荷&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;其他刚性支承压杆的临界载荷&#34;&gt;其他刚性支承压杆的临界载荷&lt;/h3&gt;
+&lt;p&gt;$$
+F_{\mathrm{Por}}=\frac{\pi^{2} E I}{(\mu l)^{2}}
+$$&lt;/p&gt;
+&lt;p&gt;$\mu l$ 为不同压杆屈曲后挠曲线上正弦半波的长度, 称为&lt;strong&gt;有效长度&lt;/strong&gt;； $\mu$ 为反映不同支承影响的系数, 称为&lt;strong&gt;长度系数&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;临界应力与临界总图&#34;&gt;临界应力与临界总图&lt;/h2&gt;
+&lt;h3 id=&#34;临界应力与长细比的概念&#34;&gt;临界应力与长细比的概念&lt;/h3&gt;
+&lt;p&gt;欧拉公式只有在弹性范围内才是适用的。这就要求在临界载荷作用下，压杆在直线平衡构形时，其横截面上的正应力小于或等于材料的比例极限，其中$\sigma_{cr}$称为临界应力：
+$$
+\sigma_{c r}=\frac{F_{\mathrm{Pcr}}}{A} \leq \sigma_{\mathrm{P}}
+$$
+引入长细比$\lambda$：
+$$
+\lambda=\frac{\mu l}{i}\quad i=\sqrt{\frac{I}{A}}
+$$
+用长细比表达细长杆件临界应力公式：
+$$
+\sigma_{\mathrm{cr}}=\frac{F_{\mathrm{Pcr}}}{A}=\frac{\frac{\pi^{2} E I}{(\mu l)^{2}}}{A}=\frac{\pi^{2} E}{\lambda^{2}}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;三类不同压杆的不同失效形式&#34;&gt;三类不同压杆的不同失效形式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;细长杆：长细比$λ$大于或等于某个极限值$λ_p$时，压杆将发生弹性屈曲。这时，压杆在直线平衡构形下横截面上的正应力不超过材料的比例极限，这类压杆称为细长杆&lt;/li&gt;
+&lt;li&gt;长中杆：长细比$λ$小于$λ_p$，但大于或等于另一个极限值λs时，压杆也会发生屈曲。这时，压杆在直线平衡构形下横截面上的正应力已经超过材料的比例极限，截面上某些部分已进入塑性状态。这种屈曲称为非弹性屈曲。这类压杆称为中长杆。&lt;/li&gt;
+&lt;li&gt;粗短杆：长细比$λ$小于极限值$λ_s$时，压杆不会发生屈曲，但将会发生屈服。这类压杆称为粗短杆。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三类压杆的临界应力公式&#34;&gt;三类压杆的临界应力公式&lt;/h3&gt;
+&lt;p&gt;对于细长杆, 临界应力公式：
+$$
+\sigma_{\mathrm{cr}}=\frac{\pi^{2} E}{\lambda^{2}}
+$$
+对于粗短杆, 因为不发生屈曲, 而只发生屈服 (㓞性材 料），故其临界应力即为材料的屈服应力
+$$
+\sigma_{\mathrm{cr}}=\sigma_{\mathrm{s}}
+$$
+对于中长杆, 由于发生了塑性变形, 理论计算比较复杂, 工程中大多采用直线经验公式计算其临界应力, 最常用是直线公式:
+$$
+\sigma_{\mathrm{cr}}=a-b \lambda
+$$
+其中a和b为与材料有关的常数，单位为MPa。&lt;/p&gt;
+&lt;p&gt;根据上述关系，可以绘制出临界应力总图：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2022/05/09/koq9NaGviDApLxR.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2022/05/09/koq9NaGviDApLxR.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;临界应力总图&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;临界应力总图&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;临界应力总图将强度设计与稳定性设计统一在一张图纸中,其中：
+$$
+\lambda_{\mathrm{P}}=\sqrt{\frac{\pi^{2} E}{\sigma_{\mathrm{P}}}}
+\\
+\lambda_{\mathrm{s}}=\frac{a-\sigma_{\mathrm{s}}}{b}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;压杆稳定性设计的安全因数法&#34;&gt;压杆稳定性设计的安全因数法&lt;/h2&gt;
+&lt;p&gt;采用安全因数法时, 稳定性设计准则一般可表示为
+$$
+{n}&lt;em&gt;{\mathrm{w}} \geq[{n}]&lt;/em&gt;{\mathrm{st}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$[n]_{st}$为规定安全因数&lt;/li&gt;
+&lt;li&gt;$\sigma_w=\frac{F_w}{A}$为工作应力&lt;/li&gt;
+&lt;li&gt;$\sigma_{cr}=\frac{F_{cr}}{A}$为临界应力&lt;/li&gt;
+&lt;li&gt;$n_{\mathrm{w}}=\frac{\sigma_{\mathrm{cr}}}{\sigma_{\mathrm{w}}}$为工作安全因数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结论与讨论&#34;&gt;结论与讨论&lt;/h2&gt;
+&lt;p&gt;对于考虑强度、刚度、稳定性、超静定的综合问题，优先考虑&lt;strong&gt;超静定问题&lt;/strong&gt;，即给出变形协调方程。&lt;/p&gt;
+&lt;h3 id=&#34;影响压杆承载能力的因素&#34;&gt;影响压杆承载能力的因素&lt;/h3&gt;
+&lt;p&gt;压杆丧失稳定，由直线平衡构形转变为弯曲平衡构形，这一过程不是某个截面或某几个截面的行为，而是压杆的一种&lt;strong&gt;整体行为&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一般情形下，控制构件&lt;strong&gt;强度&lt;/strong&gt;的因素主要是个别危险截面上的内力、危险面的几何形状和尺寸。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第八章·应力状态与强度理论及其工程应用（下）</title>
         <link>https://zalouti.github.io/p/%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%BA%94%E5%8A%9B%E7%8A%B6%E6%80%81%E4%B8%8E%E5%BC%BA%E5%BA%A6%E7%90%86%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E4%B8%8B/</link>
         <pubDate>Mon, 18 Apr 2022 08:16:35 +0800</pubDate>
