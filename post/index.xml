@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Jun 2022 21:29:57 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 17:16:56 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>断墨寻径EP1</title>
+      <link>https://zalouti.github.io/p/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84ep1/</link>
+      <pubDate>Sun, 19 Jun 2022 17:16:56 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84ep1/</guid>
+      <description>EP1:重现目标与泛化目标 引子 我们先看一个俄狄浦斯式的悲剧： 女孩子上了高中就不行了…… 男生高中后劲大…… 真的是所谓的后劲吗？ 原理分析 并不是所</description>
+    </item>
+    
     <item>
       <title>卓越还是成功</title>
       <link>https://zalouti.github.io/p/%E5%8D%93%E8%B6%8A%E8%BF%98%E6%98%AF%E6%88%90%E5%8A%9F/</link>
@@ -41,15 +50,6 @@
       
       <guid>https://zalouti.github.io/p/dreams/</guid>
       <description>Dreams 梦里什么都会有的，不是吗？ Conflict 2022/06/02 公交- 早下了一站-体谅还是自我感动 嘲讽与挖苦-金钱的收入 “没有别的意思，不是说你做错了什么，只是对得不够多罢</description>
-    </item>
-    
-    <item>
-      <title>言说悲喜</title>
-      <link>https://zalouti.github.io/p/%E8%A8%80%E8%AF%B4%E6%82%B2%E5%96%9C/</link>
-      <pubDate>Thu, 02 Jun 2022 11:33:58 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/%E8%A8%80%E8%AF%B4%E6%82%B2%E5%96%9C/</guid>
-      <description>言说悲喜 The world has no right to my heart. 我的顿悟与悲喜是否有必要让所有人知道与共鸣？</description>
     </item>
     
     <item>
@@ -209,15 +209,6 @@ computational engineering science of master degree in USA</description>
     </item>
     
     <item>
-      <title>文献管理与信息分析1</title>
-      <link>https://zalouti.github.io/p/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%901/</link>
-      <pubDate>Thu, 24 Mar 2022 13:39:21 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%901/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Orbit</title>
       <link>https://zalouti.github.io/p/orbit/</link>
       <pubDate>Mon, 21 Mar 2022 12:33:00 +0800</pubDate>
@@ -299,15 +290,6 @@ computational engineering science of master degree in USA</description>
     </item>
     
     <item>
-      <title>我所理解的流体力学</title>
-      <link>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</link>
-      <pubDate>Tue, 08 Mar 2022 11:58:38 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</guid>
-      <description>上学期某位北大的dalao整理出的课程自学的电子书实在是令人心动，回想起华大的授课水平同样需要一些优质的在线课程进行补充，遂开此坑。 我所理解</description>
-    </item>
-    
-    <item>
       <title>Cs106L Types</title>
       <link>https://zalouti.github.io/p/cs106l-types/</link>
       <pubDate>Thu, 03 Mar 2022 13:09:26 +0800</pubDate>
@@ -380,15 +362,6 @@ computational engineering science of master degree in USA</description>
     </item>
     
     <item>
-      <title>春劫</title>
-      <link>https://zalouti.github.io/p/%E6%98%A5%E5%8A%AB/</link>
-      <pubDate>Mon, 31 Jan 2022 11:19:07 +0800</pubDate>
-      
-      <guid>https://zalouti.github.io/p/%E6%98%A5%E5%8A%AB/</guid>
-      <description>.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0)</description>
-    </item>
-    
-    <item>
       <title>天大寒</title>
       <link>https://zalouti.github.io/p/%E5%A4%A9%E5%A4%A7%E5%AF%92/</link>
       <pubDate>Thu, 20 Jan 2022 22:04:50 +0800</pubDate>
@@ -457,7 +430,7 @@ computational engineering science of master degree in USA</description>
       <pubDate>Tue, 11 Jan 2022 22:51:50 +0800</pubDate>
       
       <guid>https://zalouti.github.io/p/%E5%85%B3%E4%BA%8E%E6%88%91/</guid>
-      <description>才怪。 Technology alone is not enough,it&amp;rsquo;s technology married with liberal arts married with humanities that makes our heart sing. $$ \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=-\nabla p+\nabla \cdot \mathbb{T}+\rho \mathbf{f} $$ # include &amp;#34;stdio.h&amp;#34; int main() { printf(&amp;#34;I don&amp;#39;t know what is the future like.&amp;#34;); printf(&amp;#34;But I know this must be a part of future.&amp;#34;); return 0; } .dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info</description>
+      <description>才怪。 Technology alone is not enough,it&amp;rsquo;s technology married with liberal arts married with humanities that makes our heart sing. $$ \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=-\nabla p+\nabla \cdot \mathbb{T}+\rho \mathbf{f} $$</description>
     </item>
     
     <item>
