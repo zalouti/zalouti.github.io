@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲'><title>Cs106L StreamⅡ</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='行健书院理论力学改良刍议 一本充满行健特色的理论力学教材需要什么？下面我将由课程定位引入，结合行健书院同学的培养方案，给出我的一些建议。 课程定'><title>行健书院理论力学改良刍议</title>
 
-<link rel='canonical' href='https://zalouti.github.io/p/cs106l-stream/'>
+<link rel='canonical' href='https://zalouti.github.io/p/%E8%A1%8C%E5%81%A5%E4%B9%A6%E9%99%A2%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6%E6%94%B9%E8%89%AF%E5%88%8D%E8%AE%AE/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Cs106L StreamⅡ'>
-<meta property='og:description' content='Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲'>
-<meta property='og:url' content='https://zalouti.github.io/p/cs106l-stream/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='行健书院理论力学改良刍议'>
+<meta property='og:description' content='行健书院理论力学改良刍议 一本充满行健特色的理论力学教材需要什么？下面我将由课程定位引入，结合行健书院同学的培养方案，给出我的一些建议。 课程定'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E8%A1%8C%E5%81%A5%E4%B9%A6%E9%99%A2%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6%E6%94%B9%E8%89%AF%E5%88%8D%E8%AE%AE/'>
 <meta property='og:site_name' content='第二基地'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CS106L' /><meta property='article:published_time' content='2022-03-02T13:07:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-02T13:07:00&#43;08:00'/>
-<meta name="twitter:title" content="Cs106L StreamⅡ">
-<meta name="twitter:description" content="Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲"><style>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-06-24T09:00:37&#43;08:00'/><meta property='article:modified_time' content='2022-06-24T09:00:37&#43;08:00'/>
+<meta name="twitter:title" content="行健书院理论力学改良刍议">
+<meta name="twitter:description" content="行健书院理论力学改良刍议 一本充满行健特色的理论力学教材需要什么？下面我将由课程定位引入，结合行健书院同学的培养方案，给出我的一些建议。 课程定"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -81,7 +81,7 @@
     
 
     <h2 class="article-title">
-        <a href="/p/cs106l-stream/">Cs106L StreamⅠ</a>
+        <a href="/p/%E8%A1%8C%E5%81%A5%E4%B9%A6%E9%99%A2%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6%E6%94%B9%E8%89%AF%E5%88%8D%E8%AE%AE/">行健书院理论力学改良刍议</a>
     </h2>
 
     
@@ -99,7 +99,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 02, 2022</time>
+                <time class="article-time--published">Jun 24, 2022</time>
             </div>
         
 
@@ -114,7 +114,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -124,77 +124,56 @@
 </header>
 
     <section class="article-content">
-    <h1 id="stream-">Stream Ⅱ</h1>
-<h2 id="cout--cin">cout &amp; cin</h2>
-<p>一共有四种标准的<code>iostreams</code></p>
-<ul>
-<li><code>cin</code>：标准输入</li>
-<li><code>cout</code>：标准输出（缓冲区</li>
-<li><code>cerr</code>：标准错误流（未缓冲</li>
-<li><code>clog</code>：标准错误流（缓冲</li>
-</ul>
-<p><code>cin</code>和<code>iss</code>的区别在于，如果缓冲区不存在东西时，会等用户输入东西</p>
-<h3 id="三个为什么带有的cin是一场噩梦的理由">三个为什么带有<code>&gt;&gt;</code>的<code>cin</code>是一场噩梦的理由：</h3>
+    <h1 id="行健书院理论力学改良刍议">行健书院理论力学改良刍议</h1>
+<p>一本充满行健特色的理论力学教材需要什么？下面我将由课程定位引入，结合行健书院同学的培养方案，给出我的一些建议。</p>
+<h2 id="课程定位">课程定位</h2>
+<p>《理论力学》是行健书院的同学在大学中接触的第一门力学课程，个人认为，理论力学在整个课程体系中承担了两个主要的任务：</p>
 <ol>
-<li><code>cin</code>读取一整行到缓冲区中，但是返回的是根据空白符分割的片段</li>
-<li>缓冲区中的其他信息会使得<code>cin</code>可能不会等待用户输入</li>
-<li>当前面的<code>cin</code>失效后，后面的<code>cin</code>也会失效</li>
+<li>修正高中错误的知识与过于特殊的情况</li>
+<li>为后续材料力学、流体力学等力学课程做铺垫</li>
 </ol>
-<p>所以如果我们想读取一整行时，可以采用<code>getline(cin,var)</code></p>
-<p>但是仍然会出现一些不方便的bug，当我们想将所有的东西复制到一个不依赖于外部的stream中，我们使用<code>stringstream</code>!</p>
-<h3 id="getinteger">getInteger</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">getInteger</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
-        <span class="kt">char</span> <span class="n">trash</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="n">line</span><span class="p">))</span> <span class="k">throw</span> <span class="n">domain_error</span><span class="p">(...);</span>
-        <span class="n">istringstream</span> <span class="n">iss</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">trash</span><span class="p">))</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-        <span class="n">iss</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-        <span class="n">iss</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>下面我们来解析这个读取整数的函数<code>getInteger()</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="n">line</span><span class="p">))</span> <span class="k">throw</span> <span class="n">domain_error</span><span class="p">(...);</span>
-</code></pre></div><p>这一行代码尝试去读取一整行，因为缓冲区此时是空的，所以他会提示用户输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">istringstream</span> <span class="nf">iss</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
-</code></pre></div><p>使用刚刚读取的一行<code>line</code>，创建一个<code>istringstream</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span> <span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">trash</span><span class="p">))</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</code></pre></div><p>这一行先在<code>iss</code>中尝试读取<code>int</code>的result，之后再尝试读取任何的<code>trash</code>（注意上节课讲到的<code>iss</code>的读取位置的变化，第二次读取trash时会自动寻找）</p>
-<p>如果if判定失败，则清空流并且再次尝试，因为出现了一些垃圾</p>
-<p>反之则返回我们想要的<code>result</code></p>
-<p>实际上，由于每一次都在创建不同的流，所以最后两行的清空操作可以省略</p>
-<hr>
-<h2 id="summary">Summary</h2>
-<p><code>stringstream</code>并不是用来彻底取代<code>stream</code>的，其仍然有自身的适用范围</p>
+<p>基于此，个人认为新一版的《理论力学》教材中可以加入以下的一些部分：</p>
+<p>首先，在每一章节的最开始，加入一些高中常见的错误，或者是高中较为特殊的情况在理论力学中不一定适用的例子，<strong>先做题，后讲课</strong>，现有的《理论力学》教材中存在的概念题同样起到了这样的作用。这样可以帮助读者在阅读理论力学教材中及时发现自己的理解误区，更加快速地掌握基本概念，一些常见的例子包括但不限于：</p>
+<ol>
+<li>滑轮可能存在摩擦力</li>
+<li>轮子可能会在地面上又滚又滑</li>
+<li>普及各种必要的临界条件</li>
+</ol>
+<p>其次，在理论力学的教授过程中，可以适当地为后续课程埋下一些伏笔：例如在讲授静力学的过程中可以适当引入超静定的问题，点出材料力学的核心问题之一便是<strong>变形协调</strong>；在讲授虚功原理时，拓展性地思考一下是否存在<strong>虚力原理</strong>；在讲授变质量系统动力学时，可以引出流体力学中<strong>欧拉法</strong>和<strong>拉格朗日法</strong>的观点。个人认为，这样的举动虽然对于学生掌握理论力学本身并没有过多的帮助，但是这样可以帮助同学们理解《理论力学》在整个力学基础课程之中的位置，深化对于培养方案设计的理解。</p>
+<h2 id="与同期课程的呼应">与同期课程的呼应</h2>
+<p>与《理论力学》在大二上同期开设的课程主要有：《常微分方程》、《张量分析》。正如达芬奇的名言所说的一般：</p>
+<blockquote>
+<p>​	力学是数学的乐园, 因为我们在这里获得了数学的果实。</p>
+</blockquote>
+<p>适当地在课程中应用之前学过的数学知识，可以很好地回答行健书院大一同学经常在问的问题——“学这么难的数学有什么用？”</p>
 <ul>
-<li>在处理字符串时
-<ul>
-<li>化简“/./a/b”为“/a”</li>
+<li>ODE：常微分方程的引入可以利用课后的以学数值算例展开，不必为同学增加过多负担，仅仅让同学们熟悉一下基本的理论推导与利用Matlab解常微分方程的求解器<code>ode45</code>等即可</li>
+<li>张量分析：张量分析可以在课程开始教授<strong>角速度</strong>的定义，以及教授<strong>刚体动力学</strong>引入。在角速度讲授时，可以点出角速度之所以既可以视为矢量，也可以看作张量，是因为反对称张量与其0特征向量是一一对应的；在教授刚体动力学时，张量课程同样接近了尾声，此时在课堂上不妨尝试采用张量语言讲授，可以帮助大家运用张量知识的同时体会数学的必要性。</li>
 </ul>
+<h2 id="加法与减法">加法与减法</h2>
+<p>前文对于理论力学教材的建议大多集中于增加内容，但是我们依然要考虑到并不是所有的同学都是学有余力的，我们应该对于《理论力学》教材做一些减法。个人认为，减法可以考虑删除部分课后作为体力活的习题，从而控制整本书的体量，以下是个人所做过的习题中，认为是一些体力活或者考点重合度高的题目，在编写时可以酌情删除一部分。</p>
+<ul>
+<li>
+<p>第二章：刚体运动学：2-1、2-2</p>
 </li>
-<li>规范输入输出时</li>
-<li>分析不同的类型时
-<ul>
-<li>例如getinteger()</li>
-</ul>
+<li>
+<p>第三章：复合运动：3-38、3-39、3-40</p>
+</li>
+<li>
+<p>第四章：几何静力学：4-2、4-10、4-61、4-63</p>
+</li>
+<li>
+<p>第七章：质点系动力学：7-4、7-29、7-30</p>
 </li>
 </ul>
+<p>上面给出的部分题目仅仅是根据笔者个人对于理论力学的习题的认识，可能还需要更多征集其他同学的看法与认识。</p>
+<p>这份报告是一份从个体角度出发、只能代表部分学生视角的课程改革思考。希望理论力学课程能够不断打磨至臻至善，也希望早日能够见到这本行健书院同学专属的理论力学教材。</p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/cs106l/">CS106L</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -414,104 +393,9 @@ async>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#cout--cin">cout &amp; cin</a>
-      <ol>
-        <li><a href="#三个为什么带有的cin是一场噩梦的理由">三个为什么带有<code>&gt;&gt;</code>的<code>cin</code>是一场噩梦的理由：</a></li>
-        <li><a href="#getinteger">getInteger</a></li>
-      </ol>
-    </li>
-    <li><a href="#summary">Summary</a></li>
-  </ol>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
-    </body>
-</html>
-s (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">目录</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ol>
-    <li><a href="#string-stream">string stream</a>
-      <ol>
-        <li><a href="#例一string-to-integer">例一：string to integer</a></li>
-      </ol>
-    </li>
-    <li><a href="#state-bits">State bits</a></li>
-    <li><a href="#summary">Summary</a>
-      <ol>
-        <li><a href="#stringstream">stringstream</a></li>
-        <li><a href="#state-bits-1">state bits</a></li>
-      </ol>
-    </li>
+    <li><a href="#课程定位">课程定位</a></li>
+    <li><a href="#与同期课程的呼应">与同期课程的呼应</a></li>
+    <li><a href="#加法与减法">加法与减法</a></li>
   </ol>
 </nav>
                 </div>

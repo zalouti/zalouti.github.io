@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲'><title>Cs106L StreamⅡ</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='大二生活 上大学之后有个习惯，每个学期的开始和结束必须要以打牌作为标志。随着大二最后一局三国杀惜败于我的赵云没有杀也没有闪，同样也标志了大二生'><title>大二生活</title>
 
-<link rel='canonical' href='https://zalouti.github.io/p/cs106l-stream/'>
+<link rel='canonical' href='https://zalouti.github.io/p/%E5%A4%A7%E4%BA%8C%E7%94%9F%E6%B4%BB/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Cs106L StreamⅡ'>
-<meta property='og:description' content='Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲'>
-<meta property='og:url' content='https://zalouti.github.io/p/cs106l-stream/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='大二生活'>
+<meta property='og:description' content='大二生活 上大学之后有个习惯，每个学期的开始和结束必须要以打牌作为标志。随着大二最后一局三国杀惜败于我的赵云没有杀也没有闪，同样也标志了大二生'>
+<meta property='og:url' content='https://zalouti.github.io/p/%E5%A4%A7%E4%BA%8C%E7%94%9F%E6%B4%BB/'>
 <meta property='og:site_name' content='第二基地'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CS106L' /><meta property='article:published_time' content='2022-03-02T13:07:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-02T13:07:00&#43;08:00'/>
-<meta name="twitter:title" content="Cs106L StreamⅡ">
-<meta name="twitter:description" content="Stream Ⅱ cout &amp;amp; cin 一共有四种标准的iostreams cin：标准输入 cout：标准输出（缓冲区 cerr：标准错误流（未缓冲 clog：标准错误流（缓冲"><style>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='日寄' /><meta property='article:published_time' content='2022-06-25T10:40:43&#43;08:00'/><meta property='article:modified_time' content='2022-06-25T10:40:43&#43;08:00'/>
+<meta name="twitter:title" content="大二生活">
+<meta name="twitter:description" content="大二生活 上大学之后有个习惯，每个学期的开始和结束必须要以打牌作为标志。随着大二最后一局三国杀惜败于我的赵云没有杀也没有闪，同样也标志了大二生"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -81,7 +81,7 @@
     
 
     <h2 class="article-title">
-        <a href="/p/cs106l-stream/">Cs106L StreamⅠ</a>
+        <a href="/p/%E5%A4%A7%E4%BA%8C%E7%94%9F%E6%B4%BB/">大二生活</a>
     </h2>
 
     
@@ -99,7 +99,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 02, 2022</time>
+                <time class="article-time--published">Jun 25, 2022</time>
             </div>
         
 
@@ -124,65 +124,220 @@
 </header>
 
     <section class="article-content">
-    <h1 id="stream-">Stream Ⅱ</h1>
-<h2 id="cout--cin">cout &amp; cin</h2>
-<p>一共有四种标准的<code>iostreams</code></p>
-<ul>
-<li><code>cin</code>：标准输入</li>
-<li><code>cout</code>：标准输出（缓冲区</li>
-<li><code>cerr</code>：标准错误流（未缓冲</li>
-<li><code>clog</code>：标准错误流（缓冲</li>
-</ul>
-<p><code>cin</code>和<code>iss</code>的区别在于，如果缓冲区不存在东西时，会等用户输入东西</p>
-<h3 id="三个为什么带有的cin是一场噩梦的理由">三个为什么带有<code>&gt;&gt;</code>的<code>cin</code>是一场噩梦的理由：</h3>
-<ol>
-<li><code>cin</code>读取一整行到缓冲区中，但是返回的是根据空白符分割的片段</li>
-<li>缓冲区中的其他信息会使得<code>cin</code>可能不会等待用户输入</li>
-<li>当前面的<code>cin</code>失效后，后面的<code>cin</code>也会失效</li>
-</ol>
-<p>所以如果我们想读取一整行时，可以采用<code>getline(cin,var)</code></p>
-<p>但是仍然会出现一些不方便的bug，当我们想将所有的东西复制到一个不依赖于外部的stream中，我们使用<code>stringstream</code>!</p>
-<h3 id="getinteger">getInteger</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">getInteger</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
-        <span class="kt">char</span> <span class="n">trash</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="n">line</span><span class="p">))</span> <span class="k">throw</span> <span class="n">domain_error</span><span class="p">(...);</span>
-        <span class="n">istringstream</span> <span class="n">iss</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">trash</span><span class="p">))</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-        <span class="n">iss</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-        <span class="n">iss</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>下面我们来解析这个读取整数的函数<code>getInteger()</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="n">line</span><span class="p">))</span> <span class="k">throw</span> <span class="n">domain_error</span><span class="p">(...);</span>
-</code></pre></div><p>这一行代码尝试去读取一整行，因为缓冲区此时是空的，所以他会提示用户输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">istringstream</span> <span class="nf">iss</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
-</code></pre></div><p>使用刚刚读取的一行<code>line</code>，创建一个<code>istringstream</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span> <span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">trash</span><span class="p">))</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</code></pre></div><p>这一行先在<code>iss</code>中尝试读取<code>int</code>的result，之后再尝试读取任何的<code>trash</code>（注意上节课讲到的<code>iss</code>的读取位置的变化，第二次读取trash时会自动寻找）</p>
-<p>如果if判定失败，则清空流并且再次尝试，因为出现了一些垃圾</p>
-<p>反之则返回我们想要的<code>result</code></p>
-<p>实际上，由于每一次都在创建不同的流，所以最后两行的清空操作可以省略</p>
+    <h1 id="大二生活">大二生活</h1>
+<p>上大学之后有个习惯，每个学期的开始和结束必须要以打牌作为标志。随着大二最后一局三国杀惜败于我的赵云没有杀也没有闪，同样也标志了大二生活的结束。</p>
+<p>票圈总会在年终的时候刷到一些年终总结，为了错峰、也为了符合学期的心路历程，我习惯写年中总结。</p>
+<p>公众号会进行一系列更新，算是对过去生活的总结，也算是对未来生活的思考。</p>
+<p>此为序。</p>
+<h2 id="八月">八月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/ganTZbOAs9tmqp7.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/ganTZbOAs9tmqp7.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="正午文图">
+	</a>
+	
+	<figcaption>正午文图</figcaption>
+	
+</figure></p>
+<p>八月正午，阳光从文图的穹顶上倾泻而下，照在正在备考大雾的我身上。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/mwI8f5MstPdlTNR.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/mwI8f5MstPdlTNR.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="半马完赛">
+	</a>
+	
+	<figcaption>半马完赛</figcaption>
+	
+</figure></p>
+<p>踩着八月末的尾巴，完成了人生中第一个半程马拉松。</p>
+<h2 id="九月">九月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/BCYx23oyDGhKNwJ.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/BCYx23oyDGhKNwJ.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="6B穹顶">
+	</a>
+	
+	<figcaption>6B穹顶</figcaption>
+	
+</figure></p>
+<p>在上大雾课前路过六教B区，抬头看到晨光微微照亮的五边形玻璃。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/EQZxoUjN1PCvVHp.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/EQZxoUjN1PCvVHp.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="圆明园的残荷">
+	</a>
+	
+	<figcaption>圆明园的残荷</figcaption>
+	
+</figure></p>
+<p>大二上选课的安排让我能够在周一溜出校园区圆明园看看残荷。</p>
+<h2 id="十月">十月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/NoavGOiWVXw4gMu.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/NoavGOiWVXw4gMu.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="国庆曙光">
+	</a>
+	
+	<figcaption>国庆曙光</figcaption>
+	
+</figure></p>
+<p>关于国庆反而没什么记忆，只有这一张国庆当天早晨的丁达尔效应。</p>
+<h2 id="十一月">十一月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/KHg6tJC2irEkLSB.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/KHg6tJC2irEkLSB.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="沟通表达基础与进阶">
+	</a>
+	
+	<figcaption>沟通表达基础与进阶</figcaption>
+	
+</figure></p>
+<p>多年后或许会想起，一教103的那些冬夜是如何照亮一周的好心情。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/jTkb1DnU2fZARgr.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/jTkb1DnU2fZARgr.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="简简单单的生日">
+	</a>
+	
+	<figcaption>简简单单的生日</figcaption>
+	
+</figure></p>
+<p>马齿徒增，一个简简单单的生日罢了。</p>
+<h2 id="十二月">十二月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/ZoS1iqLJdkCcUzy.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/ZoS1iqLJdkCcUzy.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="十二月的朝霞">
+	</a>
+	
+	<figcaption>十二月的朝霞</figcaption>
+	
+</figure></p>
+<p>清华在冬季的朝霞要比夏季的朝霞更具表现力。</p>
+<h2 id="一月">一月</h2>
+<p>山西过于熟悉了，反而没什么记忆留在手机相册中。</p>
+<h2 id="二月">二月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/r8Ez5STfoQG1uM6.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/r8Ez5STfoQG1uM6.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="返校香锅">
+	</a>
+	
+	<figcaption>返校香锅</figcaption>
+	
+</figure></p>
+<p>返校第一顿香锅，但是总觉得桃李的香锅不够辣。</p>
+<h2 id="三月">三月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/2P3RXzguvFUVyij.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/2P3RXzguvFUVyij.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="西主楼前的朝霞">
+	</a>
+	
+	<figcaption>西主楼前的朝霞</figcaption>
+	
+</figure></p>
+<p>西主楼前的朝霞氤氲在空气中，那时相见还没有现在这样困难。</p>
+<h2 id="四月">四月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/tsPkUoZ9alBWxLh.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/tsPkUoZ9alBWxLh.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="陶然亭樱花">
+	</a>
+	
+	<figcaption>陶然亭樱花</figcaption>
+	
+</figure></p>
+<p>忙里偷闲，一次愉快的春游，樱花真得像假的一样。</p>
+<h2 id="五月">五月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/RsEVtjqPzOGcmg4.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/RsEVtjqPzOGcmg4.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="五月花海">
+	</a>
+	
+	<figcaption>五月花海</figcaption>
+	
+</figure></p>
+<p>英士楼前的花墙，五月是清华的花季。</p>
+<h2 id="六月">六月</h2>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/06/25/n3PosjRq8YDSO2T.jpg" >
+		<img src="https://s2.loli.net/2022/06/25/n3PosjRq8YDSO2T.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="毕业季">
+	</a>
+	
+	<figcaption>毕业季</figcaption>
+	
+</figure></p>
+<p>我们笑着说再见，因为我们知道再见并非遥遥无期。</p>
 <hr>
-<h2 id="summary">Summary</h2>
-<p><code>stringstream</code>并不是用来彻底取代<code>stream</code>的，其仍然有自身的适用范围</p>
-<ul>
-<li>在处理字符串时
-<ul>
-<li>化简“/./a/b”为“/a”</li>
-</ul>
-</li>
-<li>规范输入输出时</li>
-<li>分析不同的类型时
-<ul>
-<li>例如getinteger()</li>
-</ul>
-</li>
-</ul>
+<h2 id="end">END</h2>
 
 </section>
 
@@ -191,7 +346,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/cs106l/">CS106L</a>
+            <a href="/tags/%E6%97%A5%E5%AF%84/">日寄</a>
         
     </section>
 
@@ -414,104 +569,18 @@ async>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#cout--cin">cout &amp; cin</a>
-      <ol>
-        <li><a href="#三个为什么带有的cin是一场噩梦的理由">三个为什么带有<code>&gt;&gt;</code>的<code>cin</code>是一场噩梦的理由：</a></li>
-        <li><a href="#getinteger">getInteger</a></li>
-      </ol>
-    </li>
-    <li><a href="#summary">Summary</a></li>
-  </ol>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
-    </body>
-</html>
-s (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">目录</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ol>
-    <li><a href="#string-stream">string stream</a>
-      <ol>
-        <li><a href="#例一string-to-integer">例一：string to integer</a></li>
-      </ol>
-    </li>
-    <li><a href="#state-bits">State bits</a></li>
-    <li><a href="#summary">Summary</a>
-      <ol>
-        <li><a href="#stringstream">stringstream</a></li>
-        <li><a href="#state-bits-1">state bits</a></li>
-      </ol>
-    </li>
+    <li><a href="#八月">八月</a></li>
+    <li><a href="#九月">九月</a></li>
+    <li><a href="#十月">十月</a></li>
+    <li><a href="#十一月">十一月</a></li>
+    <li><a href="#十二月">十二月</a></li>
+    <li><a href="#一月">一月</a></li>
+    <li><a href="#二月">二月</a></li>
+    <li><a href="#三月">三月</a></li>
+    <li><a href="#四月">四月</a></li>
+    <li><a href="#五月">五月</a></li>
+    <li><a href="#六月">六月</a></li>
+    <li><a href="#end">END</a></li>
   </ol>
 </nav>
                 </div>
