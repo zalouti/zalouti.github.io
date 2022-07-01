@@ -6,7 +6,166 @@
         <description>Recent content on 第二基地</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 25 Jun 2022 10:40:43 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Jul 2022 12:53:58 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>情绪调节模型</title>
+        <link>https://zalouti.github.io/p/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Fri, 01 Jul 2022 12:53:58 +0800</pubDate>
+        
+        <guid>https://zalouti.github.io/p/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;h1 id=&#34;情绪调节模型&#34;&gt;情绪调节模型&lt;/h1&gt;
+&lt;p&gt;看到知乎上有一位答主在读博期间的情绪调节方法&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，感觉十分有道理，于是自己也照猫画虎写一写。&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;大学生活相比于高中来讲，有着更多的不确定性。除了GPA这种衡量考试能力的存在之外，几乎很难有什么确定的标准来衡量什么是better。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;在市场经济下，一切行为都是在讲究效率的。考试与GPA这种东西本质上是在考核&lt;strong&gt;在规定时间内高效达到指标的能力&lt;/strong&gt;。但是日常生活中情绪波动往往会导致能力发挥的下降，陷入无休止的自我否定和自我搏斗。&lt;/p&gt;
+&lt;p&gt;最后，越往高年级越发现自己更多时候需要的是self-motivated，当一件工作没有强制性的DDL时，情绪影响反而占据了主导。&lt;/p&gt;
+&lt;p&gt;为了维持情绪波动在一个相对合理的区间里，需要明确如下内容：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目标 (objective)：维持一个较长时间的情绪稳定；&lt;/p&gt;
+&lt;p&gt;控制 (control)：当下选择做的事情以及短期规划；&lt;/p&gt;
+&lt;p&gt;模型 (model)：不同的事情引发的不同经过结果，从而造成的情绪波动；&lt;/p&gt;
+&lt;p&gt;限制 (constraints)：人的基本需求（吃饭睡觉卫生社交）、工作ddl等。&lt;/p&gt;
+&lt;p&gt;明确了这四点要素后，需要有两个过程：学习模型及制定计划。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;学习模型&#34;&gt;学习模型&lt;/h2&gt;
+&lt;p&gt;对每件事情分析其四个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入门槛：指开始此事所需要的情绪支出&lt;/li&gt;
+&lt;li&gt;所需能量：所需要的体力/脑力&lt;/li&gt;
+&lt;li&gt;情绪收支：literally&lt;/li&gt;
+&lt;li&gt;随机性：literally&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;学习方面&#34;&gt;学习方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;B站大学
+&lt;ul&gt;
+&lt;li&gt;进入门槛：由于B站大学收藏的都是自己感兴趣且广受好评的课程，所以本身是想去了解的&lt;/li&gt;
+&lt;li&gt;所需能量：中等——多，取决于授课语言/授课内容&lt;/li&gt;
+&lt;li&gt;情绪收支：中等，当听到一些很深刻的insight时确实很开心&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;、&lt;/li&gt;
+&lt;li&gt;随机性：一般，基本不会有什么出乎意料的事情&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;写笔记、做专栏
+&lt;ul&gt;
+&lt;li&gt;进入门槛：较高，需要设备齐全+有空闲时间+合理计划&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;所需能量：低，反而如果开始写的话，大脑并不会负载很大&lt;/li&gt;
+&lt;li&gt;情绪收支：高且稳定，尤其是在完成画的大饼时会很有成就感&lt;/li&gt;
+&lt;li&gt;随机性：低，因为写这些东西需要提前构思好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;coding
+&lt;ul&gt;
+&lt;li&gt;进入门槛：高，虽然打开电脑就能干活，但是在平常也不会主动打开vscode&lt;/li&gt;
+&lt;li&gt;所需能量：低，大部分时间都不是在写code……是在面向百度与CSDN编程hhh&lt;/li&gt;
+&lt;li&gt;情绪收支：低，甚至为负（起码在码力较低的时候是这样），大部分时间在和奇怪的bug与环境配置做艰苦斗争&lt;/li&gt;
+&lt;li&gt;随机性：高，有时候进展异常顺利，但是有时候很难推动项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;日常上课
+&lt;ul&gt;
+&lt;li&gt;进入门槛：低，按时到教室打个卡对我来讲并不是什么困难的事情&lt;/li&gt;
+&lt;li&gt;所需能量：低、中、高，取决于这门课程本身的难度，但其实正确的姿势应该是高强度用脑，边听课边在心里梳理出框架&lt;/li&gt;
+&lt;li&gt;情绪收支：低、中、高，取决于授课水平&lt;/li&gt;
+&lt;li&gt;随机性：高，取决于授课水平和课程难度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运动方面&#34;&gt;运动方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;晨跑
+&lt;ul&gt;
+&lt;li&gt;进入门槛：高，早起确实很难顶，但是如果形成习惯之后难度会逐渐下降&lt;/li&gt;
+&lt;li&gt;所需能量：低，六分钟的配速并没有什么负担&lt;/li&gt;
+&lt;li&gt;情绪收支：极高且持续时间很久，会抚平过去一整天的焦虑和负面情绪&lt;/li&gt;
+&lt;li&gt;随机性：中等，取决于报告的分布与晨跑的天气&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;生活方面&#34;&gt;生活方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;洗澡洗衣服
+&lt;ul&gt;
+&lt;li&gt;进入门槛：中，有时候会有拖延症&lt;/li&gt;
+&lt;li&gt;所需能量：中，需要消耗一定的体力值，比如洗完衣服之后拿笔有困难&lt;/li&gt;
+&lt;li&gt;情绪收支：高，结束之后内心反而会因为熵减而平静很多&lt;/li&gt;
+&lt;li&gt;随机性：低，日常生活按部就班，没有什么变化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;social media
+&lt;ul&gt;
+&lt;li&gt;进入门槛：负，会有成瘾倾向&lt;/li&gt;
+&lt;li&gt;所需能量：中等，属于隐性消耗，不易察觉&lt;/li&gt;
+&lt;li&gt;情绪收支：随着成瘾度的上升会不断下降，会存在负收益&lt;/li&gt;
+&lt;li&gt;随机性：高，无法与之社交媒体的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;瞎搞方面&#34;&gt;瞎搞方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;信息搜集
+&lt;ul&gt;
+&lt;li&gt;进入门槛：低，刷知乎基本没有门槛&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;所需能量：中等，由于需要练号训练推荐算法，需要手动注明label的过程还是挺费手指的&lt;/li&gt;
+&lt;li&gt;情绪收支：不定，取决于搜集的内容&lt;/li&gt;
+&lt;li&gt;随机性：高，取决于搜集的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;磕盐
+&lt;ul&gt;
+&lt;li&gt;进入门槛：中等，没有那么排斥，但也没有到把它当作消遣的地步&lt;/li&gt;
+&lt;li&gt;所需能量：高，看paper需要总结观点、跑模型需要配环境&lt;/li&gt;
+&lt;li&gt;情绪收支：有所进展时收益极大，无进展时容易陷入负面情绪&lt;/li&gt;
+&lt;li&gt;随机性：极大，不是极大还叫磕盐吗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;制定计划&#34;&gt;制定计划&lt;/h2&gt;
+&lt;p&gt;这里就偷懒直接引用了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每天的计划是现有模型下、针对目前情绪状况制定的较优策略。如果一个计划可以长期执行，执行途中情况稳定，满足自己的生活工作需求，这个计划就是一个不错的计划，可以长期执行下去。制定计划有以下几步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按照自己的人生目标、工作ddl和生活需求安排一些必做的事情。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;除了必做的事情之外，每天塞入一些flexible的项目，避开成瘾项目，尽量保持情绪收支平衡。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;**将每天的项目排序，尽量在一天内把情绪和能量维持在水平线上。**如，当下情绪偏低时，就不要选择耗费情绪高或进入门槛高的事情。如，剧烈运动完没有补充能量时，不要进行耗费能量高的项目。如，我们系一些老师会在工作前弄杯咖啡，在我看来就是给自己一些情绪收益，以供给接下来要做事情的进入门槛。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在情绪较高的一段时间内排入一些随机性高的任务。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;允许情绪有波动，在波动中动态的调节计划，让平均情绪维持稳定即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从上一个部分可以看到，在平常开心快乐的时候，应该调动理性多多去做code、磕盐这种随机性大、但是亟提升的项目。在情绪中等时，可以去B站大学遨游一会儿。在情绪低落的时候往往需要push自己去晨跑+洗澡洗衣服+整理笔记。&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;最后再引两段结束&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真正制定计划时不像这样这么严格，毕竟这种模型也不是数理模型那么精确，更多的是定性的掌握方向，而不是定量的严密分析。短期内情绪小波动很正常，但如果长期情绪持续走低时就需要从这个角度思考一下每日计划，是不是需要有所调整。另外，生活中会有一些惊喜 / 惊吓，也可自己制造一些惊喜来提升情绪水平。当生活有较大变化时（大喜大悲之事、换个环境、旅游等），情绪变化到了一个不稳定的水平，则需要一段调整期将其拉回正常水平。这种调整期的策略和日常策略不同，因为调整期的目的是为了改变情绪水平而非维持“收支平衡”。因此，情绪高涨时可安排一些平时比较排斥 / 随机性高的活去做，而情绪低落时可安排一些入门门槛低但有情绪收益的事情做，在情绪更低落时甚至可以选择一些上瘾性项目先把自己拉出坑，再维持理性戒瘾让自己恢复平静，这就相对来说更难一些。&lt;/p&gt;
+&lt;p&gt;生活中可以有些随心所欲的时间，但也要保持理性，不能让情绪一直掌舵，因为情绪会较为短视，且容易将“进入门槛”当作平均情绪支出，因此会选择”进入门槛“低的事情。如，在低落的心情中，我就会想终日赖在床上，但这样做的结果是心情越来越低落；如果是理性计划的话，我会在运动、冥想、看书这些”进入门槛“低但有调节情绪作用的活动中找一些去做，慢慢让自己恢复过来。最近这次低落期，我尝试让自己看书学习，希望用一些自律性弥补”进入门槛“，而从学习中获得的情绪收益中恢复平静，但看书急躁效率低导致并无收益，自责情绪让低谷更低，只好改变策略，在运动和冥想的进入门槛都达不到的情况下，白天和朋友侃大山加上做一些工作上的琐事加上看一些易读的非工作书籍，晚上重新回b站刷了几个视频，经过了几天，在b站快上瘾的情况下进入了有ddl的时间，强迫自己龟速赶了一下ddl，在白天刷微信公众号的时候，刷到了一个科普文章，顿时激起了对之前未学通的一块内容的兴趣，开始找材料看网课，恢复了一点可以思考的状态顺道戒了b站的瘾，算是从坑里出来了，接下来的思考带来的情绪收益可以让我维持在这个水平，再恢复间歇性运动和冥想，就可恢复平常。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/453083461&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/453083461&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;像极了在复数域上无法定义单调性（雾）&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;比如第一次听到格林函数的离散化就是对于矩阵求逆&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;大部分专栏都烂尾辣&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;比如我上课也能干（雾）&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;非常类似于jh所说的雕琢，就连这篇也是在文图摆烂摸出来的&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;行吧，查重率80%了&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+        </item>
+        <item>
         <title>大二生活</title>
         <link>https://zalouti.github.io/p/%E5%A4%A7%E4%BA%8C%E7%94%9F%E6%B4%BB/</link>
         <pubDate>Sat, 25 Jun 2022 10:40:43 +0800</pubDate>
