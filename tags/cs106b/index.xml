@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS106B on 第二基地</title>
+    <link>https://zalouti.github.io/tags/cs106b/</link>
+    <description>Recent content in CS106B on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 17 Jul 2022 14:53:43 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/cs106b/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assignment3</title>
+      <link>https://zalouti.github.io/p/assignment3/</link>
+      <pubDate>Sun, 17 Jul 2022 14:53:43 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment3/</guid>
+      <description>CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是</description>
+    </item>
+    
+    <item>
+      <title>Assignment2</title>
+      <link>https://zalouti.github.io/p/assignment2/</link>
+      <pubDate>Fri, 15 Jul 2022 15:48:53 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment2/</guid>
+      <description>CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 2。这次作业主要是针对Map、set、stake、queue的练习。 需要注意的是</description>
+    </item>
+    
+    <item>
+      <title>Assignment1</title>
+      <link>https://zalouti.github.io/p/assignment1/</link>
+      <pubDate>Wed, 13 Jul 2022 14:44:07 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment1/</guid>
+      <description>CS106B(winter 2022)Assignment 1 序 在刷知乎的时候看到汪博反复推荐这门课程，在学期中采取了错误的学习策略（在不知道什么是cin和cout的情况下前去看了CS106L），</description>
+    </item>
+    
+  </channel>
+</rss>

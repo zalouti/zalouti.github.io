@@ -6,7 +6,34 @@
     <description>Recent content in Posts on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 01 Jul 2022 12:53:58 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jul 2022 14:53:43 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assignment3</title>
+      <link>https://zalouti.github.io/p/assignment3/</link>
+      <pubDate>Sun, 17 Jul 2022 14:53:43 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment3/</guid>
+      <description>CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是</description>
+    </item>
+    
+    <item>
+      <title>Assignment2</title>
+      <link>https://zalouti.github.io/p/assignment2/</link>
+      <pubDate>Fri, 15 Jul 2022 15:48:53 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment2/</guid>
+      <description>CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 2。这次作业主要是针对Map、set、stake、queue的练习。 需要注意的是</description>
+    </item>
+    
+    <item>
+      <title>Assignment1</title>
+      <link>https://zalouti.github.io/p/assignment1/</link>
+      <pubDate>Wed, 13 Jul 2022 14:44:07 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment1/</guid>
+      <description>CS106B(winter 2022)Assignment 1 序 在刷知乎的时候看到汪博反复推荐这门课程，在学期中采取了错误的学习策略（在不知道什么是cin和cout的情况下前去看了CS106L），</description>
+    </item>
+    
     <item>
       <title>情绪调节模型</title>
       <link>https://zalouti.github.io/p/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82%E6%A8%A1%E5%9E%8B/</link>
@@ -121,10 +148,7 @@
       <pubDate>Wed, 11 May 2022 23:18:05 +0800</pubDate>
       
       <guid>https://zalouti.github.io/p/program/</guid>
-      <description>Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc.
- USA Brown University Data-Enabled Computational Engineering and Science
-Language Prerequisite Switzerland UK Rankings 2022 Best Applied Mathematics Master&amp;rsquo;s Degree Schools
-computational engineering science of master degree in USA</description>
+      <description>Below are some relevant programs which major in scientific computing, applied math, computational engineering, etc. USA UT Austin Computational Science, Engineering, and Mathematics (CSEM) 主要是一个博士课程。我们每年招收有限数量的硕士生，并且没有可供硕士生使用的资金。 语言要求 TOEFL iBT</description>
     </item>
     
     <item>
