@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是'><title>Assignment3</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='CS106B(winter 2022)Assignment 3 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是'><title>Assignment3</title>
 
 <link rel='canonical' href='https://zalouti.github.io/p/assignment3/'>
 
 <link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Assignment3'>
-<meta property='og:description' content='CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是'>
+<meta property='og:description' content='CS106B(winter 2022)Assignment 3 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是'>
 <meta property='og:url' content='https://zalouti.github.io/p/assignment3/'>
 <meta property='og:site_name' content='第二基地'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CS106B' /><meta property='article:published_time' content='2022-07-17T14:53:43&#43;08:00'/><meta property='article:modified_time' content='2022-07-17T14:53:43&#43;08:00'/>
 <meta name="twitter:title" content="Assignment3">
-<meta name="twitter:description" content="CS106B(winter 2022)Assignment 2 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是"><style>
+<meta name="twitter:description" content="CS106B(winter 2022)Assignment 3 前言 接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对Recursive Problem Solving的初步练习。 需要注意的是"><style>
     :root {
         --article-font-family: "Noto Serif SC", var(--base-font-family);
     }
@@ -114,7 +114,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 8 分钟
                 </time>
             </div>
         
@@ -124,13 +124,381 @@
 </header>
 
     <section class="article-content">
-    <h1 id="cs106bwinter-2022assignment-2">CS106B(winter 2022)Assignment 2</h1>
+    <h1 id="cs106bwinter-2022assignment-3">CS106B(winter 2022)Assignment 3</h1>
 <h2 id="前言">前言</h2>
 <p>接着上次作业，这次我们来看一看Assignment 3。这次作业主要是针对<strong>Recursive Problem Solving</strong>的初步练习。</p>
 <p>需要注意的是，目前B站上最新的课程是2020summer的，由于2022winter的课程未对外开放，所以暂且只能采用听2020summer的课程，做2022winter的作业（兼容Qt现在的版本不需要回滚至5.x）。</p>
-<p>由于毕竟不是科班出身，代码水平优先，所有程序只是通过了老师的样例，还请大佬指正。</p>
+<p>由于毕竟不是科班出身，代码水平有限，所有程序只是通过了老师的样例，还请大佬指正。</p>
 <hr>
 <h2 id="part-one-the-sierpinski-triangle">Part One: The Sierpinski Triangle</h2>
+<p>第一题的背景是自相似分形的著名例子——Sierpinski三角形。</p>
+<ul>
+<li>$0$阶的Sierpinski三角形是一个实心的正常三角形</li>
+<li>一个$n$阶的Sierpinski三角形，由三个$n-1$阶的Sierpinski三角形组成，每个都是主三角形的$\frac{1}{4}$大，排列在一起，使它们角对角相接。</li>
+</ul>
+<p><!-- raw HTML omitted --></p>
+<p>我们的任务是编写一个函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">void</span> <span class="n">drawSierpinskiTriangle</span><span class="p">(</span><span class="n">GWindow</span><span class="o">&amp;</span> <span class="n">window</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">,</span>
+                            <span class="kt">int</span> <span class="n">order</span><span class="p">)</span> 
+</code></pre></div><p>这个函数输入待绘制三角形的图窗<code>window</code>，以及三个三角形的点与三角形的阶数，然后绘制该阶数的Sierpinski三角形。如果阶数<code>order</code>小于0的话，需要使用<code>error</code>函数报错。</p>
+<p>绘制三角形的话，需要使用下面已经提供的函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">void</span> <span class="nf">drawTriangle</span><span class="p">(</span><span class="n">GWindow</span><span class="o">&amp;</span> <span class="n">window</span><span class="p">,</span>
+                  <span class="kt">double</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="p">,</span>
+                  <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span>
+                  <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">window</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="s">&#34;black&#34;</span><span class="p">);</span>
+    <span class="n">window</span><span class="p">.</span><span class="n">fillPolygon</span><span class="p">({</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div><p>这个函数输入待绘制三角形的图窗<code>window</code>，以及三个三角形的点，绘制一个黑色的实心三角形。</p>
+<blockquote>
+<p>实现思路：</p>
+<ul>
+<li>对于负数阶的三角形，报错</li>
+<li>对于0阶的三角形，使用<code>drawTriangle</code>绘制一个三角形</li>
+<li>对于n &gt; 0 阶的三角形，利用递归绘制三个**次级(order - 1)**的三角形，注意输入的顶点即可</li>
+</ul>
+</blockquote>
+<p>下面是<code>drawSierpinskiTriangle</code>函数实现：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">void</span> <span class="nf">drawSierpinskiTriangle</span><span class="p">(</span><span class="n">GWindow</span><span class="o">&amp;</span> <span class="n">window</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y0</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span>
+                            <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">,</span>
+                            <span class="kt">int</span> <span class="n">order</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">order</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">(</span><span class="s">&#34;Haiya! Order should be positive!&#34;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">order</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">drawTriangle</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">);</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">drawSierpinskiTriangle</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,(</span><span class="n">x0</span><span class="o">+</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y0</span><span class="o">+</span><span class="n">y1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">x0</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y0</span><span class="o">+</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">order</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">drawSierpinskiTriangle</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,(</span><span class="n">x0</span><span class="o">+</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y0</span><span class="o">+</span><span class="n">y1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y1</span><span class="o">+</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">order</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">drawSierpinskiTriangle</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">,(</span><span class="n">x0</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y0</span><span class="o">+</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,(</span><span class="n">y1</span><span class="o">+</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">order</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<h2 id="part-two-human-pyramids">Part Two: Human Pyramids</h2>
+<p>背景是人塔问题，我们的目标是计算$n$阶的人塔中某个人所承受的重量。</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="milestone-1-the-initial-implementation">Milestone 1: The Initial Implementation</h3>
+<p>由受力分析不难得知每个人所承受的重量，我们的任务是编写函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">double</span> <span class="n">weightOnBackOf</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pyramidHeight</span><span class="p">)</span>
+</code></pre></div><p>要求为：</p>
+<ul>
+<li>假设每个人自身体重均为160磅</li>
+<li>函数必须递归地编写</li>
+<li>当坐标<code>(row, col)</code>不在人塔中时报错，坐标定义如下图，不难发现<strong>列编号永远小于等于行编号</strong></li>
+</ul>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&#34;error.h&#34; //Remember to include this line!</span><span class="cp">
+</span><span class="cp"></span><span class="kt">double</span> <span class="nf">weightOnBackOf</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pyramidHeight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">col</span> <span class="o">&gt;</span> <span class="n">row</span> <span class="o">||</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">||</span> <span class="n">row</span> <span class="o">&gt;</span> <span class="n">pyramidHeight</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">(</span><span class="s">&#34;Haiya! Wrong cooridinates!&#34;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">80.0</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOf</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="n">row</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">80.0</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOf</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mf">80.0</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOf</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span><span class="n">pyramidHeight</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOf</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>设计思路是分类讨论递归：</p>
+<ul>
+<li>对于坐标(0,0)直接返回0</li>
+<li>对于最左侧的，返回<strong>上层人体重和所被负重量总和的一半</strong>，编号为<code>row - 1, col</code></li>
+<li>对于最右侧的，返回<strong>上层人体重和所被负重量总和的一半</strong>，编号为<code>row - 1, col - 1</code></li>
+<li>对于中间的，返回<strong>上层人体重和所被负重量总和的一半</strong>，编号为<code>row - 1, col - 1</code>与<code>row - 1, col</code></li>
+</ul>
+<h3 id="milestone-2-speeding-things-up">Milestone 2: Speeding Things Up</h3>
+<p>但是上面的递归方式其实是非常低效的，一个原因便是由于人塔中蕴含的一个菱形：</p>
+<p><!-- raw HTML omitted --></p>
+<p>我们会发现，在计算坐标(3,1)与(3,2)时，需要调用坐标(2,1)两次，当阶数递增时这会非常浪费。因此，一个简单的方法便是采用一个容器储存中间的步骤。</p>
+<p>我们的任务是：</p>
+<ul>
+<li>将原来的简单的递归代码，利用包装函数<code>wrapper function</code>与某一容器，提高程序运行速度</li>
+<li>伪代码如下</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Ret</span> <span class="nf">functionRec</span><span class="p">(</span><span class="n">Arg</span> <span class="n">a</span><span class="p">,</span> <span class="n">Table</span><span class="o">&amp;</span> <span class="n">table</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">base</span><span class="o">-</span><span class="k">case</span><span class="o">-</span><span class="n">holds</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">base</span><span class="o">-</span><span class="k">case</span><span class="o">-</span><span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">table</span> <span class="n">contains</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">table</span><span class="p">[</span><span class="n">a</span><span class="p">];</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">do</span><span class="o">-</span><span class="n">some</span><span class="o">-</span><span class="n">work</span><span class="p">;</span>
+        <span class="n">table</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">recursive</span><span class="o">-</span><span class="n">step</span><span class="o">-</span><span class="n">value</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">recursive</span><span class="o">-</span><span class="n">step</span><span class="o">-</span><span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Ret</span> <span class="nf">function</span><span class="p">(</span><span class="n">Arg</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Table</span> <span class="n">table</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">functionRec</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">table</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>此处我采用的容器是<code>Map&lt;GridLocation, double&gt;</code>，<code>GridLocation</code>用来储存坐标位置，对应一个<code>double</code>类型的重量，此处需要注意的是，在负责递归部分函数中，需要递归调用的**不是包装函数！**不然的话我们的容器无法储存下来，总是在不断地初始化，这样就达不到想要的效果了，代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&#34;grid.h&#34;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&#34;map.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">double</span> <span class="nf">weightOnBackOfHelper</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">GridLocation</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">weightKnown</span><span class="p">){</span>
+    <span class="n">GridLocation</span> <span class="n">coordinate</span> <span class="p">;</span>
+    <span class="n">coordinate</span><span class="p">.</span><span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="p">;</span>
+    <span class="n">coordinate</span><span class="p">.</span><span class="n">row</span> <span class="o">=</span> <span class="n">row</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">col</span> <span class="o">&gt;</span> <span class="n">row</span> <span class="o">||</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">||</span> <span class="n">row</span> <span class="o">&gt;</span> <span class="n">pyramidHeight</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">(</span><span class="s">&#34;Haiya! Wrong cooridinates!&#34;</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">weightKnown</span><span class="p">.</span><span class="n">containsKey</span><span class="p">(</span><span class="n">coordinate</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">weightKnown</span><span class="p">[</span><span class="n">coordinate</span><span class="p">];</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">weightKnown</span><span class="p">[</span><span class="n">coordinate</span><span class="p">]</span> <span class="o">=</span> <span class="mf">80.0</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOfHelper</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">weightKnown</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="n">row</span> <span class="o">&amp;&amp;</span> <span class="n">row</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">weightKnown</span><span class="p">[</span><span class="n">coordinate</span><span class="p">]</span> <span class="o">=</span> <span class="mf">80.0</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOfHelper</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">weightKnown</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">weightKnown</span><span class="p">[</span><span class="n">coordinate</span><span class="p">]</span> <span class="o">=</span> <span class="mf">80.0</span> <span class="o">*</span> <span class="mi">2</span>
+                    <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOfHelper</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">weightKnown</span><span class="p">)</span>
+                    <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">weightOnBackOfHelper</span><span class="p">(</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span> <span class="p">,</span><span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">weightKnown</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">weightKnown</span><span class="p">[</span><span class="n">coordinate</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">weightOnBackOf</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pyramidHeight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">GridLocation</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span> <span class="n">weightKnown</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">weightOnBackOfHelper</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">pyramidHeight</span><span class="p">,</span> <span class="n">weightKnown</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<h2 id="part-three-what-are-you-doing">Part Three: What Are YOU Doing?</h2>
+<p>题目的背景是，在英语口语中，强调不同的单词会表达出不同的意思，我们的任务是编写一个函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOf</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">sentence</span><span class="p">);</span>
+</code></pre></div><p>输入一个包含一句话的<code>string</code>，返回一个包含所有强调方式的<code>Set&lt;string&gt;</code>，需要注意的是<code>allEmphasesOf</code>输出应该包含原有的标点符号。</p>
+<p>但是如何分割单词呢？老师已经贴心地提供了函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokenize</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">sentence</span><span class="p">);</span>
+</code></pre></div><p>这个函数输入一个包含一句话的<code>string</code>，返回这句话的断词之后的<code>Vector</code>，例如：</p>
+<blockquote>
+<p>输入：Quoth the raven, &ldquo;Nevermore.&rdquo;</p>
+<p><code>tokenize</code>输出：[Quoth] [ ] [the] [ ] [raven] [,] [ ] [&quot;] [Nevermore] [.] [&quot;]</p>
+</blockquote>
+<p>按照上课讲的方法，我们写出递归的步骤：</p>
+<ul>
+<li>Decision at each step:
+<ul>
+<li>我们是否还有可以选择的单词</li>
+</ul>
+</li>
+<li>Options at each decision:
+<ul>
+<li>将这个单词大写</li>
+<li>将这个单词小写</li>
+</ul>
+</li>
+<li>Information we should store along the way:
+<ul>
+<li>我们已经强调过的单词组合</li>
+<li>剩下需要考虑的单词</li>
+</ul>
+</li>
+</ul>
+<p>因此我们发现，原函数给定的参数<code>const string</code>不方便递归，因此我们选择采用包装函数，传入的参数为已经考虑过的部分与未考虑的部分：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOfHelper</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisionmade</span><span class="p">,</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisiontomake</span><span class="p">)</span>
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOf</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">sentence</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">);</span>
+    <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">init</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">allEmphasesOfHelper</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">tokens</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>首先考虑最基本的情况：</p>
+<ul>
+<li>当传入这句话是一个空字符串时，直接返回一个空集合</li>
+<li>拓展一下，当我们没有可以选择的单词时，直接返回我们创造的集合</li>
+</ul>
+<p>这对应了<code>allEmphasesOfHelper</code>的第一部分：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOfHelper</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisionmade</span><span class="p">,</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisiontomake</span><span class="p">){</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">emphasis</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">decisiontomake</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">emphasis</span><span class="p">;</span>
+</code></pre></div><p>接着考虑递归部分，首先我们需要判断<code>Vector</code>中的元素是否是单词（因为后面的大小写只能应用于字母），作业中提示了，所给的文本只需要判断首字母即可，自然想到可以运用函数<code>isalpha()</code></p>
+<ul>
+<li>
+<p>对于字符部分，首先需要删除<code>decisiontomake</code>中的元素，接着将其全部大写或者小写加入<code>decisionmade</code>中，此处我才用了临时的<code>tokencopy</code>储存对应的单词。</p>
+<ul>
+<li>上面操作结束之后，我们的状态<code>decisionmade</code>与<code>decisiontomake</code>发生了变化，此处自然想到应该调用递归函数<code>allEmphasesOfHelper</code></li>
+<li>当<code>Vector</code>中最后一个元素被加入<code>decisionmade</code>时，将这种组合加入我们输出的集合<code>emphasis</code>中，否则会出现集合中只有部分句子的情况</li>
+</ul>
+</li>
+<li>
+<p>对于非字符部分，唯一的区别便是不需要大小写转化，因此并不需要调用递归函数</p>
+</li>
+</ul>
+<p>完整代码实现如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&#34;WhatAreYouDoing.h&#34;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&#34;strlib.h&#34;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;cctype&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">string</span> <span class="nf">Vec2Str</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokens</span><span class="p">){</span>
+    <span class="n">string</span> <span class="n">result</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">str</span><span class="p">:</span><span class="n">tokens</span><span class="p">){</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOfHelper</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisionmade</span><span class="p">,</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">decisiontomake</span><span class="p">){</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">emphasis</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">decisiontomake</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">emphasis</span><span class="p">;</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokencopy</span> <span class="o">=</span> <span class="n">decisiontomake</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tokencopy</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">isalpha</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])){</span>
+                <span class="c1">// include lowercase-version of this word
+</span><span class="c1"></span>                <span class="n">decisiontomake</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                <span class="n">decisionmade</span> <span class="o">+=</span> <span class="n">toLowerCase</span><span class="p">(</span><span class="n">tokencopy</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+                    <span class="n">emphasis</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">)</span> <span class="o">+</span> <span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">));</span>
+                <span class="n">emphasis</span> <span class="o">+=</span> <span class="n">allEmphasesOfHelper</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">,</span> <span class="n">decisiontomake</span><span class="p">);</span>
+
+                <span class="c1">// include uppercase-version of this word
+</span><span class="c1"></span>                <span class="n">decisionmade</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+                <span class="n">decisionmade</span> <span class="o">+=</span> <span class="n">toUpperCase</span><span class="p">(</span><span class="n">tokencopy</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+                    <span class="n">emphasis</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">)</span> <span class="o">+</span> <span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">));</span>
+                <span class="n">emphasis</span> <span class="o">+=</span> <span class="n">allEmphasesOfHelper</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">,</span> <span class="n">decisiontomake</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">decisiontomake</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                <span class="n">decisionmade</span> <span class="o">+=</span> <span class="n">tokencopy</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+                    <span class="n">emphasis</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisionmade</span><span class="p">)</span> <span class="o">+</span> <span class="n">Vec2Str</span><span class="p">(</span><span class="n">decisiontomake</span><span class="p">));}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">emphasis</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">allEmphasesOf</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">sentence</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">);</span>
+    <span class="n">Vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">init</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">allEmphasesOfHelper</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">tokens</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<h2 id="part-four-shift-scheduling">Part Four: Shift Scheduling</h2>
+<p>这道题目的背景是，作为一个资本家，如何安排换班可以实现剥削员工最大的剩余价值（雾</p>
+<p>对于每一班，我们已知如果某名员工工作的话所产生的价值，安排员工换班需要遵守两条规则：</p>
+<ol>
+<li>每个员工每周有固定的工作总时长</li>
+<li>每个员工不能连续工作两班</li>
+</ol>
+<p>我们的任务是编写一个函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">highestValueScheduleFor</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;&amp;</span> <span class="n">shifts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxHours</span><span class="p">)</span>
+</code></pre></div><p>输入一个各班次的集合与员工工作的最长时间，返回一个产生最大价值的班次安排集合。<code>Shift</code>是一个定义在<code>Shift.h</code>中的<code>struct</code>，包含关于班次的时间信息（它是一周中的哪一天，什么时候开始，什么时候结束）。可能还会需要用到<code>Shift.h</code>中以下的函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">int</span> <span class="nf">lengthOf</span><span class="p">(</span><span class="k">const</span> <span class="n">Shift</span><span class="o">&amp;</span> <span class="n">shift</span><span class="p">);</span> <span class="c1">// Returns the length of a shift.
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">valueOf</span><span class="p">(</span><span class="k">const</span> <span class="n">Shift</span><span class="o">&amp;</span> <span class="n">shift</span><span class="p">);</span> <span class="c1">// Returns the value of this shift.
+</span><span class="c1"></span><span class="kt">bool</span> <span class="nf">overlapsWith</span><span class="p">(</span><span class="k">const</span> <span class="n">Shift</span><span class="o">&amp;</span> <span class="n">one</span><span class="p">,</span> <span class="c1">// Returns whether two shifts overlap.
+</span><span class="c1"></span><span class="k">const</span> <span class="n">Shift</span><span class="o">&amp;</span> <span class="n">two</span><span class="p">);</span>
+</code></pre></div><p>老师详细地讲解了这个递归策略，让我直接机翻一段：</p>
+<blockquote>
+<ul>
+<li>无论怎么递归，首先需要从轮班中选择一些班次
+<ul>
+<li>如果员工不能参加的话，要么是因为与已有班次重叠，要么是因为超过了每周的总时间，那么唯一的选择便是<strong>不给员工这个班次</strong></li>
+<li>否则我们有两个选择
+<ul>
+<li>让该员工参加这个班次</li>
+<li>让员工不参加这个班次</li>
+</ul>
+</li>
+<li>这两个选项中可能某一个更好或者二者相等。在我们尝试之前，并不知道哪一个更好，所以（递归）探索这两个选项，并报告哪一个能带来更多的价值</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>其实在看到作业中写任务四的时候建议先完成任务三，所以我认为这是一个疯狂暗示，因此采用第三题的方法，先采用一个包装函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">highestValueScheduleForHelper</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">curShifts</span><span class="p">,</span> 
+                                         <span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">remainShifts</span><span class="p">,</span>
+                                         <span class="kt">int</span> <span class="n">maxHours</span><span class="p">);</span>
+ 
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">highestValueScheduleFor</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;&amp;</span> <span class="n">shifts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxHours</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">curShifts</span><span class="p">;</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">remainShifts</span> <span class="o">=</span> <span class="n">shifts</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">maxHours</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">(</span><span class="s">&#34;Haiya! Negtive maxhours!&#34;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">maxHours</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">curShifts</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="nf">highestValueScheduleForHelper</span><span class="p">(</span><span class="n">curShifts</span><span class="p">,</span> <span class="n">remainShifts</span><span class="p">,</span> <span class="n">maxHours</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>实现思路：</p>
+<ul>
+<li>如果现在没有可以选择的排班，这就意味着递归结束，返回现在的排班</li>
+<li>首先我们从待选择的集合中拿出一个元素，这就意味着<strong>之后所有递归的待选择状态减一</strong>（因为我们已经考虑过这个元素了）</li>
+<li>对于限制条件，采用常见的<code>flag</code>即可</li>
+<li>如果满足条件，则分两种情况讨论
+<ul>
+<li>加入这个元素，现在的排班集和增加了这个元素，调用递归并计算其价值</li>
+<li>不加入这个元素，直接返回现在的排班状态，调用递归并计算其价值</li>
+<li>比较价值得出返回哪一个集合</li>
+</ul>
+</li>
+<li>如果不满足条件，直接返回<strong>递归的待选择状态减一</strong>的集合，相当于忽略这个元素</li>
+</ul>
+<p>完整代码实现如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">int</span> <span class="nf">valueOfAllShift</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;&amp;</span> <span class="n">curShifts</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">Shift</span> <span class="nl">shift</span><span class="p">:</span><span class="n">curShifts</span><span class="p">){</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">valueOf</span><span class="p">(</span><span class="n">shift</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">timeOfAllShift</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;&amp;</span> <span class="n">curShifts</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">Shift</span> <span class="nl">shift</span><span class="p">:</span><span class="n">curShifts</span><span class="p">){</span>
+        <span class="n">time</span> <span class="o">+=</span> <span class="n">lengthOf</span><span class="p">(</span><span class="n">shift</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">time</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">highestValueScheduleForHelper</span><span class="p">(</span><span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">curShifts</span><span class="p">,</span> 
+                                         <span class="k">const</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">remainShifts</span><span class="p">,</span>
+                                         <span class="kt">int</span> <span class="n">maxHours</span><span class="p">){</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">shiftwith</span><span class="p">,</span> <span class="n">shiftwithout</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">remainShifts</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">curShifts</span><span class="p">;</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">Shift</span> <span class="n">elem</span> <span class="o">=</span> <span class="n">remainShifts</span><span class="p">.</span><span class="n">first</span><span class="p">();</span>
+        <span class="n">Set</span><span class="o">&lt;</span><span class="n">Shift</span><span class="o">&gt;</span> <span class="n">remaincopy</span> <span class="o">=</span> <span class="n">remainShifts</span><span class="p">;</span>
+        <span class="n">remaincopy</span> <span class="o">=</span> <span class="n">remaincopy</span> <span class="o">-</span> <span class="n">elem</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Shift</span> <span class="nl">shift</span><span class="p">:</span> <span class="n">curShifts</span><span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">overlapsWith</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">shift</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">timeOfAllShift</span><span class="p">(</span><span class="n">curShifts</span><span class="p">)</span> <span class="o">+</span> <span class="n">lengthOf</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">maxHours</span><span class="p">){</span>
+            <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">flag</span><span class="p">){</span>
+            <span class="cm">/* not include this element */</span>
+            <span class="n">shiftwithout</span> <span class="o">=</span> <span class="n">highestValueScheduleForHelper</span><span class="p">(</span><span class="n">curShifts</span><span class="p">,</span> <span class="n">remaincopy</span><span class="p">,</span> <span class="n">maxHours</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">valuewithout</span> <span class="o">=</span> <span class="n">valueOfAllShift</span><span class="p">(</span><span class="n">shiftwithout</span><span class="p">);</span>
+
+            <span class="cm">/* include this element */</span>
+
+            <span class="n">shiftwith</span> <span class="o">=</span> <span class="n">highestValueScheduleForHelper</span><span class="p">(</span><span class="n">curShifts</span> <span class="o">+</span> <span class="n">elem</span><span class="p">,</span> <span class="n">remaincopy</span><span class="p">,</span> <span class="n">maxHours</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">valuewithin</span> <span class="o">=</span> <span class="n">valueOfAllShift</span><span class="p">(</span><span class="n">shiftwith</span><span class="p">);</span>
+
+            <span class="cm">/* choose highest value */</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">valuewithin</span> <span class="o">&gt;=</span> <span class="n">valuewithout</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">shiftwith</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="k">return</span> <span class="n">shiftwithout</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="nf">highestValueScheduleForHelper</span><span class="p">(</span><span class="n">curShifts</span><span class="p">,</span> <span class="n">remaincopy</span><span class="p">,</span> <span class="n">maxHours</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p><!-- raw HTML omitted --></p>
 
 </section>
 
@@ -364,6 +732,14 @@ async>
   <ol>
     <li><a href="#前言">前言</a></li>
     <li><a href="#part-one-the-sierpinski-triangle">Part One: The Sierpinski Triangle</a></li>
+    <li><a href="#part-two-human-pyramids">Part Two: Human Pyramids</a>
+      <ol>
+        <li><a href="#milestone-1-the-initial-implementation">Milestone 1: The Initial Implementation</a></li>
+        <li><a href="#milestone-2-speeding-things-up">Milestone 2: Speeding Things Up</a></li>
+      </ol>
+    </li>
+    <li><a href="#part-three-what-are-you-doing">Part Three: What Are YOU Doing?</a></li>
+    <li><a href="#part-four-shift-scheduling">Part Four: Shift Scheduling</a></li>
   </ol>
 </nav>
                 </div>
