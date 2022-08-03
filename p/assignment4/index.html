@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='CS106B(winter 2022)Assignment 4 前言 接着上次作业，这次我们来看一看Assignment 4。这次作业还是针对Recursive Problem Solving的进一步练习。 需要注意的是'><title>Assignment4</title>
+
+<link rel='canonical' href='https://zalouti.github.io/p/assignment4/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Assignment4'>
+<meta property='og:description' content='CS106B(winter 2022)Assignment 4 前言 接着上次作业，这次我们来看一看Assignment 4。这次作业还是针对Recursive Problem Solving的进一步练习。 需要注意的是'>
+<meta property='og:url' content='https://zalouti.github.io/p/assignment4/'>
+<meta property='og:site_name' content='第二基地'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CS106B' /><meta property='article:published_time' content='2022-07-19T22:28:48&#43;08:00'/><meta property='article:modified_time' content='2022-07-19T22:28:48&#43;08:00'/>
+<meta name="twitter:title" content="Assignment4">
+<meta name="twitter:description" content="CS106B(winter 2022)Assignment 4 前言 接着上次作业，这次我们来看一看Assignment 4。这次作业还是针对Recursive Problem Solving的进一步练习。 需要注意的是"><style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/assignment4/">Assignment4</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 19, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 8 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="cs106bwinter-2022assignment-4">CS106B(winter 2022)Assignment 4</h1>
+<h2 id="前言">前言</h2>
+<p>接着上次作业，这次我们来看一看Assignment 4。这次作业还是针对<strong>Recursive Problem Solving</strong>的进一步练习。</p>
+<p>需要注意的是，目前B站上最新的课程是2020summer的，由于2022winter的课程未对外开放，所以暂且只能采用听2020summer的课程，做2022winter的作业（兼容Qt现在的版本不需要回滚至5.x）。</p>
+<p>由于毕竟不是科班出身，代码水平有限，所有程序只是通过了老师的样例，还请大佬指正。</p>
+<hr>
+<h2 id="part-one-debugging-practice">Part One: Debugging Practice</h2>
+<p>第一题是一道热身题目，更重要的是老师在教大家如何debug，开头两句话我觉得讲得非常好：</p>
+<blockquote>
+<p>当你在程序中遇到一个bug时，你的第一反应可能是：</p>
+<ul>
+<li>为什么我的程序没有像我所想的一样工作？</li>
+</ul>
+<p>但其实更好的想法是：</p>
+<ul>
+<li>我的程序在干什么？为什么没有像我预期的那样工作？</li>
+</ul>
+</blockquote>
+<p>我们在作业0和作业1中学习了设置断点和使用Step In, Step Over, and Step Out以及在调用堆栈中上下移动，下面是复习这方面的技能，并且在更复杂的递归问题中探索这些技能。</p>
+<h3 id="milestone-1-explore-the-towers-of-hanoi">Milestone 1: Explore the Towers of Hanoi</h3>
+<p>首先在函数<code>solveTowersOfHanoi</code>第一行设置断点，然后再调试模式下运行，在弹出菜单顶部选择“Tower of Hanoi”，由于之后图床无法挪动，建议先设置好大小之后再点击“Go”。</p>
+<p>此时我们回答老师提出的问题：</p>
+<blockquote>
+<p><strong>Question 1:</strong></p>
+<p>What are the values of all the parameters to the <code>solveTowerOfHanoi</code> function?</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/23/8t3qLfXTaBgIHe1.png" >
+		<img src="https://s2.loli.net/2022/07/23/8t3qLfXTaBgIHe1.png"
+			
+			
+			
+			loading="lazy"
+			alt="如图所示">
+	</a>
+	
+	<figcaption>如图所示</figcaption>
+	
+</figure></p>
+<p><strong>Question 2:</strong></p>
+<p>Some fuction in our starter code called <code>solveTowerOfHanoi.</code> What file was that function defined in, and what was the name of that function?(Hint: use the call stack!)</p>
+<p>查看栈可知：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/23/HocATqjnI8liLKV.png" >
+		<img src="https://s2.loli.net/2022/07/23/HocATqjnI8liLKV.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20220723221630539">
+	</a>
+	
+	<figcaption>image-20220723221630539</figcaption>
+	
+</figure></p>
+</blockquote>
+<p>之后点击<strong>Step Over</strong>逐级点击，然后数一数一共需要多少步？</p>
+<blockquote>
+<p><strong>Question 3:</strong></p>
+<p>How many total moves were required to solve this instance of Towers of Hanoi?</p>
+<p>通式为$2^n-1$，五阶需要31步</p>
+</blockquote>
+<p>之后点击Continue，再点击Go，再次回到我们所设置的断点。</p>
+<p>这时候我们根据指示点击<strong>Step Into</strong>进入函数<code>initHanoiDisplay</code>，但这并不是我们想追踪的递归函数，因此我们使用<strong>Step Out</strong>回到刚刚的主函数。</p>
+<p>下一行的暂停函数也不是我们想看的函数，可以直接使用<strong>Step Over</strong>跳过，或者使用<strong>Step Into +Step Out</strong>。直到执行到<code>moveTower</code>函数：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/23/ryA7uZldGjYPVzK.png" >
+		<img src="https://s2.loli.net/2022/07/23/ryA7uZldGjYPVzK.png"
+			
+			
+			
+			loading="lazy"
+			alt="调用递归函数的前一步">
+	</a>
+	
+	<figcaption>调用递归函数的前一步</figcaption>
+	
+</figure></p>
+<p>先点击<strong>Step Into</strong>进入函数<code>moveTower</code>，之后点击<code>Step Over</code>执行函数我们得到的结果是：<strong>除了最底下的圆盘，最左边的其余圆盘都移动到了中间的圆盘</strong>，现在我们回答问题4：</p>
+<blockquote>
+<p><strong>Question 4:</strong></p>
+<p>What is the value of the totalMoves variable inside the first moveTower call after stepping over its first recursive sub-call?(In other words, just after stepping over the first recursive sub-call to moveTower inside the if statement in the recursive function.)</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/23/kUnSeFXhgZB8Pmj.png" >
+		<img src="https://s2.loli.net/2022/07/23/kUnSeFXhgZB8Pmj.png"
+			
+			
+			
+			loading="lazy"
+			alt="变量">
+	</a>
+	
+	<figcaption>变量</figcaption>
+	
+</figure></p>
+<p>红色代表着改变，我们发现经过第一次递归，总步数已经变成15步了。</p>
+</blockquote>
+<p>下一步便是将最底下的圆盘移到最后的终点。根据指示点击Continue然后完成这个demo.</p>
+<p>我们再次点击Go，这次就可以自己愉快地玩耍递归了（雾</p>
+<h3 id="milestone-2-debug-a-broken-permutations-function">Milestone 2: Debug a Broken Permutations Function</h3>
+<p>下面就要亲自debug了，文件<code>Permutations.cpp</code>是有问题的，而且这个问题是<strong>one-character</strong>的问题。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/23/GgsQxOM3wmaWNAJ.png" >
+		<img src="https://s2.loli.net/2022/07/23/GgsQxOM3wmaWNAJ.png"
+			
+			
+			
+			loading="lazy"
+			alt="debug">
+	</a>
+	
+	<figcaption>debug</figcaption>
+	
+</figure></p>
+<p>结果我们发现，是因为<code>chosen</code>在传值的时候被改变了，上图是我输入字符<strong>ab</strong>之后，这一步应该是输出<strong>ba</strong>，但却输出了<strong>aba</strong>，这就是因为在上一步的调用递归函数中，传值的同时改变了<code>chosen</code>的值，改变为下面一行即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">thisOption</span> <span class="o">=</span> <span class="n">permutationsRec</span><span class="p">(</span><span class="n">remaining</span><span class="p">,</span> <span class="n">chosen</span> <span class="o">+</span> <span class="n">ch</span><span class="p">);</span>
+</code></pre></div><p>老师在作业后给出了一些简单的总结：</p>
+<ul>
+<li>在调试一个递归函数的时候，尝试先寻找引起错误的最小例子，小例子方便我们递归与寻找问题所在</li>
+<li>灵活使用<strong>Step Into</strong>、<strong>Step Over</strong>、<strong>Step Out</strong></li>
+</ul>
+<h2 id="part-two-matchmaker">Part Two: Matchmaker</h2>
+<h3 id="milestone-one-find-perfect-matchings">Milestone One: Find Perfect Matchings</h3>
+<p>背景介绍：</p>
+<blockquote>
+<p>你有一群人都在上同一门课。这门课让人们在作业上结对工作，而人们都想找人一起工作。每个人都在相互交谈，他们各自列出了一个他们愿意与之合作的人的名单。然后问题出现了——鉴于每个人的偏好，是否有可能将每个人配对，使他们与他们想一起工作的人结成伙伴？</p>
+<p>我们可以通过为每个人画一个圆圈，然后画线连接那些愿意彼此合作的人，来形象地说明这个问题。下面是一个例子，说明这可能是什么样子：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/24/pow37VqcRhEtJDI.png" >
+		<img src="https://s2.loli.net/2022/07/24/pow37VqcRhEtJDI.png"
+			
+			
+			
+			loading="lazy"
+			alt="如图所示">
+	</a>
+	
+	<figcaption>如图所示</figcaption>
+	
+</figure></p>
+<p>我们可以用<code>Map&lt;string, Set&lt;string&gt;&gt;</code>来表示上面的情形：</p>
+<p>&ldquo;A&rdquo;: { &ldquo;B&rdquo; },
+&ldquo;B&rdquo;: { &ldquo;A&rdquo;, &ldquo;C&rdquo;, &ldquo;E&rdquo;, &ldquo;G&rdquo; },
+&ldquo;C&rdquo;: { &ldquo;B&rdquo;, &ldquo;D&rdquo;, &ldquo;G&rdquo; },
+&ldquo;D&rdquo;: { &ldquo;C&rdquo;, &ldquo;G&rdquo;, &ldquo;H&rdquo; },
+&ldquo;E&rdquo;: { &ldquo;B&rdquo;, &ldquo;F&rdquo; },
+&ldquo;F&rdquo;: { &ldquo;E&rdquo;, &ldquo;G&rdquo; },
+&ldquo;G&rdquo;: { &ldquo;B&rdquo;, &ldquo;C&rdquo;, &ldquo;D&rdquo;, &ldquo;F&rdquo;, &ldquo;H&rdquo; },
+&ldquo;H&rdquo;: { &ldquo;D&rdquo;, &ldquo;G&rdquo; }</p>
+</blockquote>
+<p>把想一起工作的人组成了伙伴，并以一种方式使每个人都能匹配到伙伴。这样的安排被称为<strong>perfect matching</strong>。</p>
+<hr>
+<p>我们的任务是编写函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">bool</span> <span class="n">hasPerfectMatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;&amp;</span> <span class="n">matching</span><span class="p">)</span>
+</code></pre></div><p>该函数输入可能的连接，寻找是否存在满足上面要求的<strong>perfect matching</strong>，如果不存在则返回<strong>false</strong>，如果存在的话则返回<strong>true</strong>，并且集合<strong>matching</strong>中储存这一perfect matching</p>
+<p>注意到<code>Pair</code>类型，这是一个储存着两个字符串的类型，相关的使用如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Pair</span> <span class="nf">greek1</span><span class="p">(</span><span class="s">&#34;Castor&#34;</span><span class="p">,</span> <span class="s">&#34;Pollux&#34;</span><span class="p">);</span> <span class="c1">// Create a pair.
+</span><span class="c1"></span><span class="n">Pair</span> <span class="nf">greek2</span><span class="p">(</span><span class="s">&#34;Pollux&#34;</span><span class="p">,</span> <span class="s">&#34;Castor&#34;</span><span class="p">);</span> <span class="c1">// Same pair; order doesn&#39;t matter.
+</span><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="n">greek1</span> <span class="o">==</span> <span class="n">greek2</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// true; elements are the same even though in a different order
+</span><span class="c1"></span><span class="p">}</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">greek1</span><span class="p">.</span><span class="n">first</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span>
+<span class="o">&lt;&lt;</span> <span class="n">greek1</span><span class="p">.</span><span class="n">second</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Prints Castor, Pollux
+</span></code></pre></div><p>老师同样给了提示：</p>
+<ul>
+<li>在每一个点，你会发现要么每个人都已经配对了，要么每个人还没有配对</li>
+<li>如果是第一种情况的话，那么我们已经结束了，即找到了perfect matching</li>
+<li>如果是第二种情况的话，选择一个没有配对的人，尝试所有将其与未配对的人配对的可能方式</li>
+</ul>
+<p>函数具体实现如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">bool</span> <span class="nf">hasPerfectMatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;&amp;</span> <span class="n">matching</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">possibleLinks</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">string</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">possibleLinks</span><span class="p">.</span><span class="n">firstKey</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">possibleLinks</span><span class="p">[</span><span class="n">choice</span><span class="p">].</span><span class="n">isEmpty</span><span class="p">()){</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">string</span> <span class="nl">partner</span> <span class="p">:</span> <span class="n">possibleLinks</span><span class="p">[</span><span class="n">choice</span><span class="p">]){</span>
+                <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span> <span class="n">remainLinks</span> <span class="o">=</span> <span class="n">possibleLinks</span><span class="p">;</span>
+                <span class="n">remainLinks</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
+                <span class="n">remainLinks</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">partner</span><span class="p">);</span>
+                <span class="n">Pair</span> <span class="n">newmatch</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="n">partner</span><span class="p">);</span>
+                <span class="k">for</span><span class="p">(</span><span class="n">string</span> <span class="nl">keyleft</span> <span class="p">:</span> <span class="n">remainLinks</span><span class="p">){</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">remainLinks</span><span class="p">[</span><span class="n">keyleft</span><span class="p">].</span><span class="n">contains</span><span class="p">(</span><span class="n">choice</span><span class="p">))</span>
+                        <span class="n">remainLinks</span><span class="p">[</span><span class="n">keyleft</span><span class="p">]</span> <span class="o">-=</span> <span class="n">choice</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">remainLinks</span><span class="p">[</span><span class="n">keyleft</span><span class="p">].</span><span class="n">contains</span><span class="p">(</span><span class="n">partner</span><span class="p">))</span>
+                        <span class="n">remainLinks</span><span class="p">[</span><span class="n">keyleft</span><span class="p">]</span> <span class="o">-=</span> <span class="n">partner</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">hasPerfectMatching</span><span class="p">(</span><span class="n">remainLinks</span><span class="p">,</span> <span class="n">matching</span><span class="p">)){</span>
+                    <span class="n">matching</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">newmatch</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>讲一个我一开始犯的小错，在最后递归调用的时候，一开始没有将增加新的match放入if语句之下，这就导致了前面就算是错误的组合也会被加入集合中。还是需要仔细考虑啊orz</p>
+<h3 id="milestone-two-find-maximum-weight-matchings">Milestone Two: Find Maximum-Weight Matchings</h3>
+<p>背景介绍：</p>
+<p>前面介绍的<strong>perfect match</strong>在现实生活中并不是最优的：</p>
+<ul>
+<li>无法配对奇数个学生</li>
+<li>无法描述不同配对之间的区别</li>
+</ul>
+<p>进一步细化模型我们引入权重来说明：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/07/24/oF4CkpQUDLGqAzm.png" >
+		<img src="https://s2.loli.net/2022/07/24/oF4CkpQUDLGqAzm.png"
+			
+			
+			
+			loading="lazy"
+			alt="graph with weight">
+	</a>
+	
+	<figcaption>graph with weight</figcaption>
+	
+</figure></p>
+<p>虽然是奇数个，但是我们总能找到权重最大的组合，这种方式被称为<strong>maximum-weight matching</strong></p>
+<hr>
+<p>我们的任务是编写函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">maximumWeightMatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">)</span>
+</code></pre></div><p>输入带有权重的可能链接，返回最大权重的组合。</p>
+<p>这段代码我已经不记得写了几天了hhh，所以还是非常有难度的一段代码，但是自己写完真的非常的爽！</p>
+<p>老师在作业中讲到，不要照着Milestone One中的代码去改，一开始我还是觉得这两个问题非常像，所以照着上一问的代码修改了好久，但是在反复阅读材料之后感觉这不是一个问题，推倒重来才写成功了。</p>
+<p>首先采用了wrapping function的方式，定义了递归部分的函数<code>maxmatching</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">maximumWeightMatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">matching</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">maxmatching</span><span class="p">(</span><span class="n">possibleLinks</span><span class="p">,</span> <span class="n">matching</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>之后的思路是：</p>
+<ul>
+<li>对于传入的一个网络，先随便选择一个节点，我们称之为<code>choice</code></li>
+<li>这个节点有两种情况，要么被选中与其他人结对，要么自己独立不被选中</li>
+<li>因此我们需要考虑<strong>isolated</strong>与<strong>linked</strong>两种情况，两种情况都要递归</li>
+<li>递归中传递网络的时候记得**“修剪”**网格！</li>
+</ul>
+<p>完整代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">int</span> <span class="nf">weightcount</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">matching</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">matching</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Pair</span> <span class="nl">matches</span><span class="p">:</span> <span class="n">matching</span><span class="p">){</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">possibleLinks</span><span class="p">[</span><span class="n">matches</span><span class="p">.</span><span class="n">first</span><span class="p">()][</span><span class="n">matches</span><span class="p">.</span><span class="n">second</span><span class="p">()];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">maxmatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">Links</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">matching</span><span class="p">){</span>
+
+    <span class="cm">/* Empty graph*/</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Links</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="n">matching</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="cm">/* choose one node */</span>
+    <span class="n">string</span>  <span class="n">choice</span> <span class="o">=</span> <span class="n">Links</span><span class="p">.</span><span class="n">firstKey</span><span class="p">();</span>
+
+    <span class="cm">/* store all possible value and matches */</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">MaxWeightPair</span><span class="p">;</span>
+
+    <span class="cm">/* isolated case: leave this node alone */</span>
+    <span class="c1">// modify the rest of graph
+</span><span class="c1"></span>    <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">RemainLinks</span> <span class="o">=</span> <span class="n">Links</span><span class="p">;</span>
+    <span class="n">RemainLinks</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">allnode</span><span class="p">:</span> <span class="n">Links</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Links</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">containsKey</span><span class="p">(</span><span class="n">choice</span><span class="p">)){</span>
+            <span class="n">RemainLinks</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">remove</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// Recursion!
+</span><span class="c1"></span>    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">isolatematch</span> <span class="o">=</span> <span class="n">maxmatching</span><span class="p">(</span><span class="n">RemainLinks</span><span class="p">,</span> <span class="n">matching</span><span class="p">);</span>
+    <span class="c1">// store this value
+</span><span class="c1"></span>    <span class="n">MaxWeightPair</span><span class="p">[</span><span class="n">isolatematch</span><span class="p">]</span> <span class="o">=</span> <span class="n">weightcount</span><span class="p">(</span><span class="n">Links</span><span class="p">,</span> <span class="n">isolatematch</span><span class="p">);</span>
+
+
+
+    <span class="cm">/* Pair case: select one linked node and calculate its value */</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">node</span><span class="p">:</span> <span class="n">Links</span><span class="p">[</span><span class="n">choice</span><span class="p">]){</span>
+        <span class="c1">// avoid negtive links
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">Links</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="n">node</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="c1">// create and try this pair
+</span><span class="c1"></span>        <span class="n">Pair</span> <span class="n">newmatch</span> <span class="o">=</span> <span class="p">{</span><span class="n">choice</span><span class="p">,</span> <span class="n">node</span><span class="p">};</span>
+
+        <span class="c1">// continue to modify the rest of graph
+</span><span class="c1"></span>        <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">RemainLinks</span> <span class="o">=</span> <span class="n">Links</span><span class="p">;</span>
+        <span class="n">RemainLinks</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
+        <span class="n">RemainLinks</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">allnode</span><span class="p">:</span> <span class="n">Links</span><span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Links</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">containsKey</span><span class="p">(</span><span class="n">node</span><span class="p">)){</span>
+                <span class="n">RemainLinks</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Links</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">containsKey</span><span class="p">(</span><span class="n">choice</span><span class="p">)){</span>
+                <span class="n">RemainLinks</span><span class="p">[</span><span class="n">allnode</span><span class="p">].</span><span class="n">remove</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// recursion!
+</span><span class="c1"></span>        <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">thismatch</span> <span class="o">=</span> <span class="n">maxmatching</span><span class="p">(</span><span class="n">RemainLinks</span><span class="p">,</span> <span class="n">matching</span> <span class="o">+</span> <span class="n">newmatch</span><span class="p">)</span> <span class="o">+</span> <span class="n">matching</span><span class="p">;</span>
+        <span class="n">MaxWeightPair</span><span class="p">[</span><span class="n">thismatch</span><span class="p">]</span> <span class="o">=</span> <span class="n">weightcount</span><span class="p">(</span><span class="n">Links</span><span class="p">,</span> <span class="n">thismatch</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* return match of max value */</span>
+    <span class="n">matching</span> <span class="o">=</span> <span class="n">MaxWeightPair</span><span class="p">.</span><span class="n">firstKey</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="nl">allmatch</span> <span class="p">:</span><span class="n">MaxWeightPair</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">MaxWeightPair</span><span class="p">[</span><span class="n">allmatch</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">MaxWeightPair</span><span class="p">[</span><span class="n">matching</span><span class="p">]){</span>
+            <span class="n">matching</span> <span class="o">=</span> <span class="n">allmatch</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">matching</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">maximumWeightMatching</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">possibleLinks</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">matching</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">maxmatching</span><span class="p">(</span><span class="n">possibleLinks</span><span class="p">,</span> <span class="n">matching</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>最后可以使用一个自己绘制网格并加权重的程序可视化结果：</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2022/08/03/b1YB8iETOxuStHj.png" >
+		<img src="https://s2.loli.net/2022/08/03/b1YB8iETOxuStHj.png"
+			
+			
+			
+			loading="lazy"
+			alt="Let‘s Match">
+	</a>
+	
+	<figcaption>Let‘s Match</figcaption>
+	
+</figure></p>
+<h2 id="part-three-disaster-planning">Part Three: Disaster Planning</h2>
+<p>问题的背景是灾害物品储备。由于储备物资十分的昂贵，因此只维持少数几个城市储备物资是合理的，这样做的挑战是要弄清楚把资源放在哪里，以便：</p>
+<ol>
+<li>我们不会花太多的钱储备超过我们的需要</li>
+<li>我们不会让任何城市离应急物资太远</li>
+</ol>
+<p>我们定义一个<strong>disaster-ready</strong>状态，它是指，要么一个城市有着应急物资储备，要么它紧挨着有应急物资储备的城市。</p>
+<hr>
+<p>我们的任务是编写一个函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">bool</span> <span class="n">canBeMadeDisasterReady</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;&amp;</span> <span class="n">roadNetwork</span><span class="p">,</span>
+                            <span class="kt">int</span> <span class="n">numCities</span><span class="p">,</span>
+                            <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">supplyLocations</span><span class="p">)</span>
+</code></pre></div><p>输入如下图所示的路网，最大的物资储备城市数，判断是否能够在该区域不超过最大允许物资储备城市数的前提下，达到<strong>disaster-ready</strong>状态。并且如果可行的话，函数应该将那些物资储备城市储存在集合<code>supplyLocations</code>中。</p>
+<p><!-- raw HTML omitted --></p>
+<p>注意到这个问题可以近似于一个有着数量限制的组合问题，一个偷懒的办法便是直接列出最大组合数下的所有组合，但是当上限增加时，复杂度将会非常大。（想一想$C_m^n$的形式就可以知道）</p>
+<p>老师为我们提供了以下的思路：</p>
+<p>对于任意一个城市，证明它能够达到<strong>disaster-ready</strong>的形式的尝试有且仅有以下两种：</p>
+<ul>
+<li>选择这个城市，作为物资储备的城市</li>
+<li>选择这个城市紧挨的城市之一，作为物资储备的城市</li>
+</ul>
+<p>如果这个选择能够递归地覆盖所有城市的话，那么我们就实现了我们最终的目标。但是如果未能实现的话，我们跳至下一个选项。</p>
+<p>注意对于负的上限需要使用<code>error</code>函数报错。</p>
+<p>一开始我直接莽着写了全部列举的方法……结果还是败在了组合数增长的速度上，最后又采取了wrapping function的方法，传递一个中间参数<code>uncoveredCity</code>，即每次不需要从头再选择一遍，从还没选的里面选就行。</p>
+<p>可能有人会和我一开始一样，怀疑这种方法怎么解决两个相邻的物资储备城市的情况？</p>
+<p>但其实，这种情况是可以被考虑到的，在其他点位的邻居的遍历中，就会考虑到这个情况。（所以还是要纸笔推一推……）</p>
+<p>完整代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="kt">bool</span> <span class="nf">DisasterHelper</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;&amp;</span> <span class="n">roadNetwork</span><span class="p">,</span>
+                    <span class="kt">int</span> <span class="n">numCities</span><span class="p">,</span>
+                    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">supplyLocations</span><span class="p">,</span>
+                    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">uncoveredCity</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* if all cities have been covered ,return ture. */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">uncoveredCity</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numCities</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">uncoveredCity</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="cm">/* An empty net always stays ready */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">roadNetwork</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">string</span> <span class="n">city</span> <span class="o">=</span> <span class="n">uncoveredCity</span><span class="p">.</span><span class="n">first</span><span class="p">();</span>
+
+    <span class="cm">/* choose the city as supplylocation */</span>
+    <span class="n">supplyLocations</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">city</span><span class="p">);</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">trythis</span> <span class="o">=</span> <span class="n">uncoveredCity</span> <span class="o">-</span> <span class="n">city</span> <span class="o">-</span> <span class="n">roadNetwork</span><span class="p">[</span><span class="n">city</span><span class="p">];</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">DisasterHelper</span><span class="p">(</span><span class="n">roadNetwork</span><span class="p">,</span> <span class="n">numCities</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">supplyLocations</span><span class="p">,</span><span class="n">trythis</span><span class="p">)){</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">supplyLocations</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">city</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* choose surrounding cities as supplylocation */</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">neighbor</span><span class="p">:</span> <span class="n">roadNetwork</span><span class="p">[</span><span class="n">city</span><span class="p">]){</span>
+        <span class="n">supplyLocations</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">neighbor</span><span class="p">);</span>
+        <span class="n">trythis</span> <span class="o">=</span> <span class="n">uncoveredCity</span> <span class="o">-</span> <span class="n">neighbor</span> <span class="o">-</span> <span class="n">roadNetwork</span><span class="p">[</span><span class="n">neighbor</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">DisasterHelper</span><span class="p">(</span><span class="n">roadNetwork</span><span class="p">,</span> <span class="n">numCities</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">supplyLocations</span><span class="p">,</span><span class="n">trythis</span><span class="p">)){</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">supplyLocations</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">neighbor</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">bool</span> <span class="nf">canBeMadeDisasterReady</span><span class="p">(</span><span class="k">const</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;&amp;</span> <span class="n">roadNetwork</span><span class="p">,</span>
+                            <span class="kt">int</span> <span class="n">numCities</span><span class="p">,</span>
+                            <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">supplyLocations</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numCities</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+        <span class="n">error</span><span class="p">(</span><span class="s">&#34;Haiya!Negtive number!&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">uncoveredCity</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">string</span> <span class="nl">city</span><span class="p">:</span> <span class="n">roadNetwork</span><span class="p">){</span>
+        <span class="n">uncoveredCity</span> <span class="o">+=</span> <span class="n">city</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">DisasterHelper</span><span class="p">(</span><span class="n">roadNetwork</span><span class="p">,</span> <span class="n">numCities</span><span class="p">,</span> <span class="n">supplyLocations</span><span class="p">,</span> <span class="n">uncoveredCity</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p><figure 
+	>
+	<a href="https://s2.loli.net/2022/08/03/uGMdykqPN8fx2sS.png" >
+		<img src="https://s2.loli.net/2022/08/03/uGMdykqPN8fx2sS.png"
+			
+			
+			
+			loading="lazy"
+			alt="Very Hard North East US">
+	</a>
+	
+	<figcaption>Very Hard North East US</figcaption>
+	
+</figure></p>
+<p>这次作业还是挺结实的，递归算是好好玩了一遍hhh</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/cs106b/">CS106B</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="zalouti/comment"
+        issue-term="pathname"
+        
+        label="utterances"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <script src="https://utteranc.es/client.js"
+repo="git@github.com:zalouti/zalouti.github.io.git"
+issue-term="title"
+theme="github-light"
+crossorigin="anonymous"
+async>
+
+</script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 第二基地
+    </section>
+    
+    <section class="powerby">
+        
+            “群星的尽头” <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#part-one-debugging-practice">Part One: Debugging Practice</a>
+      <ol>
+        <li><a href="#milestone-1-explore-the-towers-of-hanoi">Milestone 1: Explore the Towers of Hanoi</a></li>
+        <li><a href="#milestone-2-debug-a-broken-permutations-function">Milestone 2: Debug a Broken Permutations Function</a></li>
+      </ol>
+    </li>
+    <li><a href="#part-two-matchmaker">Part Two: Matchmaker</a>
+      <ol>
+        <li><a href="#milestone-one-find-perfect-matchings">Milestone One: Find Perfect Matchings</a></li>
+        <li><a href="#milestone-two-find-maximum-weight-matchings">Milestone Two: Find Maximum-Weight Matchings</a></li>
+      </ol>
+    </li>
+    <li><a href="#part-three-disaster-planning">Part Three: Disaster Planning</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+    </body>
+</html>

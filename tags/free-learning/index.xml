@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>free learning on 第二基地</title>
+    <link>https://zalouti.github.io/tags/free-learning/</link>
+    <description>Recent content in free learning on 第二基地</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Jul 2022 17:44:12 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/free-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSE1 1</title>
+      <link>https://zalouti.github.io/p/cse1-1/</link>
+      <pubDate>Tue, 26 Jul 2022 17:44:12 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/cse1-1/</guid>
+      <description>1.1 Four special matrices </description>
+    </item>
+    
+  </channel>
+</rss>

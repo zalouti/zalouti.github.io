@@ -6,7 +6,25 @@
     <description>Recent content in CS106B on 第二基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 17 Jul 2022 14:53:43 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/cs106b/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2022 12:26:36 +0800</lastBuildDate><atom:link href="https://zalouti.github.io/tags/cs106b/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assigmment5</title>
+      <link>https://zalouti.github.io/p/assigmment5/</link>
+      <pubDate>Wed, 03 Aug 2022 12:26:36 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assigmment5/</guid>
+      <description>CS106B(winter 2022)Assignment 5 前言 接着上次作业，这次我们来看一看Assignment 5。这次作业是针对Big O的练习，相比之前递归的作业可以说是非常轻松了。 需要注意</description>
+    </item>
+    
+    <item>
+      <title>Assignment4</title>
+      <link>https://zalouti.github.io/p/assignment4/</link>
+      <pubDate>Tue, 19 Jul 2022 22:28:48 +0800</pubDate>
+      
+      <guid>https://zalouti.github.io/p/assignment4/</guid>
+      <description>CS106B(winter 2022)Assignment 4 前言 接着上次作业，这次我们来看一看Assignment 4。这次作业还是针对Recursive Problem Solving的进一步练习。 需要注意的是</description>
+    </item>
+    
     <item>
       <title>Assignment3</title>
       <link>https://zalouti.github.io/p/assignment3/</link>
